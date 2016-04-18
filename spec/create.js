@@ -1,31 +1,40 @@
 var gp = require('../lib/gp.node');
 var Geom = require('../lib/Geom.node');
+
+
+var currentDouble = 0;
+var maxDouble = 29;
+function nextDouble(){
+  currentDouble += 1;
+  return currentDouble;
+}
+
 var creategp = {
   XYZ() {
-    return new gp.XYZ(5, 5, 5);
+    return new gp.XYZ(nextDouble(), nextDouble(), nextDouble());
   },
   Vec() {
-    return new gp.Vec(10, 20, 40);
+    return new gp.Vec(nextDouble(), nextDouble(), nextDouble());
   },
   Pnt() {
-    return new gp.Pnt(40, 20, 10);
+    return new gp.Pnt(nextDouble(), nextDouble(), nextDouble());
   },
   Dir() {
-    return new gp.Dir(1, 2, 3);
+    return new gp.Dir(nextDouble(), nextDouble(), nextDouble());
   },
   Ax1() {
     return new gp.Ax1(
-      new gp.Pnt(1, 1, 1), new gp.Dir(0, 0, 1)
+      creategp.Pnt(), creategp.Dir()
     );
   },
   Ax2() {
     return new gp.Ax2(
-      new gp.Pnt(1, 1, 1), new gp.Dir(0, 0, 1), new gp.Dir(1, 0, 0)
+      creategp.Pnt(), creategp.Dir(), creategp.Dir()
     );
   },
   Ax3() {
     return new gp.Ax3(
-      new gp.Pnt(1, 1, 1), new gp.Dir(0, 0, 1), new gp.Dir(1, 0, 0)
+      creategp.Pnt(), creategp.Dir(), creategp.Dir()
     );
   },
   Trsf() {
@@ -33,21 +42,21 @@ var creategp = {
   },
   Sphere() {
     return new gp.Sphere(new gp.Ax3(
-      new gp.Pnt(1, 1, 1), new gp.Dir(0, 0, 1), new gp.Dir(1, 0, 0)
+      creategp.Pnt(), creategp.Dir(), creategp.Dir()
     ), 5);
   },
   Cylinder() {
     return new gp.Cylinder(new gp.Ax3(
-      new gp.Pnt(1, 1, 1), new gp.Dir(0, 0, 1), new gp.Dir(1, 0, 0)
+      creategp.Pnt(), creategp.Dir(), creategp.Dir()
     ), 5);
   }
 };
 var createGeom = {
   SphericalSurface() {
-    return new Geom.SphericalSurface(creategp.Ax3(), 10);
+    return new Geom.SphericalSurface(creategp.Ax3(), nextDouble());
   },
   CylindricalSurface() {
-    return new Geom.CylindricalSurface(creategp.Ax3(), 10);
+    return new Geom.CylindricalSurface(creategp.Ax3(), nextDouble());
   },
 
   Axis1Placement() {

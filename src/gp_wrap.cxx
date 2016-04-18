@@ -1591,22 +1591,31 @@ SWIG_FromCharPtr(const char *cptr)
 }
 
 
-#include <gp_XYZ.hxx>
+#include <gp_Vec.hxx>
 #include <Standard_Real.hxx>
-#include <Standard_Integer.hxx>
 #include <Standard_Boolean.hxx>
 #include <gp_Ax1.hxx>
 #include <gp_Ax2.hxx>
 #include <gp_Trsf.hxx>
-#include <gp_Vec.hxx>
 #include <gp_Dir.hxx>
-#include <gp_Pnt.hxx>
 #include <gp_Trsf2d.hxx>
 #include <gp_Quaternion.hxx>
 #include <gp_Ax3.hxx>
 #include <gp_TrsfForm.hxx>
 #include <gp_Mat.hxx>
+#include <Standard_Integer.hxx>
+#include <gp_Pnt.hxx>
+#include <Standard_Real.hxx>
+#include <Standard_Integer.hxx>
+#include <Standard_Boolean.hxx>
 #include <Standard_CString.hxx>
+#include <gp_Pnt.hxx>
+#include <gp_Vec.hxx>
+#include <gp_Dir.hxx>
+#include <gp_Ax1.hxx>
+#include <gp_Ax2.hxx>
+#include <gp_Ax3.hxx>
+#include <gp_Trsf.hxx>
 
 
 SWIGINTERN

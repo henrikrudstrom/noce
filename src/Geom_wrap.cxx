@@ -1580,42 +1580,83 @@ static swig_module_info swig_module = {swig_types, 45, 0, 0, 0, 0};
 #include <Standard_Real.hxx>
 #include <gp_Vec.hxx>
 #include <gp_Trsf.hxx>
-#include <Handle_Geom_Geometry.hxx>
 #include <Handle_Standard_Type.hxx>
-#include <Handle_Geom_Surface.hxx>
-#include <gp_GTrsf2d.hxx>
 #include <Standard_Boolean.hxx>
+#include <gp_Dir.hxx>
+#include <gp_Trsf2d.hxx>
+#include <gp_Quaternion.hxx>
+#include <gp_Ax3.hxx>
+#include <gp_TrsfForm.hxx>
+#include <gp_Mat.hxx>
+#include <Standard_Integer.hxx>
+#include <gp_GTrsf2d.hxx>
+#include <Geom_Curve.hxx>
 #include <Handle_Geom_Curve.hxx>
 #include <GeomAbs_Shape.hxx>
-#include <Standard_Integer.hxx>
-#include <gp_Ax3.hxx>
 #include <gp_Sphere.hxx>
-#include <gp_Cylinder.hxx>
-#include <gp_Dir.hxx>
-#include <Handle_Geom_AxisPlacement.hxx>
-#include <Handle_Geom_Axis1Placement.hxx>
-#include <gp_Circ.hxx>
 #include <Geom_Geometry.hxx>
-#include <Handle_Standard_Transient.hxx>
+#include <Handle_Geom_Geometry.hxx>
+#include <gp_Cylinder.hxx>
+#include <gp_Circ.hxx>
+#include <GC_MakeCircle.hxx>
 #include <Geom_Surface.hxx>
+#include <Handle_Geom_Surface.hxx>
 #include <Geom_ElementarySurface.hxx>
+#include <Handle_Geom_ElementarySurface.hxx>
 #include <Geom_SphericalSurface.hxx>
+#include <Handle_Geom_SphericalSurface.hxx>
 #include <Geom_CylindricalSurface.hxx>
+#include <Handle_Geom_CylindricalSurface.hxx>
 #include <Geom_AxisPlacement.hxx>
+#include <Handle_Geom_AxisPlacement.hxx>
 #include <Geom_Axis1Placement.hxx>
-#include <Geom_Curve.hxx>
+#include <Handle_Geom_Axis1Placement.hxx>
 #include <Geom_Conic.hxx>
+#include <Handle_Geom_Conic.hxx>
 #include <Geom_BoundedCurve.hxx>
+#include <Handle_Geom_BoundedCurve.hxx>
 #include <Geom_Circle.hxx>
+#include <Handle_Geom_Circle.hxx>
 #include <Geom_TrimmedCurve.hxx>
+#include <Handle_Geom_TrimmedCurve.hxx>
+#include <Geom_Geometry.hxx>
+#include <Handle_Geom_Geometry.hxx>
+#include <Geom_Surface.hxx>
+#include <Handle_Geom_Surface.hxx>
+#include <Geom_ElementarySurface.hxx>
+#include <Handle_Geom_ElementarySurface.hxx>
+#include <Geom_SphericalSurface.hxx>
+#include <Handle_Geom_SphericalSurface.hxx>
+#include <Geom_CylindricalSurface.hxx>
+#include <Handle_Geom_CylindricalSurface.hxx>
+#include <Geom_AxisPlacement.hxx>
+#include <Handle_Geom_AxisPlacement.hxx>
+#include <Geom_Axis1Placement.hxx>
+#include <Handle_Geom_Axis1Placement.hxx>
+#include <Geom_Curve.hxx>
+#include <Handle_Geom_Curve.hxx>
+#include <Geom_Conic.hxx>
+#include <Handle_Geom_Conic.hxx>
+#include <Geom_BoundedCurve.hxx>
+#include <Handle_Geom_BoundedCurve.hxx>
+#include <Geom_Circle.hxx>
+#include <Handle_Geom_Circle.hxx>
+#include <Geom_TrimmedCurve.hxx>
+#include <Handle_Geom_TrimmedCurve.hxx>
+#include <Handle_Geom_Geometry.hxx>
+#include <Handle_Geom_Surface.hxx>
 #include <Handle_Geom_ElementarySurface.hxx>
 #include <Handle_Geom_SphericalSurface.hxx>
 #include <Handle_Geom_CylindricalSurface.hxx>
+#include <Handle_Geom_AxisPlacement.hxx>
+#include <Handle_Geom_Axis1Placement.hxx>
+#include <Handle_Geom_Curve.hxx>
 #include <Handle_Geom_Conic.hxx>
 #include <Handle_Geom_BoundedCurve.hxx>
 #include <Handle_Geom_Circle.hxx>
 #include <Handle_Geom_TrimmedCurve.hxx>
 #include <MMgt_TShared.hxx>
+#include <Handle_MMgt_TShared.hxx>
 #include <Handle_MMgt_TShared.hxx>
 
 
@@ -1657,6 +1698,38 @@ int SWIG_AsVal_int (v8::Handle<v8::Value> valRef, int* val)
   return SWIG_OK;
 }
 
+SWIGINTERN Handle_Geom_Circle const Geom_Circle_makeCircle__SWIG_0(gp_Circ const &C){
+    GC_MakeCircle* obj = new GC_MakeCircle(C);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_Circle const Geom_Circle_makeCircle__SWIG_1(gp_Ax2 const &A2,Standard_Real const Radius){
+    GC_MakeCircle* obj = new GC_MakeCircle(A2, Radius);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_Circle const Geom_Circle_makeCircle__SWIG_2(gp_Circ const &Circ,Standard_Real const Dist){
+    GC_MakeCircle* obj = new GC_MakeCircle(Circ, Dist);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_Circle const Geom_Circle_makeCircle__SWIG_3(gp_Circ const &Circ,gp_Pnt const &Point){
+    GC_MakeCircle* obj = new GC_MakeCircle(Circ, Point);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_Circle const Geom_Circle_makeCircle__SWIG_4(gp_Pnt const &P1,gp_Pnt const &P2,gp_Pnt const &P3){
+    GC_MakeCircle* obj = new GC_MakeCircle(P1, P2, P3);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_Circle const Geom_Circle_makeCircle__SWIG_5(gp_Pnt const &Center,gp_Dir const &Norm,Standard_Real const Radius){
+    GC_MakeCircle* obj = new GC_MakeCircle(Center, Norm, Radius);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_Circle const Geom_Circle_makeCircle__SWIG_6(gp_Pnt const &Center,gp_Pnt const &PtAxis,Standard_Real const Radius){
+    GC_MakeCircle* obj = new GC_MakeCircle(Center, PtAxis, Radius);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_Circle const Geom_Circle_makeCircle__SWIG_7(gp_Ax1 const &Axis,Standard_Real const Radius){
+    GC_MakeCircle* obj = new GC_MakeCircle(Axis, Radius);
+    return obj->Value();
+  }
 
 #include <float.h>
 
@@ -12614,6 +12687,654 @@ fail:
 }
 
 
+static SwigV8ReturnValue _wrap_Circle_makeCircle__SWIG_0(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Circ *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  Handle_Geom_Circle result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Circ,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Circ const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Circ const &""'"); 
+  }
+  arg1 = (gp_Circ *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_Circle_makeCircle__SWIG_0((gp_Circ const &)*arg1);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_Circle *handle = (Handle_Geom_Circle *)new Handle_Geom_Circle(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Circle_makeCircle__SWIG_1(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Ax2 *arg1 = 0 ;
+  Standard_Real arg2 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  Handle_Geom_Circle result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Ax2 const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Ax2 const &""'"); 
+  }
+  arg1 = (gp_Ax2 *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Circle_makeCircle" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_Circle_makeCircle__SWIG_1((gp_Ax2 const &)*arg1,arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_Circle *handle = (Handle_Geom_Circle *)new Handle_Geom_Circle(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Circle_makeCircle__SWIG_2(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Circ *arg1 = 0 ;
+  Standard_Real arg2 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  Handle_Geom_Circle result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Circ,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Circ const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Circ const &""'"); 
+  }
+  arg1 = (gp_Circ *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Circle_makeCircle" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_Circle_makeCircle__SWIG_2((gp_Circ const &)*arg1,arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_Circle *handle = (Handle_Geom_Circle *)new Handle_Geom_Circle(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Circle_makeCircle__SWIG_3(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Circ *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  Handle_Geom_Circle result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Circ,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Circ const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Circ const &""'"); 
+  }
+  arg1 = (gp_Circ *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Circle_makeCircle" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Circle_makeCircle" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg2 = (gp_Pnt *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_Circle_makeCircle__SWIG_3((gp_Circ const &)*arg1,(gp_Pnt const &)*arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_Circle *handle = (Handle_Geom_Circle *)new Handle_Geom_Circle(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Circle_makeCircle__SWIG_4(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Pnt *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  gp_Pnt *arg3 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  Handle_Geom_Circle result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg1 = (gp_Pnt *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Circle_makeCircle" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Circle_makeCircle" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg2 = (gp_Pnt *)(argp2);
+  res3 = SWIG_ConvertPtr(args[2], &argp3, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Circle_makeCircle" "', argument " "3"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Circle_makeCircle" "', argument " "3"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg3 = (gp_Pnt *)(argp3);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_Circle_makeCircle__SWIG_4((gp_Pnt const &)*arg1,(gp_Pnt const &)*arg2,(gp_Pnt const &)*arg3);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_Circle *handle = (Handle_Geom_Circle *)new Handle_Geom_Circle(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Circle_makeCircle__SWIG_5(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Pnt *arg1 = 0 ;
+  gp_Dir *arg2 = 0 ;
+  Standard_Real arg3 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  Handle_Geom_Circle result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg1 = (gp_Pnt *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_gp_Dir,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Circle_makeCircle" "', argument " "2"" of type '" "gp_Dir const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Circle_makeCircle" "', argument " "2"" of type '" "gp_Dir const &""'"); 
+  }
+  arg2 = (gp_Dir *)(argp2);
+  ecode3 = SWIG_AsVal_double(args[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Circle_makeCircle" "', argument " "3"" of type '" "Standard_Real""'");
+  } 
+  arg3 = (Standard_Real)(val3);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_Circle_makeCircle__SWIG_5((gp_Pnt const &)*arg1,(gp_Dir const &)*arg2,arg3);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_Circle *handle = (Handle_Geom_Circle *)new Handle_Geom_Circle(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Circle_makeCircle__SWIG_6(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Pnt *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  Standard_Real arg3 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  Handle_Geom_Circle result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg1 = (gp_Pnt *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Circle_makeCircle" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Circle_makeCircle" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg2 = (gp_Pnt *)(argp2);
+  ecode3 = SWIG_AsVal_double(args[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Circle_makeCircle" "', argument " "3"" of type '" "Standard_Real""'");
+  } 
+  arg3 = (Standard_Real)(val3);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_Circle_makeCircle__SWIG_6((gp_Pnt const &)*arg1,(gp_Pnt const &)*arg2,arg3);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_Circle *handle = (Handle_Geom_Circle *)new Handle_Geom_Circle(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Circle_makeCircle__SWIG_7(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Ax1 *arg1 = 0 ;
+  Standard_Real arg2 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  Handle_Geom_Circle result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax1,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Ax1 const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Circle_makeCircle" "', argument " "1"" of type '" "gp_Ax1 const &""'"); 
+  }
+  arg1 = (gp_Ax1 *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Circle_makeCircle" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_Circle_makeCircle__SWIG_7((gp_Ax1 const &)*arg1,arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_Circle *handle = (Handle_Geom_Circle *)new Handle_Geom_Circle(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Circle__wrap_Circle_makeCircle(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  OverloadErrorHandler errorHandler;
+  
+  
+  if(args.Length() == 1) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_Circle_makeCircle__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_Circle_makeCircle__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 2) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_Circle_makeCircle__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_Circle_makeCircle__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 2) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_Circle_makeCircle__SWIG_2(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_Circle_makeCircle__SWIG_2(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 2) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_Circle_makeCircle__SWIG_3(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_Circle_makeCircle__SWIG_3(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 3) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_Circle_makeCircle__SWIG_4(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_Circle_makeCircle__SWIG_4(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 3) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_Circle_makeCircle__SWIG_5(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_Circle_makeCircle__SWIG_5(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 3) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_Circle_makeCircle__SWIG_6(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_Circle_makeCircle__SWIG_6(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 2) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_Circle_makeCircle__SWIG_7(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_Circle_makeCircle__SWIG_7(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  SWIG_exception_fail(SWIG_ERROR, "Illegal arguments for function makeCircle.");
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
 static void _wrap_delete_Circle(v8::Persistent<v8::Value> object, void *parameter) {
   SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
@@ -17592,7 +18313,8 @@ v8::Handle<v8::Object> _exports_Handle_TrimmedCurve_obj = _exports_Handle_Trimme
 
 
   /* add static class functions and variables */
-  
+  SWIGV8_AddStaticFunction(_exports_Circle_obj, "makeCircle", _wrap_Circle__wrap_Circle_makeCircle);
+
 
   /* register classes */
   exports_obj->Set(SWIGV8_SYMBOL_NEW("Standard_Transient"), _exports_Standard_Transient_obj);

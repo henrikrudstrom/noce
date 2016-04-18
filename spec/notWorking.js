@@ -9,6 +9,12 @@ var notWorking = {
   ],
   'Geom.SphericalSurface': [
     'vperiod()'
+  ],
+  'Geom.Circle': [
+    'makeCircle(gp.Pnt, gp.Pnt, gp.Pnt)'
+  ],
+  'Geom.TrimmedCurve': [
+    'makeArcOfCircle(gp.Pnt, gp.Pnt, gp.Pnt)'
   ]
 };
 
@@ -36,7 +42,6 @@ module.exports.returnType = function(clsName, memberSig) {
   if (clsName in returnType) {
     var sigs = returnType[clsName];
     if (memberSig in sigs) {
-      console.log("Found sig", memberSig);
       return sigs[memberSig];
     }
   }

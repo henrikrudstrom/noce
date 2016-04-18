@@ -1,39 +1,34 @@
 var Geom = require('../lib/Geom.node');
 var gp = require('../lib/gp.node');
 
-function bla(ap) {
-  var ap2 = ap;
-  return ap.translated(new gp.Vec(2, 3, 4))
-}
 describe('a handle', function() {
   it('returns handles as objects', function() {
     var ap1 = new Geom.Axis1Placement(new gp.Pnt(1, 1, 1), new gp.Dir(0, 0, 1));
-    var ap2 = new Geom.Axis1Placement(new gp.Pnt(1, 1, 1), new gp.Dir(0, 1, 0));
     var ap3 = ap1.translated(new gp.Vec(2, 3, 4));
-    expect(ap3.constructor.name).toBe('_exports_Axis1Placement')
-    var angle = ap3.angle(ap1);
+    expect(ap3.constructor.name).toBe('_exports_Axis1Placement');
+    ap3.angle(ap1);
   });
+
   it('accepts objects as handles', function() {
     var ap1 = new Geom.Axis1Placement(new gp.Pnt(1, 1, 1), new gp.Dir(0, 0, 1));
     var ap2 = new Geom.Axis1Placement(new gp.Pnt(1, 1, 1), new gp.Dir(0, 1, 0));
-    var ap3 = ap1.translated(new gp.Vec(2, 3, 4));
-    var angle = ap2.angle(ap1);
+    ap1.translated(new gp.Vec(2, 3, 4));
+    ap2.angle(ap1);
   });
 
-  it('it plays well with garbage collectors', function() {
-    var handles = [];
-    process.stdout.write("GarbageCollector");
+  xit('it plays well with garbage collectors', function() {
+    process.stdout.write('GarbageCollector');
     for (var i = 0; i < 250000; i++) { // 52631 pr second
       var ap1 = new Geom.Axis1Placement(new gp.Pnt(1, 1, 1), new gp.Dir(0, 0, 1));
       var ap2 = new Geom.Axis1Placement(new gp.Pnt(1, 1, 1), new gp.Dir(0, 1, 0));
 
       if (i % 25000 === 0)
-        process.stdout.write("!");
+        process.stdout.write('!');
 
-      var ap3 = ap1.translated(new gp.Vec(2, 3, 4));
-      var angle = ap1.angle(ap2);
-
+      ap1.translated(new gp.Vec(2, 3, 4));
+      ap1.angle(ap2);
     }
+    expect(true).toBe(true);
   });
 
 
