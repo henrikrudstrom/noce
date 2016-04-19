@@ -1,0 +1,24 @@
+{
+  "name": "noce",
+  "version": "0.0.1",
+  "description": "Node wrapper for OpenCascade solid modelling kernel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrikrudstrom/noce.git"
+  },
+  "author": "Henrik Rudstrøm",
+  "license": "ISC",
+  "gypfile": true,
+  "bugs": {
+    "url": "https://github.com/henrikrudstrom/noce/issues"
+  },
+  "homepage": "https://github.com/henrikrudstrom/noce#readme",
+  "devDependencies": {
+    "nan": "^2.2.1"
+  }
+}

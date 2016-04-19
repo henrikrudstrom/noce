@@ -1,11 +1,11 @@
 var notWorking = {
   'gp.Trsf': [
-    'transforms(gp.double, gp.double, gp.double)',
-    'setValues(gp.double, gp.double, gp.double, gp.double, gp.double, gp.double, gp.double, gp.double, gp.double, gp.double, gp.double, gp.double, gp.double, gp.double)'
+    'transforms(Double, Double, Double)',
+    'setValues(Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double)'
   ],
   'Geom.CylindricalSurface': [
     'vperiod()',
-    'uiso(gp.double)' // Works on spherical... segmentation fault
+    'uiso(Double)' // Works on spherical... segmentation fault
   ],
   'Geom.SphericalSurface': [
     'vperiod()'
@@ -15,6 +15,12 @@ var notWorking = {
   ],
   'Geom.TrimmedCurve': [
     'makeArcOfCircle(gp.Pnt, gp.Pnt, gp.Pnt)'
+  ],
+  'Geom.Line': [
+    'period()'
+  ],
+  'brep': [
+
   ]
 };
 
@@ -31,11 +37,11 @@ var returnType = {
   },
   'Geom.SphericalSurface': {
     'vperiod()': 'Circle',
-    'viso(gp.double)': 'Circle',
-    'uiso(gp.double)': 'TrimmedCurve'
+    'viso(Double)': 'Circle',
+    'uiso(Double)': 'TrimmedCurve'
   },
   'Geom.CylindricalSurface': {
-    'viso(gp.double)': 'Circle'
+    'viso(Double)': 'Circle'
   }
 };
 module.exports.returnType = function(clsName, memberSig) {

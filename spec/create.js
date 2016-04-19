@@ -1,10 +1,11 @@
 var gp = require('../lib/gp.node');
 var Geom = require('../lib/Geom.node');
-
+var brep = require('../lib/brep.node');
 
 var currentDouble = 0;
 var maxDouble = 29;
-function nextDouble(){
+
+function nextDouble() {
   currentDouble += 1;
   return currentDouble;
 }
@@ -87,13 +88,50 @@ var createGeom = {
     return new Geom.Circle(creategp.Ax2(), 2);
   },
   TrimmedCurve() {
-    return new Geom.TrimmedCurve(createGeom.Circle(),0, 1.5, true);
+    return new Geom.TrimmedCurve(createGeom.Circle(), 0, 1.5, true);
   },
   Curve() {
     return createGeom.Circle();
+  },
+  Line() {
+    return new Geom.Line(creategp.Pnt(), creategp.Dir());
   }
 };
+var createbrep = {
+  Vertex() {
+    return brep.makeVertex(creategp.Pnt());
+  },
+  Edge() {
+    return brep.makeEdge(createGeom.Line());
+  },
+  Shape() {
+    return createbrep.Edge();
+  },
+  Orientation() {
+    return brep.Orientation.TopAbs_FORWARD;
+  },
+  Location() {
+    return new brep.Location(creategp.Trsf());
+  },
+  Wire() {
+    var pt1 = new gp.Pnt(0, 0, 0);
+    var pt2 = new gp.Pnt(1, 4, 6);
+    var pt3 = new gp.Pnt(4, 5, 0);
+    var l1 = Geom.TrimmedCurve.makeSegment(pt1, pt2);
+    var e1 = brep.makeEdge(l1)
+    var l2 = Geom.TrimmedCurve.makeSegment(pt2, pt3);
+    var e2 = brep.makeEdge(l2)
+    console.log("E",e2)
+    return brep.makeWire(e1);
+  }, 
+  Face() {
+    var surf = createGeom.Surface();
+    return brep.makeFace(surf, 0.01);
+  }
+
+}
 module.exports = {
   gp: creategp,
-  Geom: createGeom
+  Geom: createGeom,
+  brep: createbrep
 };

@@ -2,14 +2,14 @@ var brep = require('../../lib/brep.js');
 var Geom = require('../../lib/Geom.js');
 var gp = require('../../lib/gp.js');
 var create = require('../create.js')
-describe('brep.Shape', function(){
+describe('brep.Face', function(){
 
 
 
 
   it('isNull()', function(){
     console.log('isNull()')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var res = obj.isNull();
     expect(typeof res).toBe('boolean');
   });
@@ -17,7 +17,7 @@ describe('brep.Shape', function(){
 
   it('nullify()', function(){
     console.log('nullify()')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var res = obj.nullify();
   });
 
@@ -25,7 +25,7 @@ describe('brep.Shape', function(){
     // arguments or return type not wrapped
   xit('tshape()', function(){
     console.log('tshape()')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var res = obj.tshape();
     expect(typeof res).toBe('object');
     expect(res.constructor.name.replace('_exports_', '')).toBe('Handle_TopoDS_TShape');
@@ -35,7 +35,7 @@ describe('brep.Shape', function(){
     // arguments or return type not wrapped
   xit('shapeType()', function(){
     console.log('shapeType()')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var res = obj.shapeType();
     expect(typeof res).toBe('object');
     expect(res.constructor.name.replace('_exports_', '')).toBe('TopAbs_ShapeEnum');
@@ -44,14 +44,14 @@ describe('brep.Shape', function(){
 
   it('reverse()', function(){
     console.log('reverse()')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var res = obj.reverse();
   });
 
 
   it('reversed()', function(){
     console.log('reversed()')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var res = obj.reversed();
     expect(typeof res).toBe('object');
     expect(res.constructor.name.replace('_exports_', '')).toBe('Shape');
@@ -60,14 +60,14 @@ describe('brep.Shape', function(){
 
   it('complement()', function(){
     console.log('complement()')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var res = obj.complement();
   });
 
 
   it('complemented()', function(){
     console.log('complemented()')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var res = obj.complemented();
     expect(typeof res).toBe('object');
     expect(res.constructor.name.replace('_exports_', '')).toBe('Shape');
@@ -76,14 +76,14 @@ describe('brep.Shape', function(){
 
   it('emptyCopy()', function(){
     console.log('emptyCopy()')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var res = obj.emptyCopy();
   });
 
 
   it('emptyCopied()', function(){
     console.log('emptyCopied()')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var res = obj.emptyCopied();
     expect(typeof res).toBe('object');
     expect(res.constructor.name.replace('_exports_', '')).toBe('Shape');
@@ -92,7 +92,7 @@ describe('brep.Shape', function(){
 
   it('free', function(){
     console.log('free')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var val = true;
     obj.free = val;
     expect(obj.free).toBe(val);
@@ -101,7 +101,7 @@ describe('brep.Shape', function(){
 
   it('modified', function(){
     console.log('modified')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var val = false;
     obj.modified = val;
     expect(obj.modified).toBe(val);
@@ -110,7 +110,7 @@ describe('brep.Shape', function(){
 
   it('checked', function(){
     console.log('checked')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var val = true;
     obj.checked = val;
     expect(obj.checked).toBe(val);
@@ -119,7 +119,7 @@ describe('brep.Shape', function(){
 
   it('orientable', function(){
     console.log('orientable')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var val = false;
     obj.orientable = val;
     expect(obj.orientable).toBe(val);
@@ -128,7 +128,7 @@ describe('brep.Shape', function(){
 
   it('closed', function(){
     console.log('closed')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var val = true;
     obj.closed = val;
     expect(obj.closed).toBe(val);
@@ -137,7 +137,7 @@ describe('brep.Shape', function(){
 
   it('infinite', function(){
     console.log('infinite')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var val = false;
     obj.infinite = val;
     expect(obj.infinite).toBe(val);
@@ -146,7 +146,7 @@ describe('brep.Shape', function(){
 
   it('convex', function(){
     console.log('convex')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var val = true;
     obj.convex = val;
     expect(obj.convex).toBe(val);
@@ -155,7 +155,7 @@ describe('brep.Shape', function(){
 
   it('orientation', function(){
     console.log('orientation')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var val = create.brep.Orientation();
     obj.orientation = val;
     expect(obj.orientation).toBe(val);
@@ -164,7 +164,7 @@ describe('brep.Shape', function(){
 
   it('location', function(){
     console.log('location')
-    var obj = create.brep.Shape();
+    var obj = create.brep.Face();
     var val = create.brep.Location();
     obj.location = val;
     expect(obj.location).toBe(val);

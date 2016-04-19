@@ -1490,43 +1490,49 @@ SWIGRUNTIME void JS_veto_set_variable(v8::Local<v8::String> property, v8::Local<
 #define SWIGTYPE_p_Geom_CylindricalSurface swig_types[7]
 #define SWIGTYPE_p_Geom_ElementarySurface swig_types[8]
 #define SWIGTYPE_p_Geom_Geometry swig_types[9]
-#define SWIGTYPE_p_Geom_SphericalSurface swig_types[10]
-#define SWIGTYPE_p_Geom_Surface swig_types[11]
-#define SWIGTYPE_p_Geom_TrimmedCurve swig_types[12]
-#define SWIGTYPE_p_Handle_Geom_Axis1Placement swig_types[13]
-#define SWIGTYPE_p_Handle_Geom_AxisPlacement swig_types[14]
-#define SWIGTYPE_p_Handle_Geom_BoundedCurve swig_types[15]
-#define SWIGTYPE_p_Handle_Geom_Circle swig_types[16]
-#define SWIGTYPE_p_Handle_Geom_Conic swig_types[17]
-#define SWIGTYPE_p_Handle_Geom_Curve swig_types[18]
-#define SWIGTYPE_p_Handle_Geom_CylindricalSurface swig_types[19]
-#define SWIGTYPE_p_Handle_Geom_ElementarySurface swig_types[20]
-#define SWIGTYPE_p_Handle_Geom_Geometry swig_types[21]
-#define SWIGTYPE_p_Handle_Geom_SphericalSurface swig_types[22]
-#define SWIGTYPE_p_Handle_Geom_Surface swig_types[23]
-#define SWIGTYPE_p_Handle_Geom_TrimmedCurve swig_types[24]
-#define SWIGTYPE_p_Handle_MMgt_TShared swig_types[25]
-#define SWIGTYPE_p_Handle_Standard_Transient swig_types[26]
-#define SWIGTYPE_p_Handle_Standard_Type swig_types[27]
-#define SWIGTYPE_p_MMgt_TShared swig_types[28]
-#define SWIGTYPE_p_Standard_Transient swig_types[29]
-#define SWIGTYPE_p_bool swig_types[30]
-#define SWIGTYPE_p_char swig_types[31]
-#define SWIGTYPE_p_double swig_types[32]
-#define SWIGTYPE_p_gp_Ax1 swig_types[33]
-#define SWIGTYPE_p_gp_Ax2 swig_types[34]
-#define SWIGTYPE_p_gp_Ax3 swig_types[35]
-#define SWIGTYPE_p_gp_Circ swig_types[36]
-#define SWIGTYPE_p_gp_Cylinder swig_types[37]
-#define SWIGTYPE_p_gp_Dir swig_types[38]
-#define SWIGTYPE_p_gp_GTrsf2d swig_types[39]
-#define SWIGTYPE_p_gp_Pnt swig_types[40]
-#define SWIGTYPE_p_gp_Sphere swig_types[41]
-#define SWIGTYPE_p_gp_Trsf swig_types[42]
-#define SWIGTYPE_p_gp_Vec swig_types[43]
-#define SWIGTYPE_p_int swig_types[44]
-static swig_type_info *swig_types[46];
-static swig_module_info swig_module = {swig_types, 45, 0, 0, 0, 0};
+#define SWIGTYPE_p_Geom_Line swig_types[10]
+#define SWIGTYPE_p_Geom_Plane swig_types[11]
+#define SWIGTYPE_p_Geom_SphericalSurface swig_types[12]
+#define SWIGTYPE_p_Geom_Surface swig_types[13]
+#define SWIGTYPE_p_Geom_TrimmedCurve swig_types[14]
+#define SWIGTYPE_p_Handle_Geom_Axis1Placement swig_types[15]
+#define SWIGTYPE_p_Handle_Geom_AxisPlacement swig_types[16]
+#define SWIGTYPE_p_Handle_Geom_BoundedCurve swig_types[17]
+#define SWIGTYPE_p_Handle_Geom_Circle swig_types[18]
+#define SWIGTYPE_p_Handle_Geom_Conic swig_types[19]
+#define SWIGTYPE_p_Handle_Geom_Curve swig_types[20]
+#define SWIGTYPE_p_Handle_Geom_CylindricalSurface swig_types[21]
+#define SWIGTYPE_p_Handle_Geom_ElementarySurface swig_types[22]
+#define SWIGTYPE_p_Handle_Geom_Geometry swig_types[23]
+#define SWIGTYPE_p_Handle_Geom_Line swig_types[24]
+#define SWIGTYPE_p_Handle_Geom_Plane swig_types[25]
+#define SWIGTYPE_p_Handle_Geom_SphericalSurface swig_types[26]
+#define SWIGTYPE_p_Handle_Geom_Surface swig_types[27]
+#define SWIGTYPE_p_Handle_Geom_TrimmedCurve swig_types[28]
+#define SWIGTYPE_p_Handle_MMgt_TShared swig_types[29]
+#define SWIGTYPE_p_Handle_Standard_Transient swig_types[30]
+#define SWIGTYPE_p_Handle_Standard_Type swig_types[31]
+#define SWIGTYPE_p_MMgt_TShared swig_types[32]
+#define SWIGTYPE_p_Standard_Transient swig_types[33]
+#define SWIGTYPE_p_bool swig_types[34]
+#define SWIGTYPE_p_char swig_types[35]
+#define SWIGTYPE_p_double swig_types[36]
+#define SWIGTYPE_p_gp_Ax1 swig_types[37]
+#define SWIGTYPE_p_gp_Ax2 swig_types[38]
+#define SWIGTYPE_p_gp_Ax3 swig_types[39]
+#define SWIGTYPE_p_gp_Circ swig_types[40]
+#define SWIGTYPE_p_gp_Cylinder swig_types[41]
+#define SWIGTYPE_p_gp_Dir swig_types[42]
+#define SWIGTYPE_p_gp_GTrsf2d swig_types[43]
+#define SWIGTYPE_p_gp_Lin swig_types[44]
+#define SWIGTYPE_p_gp_Pln swig_types[45]
+#define SWIGTYPE_p_gp_Pnt swig_types[46]
+#define SWIGTYPE_p_gp_Sphere swig_types[47]
+#define SWIGTYPE_p_gp_Trsf swig_types[48]
+#define SWIGTYPE_p_gp_Vec swig_types[49]
+#define SWIGTYPE_p_int swig_types[50]
+static swig_type_info *swig_types[52];
+static swig_module_info swig_module = {swig_types, 51, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1545,7 +1551,27 @@ static swig_module_info swig_module = {swig_types, 45, 0, 0, 0, 0};
 #include <stdexcept>
 
 
-#include <string>
+#include <gp_Vec.hxx>
+#include <Standard_Real.hxx>
+#include <Standard_Boolean.hxx>
+#include <gp_Ax1.hxx>
+#include <gp_Ax2.hxx>
+#include <gp_Trsf.hxx>
+#include <gp_Dir.hxx>
+#include <gp_Trsf2d.hxx>
+#include <gp_Quaternion.hxx>
+#include <gp_Ax3.hxx>
+#include <gp_TrsfForm.hxx>
+#include <gp_Mat.hxx>
+#include <Standard_Integer.hxx>
+#include <gp_Pnt.hxx>
+#include <gp_Pnt.hxx>
+#include <gp_Vec.hxx>
+#include <gp_Dir.hxx>
+#include <gp_Ax1.hxx>
+#include <gp_Ax2.hxx>
+#include <gp_Ax3.hxx>
+#include <gp_Trsf.hxx>
 
 
 #ifdef WNT
@@ -1555,6 +1581,22 @@ static swig_module_info swig_module = {swig_types, 45, 0, 0, 0, 0};
 #include <MMgt_TShared.hxx>
 #include <Handle_Standard_Transient.hxx>
 #include <Handle_MMgt_TShared.hxx>
+#include <Standard_Real.hxx>
+#include <Standard_Integer.hxx>
+#include <Standard_Boolean.hxx>
+#include <Standard_CString.hxx>
+
+
+#include <stdlib.h>
+
+
+#include <string>
+
+
+#include <stdexcept>
+
+
+#include <stdio.h>
 
 
 #include <Standard_Failure.hxx>
@@ -1572,6 +1614,43 @@ static swig_module_info swig_module = {swig_types, 45, 0, 0, 0, 0};
         strcat(message, error_message);
         return message;
     }
+
+
+SWIGINTERN swig_type_info*
+SWIG_pchar_descriptor(void)
+{
+  static int init = 0;
+  static swig_type_info* info = 0;
+  if (!init) {
+    info = SWIG_TypeQuery("_p_char");
+    init = 1;
+  }
+  return info;
+}
+
+
+SWIGINTERNINLINE v8::Handle<v8::Value>
+SWIG_FromCharPtrAndSize(const char* carray, size_t size)
+{
+  if (carray) {
+    if (size > INT_MAX) {
+      // TODO: handle extra long strings
+      return SWIGV8_UNDEFINED();
+    } else {
+      v8::Handle<v8::String> js_str = SWIGV8_STRING_NEW2(carray, size);
+      return js_str;
+    }
+  } else {
+    return SWIGV8_UNDEFINED();
+  }
+}
+
+
+SWIGINTERNINLINE v8::Handle<v8::Value> 
+SWIG_FromCharPtr(const char *cptr)
+{ 
+  return SWIG_FromCharPtrAndSize(cptr, (cptr ? strlen(cptr) : 0));
+}
 
 
 #include <gp_Pnt.hxx>
@@ -1597,8 +1676,12 @@ static swig_module_info swig_module = {swig_types, 45, 0, 0, 0, 0};
 #include <Geom_Geometry.hxx>
 #include <Handle_Geom_Geometry.hxx>
 #include <gp_Cylinder.hxx>
+#include <gp_Pln.hxx>
 #include <gp_Circ.hxx>
 #include <GC_MakeCircle.hxx>
+#include <GC_MakeArcOfCircle.hxx>
+#include <GC_MakeSegment.hxx>
+#include <gp_Lin.hxx>
 #include <Geom_Surface.hxx>
 #include <Handle_Geom_Surface.hxx>
 #include <Geom_ElementarySurface.hxx>
@@ -1607,6 +1690,8 @@ static swig_module_info swig_module = {swig_types, 45, 0, 0, 0, 0};
 #include <Handle_Geom_SphericalSurface.hxx>
 #include <Geom_CylindricalSurface.hxx>
 #include <Handle_Geom_CylindricalSurface.hxx>
+#include <Geom_Plane.hxx>
+#include <Handle_Geom_Plane.hxx>
 #include <Geom_AxisPlacement.hxx>
 #include <Handle_Geom_AxisPlacement.hxx>
 #include <Geom_Axis1Placement.hxx>
@@ -1619,6 +1704,8 @@ static swig_module_info swig_module = {swig_types, 45, 0, 0, 0, 0};
 #include <Handle_Geom_Circle.hxx>
 #include <Geom_TrimmedCurve.hxx>
 #include <Handle_Geom_TrimmedCurve.hxx>
+#include <Geom_Line.hxx>
+#include <Handle_Geom_Line.hxx>
 #include <Geom_Geometry.hxx>
 #include <Handle_Geom_Geometry.hxx>
 #include <Geom_Surface.hxx>
@@ -1629,6 +1716,8 @@ static swig_module_info swig_module = {swig_types, 45, 0, 0, 0, 0};
 #include <Handle_Geom_SphericalSurface.hxx>
 #include <Geom_CylindricalSurface.hxx>
 #include <Handle_Geom_CylindricalSurface.hxx>
+#include <Geom_Plane.hxx>
+#include <Handle_Geom_Plane.hxx>
 #include <Geom_AxisPlacement.hxx>
 #include <Handle_Geom_AxisPlacement.hxx>
 #include <Geom_Axis1Placement.hxx>
@@ -1643,11 +1732,14 @@ static swig_module_info swig_module = {swig_types, 45, 0, 0, 0, 0};
 #include <Handle_Geom_Circle.hxx>
 #include <Geom_TrimmedCurve.hxx>
 #include <Handle_Geom_TrimmedCurve.hxx>
+#include <Geom_Line.hxx>
+#include <Handle_Geom_Line.hxx>
 #include <Handle_Geom_Geometry.hxx>
 #include <Handle_Geom_Surface.hxx>
 #include <Handle_Geom_ElementarySurface.hxx>
 #include <Handle_Geom_SphericalSurface.hxx>
 #include <Handle_Geom_CylindricalSurface.hxx>
+#include <Handle_Geom_Plane.hxx>
 #include <Handle_Geom_AxisPlacement.hxx>
 #include <Handle_Geom_Axis1Placement.hxx>
 #include <Handle_Geom_Curve.hxx>
@@ -1655,6 +1747,7 @@ static swig_module_info swig_module = {swig_types, 45, 0, 0, 0, 0};
 #include <Handle_Geom_BoundedCurve.hxx>
 #include <Handle_Geom_Circle.hxx>
 #include <Handle_Geom_TrimmedCurve.hxx>
+#include <Handle_Geom_Line.hxx>
 #include <MMgt_TShared.hxx>
 #include <Handle_MMgt_TShared.hxx>
 #include <Handle_MMgt_TShared.hxx>
@@ -1790,8 +1883,44 @@ int SWIG_AsVal_bool (v8::Handle<v8::Value> obj, bool *val)
   return SWIG_OK;
 }
 
+SWIGINTERN Handle_Geom_TrimmedCurve const Geom_TrimmedCurve_makeArcOfCircle__SWIG_0(gp_Circ const &Circ,Standard_Real const Alpha1,Standard_Real const Alpha2,Standard_Boolean const Sense){
+    GC_MakeArcOfCircle* obj = new GC_MakeArcOfCircle(Circ, Alpha1, Alpha2, Sense);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_TrimmedCurve const Geom_TrimmedCurve_makeArcOfCircle__SWIG_1(gp_Circ const &Circ,gp_Pnt const &P,Standard_Real const Alpha,Standard_Boolean const Sense){
+    GC_MakeArcOfCircle* obj = new GC_MakeArcOfCircle(Circ, P, Alpha, Sense);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_TrimmedCurve const Geom_TrimmedCurve_makeArcOfCircle__SWIG_2(gp_Circ const &Circ,gp_Pnt const &P1,gp_Pnt const &P2,Standard_Boolean const Sense){
+    GC_MakeArcOfCircle* obj = new GC_MakeArcOfCircle(Circ, P1, P2, Sense);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_TrimmedCurve const Geom_TrimmedCurve_makeArcOfCircle__SWIG_3(gp_Pnt const &P1,gp_Pnt const &P2,gp_Pnt const &P3){
+    GC_MakeArcOfCircle* obj = new GC_MakeArcOfCircle(P1, P2, P3);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_TrimmedCurve const Geom_TrimmedCurve_makeArcOfCircle__SWIG_4(gp_Pnt const &P1,gp_Vec const &V,gp_Pnt const &P2){
+    GC_MakeArcOfCircle* obj = new GC_MakeArcOfCircle(P1, V, P2);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_TrimmedCurve const Geom_TrimmedCurve_makeSegment__SWIG_0(gp_Pnt const &P1,gp_Pnt const &P2){
+    GC_MakeSegment* obj = new GC_MakeSegment(P1, P2);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_TrimmedCurve const Geom_TrimmedCurve_makeSegment__SWIG_1(gp_Lin const &Line,Standard_Real const U1,Standard_Real const U2){
+    GC_MakeSegment* obj = new GC_MakeSegment(Line, U1, U2);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_TrimmedCurve const Geom_TrimmedCurve_makeSegment__SWIG_2(gp_Lin const &Line,gp_Pnt const &Point,Standard_Real const Ulast){
+    GC_MakeSegment* obj = new GC_MakeSegment(Line, Point, Ulast);
+    return obj->Value();
+  }
+SWIGINTERN Handle_Geom_TrimmedCurve const Geom_TrimmedCurve_makeSegment__SWIG_3(gp_Lin const &Line,gp_Pnt const &P1,gp_Pnt const &P2){
+    GC_MakeSegment* obj = new GC_MakeSegment(Line, P1, P2);
+    return obj->Value();
+  }
 
-#define SWIGV8_INIT gp_initialize
+#define SWIGV8_INIT Geom_initialize
 
 
 SWIGV8_ClientData _exports_Standard_Transient_clientData;
@@ -1803,6 +1932,7 @@ SWIGV8_ClientData _exports_Surface_clientData;
 SWIGV8_ClientData _exports_ElementarySurface_clientData;
 SWIGV8_ClientData _exports_SphericalSurface_clientData;
 SWIGV8_ClientData _exports_CylindricalSurface_clientData;
+SWIGV8_ClientData _exports_Plane_clientData;
 SWIGV8_ClientData _exports_AxisPlacement_clientData;
 SWIGV8_ClientData _exports_Axis1Placement_clientData;
 SWIGV8_ClientData _exports_Curve_clientData;
@@ -1810,11 +1940,13 @@ SWIGV8_ClientData _exports_Conic_clientData;
 SWIGV8_ClientData _exports_BoundedCurve_clientData;
 SWIGV8_ClientData _exports_Circle_clientData;
 SWIGV8_ClientData _exports_TrimmedCurve_clientData;
+SWIGV8_ClientData _exports_Line_clientData;
 SWIGV8_ClientData _exports_Handle_Geometry_clientData;
 SWIGV8_ClientData _exports_Handle_Surface_clientData;
 SWIGV8_ClientData _exports_Handle_ElementarySurface_clientData;
 SWIGV8_ClientData _exports_Handle_SphericalSurface_clientData;
 SWIGV8_ClientData _exports_Handle_CylindricalSurface_clientData;
+SWIGV8_ClientData _exports_Handle_Plane_clientData;
 SWIGV8_ClientData _exports_Handle_AxisPlacement_clientData;
 SWIGV8_ClientData _exports_Handle_Axis1Placement_clientData;
 SWIGV8_ClientData _exports_Handle_Curve_clientData;
@@ -1822,6 +1954,26 @@ SWIGV8_ClientData _exports_Handle_Conic_clientData;
 SWIGV8_ClientData _exports_Handle_BoundedCurve_clientData;
 SWIGV8_ClientData _exports_Handle_Circle_clientData;
 SWIGV8_ClientData _exports_Handle_TrimmedCurve_clientData;
+SWIGV8_ClientData _exports_Handle_Line_clientData;
+
+
+static SwigV8ReturnValue _wrap_GetErrorMessage(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  char *result = 0 ;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_GetErrorMessage.");
+  
+  result = (char *)GetErrorMessage();
+  jsresult = SWIG_FromCharPtr((const char *)result);
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
 
 
 static SwigV8ReturnValue _wrap_new_Standard_Transient(const SwigV8Arguments &args) {
@@ -8905,6 +9057,1779 @@ static void _wrap_delete_CylindricalSurface(v8::Persistent<v8::Value> object, vo
       }
 
 
+static SwigV8ReturnValue _wrap_new_Plane__SWIG_0(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  gp_Ax3 *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  Geom_Plane *result;
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Plane__SWIG_0.");
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax3,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Plane" "', argument " "1"" of type '" "gp_Ax3 const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Plane" "', argument " "1"" of type '" "gp_Ax3 const &""'"); 
+  }
+  arg1 = (gp_Ax3 *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Geom_Plane *)new Geom_Plane((gp_Ax3 const &)*arg1);
+    // hacked
+    Handle_Geom_Plane *handle;
+    handle = (Handle_Geom_Plane *)new Handle_Geom_Plane((Geom_Plane const *)(result));
+    self->ToObject()->Set(
+      SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_Geom_Plane, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_new_Plane__SWIG_1(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  gp_Pln *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  Geom_Plane *result;
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Plane__SWIG_1.");
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pln,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Plane" "', argument " "1"" of type '" "gp_Pln const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Plane" "', argument " "1"" of type '" "gp_Pln const &""'"); 
+  }
+  arg1 = (gp_Pln *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Geom_Plane *)new Geom_Plane((gp_Pln const &)*arg1);
+    // hacked
+    Handle_Geom_Plane *handle;
+    handle = (Handle_Geom_Plane *)new Handle_Geom_Plane((Geom_Plane const *)(result));
+    self->ToObject()->Set(
+      SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_Geom_Plane, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_new_Plane__SWIG_2(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  gp_Pnt *arg1 = 0 ;
+  gp_Dir *arg2 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  Geom_Plane *result;
+  if(args.Length() != 2) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Plane__SWIG_2.");
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Plane" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Plane" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg1 = (gp_Pnt *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_gp_Dir,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "new_Plane" "', argument " "2"" of type '" "gp_Dir const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Plane" "', argument " "2"" of type '" "gp_Dir const &""'"); 
+  }
+  arg2 = (gp_Dir *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Geom_Plane *)new Geom_Plane((gp_Pnt const &)*arg1,(gp_Dir const &)*arg2);
+    // hacked
+    Handle_Geom_Plane *handle;
+    handle = (Handle_Geom_Plane *)new Handle_Geom_Plane((Geom_Plane const *)(result));
+    self->ToObject()->Set(
+      SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_Geom_Plane, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_new_Plane__SWIG_3(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  Standard_Real arg1 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  Standard_Real arg4 ;
+  double val1 ;
+  int ecode1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  double val4 ;
+  int ecode4 = 0 ;
+  Geom_Plane *result;
+  if(args.Length() != 4) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Plane__SWIG_3.");
+  ecode1 = SWIG_AsVal_double(args[0], &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_Plane" "', argument " "1"" of type '" "Standard_Real""'");
+  } 
+  arg1 = (Standard_Real)(val1);
+  ecode2 = SWIG_AsVal_double(args[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_Plane" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  ecode3 = SWIG_AsVal_double(args[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_Plane" "', argument " "3"" of type '" "Standard_Real""'");
+  } 
+  arg3 = (Standard_Real)(val3);
+  ecode4 = SWIG_AsVal_double(args[3], &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "new_Plane" "', argument " "4"" of type '" "Standard_Real""'");
+  } 
+  arg4 = (Standard_Real)(val4);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Geom_Plane *)new Geom_Plane(arg1,arg2,arg3,arg4);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_Geom_Plane, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_new_Plane(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  OverloadErrorHandler errorHandler;
+  v8::Handle<v8::Value> self;
+  
+  // switch all cases by means of series of if-returns.
+  
+  if(args.Length() == 1) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    self = _wrap_new_Plane__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(self);
+    }
+#else
+    _wrap_new_Plane__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  if(args.Length() == 1) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    self = _wrap_new_Plane__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(self);
+    }
+#else
+    _wrap_new_Plane__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  if(args.Length() == 2) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    self = _wrap_new_Plane__SWIG_2(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(self);
+    }
+#else
+    _wrap_new_Plane__SWIG_2(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  if(args.Length() == 4) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    self = _wrap_new_Plane__SWIG_3(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(self);
+    }
+#else
+    _wrap_new_Plane__SWIG_3(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  // default:
+  SWIG_exception_fail(SWIG_ERROR, "Illegal arguments for construction of _exports_Plane");
+  
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_setPln(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  gp_Pln *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_setPln.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_setPln" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  res2 = SWIG_ConvertPtr(args[0], &argp2, SWIGTYPE_p_gp_Pln,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Plane_setPln" "', argument " "2"" of type '" "gp_Pln const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_setPln" "', argument " "2"" of type '" "gp_Pln const &""'"); 
+  }
+  arg2 = (gp_Pln *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->SetPln((gp_Pln const &)*arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_pln(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  gp_Pln result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_pln.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_pln" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (arg1)->Pln();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_NewPointerObj((new gp_Pln((const gp_Pln&)(result))), SWIGTYPE_p_gp_Pln, SWIG_POINTER_OWN |  0 );
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_ureverse(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_ureverse.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_ureverse" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->UReverse();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_ureversedParameter(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  Standard_Real arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  Standard_Real result;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_ureversedParameter.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_ureversedParameter" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Plane_ureversedParameter" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Real)(arg1)->UReversedParameter(arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_From_double((double)(result));
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_vreverse(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_vreverse.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_vreverse" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->VReverse();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_vreversedParameter(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  Standard_Real arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  Standard_Real result;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_vreversedParameter.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_vreversedParameter" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Plane_vreversedParameter" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Real)(arg1)->VReversedParameter(arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_From_double((double)(result));
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_transformParameters(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  Standard_Real *arg2 = 0 ;
+  Standard_Real *arg3 = 0 ;
+  gp_Trsf *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Standard_Real argout12 ;
+  Standard_Real argout22 ;
+  gp_Trsf argout32 ;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_transformParameters.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_transformParameters" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  {
+    // argoutin
+    arg2 = &argout12;
+    arg3 = &argout22;
+    arg4 = &argout32;
+  }
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->TransformParameters(*arg2,*arg3,(gp_Trsf const &)*arg4);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  {
+    // argoutout
+    
+    v8::Handle<v8::Array> array = v8::Array::New(v8::Isolate::GetCurrent(), 4);
+    array->Set(0, SWIG_From_double(*arg2));
+    array->Set(1, SWIG_From_double(*arg3));
+    array->Set(2, SWIG_NewPointerObj((new gp_Trsf((const gp_Trsf&)arg4)), SWIGTYPE_p_gp_Trsf, SWIG_POINTER_OWN |  0 ));
+    jsresult = array;
+  }
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_parametricTransformation(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  gp_Trsf *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  gp_GTrsf2d result;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_parametricTransformation.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_parametricTransformation" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  res2 = SWIG_ConvertPtr(args[0], &argp2, SWIGTYPE_p_gp_Trsf,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Plane_parametricTransformation" "', argument " "2"" of type '" "gp_Trsf const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_parametricTransformation" "', argument " "2"" of type '" "gp_Trsf const &""'"); 
+  }
+  arg2 = (gp_Trsf *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (arg1)->ParametricTransformation((gp_Trsf const &)*arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_NewPointerObj((new gp_GTrsf2d((const gp_GTrsf2d&)(result))), SWIGTYPE_p_gp_GTrsf2d, SWIG_POINTER_OWN |  0 );
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_bounds(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  Standard_Real *arg2 = 0 ;
+  Standard_Real *arg3 = 0 ;
+  Standard_Real *arg4 = 0 ;
+  Standard_Real *arg5 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Standard_Real argout12 ;
+  Standard_Real argout22 ;
+  Standard_Real argout32 ;
+  Standard_Real argout42 ;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_bounds.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_bounds" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  {
+    // argoutin
+    arg2 = &argout12;
+    arg3 = &argout22;
+    arg4 = &argout32;
+    arg5 = &argout42;
+  }
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->Bounds(*arg2,*arg3,*arg4,*arg5);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  {
+    // argoutout
+    
+    v8::Handle<v8::Array> array = v8::Array::New(v8::Isolate::GetCurrent(), 4);
+    array->Set(0, SWIG_From_double(*arg2));
+    array->Set(1, SWIG_From_double(*arg3));
+    array->Set(2, SWIG_From_double(*arg4));
+    array->Set(3, SWIG_From_double(*arg5));
+    jsresult = array;
+  }
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_coefficients(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  Standard_Real *arg2 = 0 ;
+  Standard_Real *arg3 = 0 ;
+  Standard_Real *arg4 = 0 ;
+  Standard_Real *arg5 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Standard_Real argout12 ;
+  Standard_Real argout22 ;
+  Standard_Real argout32 ;
+  Standard_Real argout42 ;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_coefficients.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_coefficients" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  {
+    // argoutin
+    arg2 = &argout12;
+    arg3 = &argout22;
+    arg4 = &argout32;
+    arg5 = &argout42;
+  }
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->Coefficients(*arg2,*arg3,*arg4,*arg5);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  {
+    // argoutout
+    
+    v8::Handle<v8::Array> array = v8::Array::New(v8::Isolate::GetCurrent(), 4);
+    array->Set(0, SWIG_From_double(*arg2));
+    array->Set(1, SWIG_From_double(*arg3));
+    array->Set(2, SWIG_From_double(*arg4));
+    array->Set(3, SWIG_From_double(*arg5));
+    jsresult = array;
+  }
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_isUclosed(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Standard_Boolean result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_isUclosed.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_isUclosed" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Boolean)(arg1)->IsUClosed();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_From_bool((bool)(result));
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_isVclosed(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Standard_Boolean result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_isVclosed.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_isVclosed" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Boolean)(arg1)->IsVClosed();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_From_bool((bool)(result));
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_isUperiodic(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Standard_Boolean result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_isUperiodic.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_isUperiodic" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Boolean)(arg1)->IsUPeriodic();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_From_bool((bool)(result));
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_isVperiodic(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Standard_Boolean result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_isVperiodic.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_isVperiodic" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Boolean)(arg1)->IsVPeriodic();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_From_bool((bool)(result));
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_uiso(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  Standard_Real arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  Handle_Geom_Curve result;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_uiso.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_uiso" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Plane_uiso" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (arg1)->UIso(arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_Curve *handle = (Handle_Geom_Curve *)new Handle_Geom_Curve(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_viso(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  Standard_Real arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  Handle_Geom_Curve result;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_viso.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_viso" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Plane_viso" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (arg1)->VIso(arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_Curve *handle = (Handle_Geom_Curve *)new Handle_Geom_Curve(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_d0(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  gp_Pnt *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  
+  if(args.Length() != 3) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_d0.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_d0" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Plane_d0" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  ecode3 = SWIG_AsVal_double(args[1], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Plane_d0" "', argument " "3"" of type '" "Standard_Real""'");
+  } 
+  arg3 = (Standard_Real)(val3);
+  res4 = SWIG_ConvertPtr(args[2], &argp4, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "Plane_d0" "', argument " "4"" of type '" "gp_Pnt &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d0" "', argument " "4"" of type '" "gp_Pnt &""'"); 
+  }
+  arg4 = (gp_Pnt *)(argp4);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->D0(arg2,arg3,*arg4);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_d1(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  gp_Pnt *arg4 = 0 ;
+  gp_Vec *arg5 = 0 ;
+  gp_Vec *arg6 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  void *argp5 = 0 ;
+  int res5 = 0 ;
+  void *argp6 = 0 ;
+  int res6 = 0 ;
+  
+  if(args.Length() != 5) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_d1.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_d1" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Plane_d1" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  ecode3 = SWIG_AsVal_double(args[1], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Plane_d1" "', argument " "3"" of type '" "Standard_Real""'");
+  } 
+  arg3 = (Standard_Real)(val3);
+  res4 = SWIG_ConvertPtr(args[2], &argp4, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "Plane_d1" "', argument " "4"" of type '" "gp_Pnt &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d1" "', argument " "4"" of type '" "gp_Pnt &""'"); 
+  }
+  arg4 = (gp_Pnt *)(argp4);
+  res5 = SWIG_ConvertPtr(args[3], &argp5, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res5)) {
+    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "Plane_d1" "', argument " "5"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp5) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d1" "', argument " "5"" of type '" "gp_Vec &""'"); 
+  }
+  arg5 = (gp_Vec *)(argp5);
+  res6 = SWIG_ConvertPtr(args[4], &argp6, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res6)) {
+    SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "Plane_d1" "', argument " "6"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp6) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d1" "', argument " "6"" of type '" "gp_Vec &""'"); 
+  }
+  arg6 = (gp_Vec *)(argp6);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->D1(arg2,arg3,*arg4,*arg5,*arg6);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_d2(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  gp_Pnt *arg4 = 0 ;
+  gp_Vec *arg5 = 0 ;
+  gp_Vec *arg6 = 0 ;
+  gp_Vec *arg7 = 0 ;
+  gp_Vec *arg8 = 0 ;
+  gp_Vec *arg9 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  void *argp5 = 0 ;
+  int res5 = 0 ;
+  void *argp6 = 0 ;
+  int res6 = 0 ;
+  void *argp7 = 0 ;
+  int res7 = 0 ;
+  void *argp8 = 0 ;
+  int res8 = 0 ;
+  void *argp9 = 0 ;
+  int res9 = 0 ;
+  
+  if(args.Length() != 8) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_d2.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_d2" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Plane_d2" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  ecode3 = SWIG_AsVal_double(args[1], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Plane_d2" "', argument " "3"" of type '" "Standard_Real""'");
+  } 
+  arg3 = (Standard_Real)(val3);
+  res4 = SWIG_ConvertPtr(args[2], &argp4, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "Plane_d2" "', argument " "4"" of type '" "gp_Pnt &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d2" "', argument " "4"" of type '" "gp_Pnt &""'"); 
+  }
+  arg4 = (gp_Pnt *)(argp4);
+  res5 = SWIG_ConvertPtr(args[3], &argp5, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res5)) {
+    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "Plane_d2" "', argument " "5"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp5) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d2" "', argument " "5"" of type '" "gp_Vec &""'"); 
+  }
+  arg5 = (gp_Vec *)(argp5);
+  res6 = SWIG_ConvertPtr(args[4], &argp6, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res6)) {
+    SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "Plane_d2" "', argument " "6"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp6) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d2" "', argument " "6"" of type '" "gp_Vec &""'"); 
+  }
+  arg6 = (gp_Vec *)(argp6);
+  res7 = SWIG_ConvertPtr(args[5], &argp7, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res7)) {
+    SWIG_exception_fail(SWIG_ArgError(res7), "in method '" "Plane_d2" "', argument " "7"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp7) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d2" "', argument " "7"" of type '" "gp_Vec &""'"); 
+  }
+  arg7 = (gp_Vec *)(argp7);
+  res8 = SWIG_ConvertPtr(args[6], &argp8, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res8)) {
+    SWIG_exception_fail(SWIG_ArgError(res8), "in method '" "Plane_d2" "', argument " "8"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp8) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d2" "', argument " "8"" of type '" "gp_Vec &""'"); 
+  }
+  arg8 = (gp_Vec *)(argp8);
+  res9 = SWIG_ConvertPtr(args[7], &argp9, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res9)) {
+    SWIG_exception_fail(SWIG_ArgError(res9), "in method '" "Plane_d2" "', argument " "9"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp9) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d2" "', argument " "9"" of type '" "gp_Vec &""'"); 
+  }
+  arg9 = (gp_Vec *)(argp9);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->D2(arg2,arg3,*arg4,*arg5,*arg6,*arg7,*arg8,*arg9);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_d3(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  gp_Pnt *arg4 = 0 ;
+  gp_Vec *arg5 = 0 ;
+  gp_Vec *arg6 = 0 ;
+  gp_Vec *arg7 = 0 ;
+  gp_Vec *arg8 = 0 ;
+  gp_Vec *arg9 = 0 ;
+  gp_Vec *arg10 = 0 ;
+  gp_Vec *arg11 = 0 ;
+  gp_Vec *arg12 = 0 ;
+  gp_Vec *arg13 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  void *argp5 = 0 ;
+  int res5 = 0 ;
+  void *argp6 = 0 ;
+  int res6 = 0 ;
+  void *argp7 = 0 ;
+  int res7 = 0 ;
+  void *argp8 = 0 ;
+  int res8 = 0 ;
+  void *argp9 = 0 ;
+  int res9 = 0 ;
+  void *argp10 = 0 ;
+  int res10 = 0 ;
+  void *argp11 = 0 ;
+  int res11 = 0 ;
+  void *argp12 = 0 ;
+  int res12 = 0 ;
+  void *argp13 = 0 ;
+  int res13 = 0 ;
+  
+  if(args.Length() != 12) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_d3.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_d3" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Plane_d3" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  ecode3 = SWIG_AsVal_double(args[1], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Plane_d3" "', argument " "3"" of type '" "Standard_Real""'");
+  } 
+  arg3 = (Standard_Real)(val3);
+  res4 = SWIG_ConvertPtr(args[2], &argp4, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "Plane_d3" "', argument " "4"" of type '" "gp_Pnt &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d3" "', argument " "4"" of type '" "gp_Pnt &""'"); 
+  }
+  arg4 = (gp_Pnt *)(argp4);
+  res5 = SWIG_ConvertPtr(args[3], &argp5, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res5)) {
+    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "Plane_d3" "', argument " "5"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp5) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d3" "', argument " "5"" of type '" "gp_Vec &""'"); 
+  }
+  arg5 = (gp_Vec *)(argp5);
+  res6 = SWIG_ConvertPtr(args[4], &argp6, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res6)) {
+    SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "Plane_d3" "', argument " "6"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp6) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d3" "', argument " "6"" of type '" "gp_Vec &""'"); 
+  }
+  arg6 = (gp_Vec *)(argp6);
+  res7 = SWIG_ConvertPtr(args[5], &argp7, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res7)) {
+    SWIG_exception_fail(SWIG_ArgError(res7), "in method '" "Plane_d3" "', argument " "7"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp7) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d3" "', argument " "7"" of type '" "gp_Vec &""'"); 
+  }
+  arg7 = (gp_Vec *)(argp7);
+  res8 = SWIG_ConvertPtr(args[6], &argp8, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res8)) {
+    SWIG_exception_fail(SWIG_ArgError(res8), "in method '" "Plane_d3" "', argument " "8"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp8) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d3" "', argument " "8"" of type '" "gp_Vec &""'"); 
+  }
+  arg8 = (gp_Vec *)(argp8);
+  res9 = SWIG_ConvertPtr(args[7], &argp9, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res9)) {
+    SWIG_exception_fail(SWIG_ArgError(res9), "in method '" "Plane_d3" "', argument " "9"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp9) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d3" "', argument " "9"" of type '" "gp_Vec &""'"); 
+  }
+  arg9 = (gp_Vec *)(argp9);
+  res10 = SWIG_ConvertPtr(args[8], &argp10, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res10)) {
+    SWIG_exception_fail(SWIG_ArgError(res10), "in method '" "Plane_d3" "', argument " "10"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp10) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d3" "', argument " "10"" of type '" "gp_Vec &""'"); 
+  }
+  arg10 = (gp_Vec *)(argp10);
+  res11 = SWIG_ConvertPtr(args[9], &argp11, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res11)) {
+    SWIG_exception_fail(SWIG_ArgError(res11), "in method '" "Plane_d3" "', argument " "11"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp11) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d3" "', argument " "11"" of type '" "gp_Vec &""'"); 
+  }
+  arg11 = (gp_Vec *)(argp11);
+  res12 = SWIG_ConvertPtr(args[10], &argp12, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res12)) {
+    SWIG_exception_fail(SWIG_ArgError(res12), "in method '" "Plane_d3" "', argument " "12"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp12) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d3" "', argument " "12"" of type '" "gp_Vec &""'"); 
+  }
+  arg12 = (gp_Vec *)(argp12);
+  res13 = SWIG_ConvertPtr(args[11], &argp13, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res13)) {
+    SWIG_exception_fail(SWIG_ArgError(res13), "in method '" "Plane_d3" "', argument " "13"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp13) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_d3" "', argument " "13"" of type '" "gp_Vec &""'"); 
+  }
+  arg13 = (gp_Vec *)(argp13);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->D3(arg2,arg3,*arg4,*arg5,*arg6,*arg7,*arg8,*arg9,*arg10,*arg11,*arg12,*arg13);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_dn(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  Standard_Integer arg4 ;
+  Standard_Integer arg5 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  int val4 ;
+  int ecode4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  gp_Vec result;
+  
+  if(args.Length() != 4) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_dn.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_dn" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Plane_dn" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  ecode3 = SWIG_AsVal_double(args[1], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Plane_dn" "', argument " "3"" of type '" "Standard_Real""'");
+  } 
+  arg3 = (Standard_Real)(val3);
+  ecode4 = SWIG_AsVal_int(args[2], &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "Plane_dn" "', argument " "4"" of type '" "Standard_Integer""'");
+  } 
+  arg4 = (Standard_Integer)(val4);
+  ecode5 = SWIG_AsVal_int(args[3], &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "Plane_dn" "', argument " "5"" of type '" "Standard_Integer""'");
+  } 
+  arg5 = (Standard_Integer)(val5);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (arg1)->DN(arg2,arg3,arg4,arg5);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_NewPointerObj((new gp_Vec((const gp_Vec&)(result))), SWIGTYPE_p_gp_Vec, SWIG_POINTER_OWN |  0 );
+  
+  
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_transform(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  gp_Trsf *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_transform.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_transform" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  res2 = SWIG_ConvertPtr(args[0], &argp2, SWIGTYPE_p_gp_Trsf,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Plane_transform" "', argument " "2"" of type '" "gp_Trsf const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Plane_transform" "', argument " "2"" of type '" "gp_Trsf const &""'"); 
+  }
+  arg2 = (gp_Trsf *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->Transform((gp_Trsf const &)*arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_copy(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Handle_Geom_Geometry result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_copy.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_copy" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (arg1)->Copy();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_Geometry *handle = (Handle_Geom_Geometry *)new Handle_Geom_Geometry(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Plane_dynamicType(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Handle_Standard_Type result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Plane_dynamicType.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Plane_dynamicType" "', argument " "1"" of type '" "Geom_Plane *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (arg1)->DynamicType();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_NewPointerObj((new Handle_Standard_Type((const Handle_Standard_Type&)(result))), SWIGTYPE_p_Handle_Standard_Type, SWIG_POINTER_OWN |  0 );
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+static void _wrap_delete_Plane(v8::Persistent<v8::Value> object, void *parameter) {
+  SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+  static void _wrap_delete_Plane(v8::Isolate *isolate, v8::Persistent<v8::Value> object, void *parameter) {
+    SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+    static void _wrap_delete_Plane(v8::Isolate *isolate, v8::Persistent< v8::Object> *object, SWIGV8_Proxy *proxy) {
+#else
+      static void _wrap_delete_Plane(const v8::WeakCallbackData<v8::Object, SWIGV8_Proxy> &data) {
+        v8::Local<v8::Object> object = data.GetValue();
+        SWIGV8_Proxy *proxy = data.GetParameter();
+#endif
+        
+        if(proxy->swigCMemOwn && proxy->swigCObject) {
+          Geom_Plane * arg1 = (Geom_Plane *)proxy->swigCObject;
+          delete arg1;
+        }
+        delete proxy;
+        
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+        object.Dispose();
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+        object.Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x032100)
+        object->Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+        object->Dispose();
+#else
+        object.Clear();
+#endif
+      }
+
+
 static SwigV8ReturnValue _wrap_AxisPlacement_setAxis(const SwigV8Arguments &args) {
   SWIGV8_HANDLESCOPE();
   
@@ -14611,6 +16536,843 @@ fail:
 }
 
 
+static SwigV8ReturnValue _wrap_TrimmedCurve_makeArcOfCircle__SWIG_0(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Circ *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  Standard_Boolean arg4 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  bool val4 ;
+  int ecode4 = 0 ;
+  Handle_Geom_TrimmedCurve result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Circ,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "1"" of type '" "gp_Circ const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "1"" of type '" "gp_Circ const &""'"); 
+  }
+  arg1 = (gp_Circ *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  ecode3 = SWIG_AsVal_double(args[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "3"" of type '" "Standard_Real""'");
+  } 
+  arg3 = (Standard_Real)(val3);
+  ecode4 = SWIG_AsVal_bool(args[3], &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "4"" of type '" "Standard_Boolean""'");
+  } 
+  arg4 = (Standard_Boolean)(val4);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_TrimmedCurve_makeArcOfCircle__SWIG_0((gp_Circ const &)*arg1,arg2,arg3,arg4);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_TrimmedCurve *handle = (Handle_Geom_TrimmedCurve *)new Handle_Geom_TrimmedCurve(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_TrimmedCurve_makeArcOfCircle__SWIG_1(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Circ *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  Standard_Real arg3 ;
+  Standard_Boolean arg4 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  bool val4 ;
+  int ecode4 = 0 ;
+  Handle_Geom_TrimmedCurve result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Circ,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "1"" of type '" "gp_Circ const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "1"" of type '" "gp_Circ const &""'"); 
+  }
+  arg1 = (gp_Circ *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg2 = (gp_Pnt *)(argp2);
+  ecode3 = SWIG_AsVal_double(args[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "3"" of type '" "Standard_Real""'");
+  } 
+  arg3 = (Standard_Real)(val3);
+  ecode4 = SWIG_AsVal_bool(args[3], &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "4"" of type '" "Standard_Boolean""'");
+  } 
+  arg4 = (Standard_Boolean)(val4);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_TrimmedCurve_makeArcOfCircle__SWIG_1((gp_Circ const &)*arg1,(gp_Pnt const &)*arg2,arg3,arg4);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_TrimmedCurve *handle = (Handle_Geom_TrimmedCurve *)new Handle_Geom_TrimmedCurve(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_TrimmedCurve_makeArcOfCircle__SWIG_2(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Circ *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  gp_Pnt *arg3 = 0 ;
+  Standard_Boolean arg4 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  bool val4 ;
+  int ecode4 = 0 ;
+  Handle_Geom_TrimmedCurve result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Circ,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "1"" of type '" "gp_Circ const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "1"" of type '" "gp_Circ const &""'"); 
+  }
+  arg1 = (gp_Circ *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg2 = (gp_Pnt *)(argp2);
+  res3 = SWIG_ConvertPtr(args[2], &argp3, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "3"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "3"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg3 = (gp_Pnt *)(argp3);
+  ecode4 = SWIG_AsVal_bool(args[3], &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "4"" of type '" "Standard_Boolean""'");
+  } 
+  arg4 = (Standard_Boolean)(val4);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_TrimmedCurve_makeArcOfCircle__SWIG_2((gp_Circ const &)*arg1,(gp_Pnt const &)*arg2,(gp_Pnt const &)*arg3,arg4);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_TrimmedCurve *handle = (Handle_Geom_TrimmedCurve *)new Handle_Geom_TrimmedCurve(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_TrimmedCurve_makeArcOfCircle__SWIG_3(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Pnt *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  gp_Pnt *arg3 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  Handle_Geom_TrimmedCurve result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg1 = (gp_Pnt *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg2 = (gp_Pnt *)(argp2);
+  res3 = SWIG_ConvertPtr(args[2], &argp3, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "3"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "3"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg3 = (gp_Pnt *)(argp3);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_TrimmedCurve_makeArcOfCircle__SWIG_3((gp_Pnt const &)*arg1,(gp_Pnt const &)*arg2,(gp_Pnt const &)*arg3);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_TrimmedCurve *handle = (Handle_Geom_TrimmedCurve *)new Handle_Geom_TrimmedCurve(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_TrimmedCurve_makeArcOfCircle__SWIG_4(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Pnt *arg1 = 0 ;
+  gp_Vec *arg2 = 0 ;
+  gp_Pnt *arg3 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  Handle_Geom_TrimmedCurve result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg1 = (gp_Pnt *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "2"" of type '" "gp_Vec const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "2"" of type '" "gp_Vec const &""'"); 
+  }
+  arg2 = (gp_Vec *)(argp2);
+  res3 = SWIG_ConvertPtr(args[2], &argp3, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "3"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeArcOfCircle" "', argument " "3"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg3 = (gp_Pnt *)(argp3);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_TrimmedCurve_makeArcOfCircle__SWIG_4((gp_Pnt const &)*arg1,(gp_Vec const &)*arg2,(gp_Pnt const &)*arg3);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_TrimmedCurve *handle = (Handle_Geom_TrimmedCurve *)new Handle_Geom_TrimmedCurve(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_TrimmedCurve__wrap_TrimmedCurve_makeArcOfCircle(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  OverloadErrorHandler errorHandler;
+  
+  
+  if(args.Length() == 4) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_TrimmedCurve_makeArcOfCircle__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_TrimmedCurve_makeArcOfCircle__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 4) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_TrimmedCurve_makeArcOfCircle__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_TrimmedCurve_makeArcOfCircle__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 4) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_TrimmedCurve_makeArcOfCircle__SWIG_2(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_TrimmedCurve_makeArcOfCircle__SWIG_2(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 3) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_TrimmedCurve_makeArcOfCircle__SWIG_3(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_TrimmedCurve_makeArcOfCircle__SWIG_3(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 3) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_TrimmedCurve_makeArcOfCircle__SWIG_4(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_TrimmedCurve_makeArcOfCircle__SWIG_4(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  SWIG_exception_fail(SWIG_ERROR, "Illegal arguments for function makeArcOfCircle.");
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_TrimmedCurve_makeSegment__SWIG_0(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Pnt *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  Handle_Geom_TrimmedCurve result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TrimmedCurve_makeSegment" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeSegment" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg1 = (gp_Pnt *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TrimmedCurve_makeSegment" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeSegment" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg2 = (gp_Pnt *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_TrimmedCurve_makeSegment__SWIG_0((gp_Pnt const &)*arg1,(gp_Pnt const &)*arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_TrimmedCurve *handle = (Handle_Geom_TrimmedCurve *)new Handle_Geom_TrimmedCurve(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_TrimmedCurve_makeSegment__SWIG_1(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Lin *arg1 = 0 ;
+  Standard_Real arg2 ;
+  Standard_Real arg3 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  Handle_Geom_TrimmedCurve result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Lin,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TrimmedCurve_makeSegment" "', argument " "1"" of type '" "gp_Lin const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeSegment" "', argument " "1"" of type '" "gp_Lin const &""'"); 
+  }
+  arg1 = (gp_Lin *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[1], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TrimmedCurve_makeSegment" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  ecode3 = SWIG_AsVal_double(args[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TrimmedCurve_makeSegment" "', argument " "3"" of type '" "Standard_Real""'");
+  } 
+  arg3 = (Standard_Real)(val3);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_TrimmedCurve_makeSegment__SWIG_1((gp_Lin const &)*arg1,arg2,arg3);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_TrimmedCurve *handle = (Handle_Geom_TrimmedCurve *)new Handle_Geom_TrimmedCurve(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_TrimmedCurve_makeSegment__SWIG_2(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Lin *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  Standard_Real arg3 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  Handle_Geom_TrimmedCurve result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Lin,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TrimmedCurve_makeSegment" "', argument " "1"" of type '" "gp_Lin const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeSegment" "', argument " "1"" of type '" "gp_Lin const &""'"); 
+  }
+  arg1 = (gp_Lin *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TrimmedCurve_makeSegment" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeSegment" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg2 = (gp_Pnt *)(argp2);
+  ecode3 = SWIG_AsVal_double(args[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TrimmedCurve_makeSegment" "', argument " "3"" of type '" "Standard_Real""'");
+  } 
+  arg3 = (Standard_Real)(val3);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_TrimmedCurve_makeSegment__SWIG_2((gp_Lin const &)*arg1,(gp_Pnt const &)*arg2,arg3);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_TrimmedCurve *handle = (Handle_Geom_TrimmedCurve *)new Handle_Geom_TrimmedCurve(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_TrimmedCurve_makeSegment__SWIG_3(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  gp_Lin *arg1 = 0 ;
+  gp_Pnt *arg2 = 0 ;
+  gp_Pnt *arg3 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  Handle_Geom_TrimmedCurve result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Lin,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TrimmedCurve_makeSegment" "', argument " "1"" of type '" "gp_Lin const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeSegment" "', argument " "1"" of type '" "gp_Lin const &""'"); 
+  }
+  arg1 = (gp_Lin *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TrimmedCurve_makeSegment" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeSegment" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg2 = (gp_Pnt *)(argp2);
+  res3 = SWIG_ConvertPtr(args[2], &argp3, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "TrimmedCurve_makeSegment" "', argument " "3"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TrimmedCurve_makeSegment" "', argument " "3"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg3 = (gp_Pnt *)(argp3);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = Geom_TrimmedCurve_makeSegment__SWIG_3((gp_Lin const &)*arg1,(gp_Pnt const &)*arg2,(gp_Pnt const &)*arg3);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_TrimmedCurve *handle = (Handle_Geom_TrimmedCurve *)new Handle_Geom_TrimmedCurve(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_TrimmedCurve__wrap_TrimmedCurve_makeSegment(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  OverloadErrorHandler errorHandler;
+  
+  
+  if(args.Length() == 2) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_TrimmedCurve_makeSegment__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_TrimmedCurve_makeSegment__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 3) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_TrimmedCurve_makeSegment__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_TrimmedCurve_makeSegment__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 3) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_TrimmedCurve_makeSegment__SWIG_2(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_TrimmedCurve_makeSegment__SWIG_2(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 3) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_TrimmedCurve_makeSegment__SWIG_3(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_TrimmedCurve_makeSegment__SWIG_3(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  SWIG_exception_fail(SWIG_ERROR, "Illegal arguments for function makeSegment.");
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
 static void _wrap_delete_TrimmedCurve(v8::Persistent<v8::Value> object, void *parameter) {
   SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
@@ -14627,6 +17389,1475 @@ static void _wrap_delete_TrimmedCurve(v8::Persistent<v8::Value> object, void *pa
         
         if(proxy->swigCMemOwn && proxy->swigCObject) {
           Geom_TrimmedCurve * arg1 = (Geom_TrimmedCurve *)proxy->swigCObject;
+          delete arg1;
+        }
+        delete proxy;
+        
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+        object.Dispose();
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+        object.Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x032100)
+        object->Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+        object->Dispose();
+#else
+        object.Clear();
+#endif
+      }
+
+
+static SwigV8ReturnValue _wrap_new_Line__SWIG_0(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  gp_Ax1 *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  Geom_Line *result;
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Line__SWIG_0.");
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax1,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Line" "', argument " "1"" of type '" "gp_Ax1 const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Line" "', argument " "1"" of type '" "gp_Ax1 const &""'"); 
+  }
+  arg1 = (gp_Ax1 *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Geom_Line *)new Geom_Line((gp_Ax1 const &)*arg1);
+    // hacked
+    Handle_Geom_Line *handle;
+    handle = (Handle_Geom_Line *)new Handle_Geom_Line((Geom_Line const *)(result));
+    self->ToObject()->Set(
+      SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_Geom_Line, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_new_Line__SWIG_1(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  gp_Lin *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  Geom_Line *result;
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Line__SWIG_1.");
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Lin,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Line" "', argument " "1"" of type '" "gp_Lin const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Line" "', argument " "1"" of type '" "gp_Lin const &""'"); 
+  }
+  arg1 = (gp_Lin *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Geom_Line *)new Geom_Line((gp_Lin const &)*arg1);
+    // hacked
+    Handle_Geom_Line *handle;
+    handle = (Handle_Geom_Line *)new Handle_Geom_Line((Geom_Line const *)(result));
+    self->ToObject()->Set(
+      SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_Geom_Line, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_new_Line__SWIG_2(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  gp_Pnt *arg1 = 0 ;
+  gp_Dir *arg2 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  Geom_Line *result;
+  if(args.Length() != 2) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Line__SWIG_2.");
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Line" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Line" "', argument " "1"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg1 = (gp_Pnt *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_gp_Dir,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "new_Line" "', argument " "2"" of type '" "gp_Dir const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Line" "', argument " "2"" of type '" "gp_Dir const &""'"); 
+  }
+  arg2 = (gp_Dir *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Geom_Line *)new Geom_Line((gp_Pnt const &)*arg1,(gp_Dir const &)*arg2);
+    // hacked
+    Handle_Geom_Line *handle;
+    handle = (Handle_Geom_Line *)new Handle_Geom_Line((Geom_Line const *)(result));
+    self->ToObject()->Set(
+      SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_Geom_Line, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_new_Line(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  OverloadErrorHandler errorHandler;
+  v8::Handle<v8::Value> self;
+  
+  // switch all cases by means of series of if-returns.
+  
+  if(args.Length() == 1) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    self = _wrap_new_Line__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(self);
+    }
+#else
+    _wrap_new_Line__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  if(args.Length() == 1) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    self = _wrap_new_Line__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(self);
+    }
+#else
+    _wrap_new_Line__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  if(args.Length() == 2) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    self = _wrap_new_Line__SWIG_2(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(self);
+    }
+#else
+    _wrap_new_Line__SWIG_2(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  // default:
+  SWIG_exception_fail(SWIG_ERROR, "Illegal arguments for construction of _exports_Line");
+  
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_setLin(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  gp_Lin *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_setLin.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_setLin" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  res2 = SWIG_ConvertPtr(args[0], &argp2, SWIGTYPE_p_gp_Lin,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Line_setLin" "', argument " "2"" of type '" "gp_Lin const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_setLin" "', argument " "2"" of type '" "gp_Lin const &""'"); 
+  }
+  arg2 = (gp_Lin *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->SetLin((gp_Lin const &)*arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_setDirection(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  gp_Dir *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_setDirection.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_setDirection" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  res2 = SWIG_ConvertPtr(args[0], &argp2, SWIGTYPE_p_gp_Dir,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Line_setDirection" "', argument " "2"" of type '" "gp_Dir const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_setDirection" "', argument " "2"" of type '" "gp_Dir const &""'"); 
+  }
+  arg2 = (gp_Dir *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->SetDirection((gp_Dir const &)*arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_setLocation(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  gp_Pnt *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_setLocation.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_setLocation" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  res2 = SWIG_ConvertPtr(args[0], &argp2, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Line_setLocation" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_setLocation" "', argument " "2"" of type '" "gp_Pnt const &""'"); 
+  }
+  arg2 = (gp_Pnt *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->SetLocation((gp_Pnt const &)*arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_setPosition(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  gp_Ax1 *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_setPosition.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_setPosition" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  res2 = SWIG_ConvertPtr(args[0], &argp2, SWIGTYPE_p_gp_Ax1,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Line_setPosition" "', argument " "2"" of type '" "gp_Ax1 const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_setPosition" "', argument " "2"" of type '" "gp_Ax1 const &""'"); 
+  }
+  arg2 = (gp_Ax1 *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->SetPosition((gp_Ax1 const &)*arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_lin(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  gp_Lin result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_lin.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_lin" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (arg1)->Lin();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_NewPointerObj((new gp_Lin((const gp_Lin&)(result))), SWIGTYPE_p_gp_Lin, SWIG_POINTER_OWN |  0 );
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_position(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  gp_Ax1 result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_position.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_position" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (arg1)->Position();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_NewPointerObj((new gp_Ax1((const gp_Ax1&)(result))), SWIGTYPE_p_gp_Ax1, SWIG_POINTER_OWN |  0 );
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_reverse(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_reverse.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_reverse" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->Reverse();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_reversedParameter(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  Standard_Real arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  Standard_Real result;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_reversedParameter.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_reversedParameter" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Line_reversedParameter" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Real)(arg1)->ReversedParameter(arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_From_double((double)(result));
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_firstParameter(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Standard_Real result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_firstParameter.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_firstParameter" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Real)(arg1)->FirstParameter();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_From_double((double)(result));
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_lastParameter(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Standard_Real result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_lastParameter.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_lastParameter" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Real)(arg1)->LastParameter();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_From_double((double)(result));
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_isClosed(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Standard_Boolean result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_isClosed.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_isClosed" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Boolean)(arg1)->IsClosed();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_From_bool((bool)(result));
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_isPeriodic(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Standard_Boolean result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_isPeriodic.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_isPeriodic" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Boolean)(arg1)->IsPeriodic();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_From_bool((bool)(result));
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_continuity(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  GeomAbs_Shape result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_continuity.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_continuity" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (arg1)->Continuity();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_NewPointerObj((new GeomAbs_Shape((const GeomAbs_Shape&)(result))), SWIGTYPE_p_GeomAbs_Shape, SWIG_POINTER_OWN |  0 );
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_isCn(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  Standard_Integer arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  Standard_Boolean result;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_isCn.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_isCn" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  ecode2 = SWIG_AsVal_int(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Line_isCn" "', argument " "2"" of type '" "Standard_Integer""'");
+  } 
+  arg2 = (Standard_Integer)(val2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Boolean)(arg1)->IsCN(arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_From_bool((bool)(result));
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_d0(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  Standard_Real arg2 ;
+  gp_Pnt *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  
+  if(args.Length() != 2) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_d0.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_d0" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Line_d0" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  res3 = SWIG_ConvertPtr(args[1], &argp3, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Line_d0" "', argument " "3"" of type '" "gp_Pnt &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_d0" "', argument " "3"" of type '" "gp_Pnt &""'"); 
+  }
+  arg3 = (gp_Pnt *)(argp3);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->D0(arg2,*arg3);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_d1(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  Standard_Real arg2 ;
+  gp_Pnt *arg3 = 0 ;
+  gp_Vec *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  
+  if(args.Length() != 3) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_d1.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_d1" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Line_d1" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  res3 = SWIG_ConvertPtr(args[1], &argp3, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Line_d1" "', argument " "3"" of type '" "gp_Pnt &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_d1" "', argument " "3"" of type '" "gp_Pnt &""'"); 
+  }
+  arg3 = (gp_Pnt *)(argp3);
+  res4 = SWIG_ConvertPtr(args[2], &argp4, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "Line_d1" "', argument " "4"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_d1" "', argument " "4"" of type '" "gp_Vec &""'"); 
+  }
+  arg4 = (gp_Vec *)(argp4);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->D1(arg2,*arg3,*arg4);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_d2(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  Standard_Real arg2 ;
+  gp_Pnt *arg3 = 0 ;
+  gp_Vec *arg4 = 0 ;
+  gp_Vec *arg5 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  void *argp5 = 0 ;
+  int res5 = 0 ;
+  
+  if(args.Length() != 4) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_d2.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_d2" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Line_d2" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  res3 = SWIG_ConvertPtr(args[1], &argp3, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Line_d2" "', argument " "3"" of type '" "gp_Pnt &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_d2" "', argument " "3"" of type '" "gp_Pnt &""'"); 
+  }
+  arg3 = (gp_Pnt *)(argp3);
+  res4 = SWIG_ConvertPtr(args[2], &argp4, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "Line_d2" "', argument " "4"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_d2" "', argument " "4"" of type '" "gp_Vec &""'"); 
+  }
+  arg4 = (gp_Vec *)(argp4);
+  res5 = SWIG_ConvertPtr(args[3], &argp5, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res5)) {
+    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "Line_d2" "', argument " "5"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp5) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_d2" "', argument " "5"" of type '" "gp_Vec &""'"); 
+  }
+  arg5 = (gp_Vec *)(argp5);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->D2(arg2,*arg3,*arg4,*arg5);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_d3(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  Standard_Real arg2 ;
+  gp_Pnt *arg3 = 0 ;
+  gp_Vec *arg4 = 0 ;
+  gp_Vec *arg5 = 0 ;
+  gp_Vec *arg6 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  void *argp5 = 0 ;
+  int res5 = 0 ;
+  void *argp6 = 0 ;
+  int res6 = 0 ;
+  
+  if(args.Length() != 5) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_d3.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_d3" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Line_d3" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  res3 = SWIG_ConvertPtr(args[1], &argp3, SWIGTYPE_p_gp_Pnt,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Line_d3" "', argument " "3"" of type '" "gp_Pnt &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_d3" "', argument " "3"" of type '" "gp_Pnt &""'"); 
+  }
+  arg3 = (gp_Pnt *)(argp3);
+  res4 = SWIG_ConvertPtr(args[2], &argp4, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "Line_d3" "', argument " "4"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_d3" "', argument " "4"" of type '" "gp_Vec &""'"); 
+  }
+  arg4 = (gp_Vec *)(argp4);
+  res5 = SWIG_ConvertPtr(args[3], &argp5, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res5)) {
+    SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "Line_d3" "', argument " "5"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp5) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_d3" "', argument " "5"" of type '" "gp_Vec &""'"); 
+  }
+  arg5 = (gp_Vec *)(argp5);
+  res6 = SWIG_ConvertPtr(args[4], &argp6, SWIGTYPE_p_gp_Vec,  0 );
+  if (!SWIG_IsOK(res6)) {
+    SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "Line_d3" "', argument " "6"" of type '" "gp_Vec &""'"); 
+  }
+  if (!argp6) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_d3" "', argument " "6"" of type '" "gp_Vec &""'"); 
+  }
+  arg6 = (gp_Vec *)(argp6);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->D3(arg2,*arg3,*arg4,*arg5,*arg6);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_dn(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  Standard_Real arg2 ;
+  Standard_Integer arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  gp_Vec result;
+  
+  if(args.Length() != 2) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_dn.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_dn" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Line_dn" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  ecode3 = SWIG_AsVal_int(args[1], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Line_dn" "', argument " "3"" of type '" "Standard_Integer""'");
+  } 
+  arg3 = (Standard_Integer)(val3);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (arg1)->DN(arg2,arg3);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_NewPointerObj((new gp_Vec((const gp_Vec&)(result))), SWIGTYPE_p_gp_Vec, SWIG_POINTER_OWN |  0 );
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_transform(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  gp_Trsf *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_transform.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_transform" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  res2 = SWIG_ConvertPtr(args[0], &argp2, SWIGTYPE_p_gp_Trsf,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Line_transform" "', argument " "2"" of type '" "gp_Trsf const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_transform" "', argument " "2"" of type '" "gp_Trsf const &""'"); 
+  }
+  arg2 = (gp_Trsf *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      (arg1)->Transform((gp_Trsf const &)*arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIGV8_UNDEFINED();
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_transformedParameter(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  Standard_Real arg2 ;
+  gp_Trsf *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  double val2 ;
+  int ecode2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  Standard_Real result;
+  
+  if(args.Length() != 2) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_transformedParameter.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_transformedParameter" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  ecode2 = SWIG_AsVal_double(args[0], &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Line_transformedParameter" "', argument " "2"" of type '" "Standard_Real""'");
+  } 
+  arg2 = (Standard_Real)(val2);
+  res3 = SWIG_ConvertPtr(args[1], &argp3, SWIGTYPE_p_gp_Trsf,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Line_transformedParameter" "', argument " "3"" of type '" "gp_Trsf const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_transformedParameter" "', argument " "3"" of type '" "gp_Trsf const &""'"); 
+  }
+  arg3 = (gp_Trsf *)(argp3);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Real)(arg1)->TransformedParameter(arg2,(gp_Trsf const &)*arg3);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_From_double((double)(result));
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_parametricTransformation(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  gp_Trsf *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  Standard_Real result;
+  
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_parametricTransformation.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_parametricTransformation" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  res2 = SWIG_ConvertPtr(args[0], &argp2, SWIGTYPE_p_gp_Trsf,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Line_parametricTransformation" "', argument " "2"" of type '" "gp_Trsf const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Line_parametricTransformation" "', argument " "2"" of type '" "gp_Trsf const &""'"); 
+  }
+  arg2 = (gp_Trsf *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Real)(arg1)->ParametricTransformation((gp_Trsf const &)*arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_From_double((double)(result));
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_copy(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Handle_Geom_Geometry result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_copy.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_copy" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (arg1)->Copy();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  {
+    // lookup type
+    std::string name(result->DynamicType()->Name());
+    const std::string lookup_typename = name + " *";
+    swig_type_info * const outtype = SWIG_TypeQuery(lookup_typename.c_str());
+    jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), outtype, 0);
+    // attach handle
+    Handle_Geom_Geometry *handle = (Handle_Geom_Geometry *)new Handle_Geom_Geometry(result);
+    jsresult->ToObject()->Set(SWIGV8_SYMBOL_NEW("_handle"), SWIG_NewFunctionPtrObj(handle, SWIGTYPE_p_Handle_Standard_Transient));
+  }
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_Line_dynamicType(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Handle_Standard_Type result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Line_dynamicType.");
+  
+  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Line_dynamicType" "', argument " "1"" of type '" "Geom_Line *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (arg1)->DynamicType();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = SWIG_NewPointerObj((new Handle_Standard_Type((const Handle_Standard_Type&)(result))), SWIGTYPE_p_Handle_Standard_Type, SWIG_POINTER_OWN |  0 );
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+static void _wrap_delete_Line(v8::Persistent<v8::Value> object, void *parameter) {
+  SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+  static void _wrap_delete_Line(v8::Isolate *isolate, v8::Persistent<v8::Value> object, void *parameter) {
+    SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+    static void _wrap_delete_Line(v8::Isolate *isolate, v8::Persistent< v8::Object> *object, SWIGV8_Proxy *proxy) {
+#else
+      static void _wrap_delete_Line(const v8::WeakCallbackData<v8::Object, SWIGV8_Proxy> &data) {
+        v8::Local<v8::Object> object = data.GetValue();
+        SWIGV8_Proxy *proxy = data.GetParameter();
+#endif
+        
+        if(proxy->swigCMemOwn && proxy->swigCObject) {
+          Geom_Line * arg1 = (Geom_Line *)proxy->swigCObject;
           delete arg1;
         }
         delete proxy;
@@ -15377,6 +19608,156 @@ static void _wrap_delete_Handle_CylindricalSurface(v8::Persistent<v8::Value> obj
         
         if(proxy->swigCMemOwn && proxy->swigCObject) {
           Handle_Geom_CylindricalSurface * arg1 = (Handle_Geom_CylindricalSurface *)proxy->swigCObject;
+          delete arg1;
+        }
+        delete proxy;
+        
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+        object.Dispose();
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+        object.Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x032100)
+        object->Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+        object->Dispose();
+#else
+        object.Clear();
+#endif
+      }
+
+
+static SwigV8ReturnValue _wrap_new_Handle_Plane__SWIG_0(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  Handle_Geom_Plane *result;
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Handle_Plane__SWIG_0.");
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Handle_Geom_Plane *)new Handle_Geom_Plane();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_Handle_Geom_Plane, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_new_Handle_Plane__SWIG_1(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  Geom_Plane *arg1 = (Geom_Plane *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Handle_Geom_Plane *result;
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Handle_Plane__SWIG_1.");
+  res1 = SWIG_ConvertPtr(args[0], &argp1,SWIGTYPE_p_Geom_Plane, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Handle_Plane" "', argument " "1"" of type '" "Geom_Plane const *""'"); 
+  }
+  arg1 = (Geom_Plane *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Handle_Geom_Plane *)new Handle_Geom_Plane((Geom_Plane const *)arg1);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_Handle_Geom_Plane, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_new_Handle_Plane(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  OverloadErrorHandler errorHandler;
+  v8::Handle<v8::Value> self;
+  
+  // switch all cases by means of series of if-returns.
+  
+  if(args.Length() == 0) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    self = _wrap_new_Handle_Plane__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(self);
+    }
+#else
+    _wrap_new_Handle_Plane__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  if(args.Length() == 1) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    self = _wrap_new_Handle_Plane__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(self);
+    }
+#else
+    _wrap_new_Handle_Plane__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  // default:
+  SWIG_exception_fail(SWIG_ERROR, "Illegal arguments for construction of _exports_Handle_Plane");
+  
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+static void _wrap_delete_Handle_Plane(v8::Persistent<v8::Value> object, void *parameter) {
+  SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+  static void _wrap_delete_Handle_Plane(v8::Isolate *isolate, v8::Persistent<v8::Value> object, void *parameter) {
+    SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+    static void _wrap_delete_Handle_Plane(v8::Isolate *isolate, v8::Persistent< v8::Object> *object, SWIGV8_Proxy *proxy) {
+#else
+      static void _wrap_delete_Handle_Plane(const v8::WeakCallbackData<v8::Object, SWIGV8_Proxy> &data) {
+        v8::Local<v8::Object> object = data.GetValue();
+        SWIGV8_Proxy *proxy = data.GetParameter();
+#endif
+        
+        if(proxy->swigCMemOwn && proxy->swigCObject) {
+          Handle_Geom_Plane * arg1 = (Handle_Geom_Plane *)proxy->swigCObject;
           delete arg1;
         }
         delete proxy;
@@ -16445,79 +20826,241 @@ static void _wrap_delete_Handle_TrimmedCurve(v8::Persistent<v8::Value> object, v
       }
 
 
+static SwigV8ReturnValue _wrap_new_Handle_Line__SWIG_0(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  Handle_Geom_Line *result;
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Handle_Line__SWIG_0.");
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Handle_Geom_Line *)new Handle_Geom_Line();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_Handle_Geom_Line, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_new_Handle_Line__SWIG_1(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  Geom_Line *arg1 = (Geom_Line *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  Handle_Geom_Line *result;
+  if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Handle_Line__SWIG_1.");
+  res1 = SWIG_ConvertPtr(args[0], &argp1,SWIGTYPE_p_Geom_Line, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Handle_Line" "', argument " "1"" of type '" "Geom_Line const *""'"); 
+  }
+  arg1 = (Geom_Line *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Handle_Geom_Line *)new Handle_Geom_Line((Geom_Line const *)arg1);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_Handle_Geom_Line, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_new_Handle_Line(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  OverloadErrorHandler errorHandler;
+  v8::Handle<v8::Value> self;
+  
+  // switch all cases by means of series of if-returns.
+  
+  if(args.Length() == 0) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    self = _wrap_new_Handle_Line__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(self);
+    }
+#else
+    _wrap_new_Handle_Line__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  if(args.Length() == 1) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    self = _wrap_new_Handle_Line__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(self);
+    }
+#else
+    _wrap_new_Handle_Line__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  // default:
+  SWIG_exception_fail(SWIG_ERROR, "Illegal arguments for construction of _exports_Handle_Line");
+  
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+static void _wrap_delete_Handle_Line(v8::Persistent<v8::Value> object, void *parameter) {
+  SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+  static void _wrap_delete_Handle_Line(v8::Isolate *isolate, v8::Persistent<v8::Value> object, void *parameter) {
+    SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+    static void _wrap_delete_Handle_Line(v8::Isolate *isolate, v8::Persistent< v8::Object> *object, SWIGV8_Proxy *proxy) {
+#else
+      static void _wrap_delete_Handle_Line(const v8::WeakCallbackData<v8::Object, SWIGV8_Proxy> &data) {
+        v8::Local<v8::Object> object = data.GetValue();
+        SWIGV8_Proxy *proxy = data.GetParameter();
+#endif
+        
+        if(proxy->swigCMemOwn && proxy->swigCObject) {
+          Handle_Geom_Line * arg1 = (Handle_Geom_Line *)proxy->swigCObject;
+          delete arg1;
+        }
+        delete proxy;
+        
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+        object.Dispose();
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+        object.Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x032100)
+        object->Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+        object->Dispose();
+#else
+        object.Clear();
+#endif
+      }
+
+
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
-static void *_p_Handle_Geom_CurveTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *) ((Handle_Geom_Curve *) x));
-}
-static void *_p_Handle_Geom_SurfaceTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *) ((Handle_Geom_Surface *) x));
-}
-static void *_p_Handle_Geom_ElementarySurfaceTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_Surface *) ((Handle_Geom_ElementarySurface *) x));
-}
-static void *_p_Handle_Geom_SphericalSurfaceTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_Surface *)(Handle_Geom_ElementarySurface *) ((Handle_Geom_SphericalSurface *) x));
-}
-static void *_p_Handle_Geom_CylindricalSurfaceTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_Surface *)(Handle_Geom_ElementarySurface *) ((Handle_Geom_CylindricalSurface *) x));
-}
-static void *_p_Handle_Geom_AxisPlacementTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *) ((Handle_Geom_AxisPlacement *) x));
-}
-static void *_p_Handle_Geom_Axis1PlacementTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_AxisPlacement *) ((Handle_Geom_Axis1Placement *) x));
-}
 static void *_p_Handle_Geom_ConicTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_Curve *) ((Handle_Geom_Conic *) x));
 }
-static void *_p_Handle_Geom_GeometryTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_MMgt_TShared *)  ((Handle_Geom_Geometry *) x));
-}
-static void *_p_Handle_Geom_BoundedCurveTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_Curve *) ((Handle_Geom_BoundedCurve *) x));
+static void *_p_Handle_Geom_PlaneTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_Surface *)(Handle_Geom_ElementarySurface *) ((Handle_Geom_Plane *) x));
 }
 static void *_p_Handle_Geom_TrimmedCurveTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_Curve *)(Handle_Geom_BoundedCurve *) ((Handle_Geom_TrimmedCurve *) x));
 }
+static void *_p_Handle_Geom_BoundedCurveTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_Curve *) ((Handle_Geom_BoundedCurve *) x));
+}
+static void *_p_Handle_Geom_Axis1PlacementTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_AxisPlacement *) ((Handle_Geom_Axis1Placement *) x));
+}
+static void *_p_Handle_Geom_AxisPlacementTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *) ((Handle_Geom_AxisPlacement *) x));
+}
+static void *_p_Handle_Geom_CurveTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *) ((Handle_Geom_Curve *) x));
+}
 static void *_p_Handle_Geom_CircleTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_Curve *)(Handle_Geom_Conic *) ((Handle_Geom_Circle *) x));
 }
-static void *_p_Geom_CurveTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((MMgt_TShared *) (Geom_Geometry *) ((Geom_Curve *) x));
+static void *_p_Handle_Geom_GeometryTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_MMgt_TShared *)  ((Handle_Geom_Geometry *) x));
 }
-static void *_p_Geom_SurfaceTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((MMgt_TShared *) (Geom_Geometry *) ((Geom_Surface *) x));
+static void *_p_Handle_Geom_CylindricalSurfaceTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_Surface *)(Handle_Geom_ElementarySurface *) ((Handle_Geom_CylindricalSurface *) x));
 }
-static void *_p_Geom_ElementarySurfaceTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_Surface *) ((Geom_ElementarySurface *) x));
+static void *_p_Handle_Geom_SphericalSurfaceTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_Surface *)(Handle_Geom_ElementarySurface *) ((Handle_Geom_SphericalSurface *) x));
 }
-static void *_p_Geom_SphericalSurfaceTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_Surface *)(Geom_ElementarySurface *) ((Geom_SphericalSurface *) x));
+static void *_p_Handle_Geom_ElementarySurfaceTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_Surface *) ((Handle_Geom_ElementarySurface *) x));
 }
-static void *_p_Geom_CylindricalSurfaceTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_Surface *)(Geom_ElementarySurface *) ((Geom_CylindricalSurface *) x));
+static void *_p_Handle_Geom_SurfaceTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *) ((Handle_Geom_Surface *) x));
 }
-static void *_p_Geom_AxisPlacementTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((MMgt_TShared *) (Geom_Geometry *) ((Geom_AxisPlacement *) x));
-}
-static void *_p_Geom_Axis1PlacementTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_AxisPlacement *) ((Geom_Axis1Placement *) x));
+static void *_p_Handle_Geom_LineTo_p_Handle_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_MMgt_TShared *) (Handle_Geom_Geometry *)(Handle_Geom_Curve *) ((Handle_Geom_Line *) x));
 }
 static void *_p_Geom_ConicTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_Curve *) ((Geom_Conic *) x));
 }
-static void *_p_Geom_GeometryTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((MMgt_TShared *)  ((Geom_Geometry *) x));
-}
-static void *_p_Geom_BoundedCurveTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_Curve *) ((Geom_BoundedCurve *) x));
+static void *_p_Geom_PlaneTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_Surface *)(Geom_ElementarySurface *) ((Geom_Plane *) x));
 }
 static void *_p_Geom_TrimmedCurveTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_Curve *)(Geom_BoundedCurve *) ((Geom_TrimmedCurve *) x));
 }
+static void *_p_Geom_BoundedCurveTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_Curve *) ((Geom_BoundedCurve *) x));
+}
+static void *_p_Geom_Axis1PlacementTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_AxisPlacement *) ((Geom_Axis1Placement *) x));
+}
+static void *_p_Geom_AxisPlacementTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((MMgt_TShared *) (Geom_Geometry *) ((Geom_AxisPlacement *) x));
+}
+static void *_p_Geom_CurveTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((MMgt_TShared *) (Geom_Geometry *) ((Geom_Curve *) x));
+}
 static void *_p_Geom_CircleTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_Curve *)(Geom_Conic *) ((Geom_Circle *) x));
+}
+static void *_p_Geom_GeometryTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((MMgt_TShared *)  ((Geom_Geometry *) x));
+}
+static void *_p_Geom_CylindricalSurfaceTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_Surface *)(Geom_ElementarySurface *) ((Geom_CylindricalSurface *) x));
+}
+static void *_p_Geom_SphericalSurfaceTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_Surface *)(Geom_ElementarySurface *) ((Geom_SphericalSurface *) x));
+}
+static void *_p_Geom_ElementarySurfaceTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_Surface *) ((Geom_ElementarySurface *) x));
+}
+static void *_p_Geom_SurfaceTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((MMgt_TShared *) (Geom_Geometry *) ((Geom_Surface *) x));
+}
+static void *_p_Geom_LineTo_p_MMgt_TShared(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((MMgt_TShared *) (Geom_Geometry *)(Geom_Curve *) ((Geom_Line *) x));
 }
 static void *_p_Handle_Geom_Axis1PlacementTo_p_Handle_Geom_AxisPlacement(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_Geom_AxisPlacement *)  ((Handle_Geom_Axis1Placement *) x));
@@ -16531,6 +21074,9 @@ static void *_p_Handle_Geom_SphericalSurfaceTo_p_Handle_Geom_ElementarySurface(v
 static void *_p_Handle_Geom_CylindricalSurfaceTo_p_Handle_Geom_ElementarySurface(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_Geom_ElementarySurface *)  ((Handle_Geom_CylindricalSurface *) x));
 }
+static void *_p_Handle_Geom_PlaneTo_p_Handle_Geom_ElementarySurface(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Geom_ElementarySurface *)  ((Handle_Geom_Plane *) x));
+}
 static void *_p_Handle_Geom_ElementarySurfaceTo_p_Handle_Geom_Surface(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_Geom_Surface *)  ((Handle_Geom_ElementarySurface *) x));
 }
@@ -16540,11 +21086,17 @@ static void *_p_Handle_Geom_SphericalSurfaceTo_p_Handle_Geom_Surface(void *x, in
 static void *_p_Handle_Geom_CylindricalSurfaceTo_p_Handle_Geom_Surface(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_Geom_Surface *) (Handle_Geom_ElementarySurface *) ((Handle_Geom_CylindricalSurface *) x));
 }
+static void *_p_Handle_Geom_PlaneTo_p_Handle_Geom_Surface(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Geom_Surface *) (Handle_Geom_ElementarySurface *) ((Handle_Geom_Plane *) x));
+}
 static void *_p_Geom_SphericalSurfaceTo_p_Geom_ElementarySurface(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Geom_ElementarySurface *)  ((Geom_SphericalSurface *) x));
 }
 static void *_p_Geom_CylindricalSurfaceTo_p_Geom_ElementarySurface(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Geom_ElementarySurface *)  ((Geom_CylindricalSurface *) x));
+}
+static void *_p_Geom_PlaneTo_p_Geom_ElementarySurface(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Geom_ElementarySurface *)  ((Geom_Plane *) x));
 }
 static void *_p_Geom_ElementarySurfaceTo_p_Geom_Surface(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Geom_Surface *)  ((Geom_ElementarySurface *) x));
@@ -16554,6 +21106,12 @@ static void *_p_Geom_SphericalSurfaceTo_p_Geom_Surface(void *x, int *SWIGUNUSEDP
 }
 static void *_p_Geom_CylindricalSurfaceTo_p_Geom_Surface(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Geom_Surface *) (Geom_ElementarySurface *) ((Geom_CylindricalSurface *) x));
+}
+static void *_p_Geom_PlaneTo_p_Geom_Surface(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Geom_Surface *) (Geom_ElementarySurface *) ((Geom_Plane *) x));
+}
+static void *_p_Handle_Geom_LineTo_p_Handle_Geom_Curve(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Geom_Curve *)  ((Handle_Geom_Line *) x));
 }
 static void *_p_Handle_Geom_ConicTo_p_Handle_Geom_Curve(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_Geom_Curve *)  ((Handle_Geom_Conic *) x));
@@ -16566,6 +21124,9 @@ static void *_p_Handle_Geom_TrimmedCurveTo_p_Handle_Geom_Curve(void *x, int *SWI
 }
 static void *_p_Handle_Geom_CircleTo_p_Handle_Geom_Curve(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_Geom_Curve *) (Handle_Geom_Conic *) ((Handle_Geom_Circle *) x));
+}
+static void *_p_Geom_LineTo_p_Geom_Curve(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Geom_Curve *)  ((Geom_Line *) x));
 }
 static void *_p_Geom_ConicTo_p_Geom_Curve(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Geom_Curve *)  ((Geom_Conic *) x));
@@ -16581,6 +21142,9 @@ static void *_p_Geom_CircleTo_p_Geom_Curve(void *x, int *SWIGUNUSEDPARM(newmemor
 }
 static void *_p_Handle_Geom_CurveTo_p_Handle_Geom_Geometry(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_Geom_Geometry *)  ((Handle_Geom_Curve *) x));
+}
+static void *_p_Handle_Geom_LineTo_p_Handle_Geom_Geometry(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Geom_Geometry *) (Handle_Geom_Curve *) ((Handle_Geom_Line *) x));
 }
 static void *_p_Handle_Geom_SurfaceTo_p_Handle_Geom_Geometry(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_Geom_Geometry *)  ((Handle_Geom_Surface *) x));
@@ -16612,8 +21176,14 @@ static void *_p_Handle_Geom_TrimmedCurveTo_p_Handle_Geom_Geometry(void *x, int *
 static void *_p_Handle_Geom_CircleTo_p_Handle_Geom_Geometry(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_Geom_Geometry *) (Handle_Geom_Curve *)(Handle_Geom_Conic *) ((Handle_Geom_Circle *) x));
 }
+static void *_p_Handle_Geom_PlaneTo_p_Handle_Geom_Geometry(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Geom_Geometry *) (Handle_Geom_Surface *)(Handle_Geom_ElementarySurface *) ((Handle_Geom_Plane *) x));
+}
 static void *_p_Geom_CurveTo_p_Geom_Geometry(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Geom_Geometry *)  ((Geom_Curve *) x));
+}
+static void *_p_Geom_LineTo_p_Geom_Geometry(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Geom_Geometry *) (Geom_Curve *) ((Geom_Line *) x));
 }
 static void *_p_Geom_SurfaceTo_p_Geom_Geometry(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Geom_Geometry *)  ((Geom_Surface *) x));
@@ -16645,89 +21215,104 @@ static void *_p_Geom_TrimmedCurveTo_p_Geom_Geometry(void *x, int *SWIGUNUSEDPARM
 static void *_p_Geom_CircleTo_p_Geom_Geometry(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Geom_Geometry *) (Geom_Curve *)(Geom_Conic *) ((Geom_Circle *) x));
 }
+static void *_p_Geom_PlaneTo_p_Geom_Geometry(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Geom_Geometry *) (Geom_Surface *)(Geom_ElementarySurface *) ((Geom_Plane *) x));
+}
 static void *_p_Geom_CircleTo_p_Geom_Conic(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Geom_Conic *)  ((Geom_Circle *) x));
 }
 static void *_p_Handle_Geom_CircleTo_p_Handle_Geom_Conic(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_Geom_Conic *)  ((Handle_Geom_Circle *) x));
 }
-static void *_p_Handle_Geom_CurveTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *) ((Handle_Geom_Curve *) x));
+static void *_p_Handle_Geom_ConicTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_Curve *) ((Handle_Geom_Conic *) x));
+}
+static void *_p_Handle_Geom_PlaneTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_Surface *)(Handle_Geom_ElementarySurface *) ((Handle_Geom_Plane *) x));
 }
 static void *_p_Handle_MMgt_TSharedTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_Standard_Transient *)  ((Handle_MMgt_TShared *) x));
 }
-static void *_p_Handle_Geom_SurfaceTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *) ((Handle_Geom_Surface *) x));
-}
-static void *_p_Handle_Geom_ElementarySurfaceTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_Surface *) ((Handle_Geom_ElementarySurface *) x));
-}
-static void *_p_Handle_Geom_SphericalSurfaceTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_Surface *)(Handle_Geom_ElementarySurface *) ((Handle_Geom_SphericalSurface *) x));
-}
-static void *_p_Handle_Geom_CylindricalSurfaceTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_Surface *)(Handle_Geom_ElementarySurface *) ((Handle_Geom_CylindricalSurface *) x));
-}
-static void *_p_Handle_Geom_AxisPlacementTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *) ((Handle_Geom_AxisPlacement *) x));
-}
-static void *_p_Handle_Geom_Axis1PlacementTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_AxisPlacement *) ((Handle_Geom_Axis1Placement *) x));
-}
-static void *_p_Handle_Geom_ConicTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_Curve *) ((Handle_Geom_Conic *) x));
-}
-static void *_p_Handle_Geom_GeometryTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *) ((Handle_Geom_Geometry *) x));
+static void *_p_Handle_Geom_TrimmedCurveTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_Curve *)(Handle_Geom_BoundedCurve *) ((Handle_Geom_TrimmedCurve *) x));
 }
 static void *_p_Handle_Geom_BoundedCurveTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_Curve *) ((Handle_Geom_BoundedCurve *) x));
 }
-static void *_p_Handle_Geom_TrimmedCurveTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_Curve *)(Handle_Geom_BoundedCurve *) ((Handle_Geom_TrimmedCurve *) x));
+static void *_p_Handle_Geom_Axis1PlacementTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_AxisPlacement *) ((Handle_Geom_Axis1Placement *) x));
+}
+static void *_p_Handle_Geom_AxisPlacementTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *) ((Handle_Geom_AxisPlacement *) x));
+}
+static void *_p_Handle_Geom_CurveTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *) ((Handle_Geom_Curve *) x));
 }
 static void *_p_Handle_Geom_CircleTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_Curve *)(Handle_Geom_Conic *) ((Handle_Geom_Circle *) x));
 }
-static void *_p_Geom_CurveTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *) ((Geom_Curve *) x));
+static void *_p_Handle_Geom_GeometryTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *) ((Handle_Geom_Geometry *) x));
 }
-static void *_p_MMgt_TSharedTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Standard_Transient *)  ((MMgt_TShared *) x));
+static void *_p_Handle_Geom_CylindricalSurfaceTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_Surface *)(Handle_Geom_ElementarySurface *) ((Handle_Geom_CylindricalSurface *) x));
 }
-static void *_p_Geom_SurfaceTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *) ((Geom_Surface *) x));
+static void *_p_Handle_Geom_SphericalSurfaceTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_Surface *)(Handle_Geom_ElementarySurface *) ((Handle_Geom_SphericalSurface *) x));
 }
-static void *_p_Geom_ElementarySurfaceTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_Surface *) ((Geom_ElementarySurface *) x));
+static void *_p_Handle_Geom_ElementarySurfaceTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_Surface *) ((Handle_Geom_ElementarySurface *) x));
 }
-static void *_p_Geom_SphericalSurfaceTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_Surface *)(Geom_ElementarySurface *) ((Geom_SphericalSurface *) x));
+static void *_p_Handle_Geom_SurfaceTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *) ((Handle_Geom_Surface *) x));
 }
-static void *_p_Geom_CylindricalSurfaceTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_Surface *)(Geom_ElementarySurface *) ((Geom_CylindricalSurface *) x));
-}
-static void *_p_Geom_AxisPlacementTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *) ((Geom_AxisPlacement *) x));
-}
-static void *_p_Geom_Axis1PlacementTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_AxisPlacement *) ((Geom_Axis1Placement *) x));
+static void *_p_Handle_Geom_LineTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Standard_Transient *) (Handle_MMgt_TShared *)(Handle_Geom_Geometry *)(Handle_Geom_Curve *) ((Handle_Geom_Line *) x));
 }
 static void *_p_Geom_ConicTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_Curve *) ((Geom_Conic *) x));
 }
-static void *_p_Geom_GeometryTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Standard_Transient *) (MMgt_TShared *) ((Geom_Geometry *) x));
+static void *_p_Geom_PlaneTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_Surface *)(Geom_ElementarySurface *) ((Geom_Plane *) x));
 }
-static void *_p_Geom_BoundedCurveTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_Curve *) ((Geom_BoundedCurve *) x));
+static void *_p_MMgt_TSharedTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Standard_Transient *)  ((MMgt_TShared *) x));
 }
 static void *_p_Geom_TrimmedCurveTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_Curve *)(Geom_BoundedCurve *) ((Geom_TrimmedCurve *) x));
 }
+static void *_p_Geom_BoundedCurveTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_Curve *) ((Geom_BoundedCurve *) x));
+}
+static void *_p_Geom_Axis1PlacementTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_AxisPlacement *) ((Geom_Axis1Placement *) x));
+}
+static void *_p_Geom_AxisPlacementTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *) ((Geom_AxisPlacement *) x));
+}
+static void *_p_Geom_CurveTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *) ((Geom_Curve *) x));
+}
 static void *_p_Geom_CircleTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_Curve *)(Geom_Conic *) ((Geom_Circle *) x));
+}
+static void *_p_Geom_GeometryTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Standard_Transient *) (MMgt_TShared *) ((Geom_Geometry *) x));
+}
+static void *_p_Geom_CylindricalSurfaceTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_Surface *)(Geom_ElementarySurface *) ((Geom_CylindricalSurface *) x));
+}
+static void *_p_Geom_SphericalSurfaceTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_Surface *)(Geom_ElementarySurface *) ((Geom_SphericalSurface *) x));
+}
+static void *_p_Geom_ElementarySurfaceTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_Surface *) ((Geom_ElementarySurface *) x));
+}
+static void *_p_Geom_SurfaceTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *) ((Geom_Surface *) x));
+}
+static void *_p_Geom_LineTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Standard_Transient *) (MMgt_TShared *)(Geom_Geometry *)(Geom_Curve *) ((Geom_Line *) x));
 }
 static void *_p_Geom_TrimmedCurveTo_p_Geom_BoundedCurve(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Geom_BoundedCurve *)  ((Geom_TrimmedCurve *) x));
@@ -16745,6 +21330,8 @@ static swig_type_info _swigt__p_Geom_Curve = {"_p_Geom_Curve", "Geom_Curve *|p_G
 static swig_type_info _swigt__p_Geom_CylindricalSurface = {"_p_Geom_CylindricalSurface", "p_Geom_CylindricalSurface|Geom_CylindricalSurface *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Geom_ElementarySurface = {"_p_Geom_ElementarySurface", "p_Geom_ElementarySurface|Geom_ElementarySurface *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Geom_Geometry = {"_p_Geom_Geometry", "p_Geom_Geometry|Geom_Geometry *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Geom_Line = {"_p_Geom_Line", "p_Geom_Line|Geom_Line *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Geom_Plane = {"_p_Geom_Plane", "Geom_Plane *|p_Geom_Plane", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Geom_SphericalSurface = {"_p_Geom_SphericalSurface", "p_Geom_SphericalSurface|Geom_SphericalSurface *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Geom_Surface = {"_p_Geom_Surface", "p_Geom_Surface|Geom_Surface *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Geom_TrimmedCurve = {"_p_Geom_TrimmedCurve", "Geom_TrimmedCurve *|p_Geom_TrimmedCurve", 0, 0, (void*)0, 0};
@@ -16757,6 +21344,8 @@ static swig_type_info _swigt__p_Handle_Geom_Curve = {"_p_Handle_Geom_Curve", "Ha
 static swig_type_info _swigt__p_Handle_Geom_CylindricalSurface = {"_p_Handle_Geom_CylindricalSurface", "p_Handle_Geom_CylindricalSurface", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Handle_Geom_ElementarySurface = {"_p_Handle_Geom_ElementarySurface", "p_Handle_Geom_ElementarySurface|Handle_Geom_ElementarySurface *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Handle_Geom_Geometry = {"_p_Handle_Geom_Geometry", "p_Handle_Geom_Geometry|Handle_Geom_Geometry *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Handle_Geom_Line = {"_p_Handle_Geom_Line", "p_Handle_Geom_Line", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Handle_Geom_Plane = {"_p_Handle_Geom_Plane", "p_Handle_Geom_Plane", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Handle_Geom_SphericalSurface = {"_p_Handle_Geom_SphericalSurface", "p_Handle_Geom_SphericalSurface", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Handle_Geom_Surface = {"_p_Handle_Geom_Surface", "p_Handle_Geom_Surface|Handle_Geom_Surface *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Handle_Geom_TrimmedCurve = {"_p_Handle_Geom_TrimmedCurve", "p_Handle_Geom_TrimmedCurve", 0, 0, (void*)0, 0};
@@ -16775,6 +21364,8 @@ static swig_type_info _swigt__p_gp_Circ = {"_p_gp_Circ", "gp_Circ *", 0, 0, (voi
 static swig_type_info _swigt__p_gp_Cylinder = {"_p_gp_Cylinder", "gp_Cylinder *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_gp_Dir = {"_p_gp_Dir", "gp_Dir *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_gp_GTrsf2d = {"_p_gp_GTrsf2d", "gp_GTrsf2d *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_gp_Lin = {"_p_gp_Lin", "gp_Lin *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_gp_Pln = {"_p_gp_Pln", "gp_Pln *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_gp_Pnt = {"_p_gp_Pnt", "gp_Pnt *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_gp_Sphere = {"_p_gp_Sphere", "gp_Sphere *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_gp_Trsf = {"_p_gp_Trsf", "gp_Trsf *", 0, 0, (void*)0, 0};
@@ -16792,6 +21383,8 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Geom_CylindricalSurface,
   &_swigt__p_Geom_ElementarySurface,
   &_swigt__p_Geom_Geometry,
+  &_swigt__p_Geom_Line,
+  &_swigt__p_Geom_Plane,
   &_swigt__p_Geom_SphericalSurface,
   &_swigt__p_Geom_Surface,
   &_swigt__p_Geom_TrimmedCurve,
@@ -16804,6 +21397,8 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Handle_Geom_CylindricalSurface,
   &_swigt__p_Handle_Geom_ElementarySurface,
   &_swigt__p_Handle_Geom_Geometry,
+  &_swigt__p_Handle_Geom_Line,
+  &_swigt__p_Handle_Geom_Plane,
   &_swigt__p_Handle_Geom_SphericalSurface,
   &_swigt__p_Handle_Geom_Surface,
   &_swigt__p_Handle_Geom_TrimmedCurve,
@@ -16822,6 +21417,8 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_gp_Cylinder,
   &_swigt__p_gp_Dir,
   &_swigt__p_gp_GTrsf2d,
+  &_swigt__p_gp_Lin,
+  &_swigt__p_gp_Pln,
   &_swigt__p_gp_Pnt,
   &_swigt__p_gp_Sphere,
   &_swigt__p_gp_Trsf,
@@ -16835,30 +21432,34 @@ static swig_cast_info _swigc__p_Geom_AxisPlacement[] = {  {&_swigt__p_Geom_AxisP
 static swig_cast_info _swigc__p_Geom_BoundedCurve[] = {  {&_swigt__p_Geom_BoundedCurve, 0, 0, 0},  {&_swigt__p_Geom_TrimmedCurve, _p_Geom_TrimmedCurveTo_p_Geom_BoundedCurve, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Geom_Circle[] = {  {&_swigt__p_Geom_Circle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Geom_Conic[] = {  {&_swigt__p_Geom_Conic, 0, 0, 0},  {&_swigt__p_Geom_Circle, _p_Geom_CircleTo_p_Geom_Conic, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Geom_Curve[] = {  {&_swigt__p_Geom_Curve, 0, 0, 0},  {&_swigt__p_Geom_Conic, _p_Geom_ConicTo_p_Geom_Curve, 0, 0},  {&_swigt__p_Geom_BoundedCurve, _p_Geom_BoundedCurveTo_p_Geom_Curve, 0, 0},  {&_swigt__p_Geom_TrimmedCurve, _p_Geom_TrimmedCurveTo_p_Geom_Curve, 0, 0},  {&_swigt__p_Geom_Circle, _p_Geom_CircleTo_p_Geom_Curve, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Geom_Curve[] = {  {&_swigt__p_Geom_Curve, 0, 0, 0},  {&_swigt__p_Geom_Line, _p_Geom_LineTo_p_Geom_Curve, 0, 0},  {&_swigt__p_Geom_Conic, _p_Geom_ConicTo_p_Geom_Curve, 0, 0},  {&_swigt__p_Geom_BoundedCurve, _p_Geom_BoundedCurveTo_p_Geom_Curve, 0, 0},  {&_swigt__p_Geom_TrimmedCurve, _p_Geom_TrimmedCurveTo_p_Geom_Curve, 0, 0},  {&_swigt__p_Geom_Circle, _p_Geom_CircleTo_p_Geom_Curve, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Geom_CylindricalSurface[] = {  {&_swigt__p_Geom_CylindricalSurface, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Geom_ElementarySurface[] = {  {&_swigt__p_Geom_ElementarySurface, 0, 0, 0},  {&_swigt__p_Geom_SphericalSurface, _p_Geom_SphericalSurfaceTo_p_Geom_ElementarySurface, 0, 0},  {&_swigt__p_Geom_CylindricalSurface, _p_Geom_CylindricalSurfaceTo_p_Geom_ElementarySurface, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Geom_Geometry[] = {  {&_swigt__p_Geom_Curve, _p_Geom_CurveTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_Conic, _p_Geom_ConicTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_Surface, _p_Geom_SurfaceTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_ElementarySurface, _p_Geom_ElementarySurfaceTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_SphericalSurface, _p_Geom_SphericalSurfaceTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_CylindricalSurface, _p_Geom_CylindricalSurfaceTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_AxisPlacement, _p_Geom_AxisPlacementTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_Axis1Placement, _p_Geom_Axis1PlacementTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_Geometry, 0, 0, 0},  {&_swigt__p_Geom_BoundedCurve, _p_Geom_BoundedCurveTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_TrimmedCurve, _p_Geom_TrimmedCurveTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_Circle, _p_Geom_CircleTo_p_Geom_Geometry, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Geom_ElementarySurface[] = {  {&_swigt__p_Geom_ElementarySurface, 0, 0, 0},  {&_swigt__p_Geom_SphericalSurface, _p_Geom_SphericalSurfaceTo_p_Geom_ElementarySurface, 0, 0},  {&_swigt__p_Geom_CylindricalSurface, _p_Geom_CylindricalSurfaceTo_p_Geom_ElementarySurface, 0, 0},  {&_swigt__p_Geom_Plane, _p_Geom_PlaneTo_p_Geom_ElementarySurface, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Geom_Geometry[] = {  {&_swigt__p_Geom_Conic, _p_Geom_ConicTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_Plane, _p_Geom_PlaneTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_BoundedCurve, _p_Geom_BoundedCurveTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_TrimmedCurve, _p_Geom_TrimmedCurveTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_AxisPlacement, _p_Geom_AxisPlacementTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_Axis1Placement, _p_Geom_Axis1PlacementTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_Curve, _p_Geom_CurveTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_Circle, _p_Geom_CircleTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_Geometry, 0, 0, 0},  {&_swigt__p_Geom_Surface, _p_Geom_SurfaceTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_ElementarySurface, _p_Geom_ElementarySurfaceTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_SphericalSurface, _p_Geom_SphericalSurfaceTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_CylindricalSurface, _p_Geom_CylindricalSurfaceTo_p_Geom_Geometry, 0, 0},  {&_swigt__p_Geom_Line, _p_Geom_LineTo_p_Geom_Geometry, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Geom_Line[] = {  {&_swigt__p_Geom_Line, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Geom_Plane[] = {  {&_swigt__p_Geom_Plane, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Geom_SphericalSurface[] = {  {&_swigt__p_Geom_SphericalSurface, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Geom_Surface[] = {  {&_swigt__p_Geom_Surface, 0, 0, 0},  {&_swigt__p_Geom_ElementarySurface, _p_Geom_ElementarySurfaceTo_p_Geom_Surface, 0, 0},  {&_swigt__p_Geom_SphericalSurface, _p_Geom_SphericalSurfaceTo_p_Geom_Surface, 0, 0},  {&_swigt__p_Geom_CylindricalSurface, _p_Geom_CylindricalSurfaceTo_p_Geom_Surface, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Geom_Surface[] = {  {&_swigt__p_Geom_Surface, 0, 0, 0},  {&_swigt__p_Geom_ElementarySurface, _p_Geom_ElementarySurfaceTo_p_Geom_Surface, 0, 0},  {&_swigt__p_Geom_SphericalSurface, _p_Geom_SphericalSurfaceTo_p_Geom_Surface, 0, 0},  {&_swigt__p_Geom_CylindricalSurface, _p_Geom_CylindricalSurfaceTo_p_Geom_Surface, 0, 0},  {&_swigt__p_Geom_Plane, _p_Geom_PlaneTo_p_Geom_Surface, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Geom_TrimmedCurve[] = {  {&_swigt__p_Geom_TrimmedCurve, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Handle_Geom_Axis1Placement[] = {  {&_swigt__p_Handle_Geom_Axis1Placement, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Handle_Geom_AxisPlacement[] = {  {&_swigt__p_Handle_Geom_AxisPlacement, 0, 0, 0},  {&_swigt__p_Handle_Geom_Axis1Placement, _p_Handle_Geom_Axis1PlacementTo_p_Handle_Geom_AxisPlacement, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Handle_Geom_BoundedCurve[] = {  {&_swigt__p_Handle_Geom_BoundedCurve, 0, 0, 0},  {&_swigt__p_Handle_Geom_TrimmedCurve, _p_Handle_Geom_TrimmedCurveTo_p_Handle_Geom_BoundedCurve, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Handle_Geom_Circle[] = {  {&_swigt__p_Handle_Geom_Circle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Handle_Geom_Conic[] = {  {&_swigt__p_Handle_Geom_Conic, 0, 0, 0},  {&_swigt__p_Handle_Geom_Circle, _p_Handle_Geom_CircleTo_p_Handle_Geom_Conic, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Handle_Geom_Curve[] = {  {&_swigt__p_Handle_Geom_Curve, 0, 0, 0},  {&_swigt__p_Handle_Geom_Conic, _p_Handle_Geom_ConicTo_p_Handle_Geom_Curve, 0, 0},  {&_swigt__p_Handle_Geom_BoundedCurve, _p_Handle_Geom_BoundedCurveTo_p_Handle_Geom_Curve, 0, 0},  {&_swigt__p_Handle_Geom_TrimmedCurve, _p_Handle_Geom_TrimmedCurveTo_p_Handle_Geom_Curve, 0, 0},  {&_swigt__p_Handle_Geom_Circle, _p_Handle_Geom_CircleTo_p_Handle_Geom_Curve, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Handle_Geom_Curve[] = {  {&_swigt__p_Handle_Geom_Curve, 0, 0, 0},  {&_swigt__p_Handle_Geom_Line, _p_Handle_Geom_LineTo_p_Handle_Geom_Curve, 0, 0},  {&_swigt__p_Handle_Geom_Conic, _p_Handle_Geom_ConicTo_p_Handle_Geom_Curve, 0, 0},  {&_swigt__p_Handle_Geom_BoundedCurve, _p_Handle_Geom_BoundedCurveTo_p_Handle_Geom_Curve, 0, 0},  {&_swigt__p_Handle_Geom_TrimmedCurve, _p_Handle_Geom_TrimmedCurveTo_p_Handle_Geom_Curve, 0, 0},  {&_swigt__p_Handle_Geom_Circle, _p_Handle_Geom_CircleTo_p_Handle_Geom_Curve, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Handle_Geom_CylindricalSurface[] = {  {&_swigt__p_Handle_Geom_CylindricalSurface, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Handle_Geom_ElementarySurface[] = {  {&_swigt__p_Handle_Geom_ElementarySurface, 0, 0, 0},  {&_swigt__p_Handle_Geom_SphericalSurface, _p_Handle_Geom_SphericalSurfaceTo_p_Handle_Geom_ElementarySurface, 0, 0},  {&_swigt__p_Handle_Geom_CylindricalSurface, _p_Handle_Geom_CylindricalSurfaceTo_p_Handle_Geom_ElementarySurface, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Handle_Geom_Geometry[] = {  {&_swigt__p_Handle_Geom_Curve, _p_Handle_Geom_CurveTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_Conic, _p_Handle_Geom_ConicTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_Surface, _p_Handle_Geom_SurfaceTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_ElementarySurface, _p_Handle_Geom_ElementarySurfaceTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_SphericalSurface, _p_Handle_Geom_SphericalSurfaceTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_CylindricalSurface, _p_Handle_Geom_CylindricalSurfaceTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_AxisPlacement, _p_Handle_Geom_AxisPlacementTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_Axis1Placement, _p_Handle_Geom_Axis1PlacementTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_Geometry, 0, 0, 0},  {&_swigt__p_Handle_Geom_BoundedCurve, _p_Handle_Geom_BoundedCurveTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_TrimmedCurve, _p_Handle_Geom_TrimmedCurveTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_Circle, _p_Handle_Geom_CircleTo_p_Handle_Geom_Geometry, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Handle_Geom_ElementarySurface[] = {  {&_swigt__p_Handle_Geom_ElementarySurface, 0, 0, 0},  {&_swigt__p_Handle_Geom_SphericalSurface, _p_Handle_Geom_SphericalSurfaceTo_p_Handle_Geom_ElementarySurface, 0, 0},  {&_swigt__p_Handle_Geom_CylindricalSurface, _p_Handle_Geom_CylindricalSurfaceTo_p_Handle_Geom_ElementarySurface, 0, 0},  {&_swigt__p_Handle_Geom_Plane, _p_Handle_Geom_PlaneTo_p_Handle_Geom_ElementarySurface, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Handle_Geom_Geometry[] = {  {&_swigt__p_Handle_Geom_Conic, _p_Handle_Geom_ConicTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_Plane, _p_Handle_Geom_PlaneTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_BoundedCurve, _p_Handle_Geom_BoundedCurveTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_TrimmedCurve, _p_Handle_Geom_TrimmedCurveTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_AxisPlacement, _p_Handle_Geom_AxisPlacementTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_Axis1Placement, _p_Handle_Geom_Axis1PlacementTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_Curve, _p_Handle_Geom_CurveTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_Circle, _p_Handle_Geom_CircleTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_Geometry, 0, 0, 0},  {&_swigt__p_Handle_Geom_Surface, _p_Handle_Geom_SurfaceTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_ElementarySurface, _p_Handle_Geom_ElementarySurfaceTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_SphericalSurface, _p_Handle_Geom_SphericalSurfaceTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_CylindricalSurface, _p_Handle_Geom_CylindricalSurfaceTo_p_Handle_Geom_Geometry, 0, 0},  {&_swigt__p_Handle_Geom_Line, _p_Handle_Geom_LineTo_p_Handle_Geom_Geometry, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Handle_Geom_Line[] = {  {&_swigt__p_Handle_Geom_Line, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Handle_Geom_Plane[] = {  {&_swigt__p_Handle_Geom_Plane, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Handle_Geom_SphericalSurface[] = {  {&_swigt__p_Handle_Geom_SphericalSurface, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Handle_Geom_Surface[] = {  {&_swigt__p_Handle_Geom_Surface, 0, 0, 0},  {&_swigt__p_Handle_Geom_ElementarySurface, _p_Handle_Geom_ElementarySurfaceTo_p_Handle_Geom_Surface, 0, 0},  {&_swigt__p_Handle_Geom_SphericalSurface, _p_Handle_Geom_SphericalSurfaceTo_p_Handle_Geom_Surface, 0, 0},  {&_swigt__p_Handle_Geom_CylindricalSurface, _p_Handle_Geom_CylindricalSurfaceTo_p_Handle_Geom_Surface, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Handle_Geom_Surface[] = {  {&_swigt__p_Handle_Geom_Surface, 0, 0, 0},  {&_swigt__p_Handle_Geom_ElementarySurface, _p_Handle_Geom_ElementarySurfaceTo_p_Handle_Geom_Surface, 0, 0},  {&_swigt__p_Handle_Geom_SphericalSurface, _p_Handle_Geom_SphericalSurfaceTo_p_Handle_Geom_Surface, 0, 0},  {&_swigt__p_Handle_Geom_CylindricalSurface, _p_Handle_Geom_CylindricalSurfaceTo_p_Handle_Geom_Surface, 0, 0},  {&_swigt__p_Handle_Geom_Plane, _p_Handle_Geom_PlaneTo_p_Handle_Geom_Surface, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Handle_Geom_TrimmedCurve[] = {  {&_swigt__p_Handle_Geom_TrimmedCurve, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Handle_MMgt_TShared[] = {  {&_swigt__p_Handle_Geom_Curve, _p_Handle_Geom_CurveTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_MMgt_TShared, 0, 0, 0},  {&_swigt__p_Handle_Geom_Conic, _p_Handle_Geom_ConicTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_Surface, _p_Handle_Geom_SurfaceTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_ElementarySurface, _p_Handle_Geom_ElementarySurfaceTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_SphericalSurface, _p_Handle_Geom_SphericalSurfaceTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_CylindricalSurface, _p_Handle_Geom_CylindricalSurfaceTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_AxisPlacement, _p_Handle_Geom_AxisPlacementTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_Axis1Placement, _p_Handle_Geom_Axis1PlacementTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_BoundedCurve, _p_Handle_Geom_BoundedCurveTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_TrimmedCurve, _p_Handle_Geom_TrimmedCurveTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_Geometry, _p_Handle_Geom_GeometryTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_Circle, _p_Handle_Geom_CircleTo_p_Handle_MMgt_TShared, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Handle_Standard_Transient[] = {  {&_swigt__p_Handle_Geom_Conic, _p_Handle_Geom_ConicTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Standard_Transient, 0, 0, 0},  {&_swigt__p_Handle_MMgt_TShared, _p_Handle_MMgt_TSharedTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_TrimmedCurve, _p_Handle_Geom_TrimmedCurveTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_BoundedCurve, _p_Handle_Geom_BoundedCurveTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_Axis1Placement, _p_Handle_Geom_Axis1PlacementTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_AxisPlacement, _p_Handle_Geom_AxisPlacementTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_Curve, _p_Handle_Geom_CurveTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_Circle, _p_Handle_Geom_CircleTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_Geometry, _p_Handle_Geom_GeometryTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_CylindricalSurface, _p_Handle_Geom_CylindricalSurfaceTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_SphericalSurface, _p_Handle_Geom_SphericalSurfaceTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_ElementarySurface, _p_Handle_Geom_ElementarySurfaceTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_Surface, _p_Handle_Geom_SurfaceTo_p_Handle_Standard_Transient, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Handle_MMgt_TShared[] = {  {&_swigt__p_Handle_Geom_Conic, _p_Handle_Geom_ConicTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_Plane, _p_Handle_Geom_PlaneTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_MMgt_TShared, 0, 0, 0},  {&_swigt__p_Handle_Geom_TrimmedCurve, _p_Handle_Geom_TrimmedCurveTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_BoundedCurve, _p_Handle_Geom_BoundedCurveTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_Axis1Placement, _p_Handle_Geom_Axis1PlacementTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_AxisPlacement, _p_Handle_Geom_AxisPlacementTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_Curve, _p_Handle_Geom_CurveTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_Circle, _p_Handle_Geom_CircleTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_Geometry, _p_Handle_Geom_GeometryTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_ElementarySurface, _p_Handle_Geom_ElementarySurfaceTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_SphericalSurface, _p_Handle_Geom_SphericalSurfaceTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_CylindricalSurface, _p_Handle_Geom_CylindricalSurfaceTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_Line, _p_Handle_Geom_LineTo_p_Handle_MMgt_TShared, 0, 0},  {&_swigt__p_Handle_Geom_Surface, _p_Handle_Geom_SurfaceTo_p_Handle_MMgt_TShared, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Handle_Standard_Transient[] = {  {&_swigt__p_Handle_Geom_Conic, _p_Handle_Geom_ConicTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Standard_Transient, 0, 0, 0},  {&_swigt__p_Handle_Geom_Plane, _p_Handle_Geom_PlaneTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_MMgt_TShared, _p_Handle_MMgt_TSharedTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_TrimmedCurve, _p_Handle_Geom_TrimmedCurveTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_BoundedCurve, _p_Handle_Geom_BoundedCurveTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_Axis1Placement, _p_Handle_Geom_Axis1PlacementTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_AxisPlacement, _p_Handle_Geom_AxisPlacementTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_Curve, _p_Handle_Geom_CurveTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_Circle, _p_Handle_Geom_CircleTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_Geometry, _p_Handle_Geom_GeometryTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_SphericalSurface, _p_Handle_Geom_SphericalSurfaceTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_CylindricalSurface, _p_Handle_Geom_CylindricalSurfaceTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_Line, _p_Handle_Geom_LineTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_ElementarySurface, _p_Handle_Geom_ElementarySurfaceTo_p_Handle_Standard_Transient, 0, 0},  {&_swigt__p_Handle_Geom_Surface, _p_Handle_Geom_SurfaceTo_p_Handle_Standard_Transient, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Handle_Standard_Type[] = {  {&_swigt__p_Handle_Standard_Type, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_MMgt_TShared[] = {  {&_swigt__p_Geom_Curve, _p_Geom_CurveTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_MMgt_TShared, 0, 0, 0},  {&_swigt__p_Geom_Conic, _p_Geom_ConicTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_Surface, _p_Geom_SurfaceTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_ElementarySurface, _p_Geom_ElementarySurfaceTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_SphericalSurface, _p_Geom_SphericalSurfaceTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_CylindricalSurface, _p_Geom_CylindricalSurfaceTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_AxisPlacement, _p_Geom_AxisPlacementTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_Axis1Placement, _p_Geom_Axis1PlacementTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_BoundedCurve, _p_Geom_BoundedCurveTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_TrimmedCurve, _p_Geom_TrimmedCurveTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_Geometry, _p_Geom_GeometryTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_Circle, _p_Geom_CircleTo_p_MMgt_TShared, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Standard_Transient[] = {  {&_swigt__p_Geom_Conic, _p_Geom_ConicTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Standard_Transient, 0, 0, 0},  {&_swigt__p_MMgt_TShared, _p_MMgt_TSharedTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_TrimmedCurve, _p_Geom_TrimmedCurveTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_BoundedCurve, _p_Geom_BoundedCurveTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_Axis1Placement, _p_Geom_Axis1PlacementTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_AxisPlacement, _p_Geom_AxisPlacementTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_Curve, _p_Geom_CurveTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_Circle, _p_Geom_CircleTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_Geometry, _p_Geom_GeometryTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_CylindricalSurface, _p_Geom_CylindricalSurfaceTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_SphericalSurface, _p_Geom_SphericalSurfaceTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_ElementarySurface, _p_Geom_ElementarySurfaceTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_Surface, _p_Geom_SurfaceTo_p_Standard_Transient, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_MMgt_TShared[] = {  {&_swigt__p_Geom_Conic, _p_Geom_ConicTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_Plane, _p_Geom_PlaneTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_MMgt_TShared, 0, 0, 0},  {&_swigt__p_Geom_TrimmedCurve, _p_Geom_TrimmedCurveTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_BoundedCurve, _p_Geom_BoundedCurveTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_Axis1Placement, _p_Geom_Axis1PlacementTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_AxisPlacement, _p_Geom_AxisPlacementTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_Curve, _p_Geom_CurveTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_Circle, _p_Geom_CircleTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_Geometry, _p_Geom_GeometryTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_ElementarySurface, _p_Geom_ElementarySurfaceTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_SphericalSurface, _p_Geom_SphericalSurfaceTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_CylindricalSurface, _p_Geom_CylindricalSurfaceTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_Line, _p_Geom_LineTo_p_MMgt_TShared, 0, 0},  {&_swigt__p_Geom_Surface, _p_Geom_SurfaceTo_p_MMgt_TShared, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Standard_Transient[] = {  {&_swigt__p_Geom_Conic, _p_Geom_ConicTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Standard_Transient, 0, 0, 0},  {&_swigt__p_Geom_Plane, _p_Geom_PlaneTo_p_Standard_Transient, 0, 0},  {&_swigt__p_MMgt_TShared, _p_MMgt_TSharedTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_TrimmedCurve, _p_Geom_TrimmedCurveTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_BoundedCurve, _p_Geom_BoundedCurveTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_Axis1Placement, _p_Geom_Axis1PlacementTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_AxisPlacement, _p_Geom_AxisPlacementTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_Curve, _p_Geom_CurveTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_Circle, _p_Geom_CircleTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_Geometry, _p_Geom_GeometryTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_SphericalSurface, _p_Geom_SphericalSurfaceTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_CylindricalSurface, _p_Geom_CylindricalSurfaceTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_Line, _p_Geom_LineTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_ElementarySurface, _p_Geom_ElementarySurfaceTo_p_Standard_Transient, 0, 0},  {&_swigt__p_Geom_Surface, _p_Geom_SurfaceTo_p_Standard_Transient, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_bool[] = {  {&_swigt__p_bool, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_double[] = {  {&_swigt__p_double, 0, 0, 0},{0, 0, 0, 0}};
@@ -16869,6 +21470,8 @@ static swig_cast_info _swigc__p_gp_Circ[] = {  {&_swigt__p_gp_Circ, 0, 0, 0},{0,
 static swig_cast_info _swigc__p_gp_Cylinder[] = {  {&_swigt__p_gp_Cylinder, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gp_Dir[] = {  {&_swigt__p_gp_Dir, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gp_GTrsf2d[] = {  {&_swigt__p_gp_GTrsf2d, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_gp_Lin[] = {  {&_swigt__p_gp_Lin, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_gp_Pln[] = {  {&_swigt__p_gp_Pln, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gp_Pnt[] = {  {&_swigt__p_gp_Pnt, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gp_Sphere[] = {  {&_swigt__p_gp_Sphere, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gp_Trsf[] = {  {&_swigt__p_gp_Trsf, 0, 0, 0},{0, 0, 0, 0}};
@@ -16886,6 +21489,8 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Geom_CylindricalSurface,
   _swigc__p_Geom_ElementarySurface,
   _swigc__p_Geom_Geometry,
+  _swigc__p_Geom_Line,
+  _swigc__p_Geom_Plane,
   _swigc__p_Geom_SphericalSurface,
   _swigc__p_Geom_Surface,
   _swigc__p_Geom_TrimmedCurve,
@@ -16898,6 +21503,8 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Handle_Geom_CylindricalSurface,
   _swigc__p_Handle_Geom_ElementarySurface,
   _swigc__p_Handle_Geom_Geometry,
+  _swigc__p_Handle_Geom_Line,
+  _swigc__p_Handle_Geom_Plane,
   _swigc__p_Handle_Geom_SphericalSurface,
   _swigc__p_Handle_Geom_Surface,
   _swigc__p_Handle_Geom_TrimmedCurve,
@@ -16916,6 +21523,8 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_gp_Cylinder,
   _swigc__p_gp_Dir,
   _swigc__p_gp_GTrsf2d,
+  _swigc__p_gp_Lin,
+  _swigc__p_gp_Pln,
   _swigc__p_gp_Pnt,
   _swigc__p_gp_Sphere,
   _swigc__p_gp_Trsf,
@@ -17287,6 +21896,13 @@ _exports_CylindricalSurface_clientData.dtor = _wrap_delete_CylindricalSurface;
 if (SWIGTYPE_p_Geom_CylindricalSurface->clientdata == 0) {
   SWIGTYPE_p_Geom_CylindricalSurface->clientdata = &_exports_CylindricalSurface_clientData;
 }
+/* Name: _exports_Plane, Type: p_Geom_Plane, Dtor: _wrap_delete_Plane */
+v8::Handle<v8::FunctionTemplate> _exports_Plane_class = SWIGV8_CreateClassTemplate("_exports_Plane");
+SWIGV8_SET_CLASS_TEMPL(_exports_Plane_clientData.class_templ, _exports_Plane_class);
+_exports_Plane_clientData.dtor = _wrap_delete_Plane;
+if (SWIGTYPE_p_Geom_Plane->clientdata == 0) {
+  SWIGTYPE_p_Geom_Plane->clientdata = &_exports_Plane_clientData;
+}
 /* Name: _exports_AxisPlacement, Type: p_Geom_AxisPlacement, Dtor: _wrap_delete_AxisPlacement */
 v8::Handle<v8::FunctionTemplate> _exports_AxisPlacement_class = SWIGV8_CreateClassTemplate("_exports_AxisPlacement");
 SWIGV8_SET_CLASS_TEMPL(_exports_AxisPlacement_clientData.class_templ, _exports_AxisPlacement_class);
@@ -17336,6 +21952,13 @@ _exports_TrimmedCurve_clientData.dtor = _wrap_delete_TrimmedCurve;
 if (SWIGTYPE_p_Geom_TrimmedCurve->clientdata == 0) {
   SWIGTYPE_p_Geom_TrimmedCurve->clientdata = &_exports_TrimmedCurve_clientData;
 }
+/* Name: _exports_Line, Type: p_Geom_Line, Dtor: _wrap_delete_Line */
+v8::Handle<v8::FunctionTemplate> _exports_Line_class = SWIGV8_CreateClassTemplate("_exports_Line");
+SWIGV8_SET_CLASS_TEMPL(_exports_Line_clientData.class_templ, _exports_Line_class);
+_exports_Line_clientData.dtor = _wrap_delete_Line;
+if (SWIGTYPE_p_Geom_Line->clientdata == 0) {
+  SWIGTYPE_p_Geom_Line->clientdata = &_exports_Line_clientData;
+}
 /* Name: _exports_Handle_Geometry, Type: p_Handle_Geom_Geometry, Dtor: _wrap_delete_Handle_Geometry */
 v8::Handle<v8::FunctionTemplate> _exports_Handle_Geometry_class = SWIGV8_CreateClassTemplate("_exports_Handle_Geometry");
 SWIGV8_SET_CLASS_TEMPL(_exports_Handle_Geometry_clientData.class_templ, _exports_Handle_Geometry_class);
@@ -17370,6 +21993,13 @@ SWIGV8_SET_CLASS_TEMPL(_exports_Handle_CylindricalSurface_clientData.class_templ
 _exports_Handle_CylindricalSurface_clientData.dtor = _wrap_delete_Handle_CylindricalSurface;
 if (SWIGTYPE_p_Handle_Geom_CylindricalSurface->clientdata == 0) {
   SWIGTYPE_p_Handle_Geom_CylindricalSurface->clientdata = &_exports_Handle_CylindricalSurface_clientData;
+}
+/* Name: _exports_Handle_Plane, Type: p_Handle_Geom_Plane, Dtor: _wrap_delete_Handle_Plane */
+v8::Handle<v8::FunctionTemplate> _exports_Handle_Plane_class = SWIGV8_CreateClassTemplate("_exports_Handle_Plane");
+SWIGV8_SET_CLASS_TEMPL(_exports_Handle_Plane_clientData.class_templ, _exports_Handle_Plane_class);
+_exports_Handle_Plane_clientData.dtor = _wrap_delete_Handle_Plane;
+if (SWIGTYPE_p_Handle_Geom_Plane->clientdata == 0) {
+  SWIGTYPE_p_Handle_Geom_Plane->clientdata = &_exports_Handle_Plane_clientData;
 }
 /* Name: _exports_Handle_AxisPlacement, Type: p_Handle_Geom_AxisPlacement, Dtor: _wrap_delete_Handle_AxisPlacement */
 v8::Handle<v8::FunctionTemplate> _exports_Handle_AxisPlacement_class = SWIGV8_CreateClassTemplate("_exports_Handle_AxisPlacement");
@@ -17419,6 +22049,13 @@ SWIGV8_SET_CLASS_TEMPL(_exports_Handle_TrimmedCurve_clientData.class_templ, _exp
 _exports_Handle_TrimmedCurve_clientData.dtor = _wrap_delete_Handle_TrimmedCurve;
 if (SWIGTYPE_p_Handle_Geom_TrimmedCurve->clientdata == 0) {
   SWIGTYPE_p_Handle_Geom_TrimmedCurve->clientdata = &_exports_Handle_TrimmedCurve_clientData;
+}
+/* Name: _exports_Handle_Line, Type: p_Handle_Geom_Line, Dtor: _wrap_delete_Handle_Line */
+v8::Handle<v8::FunctionTemplate> _exports_Handle_Line_class = SWIGV8_CreateClassTemplate("_exports_Handle_Line");
+SWIGV8_SET_CLASS_TEMPL(_exports_Handle_Line_clientData.class_templ, _exports_Handle_Line_class);
+_exports_Handle_Line_clientData.dtor = _wrap_delete_Handle_Line;
+if (SWIGTYPE_p_Handle_Geom_Line->clientdata == 0) {
+  SWIGTYPE_p_Handle_Geom_Line->clientdata = &_exports_Handle_Line_clientData;
 }
 
 
@@ -17524,6 +22161,30 @@ SWIGV8_AddMemberFunction(_exports_CylindricalSurface_class, "dn", _wrap_Cylindri
 SWIGV8_AddMemberFunction(_exports_CylindricalSurface_class, "transform", _wrap_CylindricalSurface_transform);
 SWIGV8_AddMemberFunction(_exports_CylindricalSurface_class, "copy", _wrap_CylindricalSurface_copy);
 SWIGV8_AddMemberFunction(_exports_CylindricalSurface_class, "dynamicType", _wrap_CylindricalSurface_dynamicType);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "setPln", _wrap_Plane_setPln);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "pln", _wrap_Plane_pln);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "ureverse", _wrap_Plane_ureverse);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "ureversedParameter", _wrap_Plane_ureversedParameter);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "vreverse", _wrap_Plane_vreverse);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "vreversedParameter", _wrap_Plane_vreversedParameter);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "transformParameters", _wrap_Plane_transformParameters);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "parametricTransformation", _wrap_Plane_parametricTransformation);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "bounds", _wrap_Plane_bounds);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "coefficients", _wrap_Plane_coefficients);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "isUclosed", _wrap_Plane_isUclosed);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "isVclosed", _wrap_Plane_isVclosed);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "isUperiodic", _wrap_Plane_isUperiodic);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "isVperiodic", _wrap_Plane_isVperiodic);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "uiso", _wrap_Plane_uiso);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "viso", _wrap_Plane_viso);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "d0", _wrap_Plane_d0);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "d1", _wrap_Plane_d1);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "d2", _wrap_Plane_d2);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "d3", _wrap_Plane_d3);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "dn", _wrap_Plane_dn);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "transform", _wrap_Plane_transform);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "copy", _wrap_Plane_copy);
+SWIGV8_AddMemberFunction(_exports_Plane_class, "dynamicType", _wrap_Plane_dynamicType);
 SWIGV8_AddMemberFunction(_exports_AxisPlacement_class, "setAxis", _wrap_AxisPlacement_setAxis);
 SWIGV8_AddMemberFunction(_exports_AxisPlacement_class, "setDirection", _wrap_AxisPlacement_setDirection);
 SWIGV8_AddMemberFunction(_exports_AxisPlacement_class, "setLocation", _wrap_AxisPlacement_setLocation);
@@ -17616,6 +22277,30 @@ SWIGV8_AddMemberFunction(_exports_TrimmedCurve_class, "transformedParameter", _w
 SWIGV8_AddMemberFunction(_exports_TrimmedCurve_class, "parametricTransformation", _wrap_TrimmedCurve_parametricTransformation);
 SWIGV8_AddMemberFunction(_exports_TrimmedCurve_class, "copy", _wrap_TrimmedCurve_copy);
 SWIGV8_AddMemberFunction(_exports_TrimmedCurve_class, "dynamicType", _wrap_TrimmedCurve_dynamicType);
+SWIGV8_AddMemberFunction(_exports_Line_class, "setLin", _wrap_Line_setLin);
+SWIGV8_AddMemberFunction(_exports_Line_class, "setDirection", _wrap_Line_setDirection);
+SWIGV8_AddMemberFunction(_exports_Line_class, "setLocation", _wrap_Line_setLocation);
+SWIGV8_AddMemberFunction(_exports_Line_class, "setPosition", _wrap_Line_setPosition);
+SWIGV8_AddMemberFunction(_exports_Line_class, "lin", _wrap_Line_lin);
+SWIGV8_AddMemberFunction(_exports_Line_class, "position", _wrap_Line_position);
+SWIGV8_AddMemberFunction(_exports_Line_class, "reverse", _wrap_Line_reverse);
+SWIGV8_AddMemberFunction(_exports_Line_class, "reversedParameter", _wrap_Line_reversedParameter);
+SWIGV8_AddMemberFunction(_exports_Line_class, "firstParameter", _wrap_Line_firstParameter);
+SWIGV8_AddMemberFunction(_exports_Line_class, "lastParameter", _wrap_Line_lastParameter);
+SWIGV8_AddMemberFunction(_exports_Line_class, "isClosed", _wrap_Line_isClosed);
+SWIGV8_AddMemberFunction(_exports_Line_class, "isPeriodic", _wrap_Line_isPeriodic);
+SWIGV8_AddMemberFunction(_exports_Line_class, "continuity", _wrap_Line_continuity);
+SWIGV8_AddMemberFunction(_exports_Line_class, "isCn", _wrap_Line_isCn);
+SWIGV8_AddMemberFunction(_exports_Line_class, "d0", _wrap_Line_d0);
+SWIGV8_AddMemberFunction(_exports_Line_class, "d1", _wrap_Line_d1);
+SWIGV8_AddMemberFunction(_exports_Line_class, "d2", _wrap_Line_d2);
+SWIGV8_AddMemberFunction(_exports_Line_class, "d3", _wrap_Line_d3);
+SWIGV8_AddMemberFunction(_exports_Line_class, "dn", _wrap_Line_dn);
+SWIGV8_AddMemberFunction(_exports_Line_class, "transform", _wrap_Line_transform);
+SWIGV8_AddMemberFunction(_exports_Line_class, "transformedParameter", _wrap_Line_transformedParameter);
+SWIGV8_AddMemberFunction(_exports_Line_class, "parametricTransformation", _wrap_Line_parametricTransformation);
+SWIGV8_AddMemberFunction(_exports_Line_class, "copy", _wrap_Line_copy);
+SWIGV8_AddMemberFunction(_exports_Line_class, "dynamicType", _wrap_Line_dynamicType);
 
 
   /* setup inheritances */
@@ -17759,6 +22444,26 @@ if (SWIGTYPE_p_Geom_ElementarySurface->clientdata && !(static_cast<SWIGV8_Client
   printf("Unable to inherit baseclass, it didn't exist _exports_CylindricalSurface _Geom_ElementarySurface\n");
 #endif
 }
+if (SWIGTYPE_p_Geom_ElementarySurface->clientdata && !(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Geom_ElementarySurface->clientdata)->class_templ.IsEmpty()))
+{
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+  _exports_Plane_class->Inherit(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Geom_ElementarySurface->clientdata)->class_templ);
+#else
+  _exports_Plane_class->Inherit(
+    v8::Local<v8::FunctionTemplate>::New(
+      v8::Isolate::GetCurrent(),
+      static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Geom_ElementarySurface->clientdata)->class_templ)
+    );
+#endif
+  
+#ifdef SWIGRUNTIME_DEBUG
+  printf("Inheritance successful _exports_Plane _Geom_ElementarySurface\n");
+#endif
+} else {
+#ifdef SWIGRUNTIME_DEBUG
+  printf("Unable to inherit baseclass, it didn't exist _exports_Plane _Geom_ElementarySurface\n");
+#endif
+}
 if (SWIGTYPE_p_Geom_Geometry->clientdata && !(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Geom_Geometry->clientdata)->class_templ.IsEmpty()))
 {
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
@@ -17899,6 +22604,26 @@ if (SWIGTYPE_p_Geom_BoundedCurve->clientdata && !(static_cast<SWIGV8_ClientData 
   printf("Unable to inherit baseclass, it didn't exist _exports_TrimmedCurve _Geom_BoundedCurve\n");
 #endif
 }
+if (SWIGTYPE_p_Geom_Curve->clientdata && !(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Geom_Curve->clientdata)->class_templ.IsEmpty()))
+{
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+  _exports_Line_class->Inherit(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Geom_Curve->clientdata)->class_templ);
+#else
+  _exports_Line_class->Inherit(
+    v8::Local<v8::FunctionTemplate>::New(
+      v8::Isolate::GetCurrent(),
+      static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Geom_Curve->clientdata)->class_templ)
+    );
+#endif
+  
+#ifdef SWIGRUNTIME_DEBUG
+  printf("Inheritance successful _exports_Line _Geom_Curve\n");
+#endif
+} else {
+#ifdef SWIGRUNTIME_DEBUG
+  printf("Unable to inherit baseclass, it didn't exist _exports_Line _Geom_Curve\n");
+#endif
+}
 if (SWIGTYPE_p_Handle_MMgt_TShared->clientdata && !(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Handle_MMgt_TShared->clientdata)->class_templ.IsEmpty()))
 {
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
@@ -17997,6 +22722,26 @@ if (SWIGTYPE_p_Handle_Geom_ElementarySurface->clientdata && !(static_cast<SWIGV8
 } else {
 #ifdef SWIGRUNTIME_DEBUG
   printf("Unable to inherit baseclass, it didn't exist _exports_Handle_CylindricalSurface _Handle_Geom_ElementarySurface\n");
+#endif
+}
+if (SWIGTYPE_p_Handle_Geom_ElementarySurface->clientdata && !(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Handle_Geom_ElementarySurface->clientdata)->class_templ.IsEmpty()))
+{
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+  _exports_Handle_Plane_class->Inherit(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Handle_Geom_ElementarySurface->clientdata)->class_templ);
+#else
+  _exports_Handle_Plane_class->Inherit(
+    v8::Local<v8::FunctionTemplate>::New(
+      v8::Isolate::GetCurrent(),
+      static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Handle_Geom_ElementarySurface->clientdata)->class_templ)
+    );
+#endif
+  
+#ifdef SWIGRUNTIME_DEBUG
+  printf("Inheritance successful _exports_Handle_Plane _Handle_Geom_ElementarySurface\n");
+#endif
+} else {
+#ifdef SWIGRUNTIME_DEBUG
+  printf("Unable to inherit baseclass, it didn't exist _exports_Handle_Plane _Handle_Geom_ElementarySurface\n");
 #endif
 }
 if (SWIGTYPE_p_Handle_Geom_Geometry->clientdata && !(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Handle_Geom_Geometry->clientdata)->class_templ.IsEmpty()))
@@ -18139,6 +22884,26 @@ if (SWIGTYPE_p_Handle_Geom_BoundedCurve->clientdata && !(static_cast<SWIGV8_Clie
   printf("Unable to inherit baseclass, it didn't exist _exports_Handle_TrimmedCurve _Handle_Geom_BoundedCurve\n");
 #endif
 }
+if (SWIGTYPE_p_Handle_Geom_Curve->clientdata && !(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Handle_Geom_Curve->clientdata)->class_templ.IsEmpty()))
+{
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+  _exports_Handle_Line_class->Inherit(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Handle_Geom_Curve->clientdata)->class_templ);
+#else
+  _exports_Handle_Line_class->Inherit(
+    v8::Local<v8::FunctionTemplate>::New(
+      v8::Isolate::GetCurrent(),
+      static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Handle_Geom_Curve->clientdata)->class_templ)
+    );
+#endif
+  
+#ifdef SWIGRUNTIME_DEBUG
+  printf("Inheritance successful _exports_Handle_Line _Handle_Geom_Curve\n");
+#endif
+} else {
+#ifdef SWIGRUNTIME_DEBUG
+  printf("Unable to inherit baseclass, it didn't exist _exports_Handle_Line _Handle_Geom_Curve\n");
+#endif
+}
 
 
   /* class instances */
@@ -18196,6 +22961,12 @@ _exports_CylindricalSurface_class_0->SetCallHandler(_wrap_new_CylindricalSurface
 _exports_CylindricalSurface_class_0->Inherit(_exports_CylindricalSurface_class);
 _exports_CylindricalSurface_class_0->SetHiddenPrototype(true);
 v8::Handle<v8::Object> _exports_CylindricalSurface_obj = _exports_CylindricalSurface_class_0->GetFunction();
+/* Class: Plane (_exports_Plane) */
+v8::Handle<v8::FunctionTemplate> _exports_Plane_class_0 = SWIGV8_CreateClassTemplate("Plane");
+_exports_Plane_class_0->SetCallHandler(_wrap_new_Plane);
+_exports_Plane_class_0->Inherit(_exports_Plane_class);
+_exports_Plane_class_0->SetHiddenPrototype(true);
+v8::Handle<v8::Object> _exports_Plane_obj = _exports_Plane_class_0->GetFunction();
 /* Class: AxisPlacement (_exports_AxisPlacement) */
 v8::Handle<v8::FunctionTemplate> _exports_AxisPlacement_class_0 = SWIGV8_CreateClassTemplate("AxisPlacement");
 _exports_AxisPlacement_class_0->SetCallHandler(_wrap_new_veto_AxisPlacement);
@@ -18238,6 +23009,12 @@ _exports_TrimmedCurve_class_0->SetCallHandler(_wrap_new_TrimmedCurve);
 _exports_TrimmedCurve_class_0->Inherit(_exports_TrimmedCurve_class);
 _exports_TrimmedCurve_class_0->SetHiddenPrototype(true);
 v8::Handle<v8::Object> _exports_TrimmedCurve_obj = _exports_TrimmedCurve_class_0->GetFunction();
+/* Class: Line (_exports_Line) */
+v8::Handle<v8::FunctionTemplate> _exports_Line_class_0 = SWIGV8_CreateClassTemplate("Line");
+_exports_Line_class_0->SetCallHandler(_wrap_new_Line);
+_exports_Line_class_0->Inherit(_exports_Line_class);
+_exports_Line_class_0->SetHiddenPrototype(true);
+v8::Handle<v8::Object> _exports_Line_obj = _exports_Line_class_0->GetFunction();
 /* Class: Handle_Geometry (_exports_Handle_Geometry) */
 v8::Handle<v8::FunctionTemplate> _exports_Handle_Geometry_class_0 = SWIGV8_CreateClassTemplate("Handle_Geometry");
 _exports_Handle_Geometry_class_0->SetCallHandler(_wrap_new_Handle_Geometry);
@@ -18268,6 +23045,12 @@ _exports_Handle_CylindricalSurface_class_0->SetCallHandler(_wrap_new_Handle_Cyli
 _exports_Handle_CylindricalSurface_class_0->Inherit(_exports_Handle_CylindricalSurface_class);
 _exports_Handle_CylindricalSurface_class_0->SetHiddenPrototype(true);
 v8::Handle<v8::Object> _exports_Handle_CylindricalSurface_obj = _exports_Handle_CylindricalSurface_class_0->GetFunction();
+/* Class: Handle_Plane (_exports_Handle_Plane) */
+v8::Handle<v8::FunctionTemplate> _exports_Handle_Plane_class_0 = SWIGV8_CreateClassTemplate("Handle_Plane");
+_exports_Handle_Plane_class_0->SetCallHandler(_wrap_new_Handle_Plane);
+_exports_Handle_Plane_class_0->Inherit(_exports_Handle_Plane_class);
+_exports_Handle_Plane_class_0->SetHiddenPrototype(true);
+v8::Handle<v8::Object> _exports_Handle_Plane_obj = _exports_Handle_Plane_class_0->GetFunction();
 /* Class: Handle_AxisPlacement (_exports_Handle_AxisPlacement) */
 v8::Handle<v8::FunctionTemplate> _exports_Handle_AxisPlacement_class_0 = SWIGV8_CreateClassTemplate("Handle_AxisPlacement");
 _exports_Handle_AxisPlacement_class_0->SetCallHandler(_wrap_new_Handle_AxisPlacement);
@@ -18310,10 +23093,19 @@ _exports_Handle_TrimmedCurve_class_0->SetCallHandler(_wrap_new_Handle_TrimmedCur
 _exports_Handle_TrimmedCurve_class_0->Inherit(_exports_Handle_TrimmedCurve_class);
 _exports_Handle_TrimmedCurve_class_0->SetHiddenPrototype(true);
 v8::Handle<v8::Object> _exports_Handle_TrimmedCurve_obj = _exports_Handle_TrimmedCurve_class_0->GetFunction();
+/* Class: Handle_Line (_exports_Handle_Line) */
+v8::Handle<v8::FunctionTemplate> _exports_Handle_Line_class_0 = SWIGV8_CreateClassTemplate("Handle_Line");
+_exports_Handle_Line_class_0->SetCallHandler(_wrap_new_Handle_Line);
+_exports_Handle_Line_class_0->Inherit(_exports_Handle_Line_class);
+_exports_Handle_Line_class_0->SetHiddenPrototype(true);
+v8::Handle<v8::Object> _exports_Handle_Line_obj = _exports_Handle_Line_class_0->GetFunction();
 
 
   /* add static class functions and variables */
-  SWIGV8_AddStaticFunction(_exports_Circle_obj, "makeCircle", _wrap_Circle__wrap_Circle_makeCircle);
+  SWIGV8_AddStaticFunction(exports_obj, "GetErrorMessage", _wrap_GetErrorMessage);
+SWIGV8_AddStaticFunction(_exports_Circle_obj, "makeCircle", _wrap_Circle__wrap_Circle_makeCircle);
+SWIGV8_AddStaticFunction(_exports_TrimmedCurve_obj, "makeArcOfCircle", _wrap_TrimmedCurve__wrap_TrimmedCurve_makeArcOfCircle);
+SWIGV8_AddStaticFunction(_exports_TrimmedCurve_obj, "makeSegment", _wrap_TrimmedCurve__wrap_TrimmedCurve_makeSegment);
 
 
   /* register classes */
@@ -18326,6 +23118,7 @@ exports_obj->Set(SWIGV8_SYMBOL_NEW("Surface"), _exports_Surface_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("ElementarySurface"), _exports_ElementarySurface_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("SphericalSurface"), _exports_SphericalSurface_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("CylindricalSurface"), _exports_CylindricalSurface_obj);
+exports_obj->Set(SWIGV8_SYMBOL_NEW("Plane"), _exports_Plane_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("AxisPlacement"), _exports_AxisPlacement_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Axis1Placement"), _exports_Axis1Placement_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Curve"), _exports_Curve_obj);
@@ -18333,11 +23126,13 @@ exports_obj->Set(SWIGV8_SYMBOL_NEW("Conic"), _exports_Conic_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("BoundedCurve"), _exports_BoundedCurve_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Circle"), _exports_Circle_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("TrimmedCurve"), _exports_TrimmedCurve_obj);
+exports_obj->Set(SWIGV8_SYMBOL_NEW("Line"), _exports_Line_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_Geometry"), _exports_Handle_Geometry_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_Surface"), _exports_Handle_Surface_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_ElementarySurface"), _exports_Handle_ElementarySurface_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_SphericalSurface"), _exports_Handle_SphericalSurface_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_CylindricalSurface"), _exports_Handle_CylindricalSurface_obj);
+exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_Plane"), _exports_Handle_Plane_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_AxisPlacement"), _exports_Handle_AxisPlacement_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_Axis1Placement"), _exports_Handle_Axis1Placement_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_Curve"), _exports_Handle_Curve_obj);
@@ -18345,6 +23140,7 @@ exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_Conic"), _exports_Handle_Conic_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_BoundedCurve"), _exports_Handle_BoundedCurve_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_Circle"), _exports_Handle_Circle_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_TrimmedCurve"), _exports_Handle_TrimmedCurve_obj);
+exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_Line"), _exports_Handle_Line_obj);
 
 
   /* create and register namespace objects */
@@ -18352,5 +23148,5 @@ exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_TrimmedCurve"), _exports_Handle_Trimm
 }
 
 #if defined(BUILDING_NODE_EXTENSION)
-NODE_MODULE(gp, gp_initialize)
+NODE_MODULE(Geom, Geom_initialize)
 #endif

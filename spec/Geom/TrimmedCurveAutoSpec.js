@@ -1,30 +1,93 @@
-var Geom = require('../../lib/Geom.node');
-var gp = require('../../lib/gp.node');
+var Geom = require('../../lib/Geom.js');
+var gp = require('../../lib/gp.js');
 var create = require('../create.js')
 describe('Geom.TrimmedCurve', function(){
-// TrimmedCurve(Geom.Curve, gp.double, gp.double, gp.bool) - Redefined.
+  // TrimmedCurve(Geom.Curve, Double, Double, Boolean) - Redefined.
 
+
+    // arguments or return type not wrapped
+  xit('makeArcOfCircle(gp_Circ, Double, Double, Boolean)', function(){
+    console.log('makeArcOfCircle(gp_Circ, Double, Double, Boolean)')
+    var res = Geom.TrimmedCurve.makeArcOfCircle(create.gp_Circ(), 11, 11.5, true);
+    expect(typeof res).toBe('object');
+    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
+  });
+
+
+    // arguments or return type not wrapped
+  xit('makeArcOfCircle(gp_Circ, gp.Pnt, Double, Boolean)', function(){
+    console.log('makeArcOfCircle(gp_Circ, gp.Pnt, Double, Boolean)')
+    var res = Geom.TrimmedCurve.makeArcOfCircle(create.gp_Circ(), create.gp.Pnt(), 12, false);
+    expect(typeof res).toBe('object');
+    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
+  });
+
+
+    // arguments or return type not wrapped
+  xit('makeArcOfCircle(gp_Circ, gp.Pnt, gp.Pnt, Boolean)', function(){
+    console.log('makeArcOfCircle(gp_Circ, gp.Pnt, gp.Pnt, Boolean)')
+    var res = Geom.TrimmedCurve.makeArcOfCircle(create.gp_Circ(), create.gp.Pnt(), create.gp.Pnt(), true);
+    expect(typeof res).toBe('object');
+    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
+  });
+
+
+    // TODO: not working
+  xit('makeArcOfCircle(gp.Pnt, gp.Pnt, gp.Pnt)', function(){
+    console.log('makeArcOfCircle(gp.Pnt, gp.Pnt, gp.Pnt)')
+    var res = Geom.TrimmedCurve.makeArcOfCircle(create.gp.Pnt(), create.gp.Pnt(), create.gp.Pnt());
+    expect(typeof res).toBe('object');
+    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
+  });
+
+
+  it('makeArcOfCircle(gp.Pnt, gp.Vec, gp.Pnt)', function(){
+    console.log('makeArcOfCircle(gp.Pnt, gp.Vec, gp.Pnt)')
+    var res = Geom.TrimmedCurve.makeArcOfCircle(create.gp.Pnt(), create.gp.Vec(), create.gp.Pnt());
+    expect(typeof res).toBe('object');
+    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
+  });
+
+
+  it('makeSegment(gp.Pnt, gp.Pnt)', function(){
+    console.log('makeSegment(gp.Pnt, gp.Pnt)')
+    var res = Geom.TrimmedCurve.makeSegment(create.gp.Pnt(), create.gp.Pnt());
+    expect(typeof res).toBe('object');
+    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
+  });
+
+
+    // arguments or return type not wrapped
+  xit('makeSegment(gp_Lin, Double, Double)', function(){
+    console.log('makeSegment(gp_Lin, Double, Double)')
+    var res = Geom.TrimmedCurve.makeSegment(create.gp_Lin(), 12.5, 13);
+    expect(typeof res).toBe('object');
+    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
+  });
+
+
+    // arguments or return type not wrapped
+  xit('makeSegment(gp_Lin, gp.Pnt, Double)', function(){
+    console.log('makeSegment(gp_Lin, gp.Pnt, Double)')
+    var res = Geom.TrimmedCurve.makeSegment(create.gp_Lin(), create.gp.Pnt(), 13.5);
+    expect(typeof res).toBe('object');
+    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
+  });
+
+
+    // arguments or return type not wrapped
+  xit('makeSegment(gp_Lin, gp.Pnt, gp.Pnt)', function(){
+    console.log('makeSegment(gp_Lin, gp.Pnt, gp.Pnt)')
+    var res = Geom.TrimmedCurve.makeSegment(create.gp_Lin(), create.gp.Pnt(), create.gp.Pnt());
+    expect(typeof res).toBe('object');
+    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
+  });
 
 
   it('reverse()', function(){
     console.log('reverse()')
     var obj = create.Geom.TrimmedCurve();
     var res = obj.reverse();
-  });
-
-
-  it('reversedParameter(gp.double)', function(){
-    console.log('reversedParameter(gp.double)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.reversedParameter(35);
-    expect(typeof res).toBe('number');
-  });
-
-
-  it('setTrim(gp.double, gp.double, gp.bool)', function(){
-    console.log('setTrim(gp.double, gp.double, gp.bool)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.setTrim(35.5, 36, false);
   });
 
 
@@ -37,21 +100,13 @@ describe('Geom.TrimmedCurve', function(){
   });
 
 
-  // arguments or return type not wrapped
+    // arguments or return type not wrapped
   xit('continuity()', function(){
     console.log('continuity()')
     var obj = create.Geom.TrimmedCurve();
     var res = obj.continuity();
     expect(typeof res).toBe('object');
     expect(res.constructor.name.replace('_exports_', '')).toBe('GeomAbs_Shape');
-  });
-
-
-  it('isCn(gp.int)', function(){
-    console.log('isCn(gp.int)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.isCn(1);
-    expect(typeof res).toBe('boolean');
   });
 
 
@@ -113,66 +168,6 @@ describe('Geom.TrimmedCurve', function(){
   });
 
 
-  it('d0(gp.double, gp.Pnt)', function(){
-    console.log('d0(gp.double, gp.Pnt)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.d0(36.5, create.gp.Pnt());
-  });
-
-
-  it('d1(gp.double, gp.Pnt, gp.Vec)', function(){
-    console.log('d1(gp.double, gp.Pnt, gp.Vec)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.d1(37, create.gp.Pnt(), create.gp.Vec());
-  });
-
-
-  it('d2(gp.double, gp.Pnt, gp.Vec, gp.Vec)', function(){
-    console.log('d2(gp.double, gp.Pnt, gp.Vec, gp.Vec)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.d2(37.5, create.gp.Pnt(), create.gp.Vec(), create.gp.Vec());
-  });
-
-
-  it('d3(gp.double, gp.Pnt, gp.Vec, gp.Vec, gp.Vec)', function(){
-    console.log('d3(gp.double, gp.Pnt, gp.Vec, gp.Vec, gp.Vec)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.d3(38, create.gp.Pnt(), create.gp.Vec(), create.gp.Vec(), create.gp.Vec());
-  });
-
-
-  it('dn(gp.double, gp.int)', function(){
-    console.log('dn(gp.double, gp.int)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.dn(38.5, 1);
-    expect(typeof res).toBe('object');
-    expect(res.constructor.name.replace('_exports_', '')).toBe('Vec');
-  });
-
-
-  it('transform(gp.Trsf)', function(){
-    console.log('transform(gp.Trsf)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.transform(create.gp.Trsf());
-  });
-
-
-  it('transformedParameter(gp.double, gp.Trsf)', function(){
-    console.log('transformedParameter(gp.double, gp.Trsf)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.transformedParameter(39, create.gp.Trsf());
-    expect(typeof res).toBe('number');
-  });
-
-
-  it('parametricTransformation(gp.Trsf)', function(){
-    console.log('parametricTransformation(gp.Trsf)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.parametricTransformation(create.gp.Trsf());
-    expect(typeof res).toBe('number');
-  });
-
-
   it('copy()', function(){
     console.log('copy()')
     var obj = create.Geom.TrimmedCurve();
@@ -182,7 +177,7 @@ describe('Geom.TrimmedCurve', function(){
   });
 
 
-  // arguments or return type not wrapped
+    // arguments or return type not wrapped
   xit('dynamicType()', function(){
     console.log('dynamicType()')
     var obj = create.Geom.TrimmedCurve();
@@ -196,136 +191,6 @@ describe('Geom.TrimmedCurve', function(){
     console.log('reversed()')
     var obj = create.Geom.TrimmedCurve();
     var res = obj.reversed();
-    expect(typeof res).toBe('object');
-    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
-  });
-
-
-  it('value(gp.double)', function(){
-    console.log('value(gp.double)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.value(39.5);
-    expect(typeof res).toBe('object');
-    expect(res.constructor.name.replace('_exports_', '')).toBe('Pnt');
-  });
-
-
-  it('mirror(gp.Pnt)', function(){
-    console.log('mirror(gp.Pnt)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.mirror(create.gp.Pnt());
-  });
-
-
-  it('mirror(gp.Ax1)', function(){
-    console.log('mirror(gp.Ax1)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.mirror(create.gp.Ax1());
-  });
-
-
-  it('mirror(gp.Ax2)', function(){
-    console.log('mirror(gp.Ax2)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.mirror(create.gp.Ax2());
-  });
-
-
-  it('rotate(gp.Ax1, gp.double)', function(){
-    console.log('rotate(gp.Ax1, gp.double)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.rotate(create.gp.Ax1(), 40);
-  });
-
-
-  it('scale(gp.Pnt, gp.double)', function(){
-    console.log('scale(gp.Pnt, gp.double)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.scale(create.gp.Pnt(), 40.5);
-  });
-
-
-  it('translate(gp.Vec)', function(){
-    console.log('translate(gp.Vec)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.translate(create.gp.Vec());
-  });
-
-
-  it('translate(gp.Pnt, gp.Pnt)', function(){
-    console.log('translate(gp.Pnt, gp.Pnt)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.translate(create.gp.Pnt(), create.gp.Pnt());
-  });
-
-
-  it('mirrored(gp.Pnt)', function(){
-    console.log('mirrored(gp.Pnt)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.mirrored(create.gp.Pnt());
-    expect(typeof res).toBe('object');
-    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
-  });
-
-
-  it('mirrored(gp.Ax1)', function(){
-    console.log('mirrored(gp.Ax1)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.mirrored(create.gp.Ax1());
-    expect(typeof res).toBe('object');
-    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
-  });
-
-
-  it('mirrored(gp.Ax2)', function(){
-    console.log('mirrored(gp.Ax2)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.mirrored(create.gp.Ax2());
-    expect(typeof res).toBe('object');
-    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
-  });
-
-
-  it('rotated(gp.Ax1, gp.double)', function(){
-    console.log('rotated(gp.Ax1, gp.double)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.rotated(create.gp.Ax1(), 41);
-    expect(typeof res).toBe('object');
-    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
-  });
-
-
-  it('scaled(gp.Pnt, gp.double)', function(){
-    console.log('scaled(gp.Pnt, gp.double)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.scaled(create.gp.Pnt(), 41.5);
-    expect(typeof res).toBe('object');
-    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
-  });
-
-
-  it('transformed(gp.Trsf)', function(){
-    console.log('transformed(gp.Trsf)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.transformed(create.gp.Trsf());
-    expect(typeof res).toBe('object');
-    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
-  });
-
-
-  it('translated(gp.Vec)', function(){
-    console.log('translated(gp.Vec)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.translated(create.gp.Vec());
-    expect(typeof res).toBe('object');
-    expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
-  });
-
-
-  it('translated(gp.Pnt, gp.Pnt)', function(){
-    console.log('translated(gp.Pnt, gp.Pnt)')
-    var obj = create.Geom.TrimmedCurve();
-    var res = obj.translated(create.gp.Pnt(), create.gp.Pnt());
     expect(typeof res).toBe('object');
     expect(res.constructor.name.replace('_exports_', '')).toBe('TrimmedCurve');
   });

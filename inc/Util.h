@@ -1,6 +1,11 @@
 #pragma once
-#include "OCC.h"
+//#include "OCC.h"
 #include "NodeV8.h"
+#include <gp_Pnt.hxx>
+#include <gp_Vec.hxx>
+#include <gp_Dir.hxx>
+#include <gp_Trsf.hxx>
+#include <gp_Ax1.hxx>
 
 void ReadDouble(const v8::Handle<v8::Value>& _v,double& value);
 

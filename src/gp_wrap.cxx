@@ -1480,24 +1480,28 @@ SWIGRUNTIME void JS_veto_set_variable(v8::Local<v8::String> property, v8::Local<
 
 /* -------- TYPES TABLE (BEGIN) -------- */
 
-#define SWIGTYPE_p_bool swig_types[0]
-#define SWIGTYPE_p_char swig_types[1]
-#define SWIGTYPE_p_double swig_types[2]
-#define SWIGTYPE_p_gp_Ax1 swig_types[3]
-#define SWIGTYPE_p_gp_Ax2 swig_types[4]
-#define SWIGTYPE_p_gp_Ax3 swig_types[5]
-#define SWIGTYPE_p_gp_Dir swig_types[6]
-#define SWIGTYPE_p_gp_Mat swig_types[7]
-#define SWIGTYPE_p_gp_Pnt swig_types[8]
-#define SWIGTYPE_p_gp_Quaternion swig_types[9]
-#define SWIGTYPE_p_gp_Trsf swig_types[10]
-#define SWIGTYPE_p_gp_Trsf2d swig_types[11]
-#define SWIGTYPE_p_gp_TrsfForm swig_types[12]
-#define SWIGTYPE_p_gp_Vec swig_types[13]
-#define SWIGTYPE_p_gp_XYZ swig_types[14]
-#define SWIGTYPE_p_int swig_types[15]
-static swig_type_info *swig_types[17];
-static swig_module_info swig_module = {swig_types, 16, 0, 0, 0, 0};
+#define SWIGTYPE_p_Handle_MMgt_TShared swig_types[0]
+#define SWIGTYPE_p_Handle_Standard_Transient swig_types[1]
+#define SWIGTYPE_p_MMgt_TShared swig_types[2]
+#define SWIGTYPE_p_Standard_Transient swig_types[3]
+#define SWIGTYPE_p_bool swig_types[4]
+#define SWIGTYPE_p_char swig_types[5]
+#define SWIGTYPE_p_double swig_types[6]
+#define SWIGTYPE_p_gp_Ax1 swig_types[7]
+#define SWIGTYPE_p_gp_Ax2 swig_types[8]
+#define SWIGTYPE_p_gp_Ax3 swig_types[9]
+#define SWIGTYPE_p_gp_Dir swig_types[10]
+#define SWIGTYPE_p_gp_Mat swig_types[11]
+#define SWIGTYPE_p_gp_Pnt swig_types[12]
+#define SWIGTYPE_p_gp_Quaternion swig_types[13]
+#define SWIGTYPE_p_gp_Trsf swig_types[14]
+#define SWIGTYPE_p_gp_Trsf2d swig_types[15]
+#define SWIGTYPE_p_gp_TrsfForm swig_types[16]
+#define SWIGTYPE_p_gp_Vec swig_types[17]
+#define SWIGTYPE_p_gp_XYZ swig_types[18]
+#define SWIGTYPE_p_int swig_types[19]
+static swig_type_info *swig_types[21];
+static swig_module_info swig_module = {swig_types, 20, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1523,6 +1527,10 @@ static swig_module_info swig_module = {swig_types, 16, 0, 0, 0, 0};
 #include <MMgt_TShared.hxx>
 #include <Handle_Standard_Transient.hxx>
 #include <Handle_MMgt_TShared.hxx>
+#include <Standard_Real.hxx>
+#include <Standard_Integer.hxx>
+#include <Standard_Boolean.hxx>
+#include <Standard_CString.hxx>
 
 
 #include <stdlib.h>
@@ -1605,10 +1613,6 @@ SWIG_FromCharPtr(const char *cptr)
 #include <gp_Mat.hxx>
 #include <Standard_Integer.hxx>
 #include <gp_Pnt.hxx>
-#include <Standard_Real.hxx>
-#include <Standard_Integer.hxx>
-#include <Standard_Boolean.hxx>
-#include <Standard_CString.hxx>
 #include <gp_Pnt.hxx>
 #include <gp_Vec.hxx>
 #include <gp_Dir.hxx>
@@ -1660,6 +1664,10 @@ int SWIG_AsVal_int (v8::Handle<v8::Value> valRef, int* val)
 #define SWIGV8_INIT gp_initialize
 
 
+SWIGV8_ClientData _exports_Standard_Transient_clientData;
+SWIGV8_ClientData _exports_MMgt_TShared_clientData;
+SWIGV8_ClientData _exports_Handle_Standard_Transient_clientData;
+SWIGV8_ClientData _exports_Handle_MMgt_TShared_clientData;
 SWIGV8_ClientData _exports_Pnt_clientData;
 SWIGV8_ClientData _exports_Vec_clientData;
 SWIGV8_ClientData _exports_Dir_clientData;
@@ -1686,6 +1694,262 @@ static SwigV8ReturnValue _wrap_GetErrorMessage(const SwigV8Arguments &args) {
 fail:
   SWIGV8_RETURN(SWIGV8_UNDEFINED());
 }
+
+
+static SwigV8ReturnValue _wrap_new_Standard_Transient(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  Standard_Transient *result;
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Standard_Transient.");
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Standard_Transient *)new Standard_Transient();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_Standard_Transient, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+static void _wrap_delete_Standard_Transient(v8::Persistent<v8::Value> object, void *parameter) {
+  SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+  static void _wrap_delete_Standard_Transient(v8::Isolate *isolate, v8::Persistent<v8::Value> object, void *parameter) {
+    SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+    static void _wrap_delete_Standard_Transient(v8::Isolate *isolate, v8::Persistent< v8::Object> *object, SWIGV8_Proxy *proxy) {
+#else
+      static void _wrap_delete_Standard_Transient(const v8::WeakCallbackData<v8::Object, SWIGV8_Proxy> &data) {
+        v8::Local<v8::Object> object = data.GetValue();
+        SWIGV8_Proxy *proxy = data.GetParameter();
+#endif
+        
+        if(proxy->swigCMemOwn && proxy->swigCObject) {
+          Standard_Transient * arg1 = (Standard_Transient *)proxy->swigCObject;
+          delete arg1;
+        }
+        delete proxy;
+        
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+        object.Dispose();
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+        object.Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x032100)
+        object->Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+        object->Dispose();
+#else
+        object.Clear();
+#endif
+      }
+
+
+static SwigV8ReturnValue _wrap_new_MMgt_TShared(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  MMgt_TShared *result;
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_MMgt_TShared.");
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (MMgt_TShared *)new MMgt_TShared();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_MMgt_TShared, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+static void _wrap_delete_MMgt_TShared(v8::Persistent<v8::Value> object, void *parameter) {
+  SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+  static void _wrap_delete_MMgt_TShared(v8::Isolate *isolate, v8::Persistent<v8::Value> object, void *parameter) {
+    SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+    static void _wrap_delete_MMgt_TShared(v8::Isolate *isolate, v8::Persistent< v8::Object> *object, SWIGV8_Proxy *proxy) {
+#else
+      static void _wrap_delete_MMgt_TShared(const v8::WeakCallbackData<v8::Object, SWIGV8_Proxy> &data) {
+        v8::Local<v8::Object> object = data.GetValue();
+        SWIGV8_Proxy *proxy = data.GetParameter();
+#endif
+        
+        if(proxy->swigCMemOwn && proxy->swigCObject) {
+          MMgt_TShared * arg1 = (MMgt_TShared *)proxy->swigCObject;
+          delete arg1;
+        }
+        delete proxy;
+        
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+        object.Dispose();
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+        object.Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x032100)
+        object->Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+        object->Dispose();
+#else
+        object.Clear();
+#endif
+      }
+
+
+static SwigV8ReturnValue _wrap_new_Handle_Standard_Transient(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  Handle_Standard_Transient *result;
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Handle_Standard_Transient.");
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Handle_Standard_Transient *)new Handle_Standard_Transient();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_Handle_Standard_Transient, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+static void _wrap_delete_Handle_Standard_Transient(v8::Persistent<v8::Value> object, void *parameter) {
+  SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+  static void _wrap_delete_Handle_Standard_Transient(v8::Isolate *isolate, v8::Persistent<v8::Value> object, void *parameter) {
+    SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+    static void _wrap_delete_Handle_Standard_Transient(v8::Isolate *isolate, v8::Persistent< v8::Object> *object, SWIGV8_Proxy *proxy) {
+#else
+      static void _wrap_delete_Handle_Standard_Transient(const v8::WeakCallbackData<v8::Object, SWIGV8_Proxy> &data) {
+        v8::Local<v8::Object> object = data.GetValue();
+        SWIGV8_Proxy *proxy = data.GetParameter();
+#endif
+        
+        if(proxy->swigCMemOwn && proxy->swigCObject) {
+          Handle_Standard_Transient * arg1 = (Handle_Standard_Transient *)proxy->swigCObject;
+          delete arg1;
+        }
+        delete proxy;
+        
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+        object.Dispose();
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+        object.Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x032100)
+        object->Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+        object->Dispose();
+#else
+        object.Clear();
+#endif
+      }
+
+
+static SwigV8ReturnValue _wrap_new_Handle_MMgt_TShared(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Object> self = args.Holder();
+  Handle_MMgt_TShared *result;
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Handle_MMgt_TShared.");
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = (Handle_MMgt_TShared *)new Handle_MMgt_TShared();
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  
+  
+  
+  SWIGV8_SetPrivateData(self, result, SWIGTYPE_p_Handle_MMgt_TShared, SWIG_POINTER_OWN);
+  SWIGV8_RETURN(self);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+static void _wrap_delete_Handle_MMgt_TShared(v8::Persistent<v8::Value> object, void *parameter) {
+  SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+  static void _wrap_delete_Handle_MMgt_TShared(v8::Isolate *isolate, v8::Persistent<v8::Value> object, void *parameter) {
+    SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+    static void _wrap_delete_Handle_MMgt_TShared(v8::Isolate *isolate, v8::Persistent< v8::Object> *object, SWIGV8_Proxy *proxy) {
+#else
+      static void _wrap_delete_Handle_MMgt_TShared(const v8::WeakCallbackData<v8::Object, SWIGV8_Proxy> &data) {
+        v8::Local<v8::Object> object = data.GetValue();
+        SWIGV8_Proxy *proxy = data.GetParameter();
+#endif
+        
+        if(proxy->swigCMemOwn && proxy->swigCObject) {
+          Handle_MMgt_TShared * arg1 = (Handle_MMgt_TShared *)proxy->swigCObject;
+          delete arg1;
+        }
+        delete proxy;
+        
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
+        object.Dispose();
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031900)
+        object.Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x032100)
+        object->Dispose(isolate);
+#elif (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < SWIGV8_SETWEAK_VERSION)
+        object->Dispose();
+#else
+        object.Clear();
+#endif
+      }
 
 
 static SwigV8ReturnValue _wrap_new_Pnt__SWIG_0(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler) {
@@ -13869,6 +14133,16 @@ static void _wrap_delete_Trsf(v8::Persistent<v8::Value> object, void *parameter)
 
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
+static void *_p_MMgt_TSharedTo_p_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Standard_Transient *)  ((MMgt_TShared *) x));
+}
+static void *_p_Handle_MMgt_TSharedTo_p_Handle_Standard_Transient(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Handle_Standard_Transient *)  ((Handle_MMgt_TShared *) x));
+}
+static swig_type_info _swigt__p_Handle_MMgt_TShared = {"_p_Handle_MMgt_TShared", "p_Handle_MMgt_TShared", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Handle_Standard_Transient = {"_p_Handle_Standard_Transient", "p_Handle_Standard_Transient|Handle_Standard_Transient *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_MMgt_TShared = {"_p_MMgt_TShared", "p_MMgt_TShared", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_Standard_Transient = {"_p_Standard_Transient", "p_Standard_Transient|Standard_Transient *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_bool = {"_p_bool", "bool *|Standard_Boolean *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_double = {"_p_double", "Standard_Real *|double *", 0, 0, (void*)0, 0};
@@ -13887,6 +14161,10 @@ static swig_type_info _swigt__p_gp_XYZ = {"_p_gp_XYZ", "gp_XYZ *", 0, 0, (void*)
 static swig_type_info _swigt__p_int = {"_p_int", "int *|Standard_Integer *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
+  &_swigt__p_Handle_MMgt_TShared,
+  &_swigt__p_Handle_Standard_Transient,
+  &_swigt__p_MMgt_TShared,
+  &_swigt__p_Standard_Transient,
   &_swigt__p_bool,
   &_swigt__p_char,
   &_swigt__p_double,
@@ -13905,6 +14183,10 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_int,
 };
 
+static swig_cast_info _swigc__p_Handle_MMgt_TShared[] = {  {&_swigt__p_Handle_MMgt_TShared, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Handle_Standard_Transient[] = {  {&_swigt__p_Handle_Standard_Transient, 0, 0, 0},  {&_swigt__p_Handle_MMgt_TShared, _p_Handle_MMgt_TSharedTo_p_Handle_Standard_Transient, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_MMgt_TShared[] = {  {&_swigt__p_MMgt_TShared, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Standard_Transient[] = {  {&_swigt__p_Standard_Transient, 0, 0, 0},  {&_swigt__p_MMgt_TShared, _p_MMgt_TSharedTo_p_Standard_Transient, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_bool[] = {  {&_swigt__p_bool, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_double[] = {  {&_swigt__p_double, 0, 0, 0},{0, 0, 0, 0}};
@@ -13923,6 +14205,10 @@ static swig_cast_info _swigc__p_gp_XYZ[] = {  {&_swigt__p_gp_XYZ, 0, 0, 0},{0, 0
 static swig_cast_info _swigc__p_int[] = {  {&_swigt__p_int, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
+  _swigc__p_Handle_MMgt_TShared,
+  _swigc__p_Handle_Standard_Transient,
+  _swigc__p_MMgt_TShared,
+  _swigc__p_Standard_Transient,
   _swigc__p_bool,
   _swigc__p_char,
   _swigc__p_double,
@@ -14242,7 +14528,35 @@ void SWIGV8_INIT (v8::Handle<v8::Object> exports, v8::Handle<v8::Object> /*modul
   
 
   /* create class templates */
-  /* Name: _exports_Pnt, Type: p_gp_Pnt, Dtor: _wrap_delete_Pnt */
+  /* Name: _exports_Standard_Transient, Type: p_Standard_Transient, Dtor: _wrap_delete_Standard_Transient */
+v8::Handle<v8::FunctionTemplate> _exports_Standard_Transient_class = SWIGV8_CreateClassTemplate("_exports_Standard_Transient");
+SWIGV8_SET_CLASS_TEMPL(_exports_Standard_Transient_clientData.class_templ, _exports_Standard_Transient_class);
+_exports_Standard_Transient_clientData.dtor = _wrap_delete_Standard_Transient;
+if (SWIGTYPE_p_Standard_Transient->clientdata == 0) {
+  SWIGTYPE_p_Standard_Transient->clientdata = &_exports_Standard_Transient_clientData;
+}
+/* Name: _exports_MMgt_TShared, Type: p_MMgt_TShared, Dtor: _wrap_delete_MMgt_TShared */
+v8::Handle<v8::FunctionTemplate> _exports_MMgt_TShared_class = SWIGV8_CreateClassTemplate("_exports_MMgt_TShared");
+SWIGV8_SET_CLASS_TEMPL(_exports_MMgt_TShared_clientData.class_templ, _exports_MMgt_TShared_class);
+_exports_MMgt_TShared_clientData.dtor = _wrap_delete_MMgt_TShared;
+if (SWIGTYPE_p_MMgt_TShared->clientdata == 0) {
+  SWIGTYPE_p_MMgt_TShared->clientdata = &_exports_MMgt_TShared_clientData;
+}
+/* Name: _exports_Handle_Standard_Transient, Type: p_Handle_Standard_Transient, Dtor: _wrap_delete_Handle_Standard_Transient */
+v8::Handle<v8::FunctionTemplate> _exports_Handle_Standard_Transient_class = SWIGV8_CreateClassTemplate("_exports_Handle_Standard_Transient");
+SWIGV8_SET_CLASS_TEMPL(_exports_Handle_Standard_Transient_clientData.class_templ, _exports_Handle_Standard_Transient_class);
+_exports_Handle_Standard_Transient_clientData.dtor = _wrap_delete_Handle_Standard_Transient;
+if (SWIGTYPE_p_Handle_Standard_Transient->clientdata == 0) {
+  SWIGTYPE_p_Handle_Standard_Transient->clientdata = &_exports_Handle_Standard_Transient_clientData;
+}
+/* Name: _exports_Handle_MMgt_TShared, Type: p_Handle_MMgt_TShared, Dtor: _wrap_delete_Handle_MMgt_TShared */
+v8::Handle<v8::FunctionTemplate> _exports_Handle_MMgt_TShared_class = SWIGV8_CreateClassTemplate("_exports_Handle_MMgt_TShared");
+SWIGV8_SET_CLASS_TEMPL(_exports_Handle_MMgt_TShared_clientData.class_templ, _exports_Handle_MMgt_TShared_class);
+_exports_Handle_MMgt_TShared_clientData.dtor = _wrap_delete_Handle_MMgt_TShared;
+if (SWIGTYPE_p_Handle_MMgt_TShared->clientdata == 0) {
+  SWIGTYPE_p_Handle_MMgt_TShared->clientdata = &_exports_Handle_MMgt_TShared_clientData;
+}
+/* Name: _exports_Pnt, Type: p_gp_Pnt, Dtor: _wrap_delete_Pnt */
 v8::Handle<v8::FunctionTemplate> _exports_Pnt_class = SWIGV8_CreateClassTemplate("_exports_Pnt");
 SWIGV8_SET_CLASS_TEMPL(_exports_Pnt_clientData.class_templ, _exports_Pnt_class);
 _exports_Pnt_clientData.dtor = _wrap_delete_Pnt;
@@ -14447,10 +14761,74 @@ SWIGV8_AddMemberFunction(_exports_Trsf_class, "transforms", _wrap_Trsf__wrap_Trs
 
 
   /* setup inheritances */
+  if (SWIGTYPE_p_Standard_Transient->clientdata && !(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Standard_Transient->clientdata)->class_templ.IsEmpty()))
+{
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+  _exports_MMgt_TShared_class->Inherit(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Standard_Transient->clientdata)->class_templ);
+#else
+  _exports_MMgt_TShared_class->Inherit(
+    v8::Local<v8::FunctionTemplate>::New(
+      v8::Isolate::GetCurrent(),
+      static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Standard_Transient->clientdata)->class_templ)
+    );
+#endif
   
+#ifdef SWIGRUNTIME_DEBUG
+  printf("Inheritance successful _exports_MMgt_TShared _Standard_Transient\n");
+#endif
+} else {
+#ifdef SWIGRUNTIME_DEBUG
+  printf("Unable to inherit baseclass, it didn't exist _exports_MMgt_TShared _Standard_Transient\n");
+#endif
+}
+if (SWIGTYPE_p_Handle_Standard_Transient->clientdata && !(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Handle_Standard_Transient->clientdata)->class_templ.IsEmpty()))
+{
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+  _exports_Handle_MMgt_TShared_class->Inherit(static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Handle_Standard_Transient->clientdata)->class_templ);
+#else
+  _exports_Handle_MMgt_TShared_class->Inherit(
+    v8::Local<v8::FunctionTemplate>::New(
+      v8::Isolate::GetCurrent(),
+      static_cast<SWIGV8_ClientData *>(SWIGTYPE_p_Handle_Standard_Transient->clientdata)->class_templ)
+    );
+#endif
+  
+#ifdef SWIGRUNTIME_DEBUG
+  printf("Inheritance successful _exports_Handle_MMgt_TShared _Handle_Standard_Transient\n");
+#endif
+} else {
+#ifdef SWIGRUNTIME_DEBUG
+  printf("Unable to inherit baseclass, it didn't exist _exports_Handle_MMgt_TShared _Handle_Standard_Transient\n");
+#endif
+}
+
 
   /* class instances */
-  /* Class: Pnt (_exports_Pnt) */
+  /* Class: Standard_Transient (_exports_Standard_Transient) */
+v8::Handle<v8::FunctionTemplate> _exports_Standard_Transient_class_0 = SWIGV8_CreateClassTemplate("Standard_Transient");
+_exports_Standard_Transient_class_0->SetCallHandler(_wrap_new_Standard_Transient);
+_exports_Standard_Transient_class_0->Inherit(_exports_Standard_Transient_class);
+_exports_Standard_Transient_class_0->SetHiddenPrototype(true);
+v8::Handle<v8::Object> _exports_Standard_Transient_obj = _exports_Standard_Transient_class_0->GetFunction();
+/* Class: MMgt_TShared (_exports_MMgt_TShared) */
+v8::Handle<v8::FunctionTemplate> _exports_MMgt_TShared_class_0 = SWIGV8_CreateClassTemplate("MMgt_TShared");
+_exports_MMgt_TShared_class_0->SetCallHandler(_wrap_new_MMgt_TShared);
+_exports_MMgt_TShared_class_0->Inherit(_exports_MMgt_TShared_class);
+_exports_MMgt_TShared_class_0->SetHiddenPrototype(true);
+v8::Handle<v8::Object> _exports_MMgt_TShared_obj = _exports_MMgt_TShared_class_0->GetFunction();
+/* Class: Handle_Standard_Transient (_exports_Handle_Standard_Transient) */
+v8::Handle<v8::FunctionTemplate> _exports_Handle_Standard_Transient_class_0 = SWIGV8_CreateClassTemplate("Handle_Standard_Transient");
+_exports_Handle_Standard_Transient_class_0->SetCallHandler(_wrap_new_Handle_Standard_Transient);
+_exports_Handle_Standard_Transient_class_0->Inherit(_exports_Handle_Standard_Transient_class);
+_exports_Handle_Standard_Transient_class_0->SetHiddenPrototype(true);
+v8::Handle<v8::Object> _exports_Handle_Standard_Transient_obj = _exports_Handle_Standard_Transient_class_0->GetFunction();
+/* Class: Handle_MMgt_TShared (_exports_Handle_MMgt_TShared) */
+v8::Handle<v8::FunctionTemplate> _exports_Handle_MMgt_TShared_class_0 = SWIGV8_CreateClassTemplate("Handle_MMgt_TShared");
+_exports_Handle_MMgt_TShared_class_0->SetCallHandler(_wrap_new_Handle_MMgt_TShared);
+_exports_Handle_MMgt_TShared_class_0->Inherit(_exports_Handle_MMgt_TShared_class);
+_exports_Handle_MMgt_TShared_class_0->SetHiddenPrototype(true);
+v8::Handle<v8::Object> _exports_Handle_MMgt_TShared_obj = _exports_Handle_MMgt_TShared_class_0->GetFunction();
+/* Class: Pnt (_exports_Pnt) */
 v8::Handle<v8::FunctionTemplate> _exports_Pnt_class_0 = SWIGV8_CreateClassTemplate("Pnt");
 _exports_Pnt_class_0->SetCallHandler(_wrap_new_Pnt);
 _exports_Pnt_class_0->Inherit(_exports_Pnt_class);
@@ -14499,7 +14877,11 @@ v8::Handle<v8::Object> _exports_Trsf_obj = _exports_Trsf_class_0->GetFunction();
 
 
   /* register classes */
-  exports_obj->Set(SWIGV8_SYMBOL_NEW("Pnt"), _exports_Pnt_obj);
+  exports_obj->Set(SWIGV8_SYMBOL_NEW("Standard_Transient"), _exports_Standard_Transient_obj);
+exports_obj->Set(SWIGV8_SYMBOL_NEW("MMgt_TShared"), _exports_MMgt_TShared_obj);
+exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_Standard_Transient"), _exports_Handle_Standard_Transient_obj);
+exports_obj->Set(SWIGV8_SYMBOL_NEW("Handle_MMgt_TShared"), _exports_Handle_MMgt_TShared_obj);
+exports_obj->Set(SWIGV8_SYMBOL_NEW("Pnt"), _exports_Pnt_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Vec"), _exports_Vec_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Dir"), _exports_Dir_obj);
 exports_obj->Set(SWIGV8_SYMBOL_NEW("Ax1"), _exports_Ax1_obj);
