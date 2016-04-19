@@ -1,3 +1,4 @@
+// Copyright © 2012-2015 E. Rossignon
 #include "Util.h"
 
 #include "vector"

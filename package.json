@@ -4,8 +4,9 @@
   "description": "Node wrapper for OpenCascade solid modelling kernel.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "node-gyp rebuild"
+    "test": "node test.js",
+    "install": "node-gyp rebuild",
+    "postinstall": "mv build/Release/*.node lib/"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,8 @@
   },
   "homepage": "https://github.com/henrikrudstrom/noce#readme",
   "devDependencies": {
-    "nan": "^2.2.1"
+    "jasmine": "^2.4.1",
+    "jasmine-terminal-reporter": "^1.0.1",
+    "nan": "^2.2.1",
   }
 }

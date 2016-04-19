@@ -8,7 +8,6 @@ describe('brep.Edge', function(){
 
 
   it('isNull()', function(){
-    console.log('isNull()')
     var obj = create.brep.Edge();
     var res = obj.isNull();
     expect(typeof res).toBe('boolean');
@@ -16,7 +15,6 @@ describe('brep.Edge', function(){
 
 
   it('nullify()', function(){
-    console.log('nullify()')
     var obj = create.brep.Edge();
     var res = obj.nullify();
   });
@@ -24,7 +22,6 @@ describe('brep.Edge', function(){
 
     // arguments or return type not wrapped
   xit('tshape()', function(){
-    console.log('tshape()')
     var obj = create.brep.Edge();
     var res = obj.tshape();
     expect(typeof res).toBe('object');
@@ -34,7 +31,6 @@ describe('brep.Edge', function(){
 
     // arguments or return type not wrapped
   xit('shapeType()', function(){
-    console.log('shapeType()')
     var obj = create.brep.Edge();
     var res = obj.shapeType();
     expect(typeof res).toBe('object');
@@ -43,14 +39,12 @@ describe('brep.Edge', function(){
 
 
   it('reverse()', function(){
-    console.log('reverse()')
     var obj = create.brep.Edge();
     var res = obj.reverse();
   });
 
 
   it('reversed()', function(){
-    console.log('reversed()')
     var obj = create.brep.Edge();
     var res = obj.reversed();
     expect(typeof res).toBe('object');
@@ -59,14 +53,12 @@ describe('brep.Edge', function(){
 
 
   it('complement()', function(){
-    console.log('complement()')
     var obj = create.brep.Edge();
     var res = obj.complement();
   });
 
 
   it('complemented()', function(){
-    console.log('complemented()')
     var obj = create.brep.Edge();
     var res = obj.complemented();
     expect(typeof res).toBe('object');
@@ -75,14 +67,12 @@ describe('brep.Edge', function(){
 
 
   it('emptyCopy()', function(){
-    console.log('emptyCopy()')
     var obj = create.brep.Edge();
     var res = obj.emptyCopy();
   });
 
 
   it('emptyCopied()', function(){
-    console.log('emptyCopied()')
     var obj = create.brep.Edge();
     var res = obj.emptyCopied();
     expect(typeof res).toBe('object');
@@ -91,7 +81,6 @@ describe('brep.Edge', function(){
 
 
   it('free', function(){
-    console.log('free')
     var obj = create.brep.Edge();
     var val = true;
     obj.free = val;
@@ -100,7 +89,6 @@ describe('brep.Edge', function(){
 
 
   it('modified', function(){
-    console.log('modified')
     var obj = create.brep.Edge();
     var val = false;
     obj.modified = val;
@@ -109,7 +97,6 @@ describe('brep.Edge', function(){
 
 
   it('checked', function(){
-    console.log('checked')
     var obj = create.brep.Edge();
     var val = true;
     obj.checked = val;
@@ -118,7 +105,6 @@ describe('brep.Edge', function(){
 
 
   it('orientable', function(){
-    console.log('orientable')
     var obj = create.brep.Edge();
     var val = false;
     obj.orientable = val;
@@ -127,7 +113,6 @@ describe('brep.Edge', function(){
 
 
   it('closed', function(){
-    console.log('closed')
     var obj = create.brep.Edge();
     var val = true;
     obj.closed = val;
@@ -136,7 +121,6 @@ describe('brep.Edge', function(){
 
 
   it('infinite', function(){
-    console.log('infinite')
     var obj = create.brep.Edge();
     var val = false;
     obj.infinite = val;
@@ -145,7 +129,6 @@ describe('brep.Edge', function(){
 
 
   it('convex', function(){
-    console.log('convex')
     var obj = create.brep.Edge();
     var val = true;
     obj.convex = val;
@@ -154,7 +137,6 @@ describe('brep.Edge', function(){
 
 
   it('orientation', function(){
-    console.log('orientation')
     var obj = create.brep.Edge();
     var val = create.brep.Orientation();
     obj.orientation = val;
@@ -163,7 +145,6 @@ describe('brep.Edge', function(){
 
 
   it('location', function(){
-    console.log('location')
     var obj = create.brep.Edge();
     var val = create.brep.Location();
     obj.location = val;

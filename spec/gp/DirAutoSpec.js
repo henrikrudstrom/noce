@@ -4,7 +4,6 @@ describe('gp.Dir', function(){
 
 
   it('Dir()', function(){
-    console.log('Dir()')
     var res = new gp.Dir();
     var res_h = res._handle;
     expect(typeof res).toBe('object');
@@ -14,7 +13,6 @@ describe('gp.Dir', function(){
 
 
   it('xyz()', function(){
-    console.log('xyz()')
     var obj = create.gp.Dir();
     var res = obj.xyz();
     expect(typeof res).toBe('object');
@@ -23,14 +21,12 @@ describe('gp.Dir', function(){
 
 
   it('reverse()', function(){
-    console.log('reverse()')
     var obj = create.gp.Dir();
     var res = obj.reverse();
   });
 
 
   it('reversed()', function(){
-    console.log('reversed()')
     var obj = create.gp.Dir();
     var res = obj.reversed();
     expect(typeof res).toBe('object');
@@ -39,7 +35,6 @@ describe('gp.Dir', function(){
 
 
   it('x', function(){
-    console.log('x')
     var obj = create.gp.Dir();
     var val = 17;
     obj.x = val;
@@ -48,7 +43,6 @@ describe('gp.Dir', function(){
 
 
   it('y', function(){
-    console.log('y')
     var obj = create.gp.Dir();
     var val = 17.5;
     obj.y = val;
@@ -57,7 +51,6 @@ describe('gp.Dir', function(){
 
 
   it('z', function(){
-    console.log('z')
     var obj = create.gp.Dir();
     var val = 18;
     obj.z = val;

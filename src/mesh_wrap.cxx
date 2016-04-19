@@ -1612,41 +1612,32 @@ SWIG_FromCharPtr(const char *cptr)
 #include <TopoDS_Face.hxx>
 
 
-
 #include<Mesh.h>
 #include<Util.h>
 #include <v8.h>
+#include <BRepMesh_IncrementalMesh.hxx>
 
 
 
-v8::Local<v8::Object> tesselate(const TopoDS_Face& face, bool qualityNormals){
-  Mesh* obj = new Mesh();
-  int res = obj->extractFaceMesh(face, qualityNormals);
-  std::cout << "Res is " << res << std::endl;
-  std::cout << "vertex count is" << obj->numVertices() << std::endl;
-  std::cout << "size is" << obj->vertices.size()*3 << std::endl;
-  v8::Handle<v8::Object> output = SWIGV8_OBJECT_NEW();
-  //v8::Handle<v8::Array> vertices = v8::Array::New(v8::Isolate::GetCurrent(), obj->numVertices());
-  v8::Local<v8::Object> vertices = _makeTypedArray(&(obj->vertices.data()[0].x), (int)obj->vertices.size()*3);
-  return vertices;
+v8::Local<v8::Object> tesselate(const TopoDS_Face& face, double factor, double angle, bool qualityNormals){
+  Mesh* mesher = new Mesh();
+  BRepMesh_IncrementalMesh IncrementalMesh(face, factor, Standard_True, angle * 3.14159 / 180.0 , Standard_True);
+  int res = mesher->extractFaceMesh(face, qualityNormals);
+
+  v8::Local<v8::Object> vertices = _makeTypedArray(&(mesher->vertices.data()[0].x), (int)mesher->vertices.size()*3);
+  v8::Local<v8::Object> normals = _makeTypedArray(&(mesher->normals.data()[0].x), (int)mesher->normals.size()*3);
+  v8::Local<v8::Object> triangles = _makeTypedArray(&(mesher->triangles.data()[0].i), (int)mesher->triangles.size()*3);
+  v8::Local<v8::Object> edgeindices = _makeTypedArray(&(mesher->edgeindices.data()[0]), (int)mesher->edgeindices.size()*3);
+  v8::Local<v8::Object> mesh = SWIGV8_OBJECT_NEW();
+
+  mesh->Set(SWIGV8_STRING_NEW("vertices"), vertices);
+  mesh->Set(SWIGV8_STRING_NEW("normals"), normals);
+  mesh->Set(SWIGV8_STRING_NEW("triangles"), triangles);
+  mesh->Set(SWIGV8_STRING_NEW("edgeindices"), edgeindices);
+
+  return mesh;
 }
 
-/*v8::Local<v8::Object> UpdateExternalArray(v8::Handle<v8::Object>& pThis, const char* name, const T* data, size_t _length)
-{
-  v8::Local<v8::Object> arr = _makeTypedArray(data, (int)_length);
-  pThis->Set(Nan::New(name).ToLocalChecked(), arr);
-}*/
-
-// void Mesh::updateJavaScriptArray()
-// {
-//   assert(sizeof(triangles[0])==sizeof(int)*3);
-//   v8::Local<v8::Object> pThis = NanObjectWrapHandle(this);
-//   UpdateExternalArray(pThis, "vertices"    ,&vertices.data()[0].x   ,vertices.size()*3);
-//   UpdateExternalArray(pThis, "normals"     ,&normals.data()[0].x    ,normals.size()*3);
-//   UpdateExternalArray(pThis, "triangles"   ,&triangles.data()[0].i  ,triangles.size()*3);
-//   UpdateExternalArray(pThis, "edgeindices" ,&edgeindices.data()[0]  ,edgeindices.size());
-// }
-  
 
 
 SWIGINTERN
@@ -1750,14 +1741,20 @@ static SwigV8ReturnValue _wrap_tesselate(const SwigV8Arguments &args) {
   
   v8::Handle<v8::Value> jsresult;
   TopoDS_Face *arg1 = 0 ;
-  bool arg2 ;
+  double arg2 ;
+  double arg3 ;
+  bool arg4 ;
   void *argp1 ;
   int res1 = 0 ;
-  bool val2 ;
+  double val2 ;
   int ecode2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  bool val4 ;
+  int ecode4 = 0 ;
   v8::Local< v8::Object > result;
   
-  if(args.Length() != 2) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_tesselate.");
+  if(args.Length() != 4) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_tesselate.");
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Face,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -1767,16 +1764,26 @@ static SwigV8ReturnValue _wrap_tesselate(const SwigV8Arguments &args) {
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "tesselate" "', argument " "1"" of type '" "TopoDS_Face const &""'"); 
   }
   arg1 = (TopoDS_Face *)(argp1);
-  ecode2 = SWIG_AsVal_bool(args[1], &val2);
+  ecode2 = SWIG_AsVal_double(args[1], &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "tesselate" "', argument " "2"" of type '" "bool""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "tesselate" "', argument " "2"" of type '" "double""'");
   } 
-  arg2 = (bool)(val2);
+  arg2 = (double)(val2);
+  ecode3 = SWIG_AsVal_double(args[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "tesselate" "', argument " "3"" of type '" "double""'");
+  } 
+  arg3 = (double)(val3);
+  ecode4 = SWIG_AsVal_bool(args[3], &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "tesselate" "', argument " "4"" of type '" "bool""'");
+  } 
+  arg4 = (bool)(val4);
   {
     try
     {
       OCC_CATCH_SIGNALS
-      result = tesselate((TopoDS_Face const &)*arg1,arg2);
+      result = tesselate((TopoDS_Face const &)*arg1,arg2,arg3,arg4);
     }
     catch(Standard_Failure)
     {
@@ -1785,9 +1792,10 @@ static SwigV8ReturnValue _wrap_tesselate(const SwigV8Arguments &args) {
     }
   }
   {
-    //just return it
     jsresult = result;
   }
+  
+  
   
   
   

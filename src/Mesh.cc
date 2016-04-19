@@ -1,3 +1,4 @@
+// Copyright © 2012-2015 E. Rossignon
 #include "Mesh.h"
 
 #include <set>
@@ -7,54 +8,11 @@
 #include <limits>
 #include <assert.h>
 
-//#include "Util.h"
-
 // old handle in V8 : see http://create.tpsitulsa.com/wiki/V8/Handles
 
 Mesh::Mesh()
 {
 }
-
-// NAN_METHOD(Mesh::New)
-// {
-//   Mesh* obj = new Mesh();
-
-//   info.This()->Set(Nan::New("vertices").ToLocalChecked(),   Nan::New<v8::Object>());
-//   info.This()->Set(Nan::New("normals").ToLocalChecked(),    Nan::New<v8::Object>());
-//   info.This()->Set(Nan::New("edgeindices").ToLocalChecked(),Nan::New<v8::Object>());
-//   info.This()->Set(Nan::New("triangles").ToLocalChecked(),  Nan::New<v8::Object>());
-
-//   obj->Wrap(info.This());
-//   info.GetReturnValue().Set(info.This());
-// }
-
-// Nan::Persistent<v8::FunctionTemplate> Mesh::_template;
-
-
-/*static*/
-// void Mesh::Init(v8::Handle<v8::Object> target)
-// {
-//   // Prepare constructor template
-//   v8::Local<v8::FunctionTemplate> tpl = Nan::New<v8::FunctionTemplate>(Mesh::New);  
-//   tpl->SetClassName(Nan::New("Mesh").ToLocalChecked());
-
-//   // object has one internal filed ( the C++ object)
-//   tpl->InstanceTemplate()->SetInternalFieldCount(1);
-
-//   _template.Reset(tpl);
-
-//   // Prototype
-//   v8::Local<v8::ObjectTemplate> proto = tpl->PrototypeTemplate();
-
-//   EXPOSE_READ_ONLY_PROPERTY_INTEGER(Mesh,numTriangles);
-//   EXPOSE_READ_ONLY_PROPERTY_INTEGER(Mesh,numEdges);
-//   EXPOSE_READ_ONLY_PROPERTY_INTEGER(Mesh,numVertices);
-//   EXPOSE_READ_ONLY_PROPERTY_INTEGER(Mesh,numNormals);
-
-//   // other Mesh prototype members are defined in the mesh.js script
-//   target->Set(Nan::New("Mesh").ToLocalChecked(), tpl->GetFunction());
-
-// }
 
 int Mesh::extractFaceMesh(const TopoDS_Face& face, bool qualityNormals)
 {
@@ -65,20 +23,19 @@ int Mesh::extractFaceMesh(const TopoDS_Face& face, bool qualityNormals)
   Coord3f vert;
   Coord3f norm;
   Triangle3i tri;
-  std::cout << "start" << std::endl;
   try {
 
     if(face.IsNull()) {
       StdFail_NotDone::Raise("Face is Null");
     }
-    std::cout << "notnull" << std::endl;
+
     TopLoc_Location loc;
     Handle_Poly_Triangulation triangulation = BRep_Tool::Triangulation(face, loc);
-    std::cout << "notnull" << std::endl;
+
     if(triangulation.IsNull()) {
       StdFail_NotDone::Raise("No triangulation created");
     }
-    std::cout << "triangnotnull" << std::endl;
+
     gp_Trsf tr = loc;
     const TColgp_Array1OfPnt& narr = triangulation->Nodes();
 
@@ -88,7 +45,6 @@ int Mesh::extractFaceMesh(const TopoDS_Face& face, bool qualityNormals)
     normals.reserve(triangulation->NbNodes());
 
     this->vertices.reserve(triangulation->NbNodes());
-    std::cout << "triangulation nodes" << triangulation->NbNodes() << std::endl;
     for (int i = 1; i <= triangulation->NbNodes(); i++) {
 
       const gp_Pnt& pnt = narr(i);
@@ -269,25 +225,6 @@ int Mesh::extractFaceMesh(const TopoDS_Face& face, bool qualityNormals)
   return 1;
 }
 
-
-// template<class T>
-// void UpdateExternalArray(v8::Handle<v8::Object>& pThis, const char* name, const T* data, size_t _length)
-// {
-//   v8::Local<v8::Object> arr = _makeTypedArray(data, (int)_length);
-//   pThis->Set(Nan::New(name).ToLocalChecked(), arr);
-// }
-
-// void Mesh::updateJavaScriptArray()
-// {
-//   assert(sizeof(triangles[0])==sizeof(int)*3);
-//   v8::Local<v8::Object> pThis = NanObjectWrapHandle(this);
-//   UpdateExternalArray(pThis, "vertices"    ,&vertices.data()[0].x   ,vertices.size()*3);
-//   UpdateExternalArray(pThis, "normals"     ,&normals.data()[0].x    ,normals.size()*3);
-//   UpdateExternalArray(pThis, "triangles"   ,&triangles.data()[0].i  ,triangles.size()*3);
-//   UpdateExternalArray(pThis, "edgeindices" ,&edgeindices.data()[0]  ,edgeindices.size());
-// }
-
-
 float square(float b)
 {
   return b*b;
@@ -330,11 +267,4 @@ void Mesh::optimize()
   }
 #endif
 
-
 }
-
-// void Initialize(v8::Handle<v8::Object> target)
-// {
-//     Mesh::Init(target);
-// }
-// NODE_MODULE(mesh, Initialize)

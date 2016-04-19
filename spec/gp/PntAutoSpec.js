@@ -4,7 +4,6 @@ describe('gp.Pnt', function(){
 
 
   it('Pnt()', function(){
-    console.log('Pnt()')
     var res = new gp.Pnt();
     var res_h = res._handle;
     expect(typeof res).toBe('object');
@@ -14,7 +13,6 @@ describe('gp.Pnt', function(){
 
 
   it('xyz()', function(){
-    console.log('xyz()')
     var obj = create.gp.Pnt();
     var res = obj.xyz();
     expect(typeof res).toBe('object');
@@ -23,7 +21,6 @@ describe('gp.Pnt', function(){
 
 
   it('x', function(){
-    console.log('x')
     var obj = create.gp.Pnt();
     var val = 14;
     obj.x = val;
@@ -32,7 +29,6 @@ describe('gp.Pnt', function(){
 
 
   it('y', function(){
-    console.log('y')
     var obj = create.gp.Pnt();
     var val = 14.5;
     obj.y = val;
@@ -41,7 +37,6 @@ describe('gp.Pnt', function(){
 
 
   it('z', function(){
-    console.log('z')
     var obj = create.gp.Pnt();
     var val = 15;
     obj.z = val;

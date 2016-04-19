@@ -6,12 +6,12 @@
         "src/brep_wrap.cxx"
       ],
       "include_dirs": [
-        "/usr/local/include/oce",
-        "/home/ubuntu/workspace/noce/inc",
+        "/home/henrik/OCE/include/oce",
+        "/home/henrik/Development/noce/noce/inc",
         "../noce/inc"
       ],
       "libraries": [
-        "-L/usr/local/lib",
+        "-L/home/henrik/OCE/lib",
         "-lTKernel",
         "-lTKMath",
         "-lTKG3d",
@@ -43,12 +43,12 @@
         "src/Geom_wrap.cxx"
       ],
       "include_dirs": [
-        "/usr/local/include/oce",
-        "/home/ubuntu/workspace/noce/inc",
+        "/home/henrik/OCE/include/oce",
+        "/home/henrik/Development/noce/noce/inc",
         "../noce/inc"
       ],
       "libraries": [
-        "-L/usr/local/lib",
+        "-L/home/henrik/OCE/lib",
         "-lTKernel",
         "-lTKMath",
         "-lTKG3d",
@@ -79,12 +79,12 @@
         "src/gp_wrap.cxx"
       ],
       "include_dirs": [
-        "/usr/local/include/oce",
-        "/home/ubuntu/workspace/noce/inc",
+        "/home/henrik/OCE/include/oce",
+        "/home/henrik/Development/noce/noce/inc",
         "../noce/inc"
       ],
       "libraries": [
-        "-L/usr/local/lib",
+        "-L/home/henrik/OCE/lib",
         "-lTKMath"
       ],
       "cflags": [
@@ -111,17 +111,16 @@
       "sources": [
         "src/Mesh.cc",
         "src/Util.cc",
-        "src/GeometryBuilder.cc",
         "src/mesh_wrap.cxx"
       ],
       "include_dirs": [
-        "/usr/local/include/oce",
-        "/home/ubuntu/workspace/noce/inc",
+        "/home/henrik/OCE/include/oce",
+        "/home/henrik/Development/noce/noce/inc",
         "../noce/inc",
         "<!(node -e \"require('nan')\")"
       ],
       "libraries": [
-        "-L/usr/local/lib",
+        "-L/home/henrik/OCE/lib",
         "-lTKernel",
         "-lTKMath",
         "-lTKAdvTools",

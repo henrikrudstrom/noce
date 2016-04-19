@@ -12,7 +12,6 @@ describe('brep', function(){
 
 
   it('makeVertex(gp.Pnt)', function(){
-    console.log('makeVertex(gp.Pnt)')
     var res = brep.makeVertex(create.gp.Pnt());
     expect(typeof res).toBe('object');
     expect(res.constructor.name.replace('_exports_', '')).toBe('Vertex');
@@ -21,7 +20,6 @@ describe('brep', function(){
 
 
   it('makeWire(brep.Edge)', function(){
-    console.log('makeWire(brep.Edge)')
     var res = brep.makeWire(create.brep.Edge());
     expect(typeof res).toBe('object');
     expect(res.constructor.name.replace('_exports_', '')).toBe('Wire');
@@ -32,7 +30,6 @@ describe('brep', function(){
 
 
   it('makeWire(brep.Wire)', function(){
-    console.log('makeWire(brep.Wire)')
     var res = brep.makeWire(create.brep.Wire());
     expect(typeof res).toBe('object');
     expect(res.constructor.name.replace('_exports_', '')).toBe('Wire');
@@ -41,7 +38,6 @@ describe('brep', function(){
 
 
   it('makeFace(Geom.Surface, Double)', function(){
-    console.log('makeFace(Geom.Surface, Double)')
     var res = brep.makeFace(create.Geom.Surface(), 3.5);
     expect(typeof res).toBe('object');
     expect(res.constructor.name.replace('_exports_', '')).toBe('Face');
@@ -49,7 +45,6 @@ describe('brep', function(){
 
 
   it('makeFace(Geom.Surface, Double, Double, Double, Double, Double)', function(){
-    console.log('makeFace(Geom.Surface, Double, Double, Double, Double, Double)')
     var res = brep.makeFace(create.Geom.Surface(), 4, 4.5, 5, 5.5, 6);
     expect(typeof res).toBe('object');
     expect(res.constructor.name.replace('_exports_', '')).toBe('Face');
@@ -57,7 +52,6 @@ describe('brep', function(){
 
 
   it('makeFace(Geom.Surface, brep.Wire, Boolean)', function(){
-    console.log('makeFace(Geom.Surface, brep.Wire, Boolean)')
     var res = brep.makeFace(create.Geom.Surface(), create.brep.Wire(), false);
     expect(typeof res).toBe('object');
     expect(res.constructor.name.replace('_exports_', '')).toBe('Face');
@@ -67,7 +61,6 @@ describe('brep', function(){
 
 
   it('makeFace(brep.Face, brep.Wire)', function(){
-    console.log('makeFace(brep.Face, brep.Wire)')
     var res = brep.makeFace(create.brep.Face(), create.brep.Wire());
     expect(typeof res).toBe('object');
     expect(res.constructor.name.replace('_exports_', '')).toBe('Face');

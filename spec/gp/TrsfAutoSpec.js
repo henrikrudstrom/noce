@@ -4,7 +4,6 @@ describe('gp.Trsf', function(){
 
 
   it('Trsf()', function(){
-    console.log('Trsf()')
     var res = new gp.Trsf();
     var res_h = res._handle;
     expect(typeof res).toBe('object');
@@ -14,7 +13,6 @@ describe('gp.Trsf', function(){
 
 
   it('isNegative()', function(){
-    console.log('isNegative()')
     var obj = create.gp.Trsf();
     var res = obj.isNegative();
     expect(typeof res).toBe('boolean');
@@ -23,7 +21,6 @@ describe('gp.Trsf', function(){
 
     // arguments or return type not wrapped
   xit('form()', function(){
-    console.log('form()')
     var obj = create.gp.Trsf();
     var res = obj.form();
     expect(typeof res).toBe('object');
@@ -32,7 +29,6 @@ describe('gp.Trsf', function(){
 
 
   it('scaleFactor()', function(){
-    console.log('scaleFactor()')
     var obj = create.gp.Trsf();
     var res = obj.scaleFactor();
     expect(typeof res).toBe('number');
@@ -40,7 +36,6 @@ describe('gp.Trsf', function(){
 
 
   it('translationPart()', function(){
-    console.log('translationPart()')
     var obj = create.gp.Trsf();
     var res = obj.translationPart();
     expect(typeof res).toBe('object');
@@ -50,7 +45,6 @@ describe('gp.Trsf', function(){
 
     // arguments or return type not wrapped
   xit('getRotation()', function(){
-    console.log('getRotation()')
     var obj = create.gp.Trsf();
     var res = obj.getRotation();
     expect(typeof res).toBe('object');
@@ -60,7 +54,6 @@ describe('gp.Trsf', function(){
 
     // arguments or return type not wrapped
   xit('vectorialPart()', function(){
-    console.log('vectorialPart()')
     var obj = create.gp.Trsf();
     var res = obj.vectorialPart();
     expect(typeof res).toBe('object');
@@ -70,7 +63,6 @@ describe('gp.Trsf', function(){
 
     // arguments or return type not wrapped
   xit('hvectorialPart()', function(){
-    console.log('hvectorialPart()')
     var obj = create.gp.Trsf();
     var res = obj.hvectorialPart();
     expect(typeof res).toBe('object');
@@ -79,14 +71,12 @@ describe('gp.Trsf', function(){
 
 
   it('invert()', function(){
-    console.log('invert()')
     var obj = create.gp.Trsf();
     var res = obj.invert();
   });
 
 
   it('inverted()', function(){
-    console.log('inverted()')
     var obj = create.gp.Trsf();
     var res = obj.inverted();
     expect(typeof res).toBe('object');

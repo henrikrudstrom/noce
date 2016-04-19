@@ -19,6 +19,9 @@ var notWorking = {
   'Geom.Line': [
     'period()'
   ],
+  'Geom.Plane': [
+    'uperiod()', 'vperiod()'
+  ],
   'brep': [
 
   ]

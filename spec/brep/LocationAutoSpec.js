@@ -6,7 +6,6 @@ describe('brep.Location', function(){
 
 
   it('Location()', function(){
-    console.log('Location()')
     var res = new brep.Location();
     var res_h = res._handle;
     expect(typeof res).toBe('object');
@@ -16,7 +15,6 @@ describe('brep.Location', function(){
 
 
   it('isIdentity()', function(){
-    console.log('isIdentity()')
     var obj = create.brep.Location();
     var res = obj.isIdentity();
     expect(typeof res).toBe('boolean');
@@ -24,7 +22,6 @@ describe('brep.Location', function(){
 
 
   it('identity()', function(){
-    console.log('identity()')
     var obj = create.brep.Location();
     var res = obj.identity();
   });
@@ -32,7 +29,6 @@ describe('brep.Location', function(){
 
     // arguments or return type not wrapped
   xit('firstDatum()', function(){
-    console.log('firstDatum()')
     var obj = create.brep.Location();
     var res = obj.firstDatum();
     expect(typeof res).toBe('object');
@@ -41,7 +37,6 @@ describe('brep.Location', function(){
 
 
   it('firstPower()', function(){
-    console.log('firstPower()')
     var obj = create.brep.Location();
     var res = obj.firstPower();
     expect(typeof res).toBe('number');
@@ -49,7 +44,6 @@ describe('brep.Location', function(){
 
 
   it('nextLocation()', function(){
-    console.log('nextLocation()')
     var obj = create.brep.Location();
     var res = obj.nextLocation();
     expect(typeof res).toBe('object');
@@ -58,7 +52,6 @@ describe('brep.Location', function(){
 
 
   it('transformation()', function(){
-    console.log('transformation()')
     var obj = create.brep.Location();
     var res = obj.transformation();
     expect(typeof res).toBe('object');
@@ -67,7 +60,6 @@ describe('brep.Location', function(){
 
 
   it('inverted()', function(){
-    console.log('inverted()')
     var obj = create.brep.Location();
     var res = obj.inverted();
     expect(typeof res).toBe('object');

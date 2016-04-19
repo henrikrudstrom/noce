@@ -1,5 +1,6 @@
+// Copyright © 2012-2015 E. Rossignon
 #pragma once
-//#include "NodeV8.h"
+
 #include <vector>
 
 #include <TopoDS.hxx>
@@ -44,21 +45,13 @@ public:
     int extractFaceMesh(const TopoDS_Face& face, bool qualityNormals);
     void optimize();
 
-    // static NAN_METHOD(New);
-
-    // static void Init(v8::Handle<v8::Object> target);
-
-
-
     std::vector<Coord3f> normals;
     std::vector<Coord3f> vertices;
     std::vector<Triangle3i> triangles;
     std::vector<unsigned int> edgeindices;
     std::vector<int> edgeranges;
     std::vector<int> edgehash;
-    friend class MeshOptimizer;
 
-    //static Nan::Persistent<v8::FunctionTemplate> _template;
     int32_t numTriangles()  {
         return  (int32_t) triangles.size();
     }

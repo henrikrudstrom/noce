@@ -5,7 +5,6 @@ describe('Geom.Axis1Placement', function(){
 
 
   it('Axis1Placement(gp.Ax1)', function(){
-    console.log('Axis1Placement(gp.Ax1)')
     var res = new Geom.Axis1Placement(create.gp.Ax1());
     var res_h = res._handle;
     expect(typeof res).toBe('object');
@@ -15,7 +14,6 @@ describe('Geom.Axis1Placement', function(){
 
 
   it('ax1()', function(){
-    console.log('ax1()')
     var obj = create.Geom.Axis1Placement();
     var res = obj.ax1();
     expect(typeof res).toBe('object');
@@ -24,14 +22,12 @@ describe('Geom.Axis1Placement', function(){
 
 
   it('reverse()', function(){
-    console.log('reverse()')
     var obj = create.Geom.Axis1Placement();
     var res = obj.reverse();
   });
 
 
   it('reversed()', function(){
-    console.log('reversed()')
     var obj = create.Geom.Axis1Placement();
     var res = obj.reversed();
     expect(typeof res).toBe('object');
@@ -40,7 +36,6 @@ describe('Geom.Axis1Placement', function(){
 
 
   it('copy()', function(){
-    console.log('copy()')
     var obj = create.Geom.Axis1Placement();
     var res = obj.copy();
     expect(typeof res).toBe('object');
@@ -50,7 +45,6 @@ describe('Geom.Axis1Placement', function(){
 
     // arguments or return type not wrapped
   xit('dynamicType()', function(){
-    console.log('dynamicType()')
     var obj = create.Geom.Axis1Placement();
     var res = obj.dynamicType();
     expect(typeof res).toBe('object');
@@ -59,7 +53,6 @@ describe('Geom.Axis1Placement', function(){
 
 
   it('axis()', function(){
-    console.log('axis()')
     var obj = create.Geom.Axis1Placement();
     var res = obj.axis();
     expect(typeof res).toBe('object');
@@ -68,7 +61,6 @@ describe('Geom.Axis1Placement', function(){
 
 
   it('direction()', function(){
-    console.log('direction()')
     var obj = create.Geom.Axis1Placement();
     var res = obj.direction();
     expect(typeof res).toBe('object');
@@ -77,7 +69,6 @@ describe('Geom.Axis1Placement', function(){
 
 
   it('location()', function(){
-    console.log('location()')
     var obj = create.Geom.Axis1Placement();
     var res = obj.location();
     expect(typeof res).toBe('object');

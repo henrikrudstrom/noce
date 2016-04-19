@@ -1,3 +1,4 @@
+// Copyright © 2012-2015 E. Rossignon
 #pragma once
 //#include "OCC.h"
 #include "NodeV8.h"

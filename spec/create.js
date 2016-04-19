@@ -59,6 +59,9 @@ var createGeom = {
   CylindricalSurface() {
     return new Geom.CylindricalSurface(creategp.Ax3(), nextDouble());
   },
+  Plane() {
+    return new Geom.Plane(creategp.Ax3());
+  },
 
   Axis1Placement() {
     return new Geom.Axis1Placement(creategp.Ax1());
@@ -121,9 +124,9 @@ var createbrep = {
     var e1 = brep.makeEdge(l1)
     var l2 = Geom.TrimmedCurve.makeSegment(pt2, pt3);
     var e2 = brep.makeEdge(l2)
-    console.log("E",e2)
+    // console.log("E",e2)
     return brep.makeWire(e1);
-  }, 
+  },
   Face() {
     var surf = createGeom.Surface();
     return brep.makeFace(surf, 0.01);

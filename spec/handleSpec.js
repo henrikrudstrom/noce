@@ -54,8 +54,8 @@ describe('a handle', function() {
     console.time('cgp');
     for (var i = 0; i < n; i++) { // 52631 pr second
       func();
-      if (i % 2500 === 0)
-        console.log("handle" + i, ap1._handle);
+      //if (i % 2500 === 0)
+      // console.log("handle" + i, ap1._handle);
     }
     return console.timeEnd('cgp');
   }
