@@ -1500,8 +1500,9 @@ SWIGRUNTIME void JS_veto_set_variable(v8::Local<v8::String> property, v8::Local<
 #define SWIGTYPE_p_gp_Vec swig_types[17]
 #define SWIGTYPE_p_gp_XYZ swig_types[18]
 #define SWIGTYPE_p_int swig_types[19]
-static swig_type_info *swig_types[21];
-static swig_module_info swig_module = {swig_types, 20, 0, 0, 0, 0};
+#define SWIGTYPE_p_std__ostream swig_types[20]
+static swig_type_info *swig_types[22];
+static swig_module_info swig_module = {swig_types, 21, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1531,6 +1532,13 @@ static swig_module_info swig_module = {swig_types, 20, 0, 0, 0, 0};
 #include <Standard_Integer.hxx>
 #include <Standard_Boolean.hxx>
 #include <Standard_CString.hxx>
+#include <Standard_TypeDef.hxx>
+#include <Standard_Stream.hxx>
+#include <Standard_OStream.hxx>
+#include <Standard_Storable.hxx>
+#include <sstream>
+#include <string>
+#include <iostream>
 
 
 #include <stdlib.h>
@@ -1599,20 +1607,26 @@ SWIG_FromCharPtr(const char *cptr)
 }
 
 
-#include <gp_Vec.hxx>
+// TODO: seems wasteful to compile this in for every module...
+
+
+
+
+#include <gp_XYZ.hxx>
 #include <Standard_Real.hxx>
 #include <Standard_Boolean.hxx>
 #include <gp_Ax1.hxx>
 #include <gp_Ax2.hxx>
 #include <gp_Trsf.hxx>
+#include <gp_Vec.hxx>
 #include <gp_Dir.hxx>
+#include <gp_Pnt.hxx>
 #include <gp_Trsf2d.hxx>
 #include <gp_Quaternion.hxx>
 #include <gp_Ax3.hxx>
 #include <gp_TrsfForm.hxx>
 #include <gp_Mat.hxx>
 #include <Standard_Integer.hxx>
-#include <gp_Pnt.hxx>
 #include <gp_Pnt.hxx>
 #include <gp_Vec.hxx>
 #include <gp_Dir.hxx>
@@ -1987,13 +2001,18 @@ static SwigV8ReturnValue _wrap_new_Pnt__SWIG_1(const SwigV8Arguments &args, V8Er
   
   v8::Handle<v8::Object> self = args.Holder();
   gp_XYZ *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
   gp_Pnt *result;
   if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Pnt__SWIG_1.");
-  {
-    void *argp ;
-    int res = SWIG_ConvertPtr(args[0], &argp, SWIGTYPE_p_gp_Vec,  0 );
-    arg1 = &((gp_Vec *)(argp))->XYZ();
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_XYZ,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Pnt" "', argument " "1"" of type '" "gp_XYZ const &""'"); 
   }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Pnt" "', argument " "1"" of type '" "gp_XYZ const &""'"); 
+  }
+  arg1 = (gp_XYZ *)(argp1);
   {
     try
     {
@@ -2146,6 +2165,8 @@ static SwigV8ReturnValue _wrap_Pnt_setXyz(const SwigV8Arguments &args) {
   gp_XYZ *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
   
   if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Pnt_setXyz.");
   
@@ -2154,11 +2175,14 @@ static SwigV8ReturnValue _wrap_Pnt_setXyz(const SwigV8Arguments &args) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Pnt_setXyz" "', argument " "1"" of type '" "gp_Pnt *""'"); 
   }
   arg1 = (gp_Pnt *)(argp1);
-  {
-    void *argp ;
-    int res = SWIG_ConvertPtr(args[0], &argp, SWIGTYPE_p_gp_Vec,  0 );
-    arg2 = &((gp_Vec *)(argp))->XYZ();
+  res2 = SWIG_ConvertPtr(args[0], &argp2, SWIGTYPE_p_gp_XYZ,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Pnt_setXyz" "', argument " "2"" of type '" "gp_XYZ const &""'"); 
   }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Pnt_setXyz" "', argument " "2"" of type '" "gp_XYZ const &""'"); 
+  }
+  arg2 = (gp_XYZ *)(argp2);
   {
     try
     {
@@ -2211,9 +2235,7 @@ static SwigV8ReturnValue _wrap_Pnt_xyz(const SwigV8Arguments &args) {
       return;
     }
   }
-  {
-    jsresult = SWIG_NewPointerObj((new gp_Vec((const gp_Vec&)result)), SWIGTYPE_p_gp_Vec, SWIG_POINTER_OWN |  0 );
-  }
+  jsresult = SWIG_NewPointerObj((new gp_XYZ((const gp_XYZ&)(result))), SWIGTYPE_p_gp_XYZ, SWIG_POINTER_OWN |  0 );
   
   
   SWIGV8_RETURN(jsresult);
@@ -2997,123 +3019,6 @@ fail:
 }
 
 
-static SwigV8ReturnValue _wrap_Pnt_X(const SwigV8Arguments &args) {
-  SWIGV8_HANDLESCOPE();
-  
-  v8::Handle<v8::Value> jsresult;
-  gp_Pnt *arg1 = (gp_Pnt *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  Standard_Real result;
-  
-  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Pnt_X.");
-  
-  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_gp_Pnt, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Pnt_X" "', argument " "1"" of type '" "gp_Pnt *""'"); 
-  }
-  arg1 = (gp_Pnt *)(argp1);
-  {
-    try
-    {
-      OCC_CATCH_SIGNALS
-      result = (Standard_Real)(arg1)->X();
-    }
-    catch(Standard_Failure)
-    {
-      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
-      return;
-    }
-  }
-  jsresult = SWIG_From_double((double)(result));
-  
-  
-  SWIGV8_RETURN(jsresult);
-  
-  goto fail;
-fail:
-  SWIGV8_RETURN(SWIGV8_UNDEFINED());
-}
-
-
-static SwigV8ReturnValue _wrap_Pnt_Y(const SwigV8Arguments &args) {
-  SWIGV8_HANDLESCOPE();
-  
-  v8::Handle<v8::Value> jsresult;
-  gp_Pnt *arg1 = (gp_Pnt *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  Standard_Real result;
-  
-  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Pnt_Y.");
-  
-  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_gp_Pnt, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Pnt_Y" "', argument " "1"" of type '" "gp_Pnt *""'"); 
-  }
-  arg1 = (gp_Pnt *)(argp1);
-  {
-    try
-    {
-      OCC_CATCH_SIGNALS
-      result = (Standard_Real)(arg1)->Y();
-    }
-    catch(Standard_Failure)
-    {
-      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
-      return;
-    }
-  }
-  jsresult = SWIG_From_double((double)(result));
-  
-  
-  SWIGV8_RETURN(jsresult);
-  
-  goto fail;
-fail:
-  SWIGV8_RETURN(SWIGV8_UNDEFINED());
-}
-
-
-static SwigV8ReturnValue _wrap_Pnt_Z(const SwigV8Arguments &args) {
-  SWIGV8_HANDLESCOPE();
-  
-  v8::Handle<v8::Value> jsresult;
-  gp_Pnt *arg1 = (gp_Pnt *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  Standard_Real result;
-  
-  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Pnt_Z.");
-  
-  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_gp_Pnt, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Pnt_Z" "', argument " "1"" of type '" "gp_Pnt *""'"); 
-  }
-  arg1 = (gp_Pnt *)(argp1);
-  {
-    try
-    {
-      OCC_CATCH_SIGNALS
-      result = (Standard_Real)(arg1)->Z();
-    }
-    catch(Standard_Failure)
-    {
-      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
-      return;
-    }
-  }
-  jsresult = SWIG_From_double((double)(result));
-  
-  
-  SWIGV8_RETURN(jsresult);
-  
-  goto fail;
-fail:
-  SWIGV8_RETURN(SWIGV8_UNDEFINED());
-}
-
-
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
 static void _wrap_delete_Pnt(v8::Persistent<v8::Value> object, void *parameter) {
   SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
@@ -3225,13 +3130,18 @@ static SwigV8ReturnValue _wrap_new_Vec__SWIG_2(const SwigV8Arguments &args, V8Er
   
   v8::Handle<v8::Object> self = args.Holder();
   gp_XYZ *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
   gp_Vec *result;
   if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Vec__SWIG_2.");
-  {
-    void *argp ;
-    int res = SWIG_ConvertPtr(args[0], &argp, SWIGTYPE_p_gp_Vec,  0 );
-    arg1 = &((gp_Vec *)(argp))->XYZ();
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_XYZ,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Vec" "', argument " "1"" of type '" "gp_XYZ const &""'"); 
   }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Vec" "', argument " "1"" of type '" "gp_XYZ const &""'"); 
+  }
+  arg1 = (gp_XYZ *)(argp1);
   {
     try
     {
@@ -3468,6 +3378,8 @@ static SwigV8ReturnValue _wrap_Vec_setXyz(const SwigV8Arguments &args) {
   gp_XYZ *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
   
   if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Vec_setXyz.");
   
@@ -3476,11 +3388,14 @@ static SwigV8ReturnValue _wrap_Vec_setXyz(const SwigV8Arguments &args) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Vec_setXyz" "', argument " "1"" of type '" "gp_Vec *""'"); 
   }
   arg1 = (gp_Vec *)(argp1);
-  {
-    void *argp ;
-    int res = SWIG_ConvertPtr(args[0], &argp, SWIGTYPE_p_gp_Vec,  0 );
-    arg2 = &((gp_Vec *)(argp))->XYZ();
+  res2 = SWIG_ConvertPtr(args[0], &argp2, SWIGTYPE_p_gp_XYZ,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Vec_setXyz" "', argument " "2"" of type '" "gp_XYZ const &""'"); 
   }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Vec_setXyz" "', argument " "2"" of type '" "gp_XYZ const &""'"); 
+  }
+  arg2 = (gp_XYZ *)(argp2);
   {
     try
     {
@@ -3533,9 +3448,7 @@ static SwigV8ReturnValue _wrap_Vec_xyz(const SwigV8Arguments &args) {
       return;
     }
   }
-  {
-    jsresult = SWIG_NewPointerObj((new gp_Vec((const gp_Vec&)result)), SWIGTYPE_p_gp_Vec, SWIG_POINTER_OWN |  0 );
-  }
+  jsresult = SWIG_NewPointerObj((new gp_XYZ((const gp_XYZ&)(result))), SWIGTYPE_p_gp_XYZ, SWIG_POINTER_OWN |  0 );
   
   
   SWIGV8_RETURN(jsresult);
@@ -5859,123 +5772,6 @@ fail:
 }
 
 
-static SwigV8ReturnValue _wrap_Vec_X(const SwigV8Arguments &args) {
-  SWIGV8_HANDLESCOPE();
-  
-  v8::Handle<v8::Value> jsresult;
-  gp_Vec *arg1 = (gp_Vec *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  Standard_Real result;
-  
-  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Vec_X.");
-  
-  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_gp_Vec, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Vec_X" "', argument " "1"" of type '" "gp_Vec *""'"); 
-  }
-  arg1 = (gp_Vec *)(argp1);
-  {
-    try
-    {
-      OCC_CATCH_SIGNALS
-      result = (Standard_Real)(arg1)->X();
-    }
-    catch(Standard_Failure)
-    {
-      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
-      return;
-    }
-  }
-  jsresult = SWIG_From_double((double)(result));
-  
-  
-  SWIGV8_RETURN(jsresult);
-  
-  goto fail;
-fail:
-  SWIGV8_RETURN(SWIGV8_UNDEFINED());
-}
-
-
-static SwigV8ReturnValue _wrap_Vec_Y(const SwigV8Arguments &args) {
-  SWIGV8_HANDLESCOPE();
-  
-  v8::Handle<v8::Value> jsresult;
-  gp_Vec *arg1 = (gp_Vec *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  Standard_Real result;
-  
-  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Vec_Y.");
-  
-  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_gp_Vec, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Vec_Y" "', argument " "1"" of type '" "gp_Vec *""'"); 
-  }
-  arg1 = (gp_Vec *)(argp1);
-  {
-    try
-    {
-      OCC_CATCH_SIGNALS
-      result = (Standard_Real)(arg1)->Y();
-    }
-    catch(Standard_Failure)
-    {
-      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
-      return;
-    }
-  }
-  jsresult = SWIG_From_double((double)(result));
-  
-  
-  SWIGV8_RETURN(jsresult);
-  
-  goto fail;
-fail:
-  SWIGV8_RETURN(SWIGV8_UNDEFINED());
-}
-
-
-static SwigV8ReturnValue _wrap_Vec_Z(const SwigV8Arguments &args) {
-  SWIGV8_HANDLESCOPE();
-  
-  v8::Handle<v8::Value> jsresult;
-  gp_Vec *arg1 = (gp_Vec *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  Standard_Real result;
-  
-  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Vec_Z.");
-  
-  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_gp_Vec, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Vec_Z" "', argument " "1"" of type '" "gp_Vec *""'"); 
-  }
-  arg1 = (gp_Vec *)(argp1);
-  {
-    try
-    {
-      OCC_CATCH_SIGNALS
-      result = (Standard_Real)(arg1)->Z();
-    }
-    catch(Standard_Failure)
-    {
-      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
-      return;
-    }
-  }
-  jsresult = SWIG_From_double((double)(result));
-  
-  
-  SWIGV8_RETURN(jsresult);
-  
-  goto fail;
-fail:
-  SWIGV8_RETURN(SWIGV8_UNDEFINED());
-}
-
-
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031710)
 static void _wrap_delete_Vec(v8::Persistent<v8::Value> object, void *parameter) {
   SWIGV8_Proxy *proxy = static_cast<SWIGV8_Proxy *>(parameter);
@@ -6087,13 +5883,18 @@ static SwigV8ReturnValue _wrap_new_Dir__SWIG_2(const SwigV8Arguments &args, V8Er
   
   v8::Handle<v8::Object> self = args.Holder();
   gp_XYZ *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
   gp_Dir *result;
   if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_new_Dir__SWIG_2.");
-  {
-    void *argp ;
-    int res = SWIG_ConvertPtr(args[0], &argp, SWIGTYPE_p_gp_Vec,  0 );
-    arg1 = &((gp_Vec *)(argp))->XYZ();
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_XYZ,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_Dir" "', argument " "1"" of type '" "gp_XYZ const &""'"); 
   }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_Dir" "', argument " "1"" of type '" "gp_XYZ const &""'"); 
+  }
+  arg1 = (gp_XYZ *)(argp1);
   {
     try
     {
@@ -6261,6 +6062,8 @@ static SwigV8ReturnValue _wrap_Dir_setXyz(const SwigV8Arguments &args) {
   gp_XYZ *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
   
   if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Dir_setXyz.");
   
@@ -6269,11 +6072,14 @@ static SwigV8ReturnValue _wrap_Dir_setXyz(const SwigV8Arguments &args) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Dir_setXyz" "', argument " "1"" of type '" "gp_Dir *""'"); 
   }
   arg1 = (gp_Dir *)(argp1);
-  {
-    void *argp ;
-    int res = SWIG_ConvertPtr(args[0], &argp, SWIGTYPE_p_gp_Vec,  0 );
-    arg2 = &((gp_Vec *)(argp))->XYZ();
+  res2 = SWIG_ConvertPtr(args[0], &argp2, SWIGTYPE_p_gp_XYZ,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Dir_setXyz" "', argument " "2"" of type '" "gp_XYZ const &""'"); 
   }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Dir_setXyz" "', argument " "2"" of type '" "gp_XYZ const &""'"); 
+  }
+  arg2 = (gp_XYZ *)(argp2);
   {
     try
     {
@@ -6326,9 +6132,7 @@ static SwigV8ReturnValue _wrap_Dir_xyz(const SwigV8Arguments &args) {
       return;
     }
   }
-  {
-    jsresult = SWIG_NewPointerObj((new gp_Vec((const gp_Vec&)result)), SWIGTYPE_p_gp_Vec, SWIG_POINTER_OWN |  0 );
-  }
+  jsresult = SWIG_NewPointerObj((new gp_XYZ((const gp_XYZ&)(result))), SWIGTYPE_p_gp_XYZ, SWIG_POINTER_OWN |  0 );
   
   
   SWIGV8_RETURN(jsresult);
@@ -7312,123 +7116,6 @@ static SwigV8ReturnValue _wrap_Dir_transform(const SwigV8Arguments &args) {
   }
   jsresult = SWIG_NewPointerObj((new gp_Dir((const gp_Dir&)(result))), SWIGTYPE_p_gp_Dir, SWIG_POINTER_OWN |  0 );
   
-  
-  
-  SWIGV8_RETURN(jsresult);
-  
-  goto fail;
-fail:
-  SWIGV8_RETURN(SWIGV8_UNDEFINED());
-}
-
-
-static SwigV8ReturnValue _wrap_Dir_X(const SwigV8Arguments &args) {
-  SWIGV8_HANDLESCOPE();
-  
-  v8::Handle<v8::Value> jsresult;
-  gp_Dir *arg1 = (gp_Dir *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  Standard_Real result;
-  
-  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Dir_X.");
-  
-  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_gp_Dir, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Dir_X" "', argument " "1"" of type '" "gp_Dir *""'"); 
-  }
-  arg1 = (gp_Dir *)(argp1);
-  {
-    try
-    {
-      OCC_CATCH_SIGNALS
-      result = (Standard_Real)(arg1)->X();
-    }
-    catch(Standard_Failure)
-    {
-      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
-      return;
-    }
-  }
-  jsresult = SWIG_From_double((double)(result));
-  
-  
-  SWIGV8_RETURN(jsresult);
-  
-  goto fail;
-fail:
-  SWIGV8_RETURN(SWIGV8_UNDEFINED());
-}
-
-
-static SwigV8ReturnValue _wrap_Dir_Y(const SwigV8Arguments &args) {
-  SWIGV8_HANDLESCOPE();
-  
-  v8::Handle<v8::Value> jsresult;
-  gp_Dir *arg1 = (gp_Dir *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  Standard_Real result;
-  
-  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Dir_Y.");
-  
-  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_gp_Dir, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Dir_Y" "', argument " "1"" of type '" "gp_Dir *""'"); 
-  }
-  arg1 = (gp_Dir *)(argp1);
-  {
-    try
-    {
-      OCC_CATCH_SIGNALS
-      result = (Standard_Real)(arg1)->Y();
-    }
-    catch(Standard_Failure)
-    {
-      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
-      return;
-    }
-  }
-  jsresult = SWIG_From_double((double)(result));
-  
-  
-  SWIGV8_RETURN(jsresult);
-  
-  goto fail;
-fail:
-  SWIGV8_RETURN(SWIGV8_UNDEFINED());
-}
-
-
-static SwigV8ReturnValue _wrap_Dir_Z(const SwigV8Arguments &args) {
-  SWIGV8_HANDLESCOPE();
-  
-  v8::Handle<v8::Value> jsresult;
-  gp_Dir *arg1 = (gp_Dir *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  Standard_Real result;
-  
-  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Dir_Z.");
-  
-  res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_gp_Dir, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Dir_Z" "', argument " "1"" of type '" "gp_Dir *""'"); 
-  }
-  arg1 = (gp_Dir *)(argp1);
-  {
-    try
-    {
-      OCC_CATCH_SIGNALS
-      result = (Standard_Real)(arg1)->Z();
-    }
-    catch(Standard_Failure)
-    {
-      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
-      return;
-    }
-  }
-  jsresult = SWIG_From_double((double)(result));
   
   
   SWIGV8_RETURN(jsresult);
@@ -13030,8 +12717,6 @@ static SwigV8ReturnValue _wrap_Trsf_setValues(const SwigV8Arguments &args) {
   Standard_Real arg11 ;
   Standard_Real arg12 ;
   Standard_Real arg13 ;
-  Standard_Real arg14 ;
-  Standard_Real arg15 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   double val2 ;
@@ -13058,12 +12743,8 @@ static SwigV8ReturnValue _wrap_Trsf_setValues(const SwigV8Arguments &args) {
   int ecode12 = 0 ;
   double val13 ;
   int ecode13 = 0 ;
-  double val14 ;
-  int ecode14 = 0 ;
-  double val15 ;
-  int ecode15 = 0 ;
   
-  if(args.Length() != 14) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Trsf_setValues.");
+  if(args.Length() != 12) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Trsf_setValues.");
   
   res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_gp_Trsf, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
@@ -13130,21 +12811,11 @@ static SwigV8ReturnValue _wrap_Trsf_setValues(const SwigV8Arguments &args) {
     SWIG_exception_fail(SWIG_ArgError(ecode13), "in method '" "Trsf_setValues" "', argument " "13"" of type '" "Standard_Real""'");
   } 
   arg13 = (Standard_Real)(val13);
-  ecode14 = SWIG_AsVal_double(args[12], &val14);
-  if (!SWIG_IsOK(ecode14)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode14), "in method '" "Trsf_setValues" "', argument " "14"" of type '" "Standard_Real""'");
-  } 
-  arg14 = (Standard_Real)(val14);
-  ecode15 = SWIG_AsVal_double(args[13], &val15);
-  if (!SWIG_IsOK(ecode15)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode15), "in method '" "Trsf_setValues" "', argument " "15"" of type '" "Standard_Real""'");
-  } 
-  arg15 = (Standard_Real)(val15);
   {
     try
     {
       OCC_CATCH_SIGNALS
-      (arg1)->SetValues(arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11,arg12,arg13,arg14,arg15);
+      (arg1)->SetValues(arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11,arg12,arg13);
     }
     catch(Standard_Failure)
     {
@@ -13153,8 +12824,6 @@ static SwigV8ReturnValue _wrap_Trsf_setValues(const SwigV8Arguments &args) {
     }
   }
   jsresult = SWIGV8_UNDEFINED();
-  
-  
   
   
   
@@ -13322,9 +12991,7 @@ static SwigV8ReturnValue _wrap_Trsf_translationPart(const SwigV8Arguments &args)
       return;
     }
   }
-  {
-    jsresult = SWIG_NewPointerObj((new gp_Vec((const gp_Vec&)result)), SWIGTYPE_p_gp_Vec, SWIG_POINTER_OWN |  0 );
-  }
+  jsresult = SWIG_NewPointerObj((new gp_XYZ((const gp_XYZ&)(result))), SWIGTYPE_p_gp_XYZ, SWIG_POINTER_OWN |  0 );
   
   
   SWIGV8_RETURN(jsresult);
@@ -13335,8 +13002,7 @@ fail:
 }
 
 
-static SwigV8ReturnValue _wrap_Trsf_getRotation__SWIG_0(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
-{
+static SwigV8ReturnValue _wrap_Trsf_getAxisAngle(const SwigV8Arguments &args) {
   SWIGV8_HANDLESCOPE();
   
   v8::Handle<v8::Value> jsresult;
@@ -13349,13 +13015,15 @@ static SwigV8ReturnValue _wrap_Trsf_getRotation__SWIG_0(const SwigV8Arguments &a
   Standard_Real argout22 ;
   Standard_Boolean result;
   
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Trsf_getAxisAngle.");
+  
   res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_gp_Trsf, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Trsf_getRotation" "', argument " "1"" of type '" "gp_Trsf *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Trsf_getAxisAngle" "', argument " "1"" of type '" "gp_Trsf *""'"); 
   }
   arg1 = (gp_Trsf *)(argp1);
   {
-    // argoutin
+    // renderArgoutInit for getAxisAngle
     arg2 = &argout12;
     arg3 = &argout22;
   }
@@ -13373,12 +13041,12 @@ static SwigV8ReturnValue _wrap_Trsf_getRotation__SWIG_0(const SwigV8Arguments &a
   }
   jsresult = SWIG_From_bool((bool)(result));
   {
-    // argoutout
+    // renderObjectOutmap for getAxisAngle
     
-    v8::Handle<v8::Array> array = v8::Array::New(v8::Isolate::GetCurrent(), 4);
-    array->Set(0, SWIG_NewPointerObj((new gp_XYZ((const gp_XYZ&)arg2)), SWIGTYPE_p_gp_XYZ, SWIG_POINTER_OWN |  0 ));
-    array->Set(1, SWIG_From_double(*arg3));
-    jsresult = array;
+    v8::Local<v8::Object> obj = SWIGV8_OBJECT_NEW();
+    obj->Set(SWIGV8_STRING_NEW("axis"), SWIG_NewPointerObj((new gp_XYZ((const gp_XYZ)*arg2)), SWIGTYPE_p_gp_XYZ, SWIG_POINTER_OWN |  0 ));
+    obj->Set(SWIGV8_STRING_NEW("angle"), SWIGV8_NUMBER_NEW(*arg3));
+    jsresult = obj;
   }
   
   
@@ -13390,8 +13058,7 @@ fail:
 }
 
 
-static SwigV8ReturnValue _wrap_Trsf_getRotation__SWIG_1(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
-{
+static SwigV8ReturnValue _wrap_Trsf_getRotation(const SwigV8Arguments &args) {
   SWIGV8_HANDLESCOPE();
   
   v8::Handle<v8::Value> jsresult;
@@ -13399,6 +13066,8 @@ static SwigV8ReturnValue _wrap_Trsf_getRotation__SWIG_1(const SwigV8Arguments &a
   void *argp1 = 0 ;
   int res1 = 0 ;
   gp_Quaternion result;
+  
+  if(args.Length() != 0) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_Trsf_getRotation.");
   
   res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_gp_Trsf, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
@@ -13421,53 +13090,6 @@ static SwigV8ReturnValue _wrap_Trsf_getRotation__SWIG_1(const SwigV8Arguments &a
   
   
   SWIGV8_RETURN(jsresult);
-  
-  goto fail;
-fail:
-  SWIGV8_RETURN(SWIGV8_UNDEFINED());
-}
-
-
-static SwigV8ReturnValue _wrap_Trsf__wrap_Trsf_getRotation(const SwigV8Arguments &args) {
-  SWIGV8_HANDLESCOPE();
-  
-  v8::Handle<v8::Value> jsresult;
-  OverloadErrorHandler errorHandler;
-  
-  
-  if(args.Length() == 0) {
-    errorHandler.err.Clear();
-#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
-    jsresult = _wrap_Trsf_getRotation__SWIG_0(args, errorHandler);
-    if(errorHandler.err.IsEmpty()) {
-      SWIGV8_ESCAPE(jsresult);
-    }
-#else
-    _wrap_Trsf_getRotation__SWIG_0(args, errorHandler);
-    if(errorHandler.err.IsEmpty()) {
-      return;
-    }
-#endif
-  }
-  
-  
-  if(args.Length() == 0) {
-    errorHandler.err.Clear();
-#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
-    jsresult = _wrap_Trsf_getRotation__SWIG_1(args, errorHandler);
-    if(errorHandler.err.IsEmpty()) {
-      SWIGV8_ESCAPE(jsresult);
-    }
-#else
-    _wrap_Trsf_getRotation__SWIG_1(args, errorHandler);
-    if(errorHandler.err.IsEmpty()) {
-      return;
-    }
-#endif
-  }
-  
-  
-  SWIG_exception_fail(SWIG_ERROR, "Illegal arguments for function getRotation.");
   
   goto fail;
 fail:
@@ -13944,42 +13566,21 @@ static SwigV8ReturnValue _wrap_Trsf_transforms__SWIG_0(const SwigV8Arguments &ar
   Standard_Real *arg4 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  void *argp4 = 0 ;
-  int res4 = 0 ;
+  Standard_Real argout12 ;
+  Standard_Real argout22 ;
+  Standard_Real argout32 ;
   
   res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_gp_Trsf, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Trsf_transforms" "', argument " "1"" of type '" "gp_Trsf *""'"); 
   }
   arg1 = (gp_Trsf *)(argp1);
-  res2 = SWIG_ConvertPtr(args[0], &argp2, SWIGTYPE_p_double,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Trsf_transforms" "', argument " "2"" of type '" "Standard_Real &""'"); 
+  {
+    // renderArgoutInit for transforms
+    arg2 = &argout12;
+    arg3 = &argout22;
+    arg4 = &argout32;
   }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Trsf_transforms" "', argument " "2"" of type '" "Standard_Real &""'"); 
-  }
-  arg2 = (Standard_Real *)(argp2);
-  res3 = SWIG_ConvertPtr(args[1], &argp3, SWIGTYPE_p_double,  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Trsf_transforms" "', argument " "3"" of type '" "Standard_Real &""'"); 
-  }
-  if (!argp3) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Trsf_transforms" "', argument " "3"" of type '" "Standard_Real &""'"); 
-  }
-  arg3 = (Standard_Real *)(argp3);
-  res4 = SWIG_ConvertPtr(args[2], &argp4, SWIGTYPE_p_double,  0 );
-  if (!SWIG_IsOK(res4)) {
-    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "Trsf_transforms" "', argument " "4"" of type '" "Standard_Real &""'"); 
-  }
-  if (!argp4) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Trsf_transforms" "', argument " "4"" of type '" "Standard_Real &""'"); 
-  }
-  arg4 = (Standard_Real *)(argp4);
   {
     try
     {
@@ -13993,9 +13594,15 @@ static SwigV8ReturnValue _wrap_Trsf_transforms__SWIG_0(const SwigV8Arguments &ar
     }
   }
   jsresult = SWIGV8_UNDEFINED();
-  
-  
-  
+  {
+    // renderObjectOutmap for transforms
+    
+    v8::Local<v8::Object> obj = SWIGV8_OBJECT_NEW();
+    obj->Set(SWIGV8_STRING_NEW("x"), SWIGV8_NUMBER_NEW(*arg2));
+    obj->Set(SWIGV8_STRING_NEW("y"), SWIGV8_NUMBER_NEW(*arg3));
+    obj->Set(SWIGV8_STRING_NEW("z"), SWIGV8_NUMBER_NEW(*arg4));
+    jsresult = obj;
+  }
   
   
   SWIGV8_RETURN(jsresult);
@@ -14015,6 +13622,7 @@ static SwigV8ReturnValue _wrap_Trsf_transforms__SWIG_1(const SwigV8Arguments &ar
   gp_XYZ *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
+  gp_XYZ argout12 ;
   
   res1 = SWIG_ConvertPtr(args.Holder(), &argp1,SWIGTYPE_p_gp_Trsf, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
@@ -14022,9 +13630,8 @@ static SwigV8ReturnValue _wrap_Trsf_transforms__SWIG_1(const SwigV8Arguments &ar
   }
   arg1 = (gp_Trsf *)(argp1);
   {
-    void *argp ;
-    int res = SWIG_ConvertPtr(args[0], &argp, SWIGTYPE_p_gp_Vec,  0 );
-    arg2 = &((gp_Vec *)(argp))->XYZ();
+    // renderArgoutInit for transforms
+    arg2 = &argout12;
   }
   {
     try
@@ -14039,6 +13646,12 @@ static SwigV8ReturnValue _wrap_Trsf_transforms__SWIG_1(const SwigV8Arguments &ar
     }
   }
   jsresult = SWIGV8_UNDEFINED();
+  {
+    // renderSingleValueOutmap for transforms
+    
+    
+    jsresult = SWIG_NewPointerObj((new gp_XYZ((const gp_XYZ)*arg2)), SWIGTYPE_p_gp_XYZ, SWIG_POINTER_OWN |  0 );
+  }
   
   
   
@@ -14057,7 +13670,7 @@ static SwigV8ReturnValue _wrap_Trsf__wrap_Trsf_transforms(const SwigV8Arguments 
   OverloadErrorHandler errorHandler;
   
   
-  if(args.Length() == 3) {
+  if(args.Length() == 0) {
     errorHandler.err.Clear();
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
     jsresult = _wrap_Trsf_transforms__SWIG_0(args, errorHandler);
@@ -14073,7 +13686,7 @@ static SwigV8ReturnValue _wrap_Trsf__wrap_Trsf_transforms(const SwigV8Arguments 
   }
   
   
-  if(args.Length() == 1) {
+  if(args.Length() == 0) {
     errorHandler.err.Clear();
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
     jsresult = _wrap_Trsf_transforms__SWIG_1(args, errorHandler);
@@ -14159,6 +13772,7 @@ static swig_type_info _swigt__p_gp_TrsfForm = {"_p_gp_TrsfForm", "gp_TrsfForm *"
 static swig_type_info _swigt__p_gp_Vec = {"_p_gp_Vec", "p_gp_Vec|gp_Vec *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_gp_XYZ = {"_p_gp_XYZ", "gp_XYZ *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int = {"_p_int", "int *|Standard_Integer *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__ostream = {"_p_std__ostream", "std::ostream *|Standard_OStream *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
   &_swigt__p_Handle_MMgt_TShared,
@@ -14181,6 +13795,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_gp_Vec,
   &_swigt__p_gp_XYZ,
   &_swigt__p_int,
+  &_swigt__p_std__ostream,
 };
 
 static swig_cast_info _swigc__p_Handle_MMgt_TShared[] = {  {&_swigt__p_Handle_MMgt_TShared, 0, 0, 0},{0, 0, 0, 0}};
@@ -14203,6 +13818,7 @@ static swig_cast_info _swigc__p_gp_TrsfForm[] = {  {&_swigt__p_gp_TrsfForm, 0, 0
 static swig_cast_info _swigc__p_gp_Vec[] = {  {&_swigt__p_gp_Vec, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_gp_XYZ[] = {  {&_swigt__p_gp_XYZ, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_int[] = {  {&_swigt__p_int, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__ostream[] = {  {&_swigt__p_std__ostream, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_Handle_MMgt_TShared,
@@ -14225,6 +13841,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_gp_Vec,
   _swigc__p_gp_XYZ,
   _swigc__p_int,
+  _swigc__p_std__ostream,
 };
 
 
@@ -14619,9 +14236,6 @@ SWIGV8_AddMemberFunction(_exports_Pnt_class, "rotate", _wrap_Pnt_rotate);
 SWIGV8_AddMemberFunction(_exports_Pnt_class, "scale", _wrap_Pnt_scale);
 SWIGV8_AddMemberFunction(_exports_Pnt_class, "transform", _wrap_Pnt_transform);
 SWIGV8_AddMemberFunction(_exports_Pnt_class, "translate", _wrap_Pnt__wrap_Pnt_translate);
-SWIGV8_AddMemberFunction(_exports_Pnt_class, "X", _wrap_Pnt_X);
-SWIGV8_AddMemberFunction(_exports_Pnt_class, "Y", _wrap_Pnt_Y);
-SWIGV8_AddMemberFunction(_exports_Pnt_class, "Z", _wrap_Pnt_Z);
 SWIGV8_AddMemberFunction(_exports_Vec_class, "setXyz", _wrap_Vec_setXyz);
 SWIGV8_AddMemberFunction(_exports_Vec_class, "xyz", _wrap_Vec_xyz);
 SWIGV8_AddMemberFunction(_exports_Vec_class, "isEqual", _wrap_Vec_isEqual);
@@ -14655,9 +14269,6 @@ SWIGV8_AddMemberFunction(_exports_Vec_class, "mirror", _wrap_Vec__wrap_Vec_mirro
 SWIGV8_AddMemberFunction(_exports_Vec_class, "rotate", _wrap_Vec_rotate);
 SWIGV8_AddMemberFunction(_exports_Vec_class, "scale", _wrap_Vec_scale);
 SWIGV8_AddMemberFunction(_exports_Vec_class, "transform", _wrap_Vec_transform);
-SWIGV8_AddMemberFunction(_exports_Vec_class, "X", _wrap_Vec_X);
-SWIGV8_AddMemberFunction(_exports_Vec_class, "Y", _wrap_Vec_Y);
-SWIGV8_AddMemberFunction(_exports_Vec_class, "Z", _wrap_Vec_Z);
 SWIGV8_AddMemberFunction(_exports_Dir_class, "setXyz", _wrap_Dir_setXyz);
 SWIGV8_AddMemberFunction(_exports_Dir_class, "xyz", _wrap_Dir_xyz);
 SWIGV8_AddMemberFunction(_exports_Dir_class, "isEqual", _wrap_Dir_isEqual);
@@ -14675,9 +14286,6 @@ SWIGV8_AddMemberFunction(_exports_Dir_class, "reversed", _wrap_Dir_reversed);
 SWIGV8_AddMemberFunction(_exports_Dir_class, "mirror", _wrap_Dir__wrap_Dir_mirror);
 SWIGV8_AddMemberFunction(_exports_Dir_class, "rotate", _wrap_Dir_rotate);
 SWIGV8_AddMemberFunction(_exports_Dir_class, "transform", _wrap_Dir_transform);
-SWIGV8_AddMemberFunction(_exports_Dir_class, "X", _wrap_Dir_X);
-SWIGV8_AddMemberFunction(_exports_Dir_class, "Y", _wrap_Dir_Y);
-SWIGV8_AddMemberFunction(_exports_Dir_class, "Z", _wrap_Dir_Z);
 SWIGV8_AddMemberFunction(_exports_Ax1_class, "setDirection", _wrap_Ax1_setDirection);
 SWIGV8_AddMemberFunction(_exports_Ax1_class, "setLocation", _wrap_Ax1_setLocation);
 SWIGV8_AddMemberFunction(_exports_Ax1_class, "direction", _wrap_Ax1_direction);
@@ -14746,7 +14354,8 @@ SWIGV8_AddMemberFunction(_exports_Trsf_class, "isNegative", _wrap_Trsf_isNegativ
 SWIGV8_AddMemberFunction(_exports_Trsf_class, "form", _wrap_Trsf_form);
 SWIGV8_AddMemberFunction(_exports_Trsf_class, "scaleFactor", _wrap_Trsf_scaleFactor);
 SWIGV8_AddMemberFunction(_exports_Trsf_class, "translationPart", _wrap_Trsf_translationPart);
-SWIGV8_AddMemberFunction(_exports_Trsf_class, "getRotation", _wrap_Trsf__wrap_Trsf_getRotation);
+SWIGV8_AddMemberFunction(_exports_Trsf_class, "getAxisAngle", _wrap_Trsf_getAxisAngle);
+SWIGV8_AddMemberFunction(_exports_Trsf_class, "getRotation", _wrap_Trsf_getRotation);
 SWIGV8_AddMemberFunction(_exports_Trsf_class, "vectorialPart", _wrap_Trsf_vectorialPart);
 SWIGV8_AddMemberFunction(_exports_Trsf_class, "hvectorialPart", _wrap_Trsf_hvectorialPart);
 SWIGV8_AddMemberFunction(_exports_Trsf_class, "value", _wrap_Trsf_value);

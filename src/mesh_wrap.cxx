@@ -1485,8 +1485,9 @@ SWIGRUNTIME void JS_veto_set_variable(v8::Local<v8::String> property, v8::Local<
 #define SWIGTYPE_p_char swig_types[2]
 #define SWIGTYPE_p_double swig_types[3]
 #define SWIGTYPE_p_int swig_types[4]
-static swig_type_info *swig_types[6];
-static swig_module_info swig_module = {swig_types, 5, 0, 0, 0, 0};
+#define SWIGTYPE_p_std__ostream swig_types[5]
+static swig_type_info *swig_types[7];
+static swig_module_info swig_module = {swig_types, 6, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1575,26 +1576,17 @@ SWIG_FromCharPtr(const char *cptr)
 #include <Handle_TopLoc_Datum3D.hxx>
 #include <Standard_Boolean.hxx>
 #include <Standard_Integer.hxx>
-#include <Standard_OStream.hxx>
-#include <gp_Trsf2d.hxx>
-#include <gp_Pnt.hxx>
-#include <gp_Ax1.hxx>
-#include <gp_Ax2.hxx>
-#include <Standard_Real.hxx>
-#include <gp_Quaternion.hxx>
-#include <gp_Ax3.hxx>
-#include <gp_Vec.hxx>
-#include <gp_TrsfForm.hxx>
-#include <gp_Mat.hxx>
-#include <gp_Dir.hxx>
 #include <TopLoc_Location.hxx>
 #include <TopAbs_Orientation.hxx>
 #include <Handle_TopoDS_TShape.hxx>
 #include <TopAbs_ShapeEnum.hxx>
+#include <TopoDS_Shape.hxx>
 #include <TopoDS_Edge.hxx>
 #include <BRepBuilderAPI_MakeEdge.hxx>
 #include <Geom_Curve.hxx>
 #include <Handle_Geom_Curve.hxx>
+#include <Standard_Real.hxx>
+#include <gp_Pnt.hxx>
 #include <TopoDS_Vertex.hxx>
 #include <BRepBuilderAPI_MakeVertex.hxx>
 #include <TopoDS_Wire.hxx>
@@ -1603,13 +1595,19 @@ SWIG_FromCharPtr(const char *cptr)
 #include <BRepBuilderAPI_MakeFace.hxx>
 #include <Geom_Surface.hxx>
 #include <Handle_Geom_Surface.hxx>
+#include <TopoDS_Shell.hxx>
+#include <BRepBuilderAPI_MakeShell.hxx>
 #include <TopLoc_Location.hxx>
 #include <TopAbs_Orientation.hxx>
+#include <TopAbs_ShapeEnum.hxx>
 #include <TopoDS_Shape.hxx>
 #include <TopoDS_Vertex.hxx>
 #include <TopoDS_Edge.hxx>
 #include <TopoDS_Wire.hxx>
 #include <TopoDS_Face.hxx>
+#include <TopoDS_Shell.hxx>
+#include <TopoDS_Solid.hxx>
+#include <TopExp.hxx>
 
 
 #include<Mesh.h>
@@ -1624,7 +1622,7 @@ v8::Local<v8::Object> tesselate(const TopoDS_Face& face, double factor, double a
   BRepMesh_IncrementalMesh IncrementalMesh(face, factor, Standard_True, angle * 3.14159 / 180.0 , Standard_True);
   int res = mesher->extractFaceMesh(face, qualityNormals);
 
-  v8::Local<v8::Object> vertices = _makeTypedArray(&(mesher->vertices.data()[0].x), (int)mesher->vertices.size()*3);
+  /*v8::Local<v8::Object> vertices = _makeTypedArray(&(mesher->vertices.data()[0].x), (int)mesher->vertices.size()*3);
   v8::Local<v8::Object> normals = _makeTypedArray(&(mesher->normals.data()[0].x), (int)mesher->normals.size()*3);
   v8::Local<v8::Object> triangles = _makeTypedArray(&(mesher->triangles.data()[0].i), (int)mesher->triangles.size()*3);
   v8::Local<v8::Object> edgeindices = _makeTypedArray(&(mesher->edgeindices.data()[0]), (int)mesher->edgeindices.size()*3);
@@ -1633,7 +1631,12 @@ v8::Local<v8::Object> tesselate(const TopoDS_Face& face, double factor, double a
   mesh->Set(SWIGV8_STRING_NEW("vertices"), vertices);
   mesh->Set(SWIGV8_STRING_NEW("normals"), normals);
   mesh->Set(SWIGV8_STRING_NEW("triangles"), triangles);
-  mesh->Set(SWIGV8_STRING_NEW("edgeindices"), edgeindices);
+  mesh->Set(SWIGV8_STRING_NEW("edgeindices"), edgeindices);*/
+  v8::Local<v8::Object> mesh = SWIGV8_OBJECT_NEW();
+  mesh->Set(SWIGV8_STRING_NEW("vertices"), _makeTypedArray(&(mesher->vertices.data()[0].x), (int)mesher->vertices.size()*3));
+  mesh->Set(SWIGV8_STRING_NEW("normals"), _makeTypedArray(&(mesher->normals.data()[0].x), (int)mesher->normals.size()*3));
+  mesh->Set(SWIGV8_STRING_NEW("triangles"), _makeTypedArray(&(mesher->triangles.data()[0].i), (int)mesher->triangles.size()*3));
+  //mesh->Set(SWIGV8_STRING_NEW("edgeindices"), edgeindices);
 
   return mesh;
 }
@@ -1814,6 +1817,7 @@ static swig_type_info _swigt__p_bool = {"_p_bool", "bool *|Standard_Boolean *", 
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_double = {"_p_double", "Standard_Real *|double *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_int = {"_p_int", "int *|Standard_Integer *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__ostream = {"_p_std__ostream", "std::ostream *|Standard_OStream *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
   &_swigt__p_TopoDS_Face,
@@ -1821,6 +1825,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_char,
   &_swigt__p_double,
   &_swigt__p_int,
+  &_swigt__p_std__ostream,
 };
 
 static swig_cast_info _swigc__p_TopoDS_Face[] = {  {&_swigt__p_TopoDS_Face, 0, 0, 0},{0, 0, 0, 0}};
@@ -1828,6 +1833,7 @@ static swig_cast_info _swigc__p_bool[] = {  {&_swigt__p_bool, 0, 0, 0},{0, 0, 0,
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_double[] = {  {&_swigt__p_double, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_int[] = {  {&_swigt__p_int, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__ostream[] = {  {&_swigt__p_std__ostream, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_TopoDS_Face,
@@ -1835,6 +1841,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_char,
   _swigc__p_double,
   _swigc__p_int,
+  _swigc__p_std__ostream,
 };
 
 

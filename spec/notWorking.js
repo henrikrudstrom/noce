@@ -1,29 +1,44 @@
 var notWorking = {
   'gp.Trsf': [
-    'transforms(Double, Double, Double)',
-    'setValues(Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double)'
+    'transforms(gp.Vec)' //should not be wrapped
   ],
-  'Geom.CylindricalSurface': [
+  'geom.CylindricalSurface': [
     'vperiod()',
-    'uiso(Double)' // Works on spherical... segmentation fault
+    'uiso(Double)', // Works on spherical... segmentation fault
+    'transformParameters(Double, Double, gp.Trsf)'
   ],
-  'Geom.SphericalSurface': [
+  'geom.SphericalSurface': [
     'vperiod()'
   ],
-  'Geom.Circle': [
+  'geom.Circle': [
     'makeCircle(gp.Pnt, gp.Pnt, gp.Pnt)'
   ],
-  'Geom.TrimmedCurve': [
-    'makeArcOfCircle(gp.Pnt, gp.Pnt, gp.Pnt)'
+  'geom.TrimmedCurve': [
+    'makeArcOfCircle(gp.Pnt, gp.Pnt, gp.Pnt)',
+    'setTrim(Double, Double, Boolean)',
+    'transformedParameter(Double, gp.Trsf)'
   ],
-  'Geom.Line': [
+  'geom.Line': [
     'period()'
   ],
-  'Geom.Plane': [
-    'uperiod()', 'vperiod()'
+  'geom.Plane': [
+    'uperiod()', 'vperiod()',
+    'transformParameters(Double, Double, gp.Trsf)'
   ],
-  'brep': [
-
+  'geom.BezierCurve': [
+    'increase(Integer)',
+    //'poles(Array)' // TODO: array outarg typemap for Array1Of has memory trouble
+  ],
+  'topo.Cone': [
+    'startTopEdge()'
+  ],
+  'topo.OneAxis': [
+    'startTopEdge()'
+  ],
+  'primitives.Revolution': [
+    'startTopEdge()',
+    // TODO: first arg is outarg or 'const &'
+    'setMeridianPcurve(topo.Edge, topo.Face)'
   ]
 };
 
@@ -34,17 +49,21 @@ module.exports.notWorking = function(clsName, memberSig) {
 };
 
 var returnType = {
-  'Geom.TrimmedCurve': {
-    'basisCurve()': 'Circle',
+  'geom.TrimmedCurve': {
+    'basisCurve()': 'Circle'
 
   },
-  'Geom.SphericalSurface': {
+  'geom.SphericalSurface': {
     'vperiod()': 'Circle',
     'viso(Double)': 'Circle',
     'uiso(Double)': 'TrimmedCurve'
   },
-  'Geom.CylindricalSurface': {
+  'geom.CylindricalSurface': {
     'viso(Double)': 'Circle'
+  },
+  'geom.Plane': {
+    'uiso(Double)': 'Line',
+    'viso(Double)': 'Line'
   }
 };
 module.exports.returnType = function(clsName, memberSig) {

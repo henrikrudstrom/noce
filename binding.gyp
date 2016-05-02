@@ -1,55 +1,17 @@
 {
   "targets": [
     {
-      "target_name": "brep",
+      "target_name": "geom",
       "sources": [
-        "src/brep_wrap.cxx"
+        "src/geom_wrap.cxx"
       ],
       "include_dirs": [
-        "/home/henrik/OCE/include/oce",
-        "/home/henrik/Development/noce/noce/inc",
-        "../noce/inc"
+        "/home/henrik/OCE-Debug/include/oce",
+        "/home/henrik/Development/noce/noce-dev/build/inc",
+        "build/inc"
       ],
       "libraries": [
-        "-L/home/henrik/OCE/lib",
-        "-lTKernel",
-        "-lTKMath",
-        "-lTKG3d",
-        "-lTKBRep",
-        "-lTKTopAlgo"
-      ],
-      "cflags": [
-        "-DCSFDB",
-        "-DHAVE_CONFIG_H",
-        "-DOCC_CONVERT_SIGNALS",
-        "-D_OCC64",
-        "-Dgp_EXPORTS",
-        "-Os",
-        "-DNDEBUG",
-        "-fPIC",
-        "-fpermissive",
-        "-DSWIG_TYPE_TABLE=occ.js"
-      ],
-      "cflags!": [
-        "-fno-exceptions"
-      ],
-      "cflags_cc!": [
-        "-fno-exceptions"
-      ]
-    },
-    {
-      "target_name": "Geom",
-      "sources": [
-        "src/Geom_wrap.cxx"
-      ],
-      "include_dirs": [
-        "/home/henrik/OCE/include/oce",
-        "/home/henrik/Development/noce/noce/inc",
-        "../noce/inc"
-      ],
-      "libraries": [
-        "-L/home/henrik/OCE/lib",
-        "-lTKernel",
+        "-L/home/henrik/OCE-Debug/lib",
         "-lTKMath",
         "-lTKG3d",
         "-lTKGeomBase"
@@ -63,7 +25,6 @@
         "-Os",
         "-DNDEBUG",
         "-fPIC",
-        "-fpermissive",
         "-DSWIG_TYPE_TABLE=occ.js"
       ],
       "cflags!": [
@@ -79,12 +40,12 @@
         "src/gp_wrap.cxx"
       ],
       "include_dirs": [
-        "/home/henrik/OCE/include/oce",
-        "/home/henrik/Development/noce/noce/inc",
-        "../noce/inc"
+        "/home/henrik/OCE-Debug/include/oce",
+        "/home/henrik/Development/noce/noce-dev/build/inc",
+        "build/inc"
       ],
       "libraries": [
-        "-L/home/henrik/OCE/lib",
+        "-L/home/henrik/OCE-Debug/lib",
         "-lTKMath"
       ],
       "cflags": [
@@ -96,7 +57,6 @@
         "-Os",
         "-DNDEBUG",
         "-fPIC",
-        "-fpermissive",
         "-DSWIG_TYPE_TABLE=occ.js"
       ],
       "cflags!": [
@@ -114,16 +74,15 @@
         "src/mesh_wrap.cxx"
       ],
       "include_dirs": [
-        "/home/henrik/OCE/include/oce",
-        "/home/henrik/Development/noce/noce/inc",
-        "../noce/inc",
+        "/home/henrik/OCE-Debug/include/oce",
+        "/home/henrik/Development/noce/noce-dev/build/inc",
+        "build/inc",
         "<!(node -e \"require('nan')\")"
       ],
       "libraries": [
-        "-L/home/henrik/OCE/lib",
+        "-L/home/henrik/OCE-Debug/lib",
         "-lTKernel",
         "-lTKMath",
-        "-lTKAdvTools",
         "-lTKG2d",
         "-lTKG3d",
         "-lTKGeomBase",
@@ -144,7 +103,73 @@
         "-Os",
         "-DNDEBUG",
         "-fPIC",
-        "-fpermissive",
+        "-DSWIG_TYPE_TABLE=occ.js"
+      ],
+      "cflags!": [
+        "-fno-exceptions"
+      ],
+      "cflags_cc!": [
+        "-fno-exceptions"
+      ]
+    },
+    {
+      "target_name": "primitives",
+      "sources": [
+        "src/primitives_wrap.cxx"
+      ],
+      "include_dirs": [
+        "/home/henrik/OCE-Debug/include/oce",
+        "/home/henrik/Development/noce/noce-dev/build/inc",
+        "build/inc"
+      ],
+      "libraries": [
+        "-L/home/henrik/OCE-Debug/lib",
+        "-lTKPrim"
+      ],
+      "cflags": [
+        "-DCSFDB",
+        "-DHAVE_CONFIG_H",
+        "-DOCC_CONVERT_SIGNALS",
+        "-D_OCC64",
+        "-Dgp_EXPORTS",
+        "-Os",
+        "-DNDEBUG",
+        "-fPIC",
+        "-DSWIG_TYPE_TABLE=occ.js"
+      ],
+      "cflags!": [
+        "-fno-exceptions"
+      ],
+      "cflags_cc!": [
+        "-fno-exceptions"
+      ]
+    },
+    {
+      "target_name": "topo",
+      "sources": [
+        "src/topo_wrap.cxx"
+      ],
+      "include_dirs": [
+        "/home/henrik/OCE-Debug/include/oce",
+        "/home/henrik/Development/noce/noce-dev/build/inc",
+        "build/inc"
+      ],
+      "libraries": [
+        "-L/home/henrik/OCE-Debug/lib",
+        "-lTKMath",
+        "-lTKG3d",
+        "-lTKBRep",
+        "-lTKTopAlgo"
+      ],
+      "cflags": [
+        "-DCSFDB",
+        "-DHAVE_CONFIG_H",
+        "-DOCC_CONVERT_SIGNALS",
+        "-D_OCC64",
+        "-Dgp_EXPORTS",
+        "-Os",
+        "-DNDEBUG",
+        "-fPIC",
         "-DSWIG_TYPE_TABLE=occ.js"
       ],
       "cflags!": [

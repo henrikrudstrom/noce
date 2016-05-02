@@ -220,8 +220,8 @@ int Mesh::extractFaceMesh(const TopoDS_Face& face, bool qualityNormals)
     }
     return 0;
   }
-  optimize();
-  //updateJavaScriptArray();
+  // optimize();
+  // updateJavaScriptArray();
   return 1;
 }
 

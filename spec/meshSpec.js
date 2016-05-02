@@ -1,29 +1,51 @@
-var brep = require('../lib/brep.js');
-var Geom = require('../lib/Geom.js');
-var gp = require('../lib/gp.js');
-var mesh = require('../lib/mesh.js');
+const topo = require('../lib/topo.js');
+const geom = require('../lib/geom.js');
+const gp = require('../lib/gp.js');
+const mesh = require('../lib/mesh.js');
+const expect = require('chai').expect;
+
+function checkMesh(mesh) {
+  expect(mesh.triangles.constructor.name).to.equal('Int32Array');
+  expect(mesh.vertices.constructor.name).to.equal('Float32Array');
+  expect(mesh.normals.constructor.name).to.equal('Float32Array');
+  expect(mesh.triangles.length).to.be.above(0);
+  expect(mesh.vertices.length).to.equal(mesh.normals.length);
+  var maxIndex = Math.max.apply(null, Array.prototype.slice.call(mesh.vertices));
+  expect(maxIndex).to.be.below(mesh.vertices.length / 3);
+}
+
 
 describe('mesh', function() {
   it('can tesselate a plane', function() {
-    var geom = new Geom.Plane(new gp.Ax3(new gp.Pnt(), new gp.Dir(0, 0, 1), new gp.Dir(1, 0, 0)));
-    var face = brep.makeFace(geom, 0, 1, 0, 1, 0.01);
+    var plane = new geom.Plane(new gp.Ax3(new gp.Pnt(), new gp.Dir(0, 0, 1), new gp.Dir(1, 0, 0)));
+    var face = topo.makeFace(plane, 0, 1, 0, 1, 0.01);
     var res = mesh(face, 5, 20, false);
-    expect(res.vertices.length).toBe(12);
-    expect(res.normals.length).toBe(12);
-    expect(res.triangles.length).toBe(6);
+
+    checkMesh(res);
+    expect(res.vertices.length).to.equal(12);
+    expect(res.normals.length).to.equal(12);
+    expect(res.triangles.length).to.equal(6);
   });
+
   it('can tesselate a Sphere', function() {
-    var geom = new Geom.SphericalSurface(
+    var sphere = new geom.SphericalSurface(
       new gp.Ax3(new gp.Pnt(), new gp.Dir(0, 0, 1), new gp.Dir(1, 0, 0)), 2
     );
-    var face = brep.makeFace(geom, 0, 3.14, 0, 3.14, 0.01);
-    mesh(face, 5, 20, false);
+
+    var face = topo.makeFace(sphere, 0, 3.14, 0, 3.14, 0.01);
+    var res = mesh(face, 0.005, 20, false);
+
+    checkMesh(res);
   });
+
   it('can tesselate a cylinder', function() {
-    var geom = new Geom.CylindricalSurface(
+    var cylinder = new geom.CylindricalSurface(
       new gp.Ax3(new gp.Pnt(), new gp.Dir(0, 0, 1), new gp.Dir(1, 0, 0)), 2
     );
-    var face = brep.makeFace(geom, 0, 3.14, 0, 3.14, 0.01);
-    mesh(face, 5, 20, false);
+
+    var face = topo.makeFace(cylinder, 0, 3.14, 0, 3.14, 0.01);
+    var res = mesh(face, 0.005, 20, false);
+
+    checkMesh(res);
   });
 });
