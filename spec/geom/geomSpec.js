@@ -1,18 +1,18 @@
-var geom = require('../lib/geom.node');
-var gp = require('../lib/gp.node');
-var create = require('./create.js');
-var helpers = require('./testHelpers.js');
+var geom = require('../../lib/geom.js');
+var gp = require('../../lib/gp.js');
+var createGeom = require('./create.js');
+var helpers = require('../testHelpers.js');
 const expect = require('chai').expect;
 
 describe('geom.TrimmedCurve', function() {
   it('TrimmedCurve(geom.Curve, Double, Double, Boolean)', function() {
-    const circle = create.geom.Curve();
+    const circle = createGeom.curve();
     const res = new geom.TrimmedCurve(circle, 0, 0.5, true);
     helpers.expectType(res, 'TrimmedCurve');
   });
 });
 
-describe('geom.BezierCurve', function(){
+describe('geom.BezierCurve', function() {
   it('BezierCurve(Array)', function() {
     var points = [
       new gp.Pnt(1, 2, 3), new gp.Pnt(2, 3, 4),
@@ -22,7 +22,6 @@ describe('geom.BezierCurve', function(){
     helpers.expectType(res, 'BezierCurve');
     expect(res.nbPoles()).to.equal(4);
   });
-
 
   it('BezierCurve(Array, Array)', function() {
     var points = [

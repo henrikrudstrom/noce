@@ -22,7 +22,7 @@ module.exports.expectType = function(res, type) {
 
   var types = [type];
   if (inheritance[type]) {
-    types = types.concat(inheritance[type]);
+    types = inheritance[type];
   }
   expect(types).to.include(className);
   return true;

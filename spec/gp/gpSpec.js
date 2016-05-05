@@ -1,5 +1,5 @@
-var gp = require('../lib/gp.node');
-var helpers = require('./testHelpers.js');
+var gp = require('../../lib/gp.js');
+var helpers = require('./../testHelpers.js');
 const expect = require('chai').expect;
 
 describe('gp.Dir', function() {
@@ -46,8 +46,8 @@ describe('gp.Ax3', function() {
 });
 
 describe('gp.Trsf', function() {
-  it('setValues(Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double)', function(){
+  it('setValues(Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double, Double)', function() {
     var obj = new gp.Trsf();
-    var res = obj.setValues(1,0,0,0, 0,1,0,0, 0,0,1,0);
+    obj.setValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0);
   });
-})
+});

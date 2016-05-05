@@ -1,5 +1,5 @@
-const gp = require('../lib/gp.node');
-const geom = require('../lib/geom.node');
+const gp = require('../lib/gp.js');
+const geom = require('../lib/geom.js');
 const expect = require('chai').expect;
 
 describe('class inheritance', function() {

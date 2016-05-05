@@ -1,17 +1,18 @@
-const topo = require('../lib/topo.js');
-const geom = require('../lib/geom.js');
-const gp = require('../lib/gp.js');
-const mesh = require('../lib/mesh.js');
+const topo = require('../../lib/topo.js');
+const geom = require('../../lib/geom.js');
+const gp = require('../../lib/gp.js');
+const mesh = require('../../lib/mesh.js');
+
 const expect = require('chai').expect;
 
-function checkMesh(mesh) {
-  expect(mesh.triangles.constructor.name).to.equal('Int32Array');
-  expect(mesh.vertices.constructor.name).to.equal('Float32Array');
-  expect(mesh.normals.constructor.name).to.equal('Float32Array');
-  expect(mesh.triangles.length).to.be.above(0);
-  expect(mesh.vertices.length).to.equal(mesh.normals.length);
-  var maxIndex = Math.max.apply(null, Array.prototype.slice.call(mesh.vertices));
-  expect(maxIndex).to.be.below(mesh.vertices.length / 3);
+function checkMesh(meshData) {
+  expect(meshData.triangles.constructor.name).to.equal('Int32Array');
+  expect(meshData.vertices.constructor.name).to.equal('Float32Array');
+  expect(meshData.normals.constructor.name).to.equal('Float32Array');
+  expect(meshData.triangles.length).to.be.above(0);
+  expect(meshData.vertices.length).to.equal(meshData.normals.length);
+  var maxIndex = Math.max.apply(null, Array.prototype.slice.call(meshData.vertices));
+  expect(maxIndex).to.be.below(meshData.vertices.length / 3);
 }
 
 

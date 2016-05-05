@@ -1,6 +1,6 @@
 var mesh = require('../../lib/mesh.js');
+var meshCreate = require('../mesh/create.js');
 var helpers = require('../testHelpers.js');
-var create = require('../create.js');
 
 describe('mesh', function(){
 

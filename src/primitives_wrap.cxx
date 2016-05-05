@@ -1566,6 +1566,12 @@ static swig_module_info swig_module = {swig_types, 51, 0, 0, 0, 0};
 #include <gp_TrsfForm.hxx>
 #include <gp_Mat.hxx>
 #include <Standard_Integer.hxx>
+#include <gp_XY.hxx>
+#include <gp_Ax2d.hxx>
+#include <gp_Vec2d.hxx>
+#include <gp_Dir2d.hxx>
+#include <gp_Pnt2d.hxx>
+#include <gp_Mat2d.hxx>
 #include <gp_Pnt.hxx>
 #include <gp_Vec.hxx>
 #include <gp_Dir.hxx>
@@ -1573,6 +1579,12 @@ static swig_module_info swig_module = {swig_types, 51, 0, 0, 0, 0};
 #include <gp_Ax2.hxx>
 #include <gp_Ax3.hxx>
 #include <gp_Trsf.hxx>
+#include <gp_Pnt2d.hxx>
+#include <gp_Vec2d.hxx>
+#include <gp_Dir2d.hxx>
+#include <gp_Ax2d.hxx>
+#include <gp_Ax22d.hxx>
+#include <gp_Trsf2d.hxx>
 
 
 #include <gp_Pnt.hxx>
@@ -1701,6 +1713,10 @@ static swig_module_info swig_module = {swig_types, 51, 0, 0, 0, 0};
 #include <Handle_Geom_Surface.hxx>
 #include <TopoDS_Shell.hxx>
 #include <BRepBuilderAPI_MakeShell.hxx>
+#include <TopoDS_Solid.hxx>
+#include <BRepBuilderAPI_MakeSolid.hxx>
+#include <TopoDS_CompSolid.hxx>
+#include <BRepBuilderAPI_Transform.hxx>
 #include <TopLoc_Location.hxx>
 #include <TopAbs_Orientation.hxx>
 #include <TopAbs_ShapeEnum.hxx>
@@ -1748,41 +1764,41 @@ v8::Handle<v8::Value> upcastTopoDS_Shape(const TopoDS_Shape & shape){
     // lookup type
     int type = shape.ShapeType();
     std::string typeName = "";
-    void * voidptr;
+    void * voidptr = 0;
     switch(type){
       case 7:
-        typeName = "TopoDS_Vertex *";
+        typeName = "TopoDS_Vertex";
         voidptr = SWIG_as_voidptr(new TopoDS_Vertex(TopoDS::Vertex(shape)));
         break;
       case 6:
-        typeName = "TopoDS_Edge *";
+        typeName = "TopoDS_Edge";
         voidptr = SWIG_as_voidptr(new TopoDS_Edge(TopoDS::Edge(shape)));
         break;
       case 5:
-        typeName = "TopoDS_Wire *";
+        typeName = "TopoDS_Wire";
         voidptr = SWIG_as_voidptr(new TopoDS_Wire(TopoDS::Wire(shape)));
         break;
       case 4:
-        typeName = "TopoDS_Face *";
+        typeName = "TopoDS_Face";
         voidptr = SWIG_as_voidptr(new TopoDS_Face(TopoDS::Face(shape)));
         break;
       case 3:
-        typeName = "TopoDS_Shell *";
+        typeName = "TopoDS_Shell";
         voidptr = SWIG_as_voidptr(new TopoDS_Shell(TopoDS::Shell(shape)));
         break;
       case 2:
-        typeName = "TopoDS_Solid *";
+        typeName = "TopoDS_Solid";
         voidptr = SWIG_as_voidptr(new TopoDS_Solid(TopoDS::Solid(shape)));
         break;
       case 1:
-        typeName = "TopoDS_CompSolid *";
+        typeName = "TopoDS_CompSolid";
         voidptr = SWIG_as_voidptr(new TopoDS_CompSolid(TopoDS::CompSolid(shape)));
         break;
       case 0:
-        typeName = "TopoDS_Compound *";
+        typeName = "TopoDS_Compound";
         voidptr = SWIG_as_voidptr(new TopoDS_Compound(TopoDS::Compound(shape)));
     }
-    swig_type_info * const outtype = SWIG_TypeQuery(typeName.c_str());
+    swig_type_info * const outtype = SWIG_TypeQuery((typeName + " *").c_str());
     return SWIG_NewPointerObj(voidptr, outtype, SWIG_POINTER_OWN |  0);
   }
 
@@ -1882,12 +1898,13 @@ SWIG_FromCharPtr(const char *cptr)
 #include<TopTools_ListIteratorOfListOfShape.hxx>  
 
 
-  static const TopoDS_Shape & makeBox(const Standard_Real dx, const Standard_Real dy, const Standard_Real dz){
+  static v8::Handle<v8::Value> makeBox(const Standard_Real dx, const Standard_Real dy, const Standard_Real dz){
     BRepPrimAPI_MakeBox* obj = new BRepPrimAPI_MakeBox(dx, dy, dz);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
@@ -1903,129 +1920,143 @@ int SWIG_AsVal_double (v8::Handle<v8::Value> obj, double *val)
 }
 
 
-  static const TopoDS_Shape & makeBox(const gp_Pnt & P, const Standard_Real dx, const Standard_Real dy, const Standard_Real dz){
+  static v8::Handle<v8::Value> makeBox(const gp_Pnt & P, const Standard_Real dx, const Standard_Real dy, const Standard_Real dz){
     BRepPrimAPI_MakeBox* obj = new BRepPrimAPI_MakeBox(P, dx, dy, dz);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeBox(const gp_Pnt & P1, const gp_Pnt & P2){
+  static v8::Handle<v8::Value> makeBox(const gp_Pnt & P1, const gp_Pnt & P2){
     BRepPrimAPI_MakeBox* obj = new BRepPrimAPI_MakeBox(P1, P2);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeBox(const gp_Ax2 & Axes, const Standard_Real dx, const Standard_Real dy, const Standard_Real dz){
+  static v8::Handle<v8::Value> makeBox(const gp_Ax2 & Axes, const Standard_Real dx, const Standard_Real dy, const Standard_Real dz){
     BRepPrimAPI_MakeBox* obj = new BRepPrimAPI_MakeBox(Axes, dx, dy, dz);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeCone(const Standard_Real R1, const Standard_Real R2, const Standard_Real H){
+  static v8::Handle<v8::Value> makeCone(const Standard_Real R1, const Standard_Real R2, const Standard_Real H){
     BRepPrimAPI_MakeCone* obj = new BRepPrimAPI_MakeCone(R1, R2, H);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeCone(const Standard_Real R1, const Standard_Real R2, const Standard_Real H, const Standard_Real angle){
+  static v8::Handle<v8::Value> makeCone(const Standard_Real R1, const Standard_Real R2, const Standard_Real H, const Standard_Real angle){
     BRepPrimAPI_MakeCone* obj = new BRepPrimAPI_MakeCone(R1, R2, H, angle);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeCone(const gp_Ax2 & Axes, const Standard_Real R1, const Standard_Real R2, const Standard_Real H){
+  static v8::Handle<v8::Value> makeCone(const gp_Ax2 & Axes, const Standard_Real R1, const Standard_Real R2, const Standard_Real H){
     BRepPrimAPI_MakeCone* obj = new BRepPrimAPI_MakeCone(Axes, R1, R2, H);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeCone(const gp_Ax2 & Axes, const Standard_Real R1, const Standard_Real R2, const Standard_Real H, const Standard_Real angle){
+  static v8::Handle<v8::Value> makeCone(const gp_Ax2 & Axes, const Standard_Real R1, const Standard_Real R2, const Standard_Real H, const Standard_Real angle){
     BRepPrimAPI_MakeCone* obj = new BRepPrimAPI_MakeCone(Axes, R1, R2, H, angle);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeCylinder(const Standard_Real R, const Standard_Real H){
+  static v8::Handle<v8::Value> makeCylinder(const Standard_Real R, const Standard_Real H){
     BRepPrimAPI_MakeCylinder* obj = new BRepPrimAPI_MakeCylinder(R, H);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeCylinder(const Standard_Real R, const Standard_Real H, const Standard_Real Angle){
+  static v8::Handle<v8::Value> makeCylinder(const Standard_Real R, const Standard_Real H, const Standard_Real Angle){
     BRepPrimAPI_MakeCylinder* obj = new BRepPrimAPI_MakeCylinder(R, H, Angle);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeCylinder(const gp_Ax2 & Axes, const Standard_Real R, const Standard_Real H){
+  static v8::Handle<v8::Value> makeCylinder(const gp_Ax2 & Axes, const Standard_Real R, const Standard_Real H){
     BRepPrimAPI_MakeCylinder* obj = new BRepPrimAPI_MakeCylinder(Axes, R, H);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeCylinder(const gp_Ax2 & Axes, const Standard_Real R, const Standard_Real H, const Standard_Real Angle){
+  static v8::Handle<v8::Value> makeCylinder(const gp_Ax2 & Axes, const Standard_Real R, const Standard_Real H, const Standard_Real Angle){
     BRepPrimAPI_MakeCylinder* obj = new BRepPrimAPI_MakeCylinder(Axes, R, H, Angle);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeHalfSpace(const TopoDS_Face & Face, const gp_Pnt & RefPnt){
+  static v8::Handle<v8::Value> makeHalfSpace(const TopoDS_Face & Face, const gp_Pnt & RefPnt){
     BRepPrimAPI_MakeHalfSpace* obj = new BRepPrimAPI_MakeHalfSpace(Face, RefPnt);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeHalfSpace(const TopoDS_Shell & Shell, const gp_Pnt & RefPnt){
+  static v8::Handle<v8::Value> makeHalfSpace(const TopoDS_Shell & Shell, const gp_Pnt & RefPnt){
     BRepPrimAPI_MakeHalfSpace* obj = new BRepPrimAPI_MakeHalfSpace(Shell, RefPnt);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makePrism(const TopoDS_Shape & S, const gp_Vec & V, const Standard_Boolean Copy, const Standard_Boolean Canonize){
+  static v8::Handle<v8::Value> makePrism(const TopoDS_Shape & S, const gp_Vec & V, const Standard_Boolean Copy, const Standard_Boolean Canonize){
     BRepPrimAPI_MakePrism* obj = new BRepPrimAPI_MakePrism(S, V, Copy, Canonize);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
@@ -2089,246 +2120,273 @@ int SWIG_AsVal_bool (v8::Handle<v8::Value> obj, bool *val)
 }
 
 
-  static const TopoDS_Shape & makePrism(const TopoDS_Shape & S, const gp_Dir & D, const Standard_Boolean Inf, const Standard_Boolean Copy, const Standard_Boolean Canonize){
+  static v8::Handle<v8::Value> makePrism(const TopoDS_Shape & S, const gp_Dir & D, const Standard_Boolean Inf, const Standard_Boolean Copy, const Standard_Boolean Canonize){
     BRepPrimAPI_MakePrism* obj = new BRepPrimAPI_MakePrism(S, D, Inf, Copy, Canonize);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Shape & makeRevol(const TopoDS_Shape & S, const gp_Ax1 & A, const Standard_Real D, const Standard_Boolean Copy){
+  static v8::Handle<v8::Value> makeRevol(const TopoDS_Shape & S, const gp_Ax1 & A, const Standard_Real D, const Standard_Boolean Copy){
     BRepPrimAPI_MakeRevol* obj = new BRepPrimAPI_MakeRevol(S, A, D, Copy);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Shape & makeRevol(const TopoDS_Shape & S, const gp_Ax1 & A, const Standard_Boolean Copy){
+  static v8::Handle<v8::Value> makeRevol(const TopoDS_Shape & S, const gp_Ax1 & A, const Standard_Boolean Copy){
     BRepPrimAPI_MakeRevol* obj = new BRepPrimAPI_MakeRevol(S, A, Copy);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Shape & makeSphere(const Standard_Real R){
+  static v8::Handle<v8::Value> makeSphere(const Standard_Real R){
     BRepPrimAPI_MakeSphere* obj = new BRepPrimAPI_MakeSphere(R);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeSphere(const Standard_Real R, const Standard_Real angle){
+  static v8::Handle<v8::Value> makeSphere(const Standard_Real R, const Standard_Real angle){
     BRepPrimAPI_MakeSphere* obj = new BRepPrimAPI_MakeSphere(R, angle);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeSphere(const Standard_Real R, const Standard_Real angle1, const Standard_Real angle2){
+  static v8::Handle<v8::Value> makeSphere(const Standard_Real R, const Standard_Real angle1, const Standard_Real angle2){
     BRepPrimAPI_MakeSphere* obj = new BRepPrimAPI_MakeSphere(R, angle1, angle2);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeSphere(const Standard_Real R, const Standard_Real angle1, const Standard_Real angle2, const Standard_Real angle3){
+  static v8::Handle<v8::Value> makeSphere(const Standard_Real R, const Standard_Real angle1, const Standard_Real angle2, const Standard_Real angle3){
     BRepPrimAPI_MakeSphere* obj = new BRepPrimAPI_MakeSphere(R, angle1, angle2, angle3);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeSphere(const gp_Pnt & Center, const Standard_Real R){
+  static v8::Handle<v8::Value> makeSphere(const gp_Pnt & Center, const Standard_Real R){
     BRepPrimAPI_MakeSphere* obj = new BRepPrimAPI_MakeSphere(Center, R);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeSphere(const gp_Pnt & Center, const Standard_Real R, const Standard_Real angle){
+  static v8::Handle<v8::Value> makeSphere(const gp_Pnt & Center, const Standard_Real R, const Standard_Real angle){
     BRepPrimAPI_MakeSphere* obj = new BRepPrimAPI_MakeSphere(Center, R, angle);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeSphere(const gp_Pnt & Center, const Standard_Real R, const Standard_Real angle1, const Standard_Real angle2){
+  static v8::Handle<v8::Value> makeSphere(const gp_Pnt & Center, const Standard_Real R, const Standard_Real angle1, const Standard_Real angle2){
     BRepPrimAPI_MakeSphere* obj = new BRepPrimAPI_MakeSphere(Center, R, angle1, angle2);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeSphere(const gp_Pnt & Center, const Standard_Real R, const Standard_Real angle1, const Standard_Real angle2, const Standard_Real angle3){
+  static v8::Handle<v8::Value> makeSphere(const gp_Pnt & Center, const Standard_Real R, const Standard_Real angle1, const Standard_Real angle2, const Standard_Real angle3){
     BRepPrimAPI_MakeSphere* obj = new BRepPrimAPI_MakeSphere(Center, R, angle1, angle2, angle3);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeSphere(const gp_Ax2 & Axis, const Standard_Real R){
+  static v8::Handle<v8::Value> makeSphere(const gp_Ax2 & Axis, const Standard_Real R){
     BRepPrimAPI_MakeSphere* obj = new BRepPrimAPI_MakeSphere(Axis, R);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeSphere(const gp_Ax2 & Axis, const Standard_Real R, const Standard_Real angle){
+  static v8::Handle<v8::Value> makeSphere(const gp_Ax2 & Axis, const Standard_Real R, const Standard_Real angle){
     BRepPrimAPI_MakeSphere* obj = new BRepPrimAPI_MakeSphere(Axis, R, angle);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeSphere(const gp_Ax2 & Axis, const Standard_Real R, const Standard_Real angle1, const Standard_Real angle2){
+  static v8::Handle<v8::Value> makeSphere(const gp_Ax2 & Axis, const Standard_Real R, const Standard_Real angle1, const Standard_Real angle2){
     BRepPrimAPI_MakeSphere* obj = new BRepPrimAPI_MakeSphere(Axis, R, angle1, angle2);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeSphere(const gp_Ax2 & Axis, const Standard_Real R, const Standard_Real angle1, const Standard_Real angle2, const Standard_Real angle3){
+  static v8::Handle<v8::Value> makeSphere(const gp_Ax2 & Axis, const Standard_Real R, const Standard_Real angle1, const Standard_Real angle2, const Standard_Real angle3){
     BRepPrimAPI_MakeSphere* obj = new BRepPrimAPI_MakeSphere(Axis, R, angle1, angle2, angle3);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeTorus(const Standard_Real R1, const Standard_Real R2){
+  static v8::Handle<v8::Value> makeTorus(const Standard_Real R1, const Standard_Real R2){
     BRepPrimAPI_MakeTorus* obj = new BRepPrimAPI_MakeTorus(R1, R2);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeTorus(const Standard_Real R1, const Standard_Real R2, const Standard_Real angle){
+  static v8::Handle<v8::Value> makeTorus(const Standard_Real R1, const Standard_Real R2, const Standard_Real angle){
     BRepPrimAPI_MakeTorus* obj = new BRepPrimAPI_MakeTorus(R1, R2, angle);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeTorus(const Standard_Real R1, const Standard_Real R2, const Standard_Real angle1, const Standard_Real angle2){
+  static v8::Handle<v8::Value> makeTorus(const Standard_Real R1, const Standard_Real R2, const Standard_Real angle1, const Standard_Real angle2){
     BRepPrimAPI_MakeTorus* obj = new BRepPrimAPI_MakeTorus(R1, R2, angle1, angle2);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeTorus(const Standard_Real R1, const Standard_Real R2, const Standard_Real angle1, const Standard_Real angle2, const Standard_Real angle){
+  static v8::Handle<v8::Value> makeTorus(const Standard_Real R1, const Standard_Real R2, const Standard_Real angle1, const Standard_Real angle2, const Standard_Real angle){
     BRepPrimAPI_MakeTorus* obj = new BRepPrimAPI_MakeTorus(R1, R2, angle1, angle2, angle);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeTorus(const gp_Ax2 & Axes, const Standard_Real R1, const Standard_Real R2){
+  static v8::Handle<v8::Value> makeTorus(const gp_Ax2 & Axes, const Standard_Real R1, const Standard_Real R2){
     BRepPrimAPI_MakeTorus* obj = new BRepPrimAPI_MakeTorus(Axes, R1, R2);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeTorus(const gp_Ax2 & Axes, const Standard_Real R1, const Standard_Real R2, const Standard_Real angle){
+  static v8::Handle<v8::Value> makeTorus(const gp_Ax2 & Axes, const Standard_Real R1, const Standard_Real R2, const Standard_Real angle){
     BRepPrimAPI_MakeTorus* obj = new BRepPrimAPI_MakeTorus(Axes, R1, R2, angle);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeTorus(const gp_Ax2 & Axes, const Standard_Real R1, const Standard_Real R2, const Standard_Real angle1, const Standard_Real angle2){
+  static v8::Handle<v8::Value> makeTorus(const gp_Ax2 & Axes, const Standard_Real R1, const Standard_Real R2, const Standard_Real angle1, const Standard_Real angle2){
     BRepPrimAPI_MakeTorus* obj = new BRepPrimAPI_MakeTorus(Axes, R1, R2, angle1, angle2);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeTorus(const gp_Ax2 & Axes, const Standard_Real R1, const Standard_Real R2, const Standard_Real angle1, const Standard_Real angle2, const Standard_Real angle){
+  static v8::Handle<v8::Value> makeTorus(const gp_Ax2 & Axes, const Standard_Real R1, const Standard_Real R2, const Standard_Real angle1, const Standard_Real angle2, const Standard_Real angle){
     BRepPrimAPI_MakeTorus* obj = new BRepPrimAPI_MakeTorus(Axes, R1, R2, angle1, angle2, angle);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeWedge(const Standard_Real dx, const Standard_Real dy, const Standard_Real dz, const Standard_Real ltx){
+  static v8::Handle<v8::Value> makeWedge(const Standard_Real dx, const Standard_Real dy, const Standard_Real dz, const Standard_Real ltx){
     BRepPrimAPI_MakeWedge* obj = new BRepPrimAPI_MakeWedge(dx, dy, dz, ltx);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeWedge(const gp_Ax2 & Axes, const Standard_Real dx, const Standard_Real dy, const Standard_Real dz, const Standard_Real ltx){
+  static v8::Handle<v8::Value> makeWedge(const gp_Ax2 & Axes, const Standard_Real dx, const Standard_Real dy, const Standard_Real dz, const Standard_Real ltx){
     BRepPrimAPI_MakeWedge* obj = new BRepPrimAPI_MakeWedge(Axes, dx, dy, dz, ltx);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeWedge(const Standard_Real dx, const Standard_Real dy, const Standard_Real dz, const Standard_Real xmin, const Standard_Real zmin, const Standard_Real xmax, const Standard_Real zmax){
+  static v8::Handle<v8::Value> makeWedge(const Standard_Real dx, const Standard_Real dy, const Standard_Real dz, const Standard_Real xmin, const Standard_Real zmin, const Standard_Real xmax, const Standard_Real zmax){
     BRepPrimAPI_MakeWedge* obj = new BRepPrimAPI_MakeWedge(dx, dy, dz, xmin, zmin, xmax, zmax);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
-  static const TopoDS_Shape & makeWedge(const gp_Ax2 & Axes, const Standard_Real dx, const Standard_Real dy, const Standard_Real dz, const Standard_Real xmin, const Standard_Real zmin, const Standard_Real xmax, const Standard_Real zmax){
+  static v8::Handle<v8::Value> makeWedge(const gp_Ax2 & Axes, const Standard_Real dx, const Standard_Real dy, const Standard_Real dz, const Standard_Real xmin, const Standard_Real zmin, const Standard_Real xmax, const Standard_Real zmax){
     BRepPrimAPI_MakeWedge* obj = new BRepPrimAPI_MakeWedge(Axes, dx, dy, dz, xmin, zmin, xmax, zmax);
     obj->Build();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make primitive"); // TODO check error
-    return obj->Shape();
+
+    return upcastTopoDS_Shape(obj->Solid());
   }
 
 
@@ -2630,7 +2688,7 @@ static SwigV8ReturnValue _wrap_makeBox__SWIG_0(const SwigV8Arguments &args, V8Er
   int ecode2 = 0 ;
   double val3 ;
   int ecode3 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -2651,7 +2709,7 @@ static SwigV8ReturnValue _wrap_makeBox__SWIG_0(const SwigV8Arguments &args, V8Er
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeBox(arg1,arg2,arg3);
+      result = makeBox(arg1,arg2,arg3);
     }
     catch(Standard_Failure)
     {
@@ -2659,7 +2717,7 @@ static SwigV8ReturnValue _wrap_makeBox__SWIG_0(const SwigV8Arguments &args, V8Er
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -2689,7 +2747,7 @@ static SwigV8ReturnValue _wrap_makeBox__SWIG_1(const SwigV8Arguments &args, V8Er
   int ecode3 = 0 ;
   double val4 ;
   int ecode4 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pnt,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -2718,7 +2776,7 @@ static SwigV8ReturnValue _wrap_makeBox__SWIG_1(const SwigV8Arguments &args, V8Er
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeBox((gp_Pnt const &)*arg1,arg2,arg3,arg4);
+      result = makeBox((gp_Pnt const &)*arg1,arg2,arg3,arg4);
     }
     catch(Standard_Failure)
     {
@@ -2726,7 +2784,7 @@ static SwigV8ReturnValue _wrap_makeBox__SWIG_1(const SwigV8Arguments &args, V8Er
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -2751,7 +2809,7 @@ static SwigV8ReturnValue _wrap_makeBox__SWIG_2(const SwigV8Arguments &args, V8Er
   int res1 = 0 ;
   void *argp2 ;
   int res2 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pnt,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -2773,7 +2831,7 @@ static SwigV8ReturnValue _wrap_makeBox__SWIG_2(const SwigV8Arguments &args, V8Er
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeBox((gp_Pnt const &)*arg1,(gp_Pnt const &)*arg2);
+      result = makeBox((gp_Pnt const &)*arg1,(gp_Pnt const &)*arg2);
     }
     catch(Standard_Failure)
     {
@@ -2781,7 +2839,7 @@ static SwigV8ReturnValue _wrap_makeBox__SWIG_2(const SwigV8Arguments &args, V8Er
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -2810,7 +2868,7 @@ static SwigV8ReturnValue _wrap_makeBox__SWIG_3(const SwigV8Arguments &args, V8Er
   int ecode3 = 0 ;
   double val4 ;
   int ecode4 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -2839,7 +2897,7 @@ static SwigV8ReturnValue _wrap_makeBox__SWIG_3(const SwigV8Arguments &args, V8Er
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeBox((gp_Ax2 const &)*arg1,arg2,arg3,arg4);
+      result = makeBox((gp_Ax2 const &)*arg1,arg2,arg3,arg4);
     }
     catch(Standard_Failure)
     {
@@ -2847,7 +2905,7 @@ static SwigV8ReturnValue _wrap_makeBox__SWIG_3(const SwigV8Arguments &args, V8Er
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -2954,7 +3012,7 @@ static SwigV8ReturnValue _wrap_makeCone__SWIG_0(const SwigV8Arguments &args, V8E
   int ecode2 = 0 ;
   double val3 ;
   int ecode3 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -2975,7 +3033,7 @@ static SwigV8ReturnValue _wrap_makeCone__SWIG_0(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeCone(arg1,arg2,arg3);
+      result = makeCone(arg1,arg2,arg3);
     }
     catch(Standard_Failure)
     {
@@ -2983,7 +3041,7 @@ static SwigV8ReturnValue _wrap_makeCone__SWIG_0(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -3013,7 +3071,7 @@ static SwigV8ReturnValue _wrap_makeCone__SWIG_1(const SwigV8Arguments &args, V8E
   int ecode3 = 0 ;
   double val4 ;
   int ecode4 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -3039,7 +3097,7 @@ static SwigV8ReturnValue _wrap_makeCone__SWIG_1(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeCone(arg1,arg2,arg3,arg4);
+      result = makeCone(arg1,arg2,arg3,arg4);
     }
     catch(Standard_Failure)
     {
@@ -3047,7 +3105,7 @@ static SwigV8ReturnValue _wrap_makeCone__SWIG_1(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -3078,7 +3136,7 @@ static SwigV8ReturnValue _wrap_makeCone__SWIG_2(const SwigV8Arguments &args, V8E
   int ecode3 = 0 ;
   double val4 ;
   int ecode4 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -3107,7 +3165,7 @@ static SwigV8ReturnValue _wrap_makeCone__SWIG_2(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeCone((gp_Ax2 const &)*arg1,arg2,arg3,arg4);
+      result = makeCone((gp_Ax2 const &)*arg1,arg2,arg3,arg4);
     }
     catch(Standard_Failure)
     {
@@ -3115,7 +3173,7 @@ static SwigV8ReturnValue _wrap_makeCone__SWIG_2(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -3149,7 +3207,7 @@ static SwigV8ReturnValue _wrap_makeCone__SWIG_3(const SwigV8Arguments &args, V8E
   int ecode4 = 0 ;
   double val5 ;
   int ecode5 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -3183,7 +3241,7 @@ static SwigV8ReturnValue _wrap_makeCone__SWIG_3(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeCone((gp_Ax2 const &)*arg1,arg2,arg3,arg4,arg5);
+      result = makeCone((gp_Ax2 const &)*arg1,arg2,arg3,arg4,arg5);
     }
     catch(Standard_Failure)
     {
@@ -3191,7 +3249,7 @@ static SwigV8ReturnValue _wrap_makeCone__SWIG_3(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -3296,7 +3354,7 @@ static SwigV8ReturnValue _wrap_makeCylinder__SWIG_0(const SwigV8Arguments &args,
   int ecode1 = 0 ;
   double val2 ;
   int ecode2 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -3312,7 +3370,7 @@ static SwigV8ReturnValue _wrap_makeCylinder__SWIG_0(const SwigV8Arguments &args,
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeCylinder(arg1,arg2);
+      result = makeCylinder(arg1,arg2);
     }
     catch(Standard_Failure)
     {
@@ -3320,7 +3378,7 @@ static SwigV8ReturnValue _wrap_makeCylinder__SWIG_0(const SwigV8Arguments &args,
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -3346,7 +3404,7 @@ static SwigV8ReturnValue _wrap_makeCylinder__SWIG_1(const SwigV8Arguments &args,
   int ecode2 = 0 ;
   double val3 ;
   int ecode3 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -3367,7 +3425,7 @@ static SwigV8ReturnValue _wrap_makeCylinder__SWIG_1(const SwigV8Arguments &args,
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeCylinder(arg1,arg2,arg3);
+      result = makeCylinder(arg1,arg2,arg3);
     }
     catch(Standard_Failure)
     {
@@ -3375,7 +3433,7 @@ static SwigV8ReturnValue _wrap_makeCylinder__SWIG_1(const SwigV8Arguments &args,
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -3402,7 +3460,7 @@ static SwigV8ReturnValue _wrap_makeCylinder__SWIG_2(const SwigV8Arguments &args,
   int ecode2 = 0 ;
   double val3 ;
   int ecode3 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -3426,7 +3484,7 @@ static SwigV8ReturnValue _wrap_makeCylinder__SWIG_2(const SwigV8Arguments &args,
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeCylinder((gp_Ax2 const &)*arg1,arg2,arg3);
+      result = makeCylinder((gp_Ax2 const &)*arg1,arg2,arg3);
     }
     catch(Standard_Failure)
     {
@@ -3434,7 +3492,7 @@ static SwigV8ReturnValue _wrap_makeCylinder__SWIG_2(const SwigV8Arguments &args,
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -3464,7 +3522,7 @@ static SwigV8ReturnValue _wrap_makeCylinder__SWIG_3(const SwigV8Arguments &args,
   int ecode3 = 0 ;
   double val4 ;
   int ecode4 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -3493,7 +3551,7 @@ static SwigV8ReturnValue _wrap_makeCylinder__SWIG_3(const SwigV8Arguments &args,
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeCylinder((gp_Ax2 const &)*arg1,arg2,arg3,arg4);
+      result = makeCylinder((gp_Ax2 const &)*arg1,arg2,arg3,arg4);
     }
     catch(Standard_Failure)
     {
@@ -3501,7 +3559,7 @@ static SwigV8ReturnValue _wrap_makeCylinder__SWIG_3(const SwigV8Arguments &args,
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -3605,7 +3663,7 @@ static SwigV8ReturnValue _wrap_makeHalfSpace__SWIG_0(const SwigV8Arguments &args
   int res1 = 0 ;
   void *argp2 ;
   int res2 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Face,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -3627,7 +3685,7 @@ static SwigV8ReturnValue _wrap_makeHalfSpace__SWIG_0(const SwigV8Arguments &args
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeHalfSpace((TopoDS_Face const &)*arg1,(gp_Pnt const &)*arg2);
+      result = makeHalfSpace((TopoDS_Face const &)*arg1,(gp_Pnt const &)*arg2);
     }
     catch(Standard_Failure)
     {
@@ -3635,7 +3693,7 @@ static SwigV8ReturnValue _wrap_makeHalfSpace__SWIG_0(const SwigV8Arguments &args
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -3658,7 +3716,7 @@ static SwigV8ReturnValue _wrap_makeHalfSpace__SWIG_1(const SwigV8Arguments &args
   int res1 = 0 ;
   void *argp2 ;
   int res2 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Shell,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -3680,7 +3738,7 @@ static SwigV8ReturnValue _wrap_makeHalfSpace__SWIG_1(const SwigV8Arguments &args
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeHalfSpace((TopoDS_Shell const &)*arg1,(gp_Pnt const &)*arg2);
+      result = makeHalfSpace((TopoDS_Shell const &)*arg1,(gp_Pnt const &)*arg2);
     }
     catch(Standard_Failure)
     {
@@ -3688,7 +3746,7 @@ static SwigV8ReturnValue _wrap_makeHalfSpace__SWIG_1(const SwigV8Arguments &args
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -3764,7 +3822,7 @@ static SwigV8ReturnValue _wrap_makePrism__SWIG_0(const SwigV8Arguments &args, V8
   int ecode3 = 0 ;
   bool val4 ;
   int ecode4 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Shape,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -3796,7 +3854,7 @@ static SwigV8ReturnValue _wrap_makePrism__SWIG_0(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makePrism((TopoDS_Shape const &)*arg1,(gp_Vec const &)*arg2,arg3,arg4);
+      result = makePrism((TopoDS_Shape const &)*arg1,(gp_Vec const &)*arg2,arg3,arg4);
     }
     catch(Standard_Failure)
     {
@@ -3804,7 +3862,7 @@ static SwigV8ReturnValue _wrap_makePrism__SWIG_0(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -3838,7 +3896,7 @@ static SwigV8ReturnValue _wrap_makePrism__SWIG_1(const SwigV8Arguments &args, V8
   int ecode4 = 0 ;
   bool val5 ;
   int ecode5 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Shape,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -3875,7 +3933,7 @@ static SwigV8ReturnValue _wrap_makePrism__SWIG_1(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makePrism((TopoDS_Shape const &)*arg1,(gp_Dir const &)*arg2,arg3,arg4,arg5);
+      result = makePrism((TopoDS_Shape const &)*arg1,(gp_Dir const &)*arg2,arg3,arg4,arg5);
     }
     catch(Standard_Failure)
     {
@@ -3883,7 +3941,7 @@ static SwigV8ReturnValue _wrap_makePrism__SWIG_1(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -3962,7 +4020,7 @@ static SwigV8ReturnValue _wrap_makeRevol__SWIG_0(const SwigV8Arguments &args, V8
   int ecode3 = 0 ;
   bool val4 ;
   int ecode4 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Shape,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -3994,7 +4052,7 @@ static SwigV8ReturnValue _wrap_makeRevol__SWIG_0(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeRevol((TopoDS_Shape const &)*arg1,(gp_Ax1 const &)*arg2,arg3,arg4);
+      result = makeRevol((TopoDS_Shape const &)*arg1,(gp_Ax1 const &)*arg2,arg3,arg4);
     }
     catch(Standard_Failure)
     {
@@ -4002,7 +4060,7 @@ static SwigV8ReturnValue _wrap_makeRevol__SWIG_0(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -4030,7 +4088,7 @@ static SwigV8ReturnValue _wrap_makeRevol__SWIG_1(const SwigV8Arguments &args, V8
   int res2 = 0 ;
   bool val3 ;
   int ecode3 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Shape,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -4057,7 +4115,7 @@ static SwigV8ReturnValue _wrap_makeRevol__SWIG_1(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeRevol((TopoDS_Shape const &)*arg1,(gp_Ax1 const &)*arg2,arg3);
+      result = makeRevol((TopoDS_Shape const &)*arg1,(gp_Ax1 const &)*arg2,arg3);
     }
     catch(Standard_Failure)
     {
@@ -4065,7 +4123,7 @@ static SwigV8ReturnValue _wrap_makeRevol__SWIG_1(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -4133,7 +4191,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_0(const SwigV8Arguments &args, V
   Standard_Real arg1 ;
   double val1 ;
   int ecode1 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -4144,7 +4202,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_0(const SwigV8Arguments &args, V
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeSphere(arg1);
+      result = makeSphere(arg1);
     }
     catch(Standard_Failure)
     {
@@ -4152,7 +4210,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_0(const SwigV8Arguments &args, V
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   SWIGV8_RETURN(jsresult);
@@ -4174,7 +4232,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_1(const SwigV8Arguments &args, V
   int ecode1 = 0 ;
   double val2 ;
   int ecode2 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -4190,7 +4248,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_1(const SwigV8Arguments &args, V
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeSphere(arg1,arg2);
+      result = makeSphere(arg1,arg2);
     }
     catch(Standard_Failure)
     {
@@ -4198,7 +4256,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_1(const SwigV8Arguments &args, V
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -4224,7 +4282,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_2(const SwigV8Arguments &args, V
   int ecode2 = 0 ;
   double val3 ;
   int ecode3 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -4245,7 +4303,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_2(const SwigV8Arguments &args, V
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeSphere(arg1,arg2,arg3);
+      result = makeSphere(arg1,arg2,arg3);
     }
     catch(Standard_Failure)
     {
@@ -4253,7 +4311,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_2(const SwigV8Arguments &args, V
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -4283,7 +4341,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_3(const SwigV8Arguments &args, V
   int ecode3 = 0 ;
   double val4 ;
   int ecode4 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -4309,7 +4367,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_3(const SwigV8Arguments &args, V
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeSphere(arg1,arg2,arg3,arg4);
+      result = makeSphere(arg1,arg2,arg3,arg4);
     }
     catch(Standard_Failure)
     {
@@ -4317,7 +4375,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_3(const SwigV8Arguments &args, V
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -4342,7 +4400,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_4(const SwigV8Arguments &args, V
   int res1 = 0 ;
   double val2 ;
   int ecode2 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pnt,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -4361,7 +4419,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_4(const SwigV8Arguments &args, V
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeSphere((gp_Pnt const &)*arg1,arg2);
+      result = makeSphere((gp_Pnt const &)*arg1,arg2);
     }
     catch(Standard_Failure)
     {
@@ -4369,7 +4427,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_4(const SwigV8Arguments &args, V
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -4395,7 +4453,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_5(const SwigV8Arguments &args, V
   int ecode2 = 0 ;
   double val3 ;
   int ecode3 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pnt,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -4419,7 +4477,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_5(const SwigV8Arguments &args, V
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeSphere((gp_Pnt const &)*arg1,arg2,arg3);
+      result = makeSphere((gp_Pnt const &)*arg1,arg2,arg3);
     }
     catch(Standard_Failure)
     {
@@ -4427,7 +4485,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_5(const SwigV8Arguments &args, V
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -4457,7 +4515,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_6(const SwigV8Arguments &args, V
   int ecode3 = 0 ;
   double val4 ;
   int ecode4 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pnt,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -4486,7 +4544,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_6(const SwigV8Arguments &args, V
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeSphere((gp_Pnt const &)*arg1,arg2,arg3,arg4);
+      result = makeSphere((gp_Pnt const &)*arg1,arg2,arg3,arg4);
     }
     catch(Standard_Failure)
     {
@@ -4494,7 +4552,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_6(const SwigV8Arguments &args, V
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -4528,7 +4586,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_7(const SwigV8Arguments &args, V
   int ecode4 = 0 ;
   double val5 ;
   int ecode5 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Pnt,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -4562,7 +4620,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_7(const SwigV8Arguments &args, V
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeSphere((gp_Pnt const &)*arg1,arg2,arg3,arg4,arg5);
+      result = makeSphere((gp_Pnt const &)*arg1,arg2,arg3,arg4,arg5);
     }
     catch(Standard_Failure)
     {
@@ -4570,7 +4628,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_7(const SwigV8Arguments &args, V
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -4596,7 +4654,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_8(const SwigV8Arguments &args, V
   int res1 = 0 ;
   double val2 ;
   int ecode2 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -4615,7 +4673,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_8(const SwigV8Arguments &args, V
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeSphere((gp_Ax2 const &)*arg1,arg2);
+      result = makeSphere((gp_Ax2 const &)*arg1,arg2);
     }
     catch(Standard_Failure)
     {
@@ -4623,7 +4681,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_8(const SwigV8Arguments &args, V
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -4649,7 +4707,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_9(const SwigV8Arguments &args, V
   int ecode2 = 0 ;
   double val3 ;
   int ecode3 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -4673,7 +4731,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_9(const SwigV8Arguments &args, V
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeSphere((gp_Ax2 const &)*arg1,arg2,arg3);
+      result = makeSphere((gp_Ax2 const &)*arg1,arg2,arg3);
     }
     catch(Standard_Failure)
     {
@@ -4681,7 +4739,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_9(const SwigV8Arguments &args, V
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -4711,7 +4769,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_10(const SwigV8Arguments &args, 
   int ecode3 = 0 ;
   double val4 ;
   int ecode4 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -4740,7 +4798,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_10(const SwigV8Arguments &args, 
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeSphere((gp_Ax2 const &)*arg1,arg2,arg3,arg4);
+      result = makeSphere((gp_Ax2 const &)*arg1,arg2,arg3,arg4);
     }
     catch(Standard_Failure)
     {
@@ -4748,7 +4806,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_10(const SwigV8Arguments &args, 
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -4782,7 +4840,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_11(const SwigV8Arguments &args, 
   int ecode4 = 0 ;
   double val5 ;
   int ecode5 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -4816,7 +4874,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_11(const SwigV8Arguments &args, 
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeSphere((gp_Ax2 const &)*arg1,arg2,arg3,arg4,arg5);
+      result = makeSphere((gp_Ax2 const &)*arg1,arg2,arg3,arg4,arg5);
     }
     catch(Standard_Failure)
     {
@@ -4824,7 +4882,7 @@ static SwigV8ReturnValue _wrap_makeSphere__SWIG_11(const SwigV8Arguments &args, 
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5057,7 +5115,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_0(const SwigV8Arguments &args, V8
   int ecode1 = 0 ;
   double val2 ;
   int ecode2 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -5073,7 +5131,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_0(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeTorus(arg1,arg2);
+      result = makeTorus(arg1,arg2);
     }
     catch(Standard_Failure)
     {
@@ -5081,7 +5139,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_0(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5107,7 +5165,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_1(const SwigV8Arguments &args, V8
   int ecode2 = 0 ;
   double val3 ;
   int ecode3 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -5128,7 +5186,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_1(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeTorus(arg1,arg2,arg3);
+      result = makeTorus(arg1,arg2,arg3);
     }
     catch(Standard_Failure)
     {
@@ -5136,7 +5194,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_1(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5166,7 +5224,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_2(const SwigV8Arguments &args, V8
   int ecode3 = 0 ;
   double val4 ;
   int ecode4 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -5192,7 +5250,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_2(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeTorus(arg1,arg2,arg3,arg4);
+      result = makeTorus(arg1,arg2,arg3,arg4);
     }
     catch(Standard_Failure)
     {
@@ -5200,7 +5258,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_2(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5234,7 +5292,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_3(const SwigV8Arguments &args, V8
   int ecode4 = 0 ;
   double val5 ;
   int ecode5 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -5265,7 +5323,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_3(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeTorus(arg1,arg2,arg3,arg4,arg5);
+      result = makeTorus(arg1,arg2,arg3,arg4,arg5);
     }
     catch(Standard_Failure)
     {
@@ -5273,7 +5331,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_3(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5302,7 +5360,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_4(const SwigV8Arguments &args, V8
   int ecode2 = 0 ;
   double val3 ;
   int ecode3 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -5326,7 +5384,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_4(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeTorus((gp_Ax2 const &)*arg1,arg2,arg3);
+      result = makeTorus((gp_Ax2 const &)*arg1,arg2,arg3);
     }
     catch(Standard_Failure)
     {
@@ -5334,7 +5392,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_4(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5364,7 +5422,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_5(const SwigV8Arguments &args, V8
   int ecode3 = 0 ;
   double val4 ;
   int ecode4 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -5393,7 +5451,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_5(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeTorus((gp_Ax2 const &)*arg1,arg2,arg3,arg4);
+      result = makeTorus((gp_Ax2 const &)*arg1,arg2,arg3,arg4);
     }
     catch(Standard_Failure)
     {
@@ -5401,7 +5459,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_5(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5435,7 +5493,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_6(const SwigV8Arguments &args, V8
   int ecode4 = 0 ;
   double val5 ;
   int ecode5 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -5469,7 +5527,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_6(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeTorus((gp_Ax2 const &)*arg1,arg2,arg3,arg4,arg5);
+      result = makeTorus((gp_Ax2 const &)*arg1,arg2,arg3,arg4,arg5);
     }
     catch(Standard_Failure)
     {
@@ -5477,7 +5535,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_6(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5515,7 +5573,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_7(const SwigV8Arguments &args, V8
   int ecode5 = 0 ;
   double val6 ;
   int ecode6 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -5554,7 +5612,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_7(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeTorus((gp_Ax2 const &)*arg1,arg2,arg3,arg4,arg5,arg6);
+      result = makeTorus((gp_Ax2 const &)*arg1,arg2,arg3,arg4,arg5,arg6);
     }
     catch(Standard_Failure)
     {
@@ -5562,7 +5620,7 @@ static SwigV8ReturnValue _wrap_makeTorus__SWIG_7(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5738,7 +5796,7 @@ static SwigV8ReturnValue _wrap_makeWedge__SWIG_0(const SwigV8Arguments &args, V8
   int ecode3 = 0 ;
   double val4 ;
   int ecode4 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -5764,7 +5822,7 @@ static SwigV8ReturnValue _wrap_makeWedge__SWIG_0(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeWedge(arg1,arg2,arg3,arg4);
+      result = makeWedge(arg1,arg2,arg3,arg4);
     }
     catch(Standard_Failure)
     {
@@ -5772,7 +5830,7 @@ static SwigV8ReturnValue _wrap_makeWedge__SWIG_0(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5806,7 +5864,7 @@ static SwigV8ReturnValue _wrap_makeWedge__SWIG_1(const SwigV8Arguments &args, V8
   int ecode4 = 0 ;
   double val5 ;
   int ecode5 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -5840,7 +5898,7 @@ static SwigV8ReturnValue _wrap_makeWedge__SWIG_1(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeWedge((gp_Ax2 const &)*arg1,arg2,arg3,arg4,arg5);
+      result = makeWedge((gp_Ax2 const &)*arg1,arg2,arg3,arg4,arg5);
     }
     catch(Standard_Failure)
     {
@@ -5848,7 +5906,7 @@ static SwigV8ReturnValue _wrap_makeWedge__SWIG_1(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5889,7 +5947,7 @@ static SwigV8ReturnValue _wrap_makeWedge__SWIG_2(const SwigV8Arguments &args, V8
   int ecode6 = 0 ;
   double val7 ;
   int ecode7 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   ecode1 = SWIG_AsVal_double(args[0], &val1);
   if (!SWIG_IsOK(ecode1)) {
@@ -5930,7 +5988,7 @@ static SwigV8ReturnValue _wrap_makeWedge__SWIG_2(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeWedge(arg1,arg2,arg3,arg4,arg5,arg6,arg7);
+      result = makeWedge(arg1,arg2,arg3,arg4,arg5,arg6,arg7);
     }
     catch(Standard_Failure)
     {
@@ -5938,7 +5996,7 @@ static SwigV8ReturnValue _wrap_makeWedge__SWIG_2(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5984,7 +6042,7 @@ static SwigV8ReturnValue _wrap_makeWedge__SWIG_3(const SwigV8Arguments &args, V8
   int ecode7 = 0 ;
   double val8 ;
   int ecode8 = 0 ;
-  TopoDS_Shape *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_gp_Ax2,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -6033,7 +6091,7 @@ static SwigV8ReturnValue _wrap_makeWedge__SWIG_3(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shape *) &makeWedge((gp_Ax2 const &)*arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8);
+      result = makeWedge((gp_Ax2 const &)*arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8);
     }
     catch(Standard_Failure)
     {
@@ -6041,7 +6099,7 @@ static SwigV8ReturnValue _wrap_makeWedge__SWIG_3(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shape, 0 |  0 );
+  jsresult = result;
   
   
   

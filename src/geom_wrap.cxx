@@ -1569,6 +1569,12 @@ static swig_module_info swig_module = {swig_types, 54, 0, 0, 0, 0};
 #include <gp_TrsfForm.hxx>
 #include <gp_Mat.hxx>
 #include <Standard_Integer.hxx>
+#include <gp_XY.hxx>
+#include <gp_Ax2d.hxx>
+#include <gp_Vec2d.hxx>
+#include <gp_Dir2d.hxx>
+#include <gp_Pnt2d.hxx>
+#include <gp_Mat2d.hxx>
 #include <gp_Pnt.hxx>
 #include <gp_Vec.hxx>
 #include <gp_Dir.hxx>
@@ -1576,6 +1582,12 @@ static swig_module_info swig_module = {swig_types, 54, 0, 0, 0, 0};
 #include <gp_Ax2.hxx>
 #include <gp_Ax3.hxx>
 #include <gp_Trsf.hxx>
+#include <gp_Pnt2d.hxx>
+#include <gp_Vec2d.hxx>
+#include <gp_Dir2d.hxx>
+#include <gp_Ax2d.hxx>
+#include <gp_Ax22d.hxx>
+#include <gp_Trsf2d.hxx>
 
 
 #ifdef WNT

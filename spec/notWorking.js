@@ -29,16 +29,14 @@ var notWorking = {
     'increase(Integer)',
     //'poles(Array)' // TODO: array outarg typemap for Array1Of has memory trouble
   ],
-  'topo.Cone': [
-    'startTopEdge()'
-  ],
-  'topo.OneAxis': [
-    'startTopEdge()'
-  ],
   'primitives.Revolution': [
     'startTopEdge()',
     // TODO: first arg is outarg or 'const &'
     'setMeridianPcurve(topo.Edge, topo.Face)'
+  ],
+  'topo': [
+    'makeWire(topo.Wire)',
+    'makeWire(topo.Edge)'
   ]
 };
 

@@ -1597,6 +1597,10 @@ SWIG_FromCharPtr(const char *cptr)
 #include <Handle_Geom_Surface.hxx>
 #include <TopoDS_Shell.hxx>
 #include <BRepBuilderAPI_MakeShell.hxx>
+#include <TopoDS_Solid.hxx>
+#include <BRepBuilderAPI_MakeSolid.hxx>
+#include <TopoDS_CompSolid.hxx>
+#include <BRepBuilderAPI_Transform.hxx>
 #include <TopLoc_Location.hxx>
 #include <TopAbs_Orientation.hxx>
 #include <TopAbs_ShapeEnum.hxx>

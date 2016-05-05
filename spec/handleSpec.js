@@ -1,7 +1,7 @@
-const geom = require('../lib/geom.node');
-const gp = require('../lib/gp.node');
+const geom = require('../lib/geom.js');
+const gp = require('../lib/gp.js');
 const helpers = require('./testHelpers.js');
-const create = require('./create.js');
+const geomCreate = require('./geom/create.js');
 
 
 describe('a handle', function() {
@@ -33,18 +33,18 @@ describe('a handle', function() {
     }
 
   });
-  
+
   it('TrimmedCurve plays well with garbage collectors', function() {
     process.stdout.write('GarbageCollector');
     for (var i = 0; i < 100000; i++) { // 52631 pr second
-      var circle = create.geom.Curve();
+      var circle = geomCreate.curve();
       var res = new geom.TrimmedCurve(circle, 0, 0.5, true);
 
       if (i % 10000 === 0)
         process.stdout.write('!');
-      
+
       var trsf = new gp.Trsf();
-      trsf.setTranslation(new gp.Vec(11,1,0));
+      trsf.setTranslation(new gp.Vec(11, 1, 0));
       var r2 = res.translated(new gp.Vec(2, 3, 4));
       r2.transform(trsf);
     }

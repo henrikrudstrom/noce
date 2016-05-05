@@ -1521,22 +1521,24 @@ SWIGRUNTIME void JS_veto_set_variable(v8::Local<v8::String> property, v8::Local<
 #define SWIGTYPE_p_TopExp swig_types[38]
 #define SWIGTYPE_p_TopLoc_Location swig_types[39]
 #define SWIGTYPE_p_TopTools_IndexedMapOfShape swig_types[40]
-#define SWIGTYPE_p_TopoDS_Edge swig_types[41]
-#define SWIGTYPE_p_TopoDS_Face swig_types[42]
-#define SWIGTYPE_p_TopoDS_Shape swig_types[43]
-#define SWIGTYPE_p_TopoDS_Shell swig_types[44]
-#define SWIGTYPE_p_TopoDS_Solid swig_types[45]
-#define SWIGTYPE_p_TopoDS_Vertex swig_types[46]
-#define SWIGTYPE_p_TopoDS_Wire swig_types[47]
-#define SWIGTYPE_p_bool swig_types[48]
-#define SWIGTYPE_p_char swig_types[49]
-#define SWIGTYPE_p_double swig_types[50]
-#define SWIGTYPE_p_gp_Pnt swig_types[51]
-#define SWIGTYPE_p_gp_Trsf swig_types[52]
-#define SWIGTYPE_p_int swig_types[53]
-#define SWIGTYPE_p_std__ostream swig_types[54]
-static swig_type_info *swig_types[56];
-static swig_module_info swig_module = {swig_types, 55, 0, 0, 0, 0};
+#define SWIGTYPE_p_TopTools_ListOfShape swig_types[41]
+#define SWIGTYPE_p_TopoDS_CompSolid swig_types[42]
+#define SWIGTYPE_p_TopoDS_Edge swig_types[43]
+#define SWIGTYPE_p_TopoDS_Face swig_types[44]
+#define SWIGTYPE_p_TopoDS_Shape swig_types[45]
+#define SWIGTYPE_p_TopoDS_Shell swig_types[46]
+#define SWIGTYPE_p_TopoDS_Solid swig_types[47]
+#define SWIGTYPE_p_TopoDS_Vertex swig_types[48]
+#define SWIGTYPE_p_TopoDS_Wire swig_types[49]
+#define SWIGTYPE_p_bool swig_types[50]
+#define SWIGTYPE_p_char swig_types[51]
+#define SWIGTYPE_p_double swig_types[52]
+#define SWIGTYPE_p_gp_Pnt swig_types[53]
+#define SWIGTYPE_p_gp_Trsf swig_types[54]
+#define SWIGTYPE_p_int swig_types[55]
+#define SWIGTYPE_p_std__ostream swig_types[56]
+static swig_type_info *swig_types[58];
+static swig_module_info swig_module = {swig_types, 57, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1671,6 +1673,12 @@ static swig_module_info swig_module = {swig_types, 55, 0, 0, 0, 0};
 #include <gp_TrsfForm.hxx>
 #include <gp_Mat.hxx>
 #include <Standard_Integer.hxx>
+#include <gp_XY.hxx>
+#include <gp_Ax2d.hxx>
+#include <gp_Vec2d.hxx>
+#include <gp_Dir2d.hxx>
+#include <gp_Pnt2d.hxx>
+#include <gp_Mat2d.hxx>
 #include <gp_Pnt.hxx>
 #include <gp_Vec.hxx>
 #include <gp_Dir.hxx>
@@ -1678,6 +1686,12 @@ static swig_module_info swig_module = {swig_types, 55, 0, 0, 0, 0};
 #include <gp_Ax2.hxx>
 #include <gp_Ax3.hxx>
 #include <gp_Trsf.hxx>
+#include <gp_Pnt2d.hxx>
+#include <gp_Vec2d.hxx>
+#include <gp_Dir2d.hxx>
+#include <gp_Ax2d.hxx>
+#include <gp_Ax22d.hxx>
+#include <gp_Trsf2d.hxx>
 
 
 #ifdef WNT
@@ -1714,41 +1728,41 @@ v8::Handle<v8::Value> upcastTopoDS_Shape(const TopoDS_Shape & shape){
     // lookup type
     int type = shape.ShapeType();
     std::string typeName = "";
-    void * voidptr;
+    void * voidptr = 0;
     switch(type){
       case 7:
-        typeName = "TopoDS_Vertex *";
+        typeName = "TopoDS_Vertex";
         voidptr = SWIG_as_voidptr(new TopoDS_Vertex(TopoDS::Vertex(shape)));
         break;
       case 6:
-        typeName = "TopoDS_Edge *";
+        typeName = "TopoDS_Edge";
         voidptr = SWIG_as_voidptr(new TopoDS_Edge(TopoDS::Edge(shape)));
         break;
       case 5:
-        typeName = "TopoDS_Wire *";
+        typeName = "TopoDS_Wire";
         voidptr = SWIG_as_voidptr(new TopoDS_Wire(TopoDS::Wire(shape)));
         break;
       case 4:
-        typeName = "TopoDS_Face *";
+        typeName = "TopoDS_Face";
         voidptr = SWIG_as_voidptr(new TopoDS_Face(TopoDS::Face(shape)));
         break;
       case 3:
-        typeName = "TopoDS_Shell *";
+        typeName = "TopoDS_Shell";
         voidptr = SWIG_as_voidptr(new TopoDS_Shell(TopoDS::Shell(shape)));
         break;
       case 2:
-        typeName = "TopoDS_Solid *";
+        typeName = "TopoDS_Solid";
         voidptr = SWIG_as_voidptr(new TopoDS_Solid(TopoDS::Solid(shape)));
         break;
       case 1:
-        typeName = "TopoDS_CompSolid *";
+        typeName = "TopoDS_CompSolid";
         voidptr = SWIG_as_voidptr(new TopoDS_CompSolid(TopoDS::CompSolid(shape)));
         break;
       case 0:
-        typeName = "TopoDS_Compound *";
+        typeName = "TopoDS_Compound";
         voidptr = SWIG_as_voidptr(new TopoDS_Compound(TopoDS::Compound(shape)));
     }
-    swig_type_info * const outtype = SWIG_TypeQuery(typeName.c_str());
+    swig_type_info * const outtype = SWIG_TypeQuery((typeName + " *").c_str());
     return SWIG_NewPointerObj(voidptr, outtype, SWIG_POINTER_OWN |  0);
   }
 
@@ -1849,6 +1863,10 @@ SWIG_FromCharPtr(const char *cptr)
 #include <Handle_Geom_Surface.hxx>
 #include <TopoDS_Shell.hxx>
 #include <BRepBuilderAPI_MakeShell.hxx>
+#include <TopoDS_Solid.hxx>
+#include <BRepBuilderAPI_MakeSolid.hxx>
+#include <TopoDS_CompSolid.hxx>
+#include <BRepBuilderAPI_Transform.hxx>
 #include <TopLoc_Location.hxx>
 #include <TopAbs_Orientation.hxx>
 #include <TopAbs_ShapeEnum.hxx>
@@ -1862,17 +1880,25 @@ SWIG_FromCharPtr(const char *cptr)
 #include <TopExp.hxx>
 
 
-  #include <TCollection.hxx>
-  #include <TCollection_BasicMap.hxx>
-#include<TopTools_IndexedMapOfShape.hxx>
-#include<TopExp_Explorer.hxx>
-#include<TopExp.hxx>
+#include <TCollection.hxx>
+#include <TCollection_BasicMap.hxx>
+#include <TopTools_IndexedMapOfShape.hxx>
+#include <TopTools_ListOfShape.hxx>
+#include <TopExp.hxx>
 #include <sstream>
 #include <string>
 #include <iostream>
 #include <ostream>
 #include <ios>
 
+
+  static v8::Handle<v8::Value> makeWire(const TopTools_ListOfShape &edges){
+    BRepBuilderAPI_MakeWire * obj = new BRepBuilderAPI_MakeWire();
+    obj->Add(edges);
+    if(!obj->IsDone())
+      SWIG_V8_Raise("could not make brep"); // TODO check error
+    return upcastTopoDS_Shape(obj->Shape());
+  }
 
 
 SWIGINTERNINLINE
@@ -1902,19 +1928,19 @@ int SWIG_AsVal_int (v8::Handle<v8::Value> valRef, int* val)
 }
 
 
-  static const TopoDS_Edge & makeEdge(const Handle_Geom_Curve & L){
+  static v8::Handle<v8::Value> makeEdge(const Handle_Geom_Curve & L){
     BRepBuilderAPI_MakeEdge* obj = new BRepBuilderAPI_MakeEdge(L);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Edge();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Edge & makeEdge(const Handle_Geom_Curve & L, const Standard_Real p1, const Standard_Real p2){
+  static v8::Handle<v8::Value> makeEdge(const Handle_Geom_Curve & L, const Standard_Real p1, const Standard_Real p2){
     BRepBuilderAPI_MakeEdge* obj = new BRepBuilderAPI_MakeEdge(L, p1, p2);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Edge();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
@@ -1930,123 +1956,123 @@ int SWIG_AsVal_double (v8::Handle<v8::Value> obj, double *val)
 }
 
 
-  static const TopoDS_Edge & makeEdge(const Handle_Geom_Curve & L, const gp_Pnt & P1, const gp_Pnt & P2){
+  static v8::Handle<v8::Value> makeEdge(const Handle_Geom_Curve & L, const gp_Pnt & P1, const gp_Pnt & P2){
     BRepBuilderAPI_MakeEdge* obj = new BRepBuilderAPI_MakeEdge(L, P1, P2);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Edge();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Edge & makeEdge(const Handle_Geom_Curve & L, const TopoDS_Vertex & V1, const TopoDS_Vertex & V2){
+  static v8::Handle<v8::Value> makeEdge(const Handle_Geom_Curve & L, const TopoDS_Vertex & V1, const TopoDS_Vertex & V2){
     BRepBuilderAPI_MakeEdge* obj = new BRepBuilderAPI_MakeEdge(L, V1, V2);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Edge();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Edge & makeEdge(const Handle_Geom_Curve & L, const gp_Pnt & P1, const gp_Pnt & P2, const Standard_Real p1, const Standard_Real p2){
+  static v8::Handle<v8::Value> makeEdge(const Handle_Geom_Curve & L, const gp_Pnt & P1, const gp_Pnt & P2, const Standard_Real p1, const Standard_Real p2){
     BRepBuilderAPI_MakeEdge* obj = new BRepBuilderAPI_MakeEdge(L, P1, P2, p1, p2);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Edge();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Edge & makeEdge(const Handle_Geom_Curve & L, const TopoDS_Vertex & V1, const TopoDS_Vertex & V2, const Standard_Real p1, const Standard_Real p2){
+  static v8::Handle<v8::Value> makeEdge(const Handle_Geom_Curve & L, const TopoDS_Vertex & V1, const TopoDS_Vertex & V2, const Standard_Real p1, const Standard_Real p2){
     BRepBuilderAPI_MakeEdge* obj = new BRepBuilderAPI_MakeEdge(L, V1, V2, p1, p2);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Edge();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Vertex & makeVertex(const gp_Pnt & P){
+  static v8::Handle<v8::Value> makeVertex(const gp_Pnt & P){
     BRepBuilderAPI_MakeVertex* obj = new BRepBuilderAPI_MakeVertex(P);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Vertex();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Wire & makeWire(){
+  static v8::Handle<v8::Value> makeWire(){
     BRepBuilderAPI_MakeWire* obj = new BRepBuilderAPI_MakeWire();
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Wire();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Wire & makeWire(const TopoDS_Edge & E){
+  static v8::Handle<v8::Value> makeWire(const TopoDS_Edge & E){
     BRepBuilderAPI_MakeWire* obj = new BRepBuilderAPI_MakeWire(E);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Wire();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Wire & makeWire(const TopoDS_Edge & E1, const TopoDS_Edge & E2){
+  static v8::Handle<v8::Value> makeWire(const TopoDS_Edge & E1, const TopoDS_Edge & E2){
     BRepBuilderAPI_MakeWire* obj = new BRepBuilderAPI_MakeWire(E1, E2);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Wire();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Wire & makeWire(const TopoDS_Edge & E1, const TopoDS_Edge & E2, const TopoDS_Edge & E3){
+  static v8::Handle<v8::Value> makeWire(const TopoDS_Edge & E1, const TopoDS_Edge & E2, const TopoDS_Edge & E3){
     BRepBuilderAPI_MakeWire* obj = new BRepBuilderAPI_MakeWire(E1, E2, E3);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Wire();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Wire & makeWire(const TopoDS_Edge & E1, const TopoDS_Edge & E2, const TopoDS_Edge & E3, const TopoDS_Edge & E4){
+  static v8::Handle<v8::Value> makeWire(const TopoDS_Edge & E1, const TopoDS_Edge & E2, const TopoDS_Edge & E3, const TopoDS_Edge & E4){
     BRepBuilderAPI_MakeWire* obj = new BRepBuilderAPI_MakeWire(E1, E2, E3, E4);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Wire();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Wire & makeWire(const TopoDS_Wire & W){
+  static v8::Handle<v8::Value> makeWire(const TopoDS_Wire & W){
     BRepBuilderAPI_MakeWire* obj = new BRepBuilderAPI_MakeWire(W);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Wire();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Wire & makeWire(const TopoDS_Wire & W, const TopoDS_Edge & E){
+  static v8::Handle<v8::Value> makeWire(const TopoDS_Wire & W, const TopoDS_Edge & E){
     BRepBuilderAPI_MakeWire* obj = new BRepBuilderAPI_MakeWire(W, E);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Wire();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Face & makeFace(const Handle_Geom_Surface & S, const Standard_Real TolDegen){
+  static v8::Handle<v8::Value> makeFace(const Handle_Geom_Surface & S, const Standard_Real TolDegen){
     BRepBuilderAPI_MakeFace* obj = new BRepBuilderAPI_MakeFace(S, TolDegen);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Face();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Face & makeFace(const Handle_Geom_Surface & S, const Standard_Real UMin, const Standard_Real UMax, const Standard_Real VMin, const Standard_Real VMax, const Standard_Real TolDegen){
+  static v8::Handle<v8::Value> makeFace(const Handle_Geom_Surface & S, const Standard_Real UMin, const Standard_Real UMax, const Standard_Real VMin, const Standard_Real VMax, const Standard_Real TolDegen){
     BRepBuilderAPI_MakeFace* obj = new BRepBuilderAPI_MakeFace(S, UMin, UMax, VMin, VMax, TolDegen);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Face();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Face & makeFace(const Handle_Geom_Surface & S, const TopoDS_Wire & W, const Standard_Boolean Inside){
+  static v8::Handle<v8::Value> makeFace(const Handle_Geom_Surface & S, const TopoDS_Wire & W, const Standard_Boolean Inside){
     BRepBuilderAPI_MakeFace* obj = new BRepBuilderAPI_MakeFace(S, W, Inside);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Face();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
@@ -2110,43 +2136,99 @@ int SWIG_AsVal_bool (v8::Handle<v8::Value> obj, bool *val)
 }
 
 
-  static const TopoDS_Face & makeFace(const TopoDS_Face & F){
+  static v8::Handle<v8::Value> makeFace(const TopoDS_Face & F){
     BRepBuilderAPI_MakeFace* obj = new BRepBuilderAPI_MakeFace(F);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Face();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Face & makeFace(const TopoDS_Wire & W, const Standard_Boolean OnlyPlane){
+  static v8::Handle<v8::Value> makeFace(const TopoDS_Wire & W, const Standard_Boolean OnlyPlane){
     BRepBuilderAPI_MakeFace* obj = new BRepBuilderAPI_MakeFace(W, OnlyPlane);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Face();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Face & makeFace(const TopoDS_Face & F, const TopoDS_Wire & W){
+  static v8::Handle<v8::Value> makeFace(const TopoDS_Face & F, const TopoDS_Wire & W){
     BRepBuilderAPI_MakeFace* obj = new BRepBuilderAPI_MakeFace(F, W);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Face();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Shell & makeShell(const Handle_Geom_Surface & S, const Standard_Boolean Segment){
+  static v8::Handle<v8::Value> makeShell(const Handle_Geom_Surface & S, const Standard_Boolean Segment){
     BRepBuilderAPI_MakeShell* obj = new BRepBuilderAPI_MakeShell(S, Segment);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Shell();
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
-  static const TopoDS_Shell & makeShell(const Handle_Geom_Surface & S, const Standard_Real UMin, const Standard_Real UMax, const Standard_Real VMin, const Standard_Real VMax, const Standard_Boolean Segment){
+  static v8::Handle<v8::Value> makeShell(const Handle_Geom_Surface & S, const Standard_Real UMin, const Standard_Real UMax, const Standard_Real VMin, const Standard_Real VMax, const Standard_Boolean Segment){
     BRepBuilderAPI_MakeShell* obj = new BRepBuilderAPI_MakeShell(S, UMin, UMax, VMin, VMax, Segment);
     if(!obj->IsDone())
       SWIG_V8_Raise("could not make brep"); // TODO check error
-    return obj->Shell();
+    return upcastTopoDS_Shape(obj->Shape());
+  }
+
+
+  static v8::Handle<v8::Value> makeSolid(const TopoDS_CompSolid & S){
+    BRepBuilderAPI_MakeSolid* obj = new BRepBuilderAPI_MakeSolid(S);
+    if(!obj->IsDone())
+      SWIG_V8_Raise("could not make brep"); // TODO check error
+    return upcastTopoDS_Shape(obj->Shape());
+  }
+
+
+  static v8::Handle<v8::Value> makeSolid(const TopoDS_Shell & S){
+    BRepBuilderAPI_MakeSolid* obj = new BRepBuilderAPI_MakeSolid(S);
+    if(!obj->IsDone())
+      SWIG_V8_Raise("could not make brep"); // TODO check error
+    return upcastTopoDS_Shape(obj->Shape());
+  }
+
+
+  static v8::Handle<v8::Value> makeSolid(const TopoDS_Shell & S1, const TopoDS_Shell & S2){
+    BRepBuilderAPI_MakeSolid* obj = new BRepBuilderAPI_MakeSolid(S1, S2);
+    if(!obj->IsDone())
+      SWIG_V8_Raise("could not make brep"); // TODO check error
+    return upcastTopoDS_Shape(obj->Shape());
+  }
+
+
+  static v8::Handle<v8::Value> makeSolid(const TopoDS_Shell & S1, const TopoDS_Shell & S2, const TopoDS_Shell & S3){
+    BRepBuilderAPI_MakeSolid* obj = new BRepBuilderAPI_MakeSolid(S1, S2, S3);
+    if(!obj->IsDone())
+      SWIG_V8_Raise("could not make brep"); // TODO check error
+    return upcastTopoDS_Shape(obj->Shape());
+  }
+
+
+  static v8::Handle<v8::Value> makeSolid(const TopoDS_Solid & So){
+    BRepBuilderAPI_MakeSolid* obj = new BRepBuilderAPI_MakeSolid(So);
+    if(!obj->IsDone())
+      SWIG_V8_Raise("could not make brep"); // TODO check error
+    return upcastTopoDS_Shape(obj->Shape());
+  }
+
+
+  static v8::Handle<v8::Value> makeSolid(const TopoDS_Solid & So, const TopoDS_Shell & S){
+    BRepBuilderAPI_MakeSolid* obj = new BRepBuilderAPI_MakeSolid(So, S);
+    if(!obj->IsDone())
+      SWIG_V8_Raise("could not make brep"); // TODO check error
+    return upcastTopoDS_Shape(obj->Shape());
+  }
+
+
+  static v8::Handle<v8::Value> transform(const TopoDS_Shape & S, const gp_Trsf & T, const Standard_Boolean Copy){
+    BRepBuilderAPI_Transform* obj = new BRepBuilderAPI_Transform(S, T, Copy);
+    if(!obj->IsDone())
+      SWIG_V8_Raise("could not make brep"); // TODO check error
+    return upcastTopoDS_Shape(obj->Shape());
   }
 
 
@@ -2441,6 +2523,52 @@ static void _wrap_delete_Handle_MMgt_TShared(v8::Persistent<v8::Value> object, v
         object.Clear();
 #endif
       }
+
+
+static SwigV8ReturnValue _wrap_makeWire__SWIG_0(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  TopTools_ListOfShape *arg1 = 0 ;
+  v8::Handle< v8::Value > result;
+  
+  {
+    // typemap inmap
+    v8::Handle<v8::Array> array = v8::Handle<v8::Array>::Cast(args[0]);
+    int length = array->Get(SWIGV8_SYMBOL_NEW("length"))->ToObject()->Uint32Value();
+    
+    TopTools_ListOfShape * list = new TopTools_ListOfShape();
+    TopoDS_Shape *argpointer;
+    
+    for(int i = 1; i <= length; i++){
+      SWIG_ConvertPtr(array->Get(i-1), (void **)&argpointer, SWIGTYPE_p_TopoDS_Shape, 0);
+      list->Append((const TopoDS_Shape &)*argpointer);
+    }
+    
+    arg1 = list;
+  }
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = makeWire((TopTools_ListOfShape const &)*arg1);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = result;
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
 
 
 static SwigV8ReturnValue _wrap_new_Location__SWIG_0(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler) {
@@ -3394,7 +3522,7 @@ static SwigV8ReturnValue _wrap_Shape_located(const SwigV8Arguments &args) {
   }
   {
     //typemap outmap
-    jsresult = upcastTopoDS_Shape((const TopoDS_Shape &)result);
+    jsresult = upcastTopoDS_Shape(result);
   }
   
   
@@ -3443,7 +3571,7 @@ static SwigV8ReturnValue _wrap_Shape_oriented(const SwigV8Arguments &args) {
   }
   {
     //typemap outmap
-    jsresult = upcastTopoDS_Shape((const TopoDS_Shape &)result);
+    jsresult = upcastTopoDS_Shape(result);
   }
   
   
@@ -3625,7 +3753,7 @@ static SwigV8ReturnValue _wrap_Shape_moved(const SwigV8Arguments &args) {
   }
   {
     //typemap outmap
-    jsresult = upcastTopoDS_Shape((const TopoDS_Shape &)result);
+    jsresult = upcastTopoDS_Shape(result);
   }
   
   
@@ -3706,7 +3834,7 @@ static SwigV8ReturnValue _wrap_Shape_reversed(const SwigV8Arguments &args) {
   }
   {
     //typemap outmap
-    jsresult = upcastTopoDS_Shape((const TopoDS_Shape &)result);
+    jsresult = upcastTopoDS_Shape(result);
   }
   
   
@@ -3786,7 +3914,7 @@ static SwigV8ReturnValue _wrap_Shape_complemented(const SwigV8Arguments &args) {
   }
   {
     //typemap outmap
-    jsresult = upcastTopoDS_Shape((const TopoDS_Shape &)result);
+    jsresult = upcastTopoDS_Shape(result);
   }
   
   
@@ -3878,7 +4006,7 @@ static SwigV8ReturnValue _wrap_Shape_composed(const SwigV8Arguments &args) {
   }
   {
     //typemap outmap
-    jsresult = upcastTopoDS_Shape((const TopoDS_Shape &)result);
+    jsresult = upcastTopoDS_Shape(result);
   }
   
   
@@ -4210,7 +4338,7 @@ static SwigV8ReturnValue _wrap_Shape_emptyCopied(const SwigV8Arguments &args) {
   }
   {
     //typemap outmap
-    jsresult = upcastTopoDS_Shape((const TopoDS_Shape &)result);
+    jsresult = upcastTopoDS_Shape(result);
   }
   
   
@@ -4662,7 +4790,7 @@ static SwigV8ReturnValue _wrap_TopExp_mapShapes__SWIG_0(const SwigV8Arguments &a
       v8::Isolate::GetCurrent(), arg3->Extent());
     int length = arg3->Extent();
     for(int i = 1; i <= length; i++){
-      v8::Handle<v8::Value> val = upcastTopoDS_Shape((const TopoDS_Shape &)arg3->FindKey(i));
+      v8::Handle<v8::Value> val = upcastTopoDS_Shape(arg3->FindKey(i));
       array->Set(i-1, val);
     }
     value = array;
@@ -4724,7 +4852,7 @@ static SwigV8ReturnValue _wrap_TopExp_mapShapes__SWIG_1(const SwigV8Arguments &a
       v8::Isolate::GetCurrent(), arg2->Extent());
     int length = arg2->Extent();
     for(int i = 1; i <= length; i++){
-      v8::Handle<v8::Value> val = upcastTopoDS_Shape((const TopoDS_Shape &)arg2->FindKey(i));
+      v8::Handle<v8::Value> val = upcastTopoDS_Shape(arg2->FindKey(i));
       array->Set(i-1, val);
     }
     value = array;
@@ -4837,7 +4965,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_0(const SwigV8Arguments &args, V8E
   
   v8::Handle<v8::Value> jsresult;
   Handle_Geom_Curve *arg1 = 0 ;
-  TopoDS_Edge *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   {
     // handlein
@@ -4852,7 +4980,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_0(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Edge *) &makeEdge((Handle_Geom_Curve const &)*arg1);
+      result = makeEdge((Handle_Geom_Curve const &)*arg1);
     }
     catch(Standard_Failure)
     {
@@ -4860,7 +4988,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_0(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Edge, 0 |  0 );
+  jsresult = result;
   
   
   SWIGV8_RETURN(jsresult);
@@ -4883,7 +5011,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_1(const SwigV8Arguments &args, V8E
   int ecode2 = 0 ;
   double val3 ;
   int ecode3 = 0 ;
-  TopoDS_Edge *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   {
     // handlein
@@ -4908,7 +5036,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_1(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Edge *) &makeEdge((Handle_Geom_Curve const &)*arg1,arg2,arg3);
+      result = makeEdge((Handle_Geom_Curve const &)*arg1,arg2,arg3);
     }
     catch(Standard_Failure)
     {
@@ -4916,7 +5044,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_1(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Edge, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -4941,7 +5069,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_2(const SwigV8Arguments &args, V8E
   int res2 = 0 ;
   void *argp3 ;
   int res3 = 0 ;
-  TopoDS_Edge *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   {
     // handlein
@@ -4972,7 +5100,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_2(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Edge *) &makeEdge((Handle_Geom_Curve const &)*arg1,(gp_Pnt const &)*arg2,(gp_Pnt const &)*arg3);
+      result = makeEdge((Handle_Geom_Curve const &)*arg1,(gp_Pnt const &)*arg2,(gp_Pnt const &)*arg3);
     }
     catch(Standard_Failure)
     {
@@ -4980,7 +5108,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_2(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Edge, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5005,7 +5133,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_3(const SwigV8Arguments &args, V8E
   int res2 = 0 ;
   void *argp3 ;
   int res3 = 0 ;
-  TopoDS_Edge *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   {
     // handlein
@@ -5036,7 +5164,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_3(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Edge *) &makeEdge((Handle_Geom_Curve const &)*arg1,(TopoDS_Vertex const &)*arg2,(TopoDS_Vertex const &)*arg3);
+      result = makeEdge((Handle_Geom_Curve const &)*arg1,(TopoDS_Vertex const &)*arg2,(TopoDS_Vertex const &)*arg3);
     }
     catch(Standard_Failure)
     {
@@ -5044,7 +5172,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_3(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Edge, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5075,7 +5203,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_4(const SwigV8Arguments &args, V8E
   int ecode4 = 0 ;
   double val5 ;
   int ecode5 = 0 ;
-  TopoDS_Edge *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   {
     // handlein
@@ -5116,7 +5244,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_4(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Edge *) &makeEdge((Handle_Geom_Curve const &)*arg1,(gp_Pnt const &)*arg2,(gp_Pnt const &)*arg3,arg4,arg5);
+      result = makeEdge((Handle_Geom_Curve const &)*arg1,(gp_Pnt const &)*arg2,(gp_Pnt const &)*arg3,arg4,arg5);
     }
     catch(Standard_Failure)
     {
@@ -5124,7 +5252,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_4(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Edge, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5157,7 +5285,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_5(const SwigV8Arguments &args, V8E
   int ecode4 = 0 ;
   double val5 ;
   int ecode5 = 0 ;
-  TopoDS_Edge *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   {
     // handlein
@@ -5198,7 +5326,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_5(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Edge *) &makeEdge((Handle_Geom_Curve const &)*arg1,(TopoDS_Vertex const &)*arg2,(TopoDS_Vertex const &)*arg3,arg4,arg5);
+      result = makeEdge((Handle_Geom_Curve const &)*arg1,(TopoDS_Vertex const &)*arg2,(TopoDS_Vertex const &)*arg3,arg4,arg5);
     }
     catch(Standard_Failure)
     {
@@ -5206,7 +5334,7 @@ static SwigV8ReturnValue _wrap_makeEdge__SWIG_5(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Edge, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5339,7 +5467,7 @@ static SwigV8ReturnValue _wrap_makeVertex(const SwigV8Arguments &args) {
   gp_Pnt *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
-  TopoDS_Vertex *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   if(args.Length() != 1) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_makeVertex.");
   
@@ -5355,7 +5483,7 @@ static SwigV8ReturnValue _wrap_makeVertex(const SwigV8Arguments &args) {
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Vertex *) &makeVertex((gp_Pnt const &)*arg1);
+      result = makeVertex((gp_Pnt const &)*arg1);
     }
     catch(Standard_Failure)
     {
@@ -5363,37 +5491,8 @@ static SwigV8ReturnValue _wrap_makeVertex(const SwigV8Arguments &args) {
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Vertex, 0 |  0 );
+  jsresult = result;
   
-  
-  SWIGV8_RETURN(jsresult);
-  
-  goto fail;
-fail:
-  SWIGV8_RETURN(SWIGV8_UNDEFINED());
-}
-
-
-static SwigV8ReturnValue _wrap_makeWire__SWIG_0(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
-{
-  SWIGV8_HANDLESCOPE();
-  
-  v8::Handle<v8::Value> jsresult;
-  TopoDS_Wire *result = 0 ;
-  
-  {
-    try
-    {
-      OCC_CATCH_SIGNALS
-      result = (TopoDS_Wire *) &makeWire();
-    }
-    catch(Standard_Failure)
-    {
-      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
-      return;
-    }
-  }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Wire, 0 |  0 );
   
   SWIGV8_RETURN(jsresult);
   
@@ -5408,24 +5507,13 @@ static SwigV8ReturnValue _wrap_makeWire__SWIG_1(const SwigV8Arguments &args, V8E
   SWIGV8_HANDLESCOPE();
   
   v8::Handle<v8::Value> jsresult;
-  TopoDS_Edge *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  TopoDS_Wire *result = 0 ;
+  v8::Handle< v8::Value > result;
   
-  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Edge,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "makeWire" "', argument " "1"" of type '" "TopoDS_Edge const &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "makeWire" "', argument " "1"" of type '" "TopoDS_Edge const &""'"); 
-  }
-  arg1 = (TopoDS_Edge *)(argp1);
   {
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Wire *) &makeWire((TopoDS_Edge const &)*arg1);
+      result = makeWire();
     }
     catch(Standard_Failure)
     {
@@ -5433,8 +5521,7 @@ static SwigV8ReturnValue _wrap_makeWire__SWIG_1(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Wire, 0 |  0 );
-  
+  jsresult = result;
   
   SWIGV8_RETURN(jsresult);
   
@@ -5450,12 +5537,53 @@ static SwigV8ReturnValue _wrap_makeWire__SWIG_2(const SwigV8Arguments &args, V8E
   
   v8::Handle<v8::Value> jsresult;
   TopoDS_Edge *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  v8::Handle< v8::Value > result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Edge,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "makeWire" "', argument " "1"" of type '" "TopoDS_Edge const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "makeWire" "', argument " "1"" of type '" "TopoDS_Edge const &""'"); 
+  }
+  arg1 = (TopoDS_Edge *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = makeWire((TopoDS_Edge const &)*arg1);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = result;
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_makeWire__SWIG_3(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  TopoDS_Edge *arg1 = 0 ;
   TopoDS_Edge *arg2 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
   void *argp2 ;
   int res2 = 0 ;
-  TopoDS_Wire *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Edge,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -5477,7 +5605,7 @@ static SwigV8ReturnValue _wrap_makeWire__SWIG_2(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Wire *) &makeWire((TopoDS_Edge const &)*arg1,(TopoDS_Edge const &)*arg2);
+      result = makeWire((TopoDS_Edge const &)*arg1,(TopoDS_Edge const &)*arg2);
     }
     catch(Standard_Failure)
     {
@@ -5485,7 +5613,7 @@ static SwigV8ReturnValue _wrap_makeWire__SWIG_2(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Wire, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5497,7 +5625,7 @@ fail:
 }
 
 
-static SwigV8ReturnValue _wrap_makeWire__SWIG_3(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+static SwigV8ReturnValue _wrap_makeWire__SWIG_4(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
 {
   SWIGV8_HANDLESCOPE();
   
@@ -5511,7 +5639,7 @@ static SwigV8ReturnValue _wrap_makeWire__SWIG_3(const SwigV8Arguments &args, V8E
   int res2 = 0 ;
   void *argp3 ;
   int res3 = 0 ;
-  TopoDS_Wire *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Edge,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -5541,7 +5669,7 @@ static SwigV8ReturnValue _wrap_makeWire__SWIG_3(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Wire *) &makeWire((TopoDS_Edge const &)*arg1,(TopoDS_Edge const &)*arg2,(TopoDS_Edge const &)*arg3);
+      result = makeWire((TopoDS_Edge const &)*arg1,(TopoDS_Edge const &)*arg2,(TopoDS_Edge const &)*arg3);
     }
     catch(Standard_Failure)
     {
@@ -5549,7 +5677,7 @@ static SwigV8ReturnValue _wrap_makeWire__SWIG_3(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Wire, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5562,7 +5690,7 @@ fail:
 }
 
 
-static SwigV8ReturnValue _wrap_makeWire__SWIG_4(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+static SwigV8ReturnValue _wrap_makeWire__SWIG_5(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
 {
   SWIGV8_HANDLESCOPE();
   
@@ -5579,7 +5707,7 @@ static SwigV8ReturnValue _wrap_makeWire__SWIG_4(const SwigV8Arguments &args, V8E
   int res3 = 0 ;
   void *argp4 ;
   int res4 = 0 ;
-  TopoDS_Wire *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Edge,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -5617,7 +5745,7 @@ static SwigV8ReturnValue _wrap_makeWire__SWIG_4(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Wire *) &makeWire((TopoDS_Edge const &)*arg1,(TopoDS_Edge const &)*arg2,(TopoDS_Edge const &)*arg3,(TopoDS_Edge const &)*arg4);
+      result = makeWire((TopoDS_Edge const &)*arg1,(TopoDS_Edge const &)*arg2,(TopoDS_Edge const &)*arg3,(TopoDS_Edge const &)*arg4);
     }
     catch(Standard_Failure)
     {
@@ -5625,51 +5753,10 @@ static SwigV8ReturnValue _wrap_makeWire__SWIG_4(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Wire, 0 |  0 );
+  jsresult = result;
   
   
   
-  
-  
-  SWIGV8_RETURN(jsresult);
-  
-  goto fail;
-fail:
-  SWIGV8_RETURN(SWIGV8_UNDEFINED());
-}
-
-
-static SwigV8ReturnValue _wrap_makeWire__SWIG_5(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
-{
-  SWIGV8_HANDLESCOPE();
-  
-  v8::Handle<v8::Value> jsresult;
-  TopoDS_Wire *arg1 = 0 ;
-  void *argp1 ;
-  int res1 = 0 ;
-  TopoDS_Wire *result = 0 ;
-  
-  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Wire,  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "makeWire" "', argument " "1"" of type '" "TopoDS_Wire const &""'"); 
-  }
-  if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "makeWire" "', argument " "1"" of type '" "TopoDS_Wire const &""'"); 
-  }
-  arg1 = (TopoDS_Wire *)(argp1);
-  {
-    try
-    {
-      OCC_CATCH_SIGNALS
-      result = (TopoDS_Wire *) &makeWire((TopoDS_Wire const &)*arg1);
-    }
-    catch(Standard_Failure)
-    {
-      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
-      return;
-    }
-  }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Wire, 0 |  0 );
   
   
   SWIGV8_RETURN(jsresult);
@@ -5686,12 +5773,53 @@ static SwigV8ReturnValue _wrap_makeWire__SWIG_6(const SwigV8Arguments &args, V8E
   
   v8::Handle<v8::Value> jsresult;
   TopoDS_Wire *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  v8::Handle< v8::Value > result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Wire,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "makeWire" "', argument " "1"" of type '" "TopoDS_Wire const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "makeWire" "', argument " "1"" of type '" "TopoDS_Wire const &""'"); 
+  }
+  arg1 = (TopoDS_Wire *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = makeWire((TopoDS_Wire const &)*arg1);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = result;
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_makeWire__SWIG_7(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  TopoDS_Wire *arg1 = 0 ;
   TopoDS_Edge *arg2 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
   void *argp2 ;
   int res2 = 0 ;
-  TopoDS_Wire *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Wire,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -5713,7 +5841,7 @@ static SwigV8ReturnValue _wrap_makeWire__SWIG_6(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Wire *) &makeWire((TopoDS_Wire const &)*arg1,(TopoDS_Edge const &)*arg2);
+      result = makeWire((TopoDS_Wire const &)*arg1,(TopoDS_Edge const &)*arg2);
     }
     catch(Standard_Failure)
     {
@@ -5721,7 +5849,7 @@ static SwigV8ReturnValue _wrap_makeWire__SWIG_6(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Wire, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5740,7 +5868,7 @@ static SwigV8ReturnValue _wrap___wrap_makeWire(const SwigV8Arguments &args) {
   OverloadErrorHandler errorHandler;
   
   
-  if(args.Length() == 0) {
+  if(args.Length() == 1) {
     errorHandler.err.Clear();
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
     jsresult = _wrap_makeWire__SWIG_0(args, errorHandler);
@@ -5756,7 +5884,7 @@ static SwigV8ReturnValue _wrap___wrap_makeWire(const SwigV8Arguments &args) {
   }
   
   
-  if(args.Length() == 1) {
+  if(args.Length() == 0) {
     errorHandler.err.Clear();
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
     jsresult = _wrap_makeWire__SWIG_1(args, errorHandler);
@@ -5772,7 +5900,7 @@ static SwigV8ReturnValue _wrap___wrap_makeWire(const SwigV8Arguments &args) {
   }
   
   
-  if(args.Length() == 2) {
+  if(args.Length() == 1) {
     errorHandler.err.Clear();
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
     jsresult = _wrap_makeWire__SWIG_2(args, errorHandler);
@@ -5788,7 +5916,7 @@ static SwigV8ReturnValue _wrap___wrap_makeWire(const SwigV8Arguments &args) {
   }
   
   
-  if(args.Length() == 3) {
+  if(args.Length() == 2) {
     errorHandler.err.Clear();
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
     jsresult = _wrap_makeWire__SWIG_3(args, errorHandler);
@@ -5804,7 +5932,7 @@ static SwigV8ReturnValue _wrap___wrap_makeWire(const SwigV8Arguments &args) {
   }
   
   
-  if(args.Length() == 4) {
+  if(args.Length() == 3) {
     errorHandler.err.Clear();
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
     jsresult = _wrap_makeWire__SWIG_4(args, errorHandler);
@@ -5820,7 +5948,7 @@ static SwigV8ReturnValue _wrap___wrap_makeWire(const SwigV8Arguments &args) {
   }
   
   
-  if(args.Length() == 1) {
+  if(args.Length() == 4) {
     errorHandler.err.Clear();
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
     jsresult = _wrap_makeWire__SWIG_5(args, errorHandler);
@@ -5836,7 +5964,7 @@ static SwigV8ReturnValue _wrap___wrap_makeWire(const SwigV8Arguments &args) {
   }
   
   
-  if(args.Length() == 2) {
+  if(args.Length() == 1) {
     errorHandler.err.Clear();
 #if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
     jsresult = _wrap_makeWire__SWIG_6(args, errorHandler);
@@ -5845,6 +5973,22 @@ static SwigV8ReturnValue _wrap___wrap_makeWire(const SwigV8Arguments &args) {
     }
 #else
     _wrap_makeWire__SWIG_6(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 2) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_makeWire__SWIG_7(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_makeWire__SWIG_7(args, errorHandler);
     if(errorHandler.err.IsEmpty()) {
       return;
     }
@@ -5869,7 +6013,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_0(const SwigV8Arguments &args, V8E
   Standard_Real arg2 ;
   double val2 ;
   int ecode2 = 0 ;
-  TopoDS_Face *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   {
     // handlein
@@ -5889,7 +6033,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_0(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Face *) &makeFace((Handle_Geom_Surface const &)*arg1,arg2);
+      result = makeFace((Handle_Geom_Surface const &)*arg1,arg2);
     }
     catch(Standard_Failure)
     {
@@ -5897,7 +6041,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_0(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Face, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -5930,7 +6074,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_1(const SwigV8Arguments &args, V8E
   int ecode5 = 0 ;
   double val6 ;
   int ecode6 = 0 ;
-  TopoDS_Face *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   {
     // handlein
@@ -5970,7 +6114,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_1(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Face *) &makeFace((Handle_Geom_Surface const &)*arg1,arg2,arg3,arg4,arg5,arg6);
+      result = makeFace((Handle_Geom_Surface const &)*arg1,arg2,arg3,arg4,arg5,arg6);
     }
     catch(Standard_Failure)
     {
@@ -5978,7 +6122,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_1(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Face, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -6006,7 +6150,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_2(const SwigV8Arguments &args, V8E
   int res2 = 0 ;
   bool val3 ;
   int ecode3 = 0 ;
-  TopoDS_Face *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   {
     // handlein
@@ -6034,7 +6178,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_2(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Face *) &makeFace((Handle_Geom_Surface const &)*arg1,(TopoDS_Wire const &)*arg2,arg3);
+      result = makeFace((Handle_Geom_Surface const &)*arg1,(TopoDS_Wire const &)*arg2,arg3);
     }
     catch(Standard_Failure)
     {
@@ -6042,7 +6186,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_2(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Face, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -6063,7 +6207,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_3(const SwigV8Arguments &args, V8E
   TopoDS_Face *arg1 = 0 ;
   void *argp1 ;
   int res1 = 0 ;
-  TopoDS_Face *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Face,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -6077,7 +6221,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_3(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Face *) &makeFace((TopoDS_Face const &)*arg1);
+      result = makeFace((TopoDS_Face const &)*arg1);
     }
     catch(Standard_Failure)
     {
@@ -6085,7 +6229,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_3(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Face, 0 |  0 );
+  jsresult = result;
   
   
   SWIGV8_RETURN(jsresult);
@@ -6107,7 +6251,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_4(const SwigV8Arguments &args, V8E
   int res1 = 0 ;
   bool val2 ;
   int ecode2 = 0 ;
-  TopoDS_Face *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Wire,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -6126,7 +6270,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_4(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Face *) &makeFace((TopoDS_Wire const &)*arg1,arg2);
+      result = makeFace((TopoDS_Wire const &)*arg1,arg2);
     }
     catch(Standard_Failure)
     {
@@ -6134,7 +6278,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_4(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Face, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -6157,7 +6301,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_5(const SwigV8Arguments &args, V8E
   int res1 = 0 ;
   void *argp2 ;
   int res2 = 0 ;
-  TopoDS_Face *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Face,  0 );
   if (!SWIG_IsOK(res1)) {
@@ -6179,7 +6323,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_5(const SwigV8Arguments &args, V8E
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Face *) &makeFace((TopoDS_Face const &)*arg1,(TopoDS_Wire const &)*arg2);
+      result = makeFace((TopoDS_Face const &)*arg1,(TopoDS_Wire const &)*arg2);
     }
     catch(Standard_Failure)
     {
@@ -6187,7 +6331,7 @@ static SwigV8ReturnValue _wrap_makeFace__SWIG_5(const SwigV8Arguments &args, V8E
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Face, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -6319,7 +6463,7 @@ static SwigV8ReturnValue _wrap_makeShell__SWIG_0(const SwigV8Arguments &args, V8
   Standard_Boolean arg2 ;
   bool val2 ;
   int ecode2 = 0 ;
-  TopoDS_Shell *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   {
     // handlein
@@ -6339,7 +6483,7 @@ static SwigV8ReturnValue _wrap_makeShell__SWIG_0(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shell *) &makeShell((Handle_Geom_Surface const &)*arg1,arg2);
+      result = makeShell((Handle_Geom_Surface const &)*arg1,arg2);
     }
     catch(Standard_Failure)
     {
@@ -6347,7 +6491,7 @@ static SwigV8ReturnValue _wrap_makeShell__SWIG_0(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shell, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -6380,7 +6524,7 @@ static SwigV8ReturnValue _wrap_makeShell__SWIG_1(const SwigV8Arguments &args, V8
   int ecode5 = 0 ;
   bool val6 ;
   int ecode6 = 0 ;
-  TopoDS_Shell *result = 0 ;
+  v8::Handle< v8::Value > result;
   
   {
     // handlein
@@ -6420,7 +6564,7 @@ static SwigV8ReturnValue _wrap_makeShell__SWIG_1(const SwigV8Arguments &args, V8
     try
     {
       OCC_CATCH_SIGNALS
-      result = (TopoDS_Shell *) &makeShell((Handle_Geom_Surface const &)*arg1,arg2,arg3,arg4,arg5,arg6);
+      result = makeShell((Handle_Geom_Surface const &)*arg1,arg2,arg3,arg4,arg5,arg6);
     }
     catch(Standard_Failure)
     {
@@ -6428,7 +6572,7 @@ static SwigV8ReturnValue _wrap_makeShell__SWIG_1(const SwigV8Arguments &args, V8
       return;
     }
   }
-  jsresult = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TopoDS_Shell, 0 |  0 );
+  jsresult = result;
   
   
   
@@ -6484,6 +6628,474 @@ static SwigV8ReturnValue _wrap___wrap_makeShell(const SwigV8Arguments &args) {
   
   
   SWIG_exception_fail(SWIG_ERROR, "Illegal arguments for function makeShell.");
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_makeSolid__SWIG_0(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  TopoDS_CompSolid *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  v8::Handle< v8::Value > result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_CompSolid,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "makeSolid" "', argument " "1"" of type '" "TopoDS_CompSolid const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "makeSolid" "', argument " "1"" of type '" "TopoDS_CompSolid const &""'"); 
+  }
+  arg1 = (TopoDS_CompSolid *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = makeSolid((TopoDS_CompSolid const &)*arg1);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = result;
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_makeSolid__SWIG_1(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  TopoDS_Shell *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  v8::Handle< v8::Value > result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Shell,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "makeSolid" "', argument " "1"" of type '" "TopoDS_Shell const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "makeSolid" "', argument " "1"" of type '" "TopoDS_Shell const &""'"); 
+  }
+  arg1 = (TopoDS_Shell *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = makeSolid((TopoDS_Shell const &)*arg1);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = result;
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_makeSolid__SWIG_2(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  TopoDS_Shell *arg1 = 0 ;
+  TopoDS_Shell *arg2 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  v8::Handle< v8::Value > result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Shell,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "makeSolid" "', argument " "1"" of type '" "TopoDS_Shell const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "makeSolid" "', argument " "1"" of type '" "TopoDS_Shell const &""'"); 
+  }
+  arg1 = (TopoDS_Shell *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_TopoDS_Shell,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "makeSolid" "', argument " "2"" of type '" "TopoDS_Shell const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "makeSolid" "', argument " "2"" of type '" "TopoDS_Shell const &""'"); 
+  }
+  arg2 = (TopoDS_Shell *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = makeSolid((TopoDS_Shell const &)*arg1,(TopoDS_Shell const &)*arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = result;
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_makeSolid__SWIG_3(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  TopoDS_Shell *arg1 = 0 ;
+  TopoDS_Shell *arg2 = 0 ;
+  TopoDS_Shell *arg3 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  v8::Handle< v8::Value > result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Shell,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "makeSolid" "', argument " "1"" of type '" "TopoDS_Shell const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "makeSolid" "', argument " "1"" of type '" "TopoDS_Shell const &""'"); 
+  }
+  arg1 = (TopoDS_Shell *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_TopoDS_Shell,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "makeSolid" "', argument " "2"" of type '" "TopoDS_Shell const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "makeSolid" "', argument " "2"" of type '" "TopoDS_Shell const &""'"); 
+  }
+  arg2 = (TopoDS_Shell *)(argp2);
+  res3 = SWIG_ConvertPtr(args[2], &argp3, SWIGTYPE_p_TopoDS_Shell,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "makeSolid" "', argument " "3"" of type '" "TopoDS_Shell const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "makeSolid" "', argument " "3"" of type '" "TopoDS_Shell const &""'"); 
+  }
+  arg3 = (TopoDS_Shell *)(argp3);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = makeSolid((TopoDS_Shell const &)*arg1,(TopoDS_Shell const &)*arg2,(TopoDS_Shell const &)*arg3);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = result;
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_makeSolid__SWIG_4(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  TopoDS_Solid *arg1 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  v8::Handle< v8::Value > result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Solid,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "makeSolid" "', argument " "1"" of type '" "TopoDS_Solid const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "makeSolid" "', argument " "1"" of type '" "TopoDS_Solid const &""'"); 
+  }
+  arg1 = (TopoDS_Solid *)(argp1);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = makeSolid((TopoDS_Solid const &)*arg1);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = result;
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_makeSolid__SWIG_5(const SwigV8Arguments &args, V8ErrorHandler &SWIGV8_ErrorHandler)
+{
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  TopoDS_Solid *arg1 = 0 ;
+  TopoDS_Shell *arg2 = 0 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  v8::Handle< v8::Value > result;
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Solid,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "makeSolid" "', argument " "1"" of type '" "TopoDS_Solid const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "makeSolid" "', argument " "1"" of type '" "TopoDS_Solid const &""'"); 
+  }
+  arg1 = (TopoDS_Solid *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_TopoDS_Shell,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "makeSolid" "', argument " "2"" of type '" "TopoDS_Shell const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "makeSolid" "', argument " "2"" of type '" "TopoDS_Shell const &""'"); 
+  }
+  arg2 = (TopoDS_Shell *)(argp2);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = makeSolid((TopoDS_Solid const &)*arg1,(TopoDS_Shell const &)*arg2);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = result;
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap___wrap_makeSolid(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  OverloadErrorHandler errorHandler;
+  
+  
+  if(args.Length() == 1) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_makeSolid__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_makeSolid__SWIG_0(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 1) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_makeSolid__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_makeSolid__SWIG_1(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 2) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_makeSolid__SWIG_2(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_makeSolid__SWIG_2(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 3) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_makeSolid__SWIG_3(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_makeSolid__SWIG_3(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 1) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_makeSolid__SWIG_4(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_makeSolid__SWIG_4(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  if(args.Length() == 2) {
+    errorHandler.err.Clear();
+#if (V8_MAJOR_VERSION-0) < 4 && (SWIG_V8_VERSION < 0x031903)
+    jsresult = _wrap_makeSolid__SWIG_5(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      SWIGV8_ESCAPE(jsresult);
+    }
+#else
+    _wrap_makeSolid__SWIG_5(args, errorHandler);
+    if(errorHandler.err.IsEmpty()) {
+      return;
+    }
+#endif
+  }
+  
+  
+  SWIG_exception_fail(SWIG_ERROR, "Illegal arguments for function makeSolid.");
+  
+  goto fail;
+fail:
+  SWIGV8_RETURN(SWIGV8_UNDEFINED());
+}
+
+
+static SwigV8ReturnValue _wrap_transform(const SwigV8Arguments &args) {
+  SWIGV8_HANDLESCOPE();
+  
+  v8::Handle<v8::Value> jsresult;
+  TopoDS_Shape *arg1 = 0 ;
+  gp_Trsf *arg2 = 0 ;
+  Standard_Boolean arg3 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  bool val3 ;
+  int ecode3 = 0 ;
+  v8::Handle< v8::Value > result;
+  
+  if(args.Length() != 3) SWIG_exception_fail(SWIG_ERROR, "Illegal number of arguments for _wrap_transform.");
+  
+  res1 = SWIG_ConvertPtr(args[0], &argp1, SWIGTYPE_p_TopoDS_Shape,  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "transform" "', argument " "1"" of type '" "TopoDS_Shape const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "transform" "', argument " "1"" of type '" "TopoDS_Shape const &""'"); 
+  }
+  arg1 = (TopoDS_Shape *)(argp1);
+  res2 = SWIG_ConvertPtr(args[1], &argp2, SWIGTYPE_p_gp_Trsf,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "transform" "', argument " "2"" of type '" "gp_Trsf const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "transform" "', argument " "2"" of type '" "gp_Trsf const &""'"); 
+  }
+  arg2 = (gp_Trsf *)(argp2);
+  ecode3 = SWIG_AsVal_bool(args[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "transform" "', argument " "3"" of type '" "Standard_Boolean""'");
+  } 
+  arg3 = (Standard_Boolean)(val3);
+  {
+    try
+    {
+      OCC_CATCH_SIGNALS
+      result = transform((TopoDS_Shape const &)*arg1,(gp_Trsf const &)*arg2,arg3);
+    }
+    catch(Standard_Failure)
+    {
+      args.GetIsolate()->ThrowException(v8::String::NewFromUtf8(args.GetIsolate(), GetErrorMessage()));
+      return;
+    }
+  }
+  jsresult = result;
+  
+  
+  
+  
+  SWIGV8_RETURN(jsresult);
   
   goto fail;
 fail:
@@ -6678,11 +7290,13 @@ static swig_type_info _swigt__p_TopAbs_ShapeEnum = {"_p_TopAbs_ShapeEnum", "TopA
 static swig_type_info _swigt__p_TopExp = {"_p_TopExp", "p_TopExp", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TopLoc_Location = {"_p_TopLoc_Location", "p_TopLoc_Location|TopLoc_Location *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TopTools_IndexedMapOfShape = {"_p_TopTools_IndexedMapOfShape", "TopTools_IndexedMapOfShape *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_TopTools_ListOfShape = {"_p_TopTools_ListOfShape", "TopTools_ListOfShape *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_TopoDS_CompSolid = {"_p_TopoDS_CompSolid", "TopoDS_CompSolid *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TopoDS_Edge = {"_p_TopoDS_Edge", "p_TopoDS_Edge|TopoDS_Edge *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TopoDS_Face = {"_p_TopoDS_Face", "p_TopoDS_Face|TopoDS_Face *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TopoDS_Shape = {"_p_TopoDS_Shape", "p_TopoDS_Shape|TopoDS_Shape *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TopoDS_Shell = {"_p_TopoDS_Shell", "p_TopoDS_Shell|TopoDS_Shell *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_TopoDS_Solid = {"_p_TopoDS_Solid", "p_TopoDS_Solid", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_TopoDS_Solid = {"_p_TopoDS_Solid", "p_TopoDS_Solid|TopoDS_Solid *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TopoDS_Vertex = {"_p_TopoDS_Vertex", "p_TopoDS_Vertex|TopoDS_Vertex *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TopoDS_Wire = {"_p_TopoDS_Wire", "TopoDS_Wire *|p_TopoDS_Wire", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_bool = {"_p_bool", "bool *|Standard_Boolean *", 0, 0, (void*)0, 0};
@@ -6735,6 +7349,8 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_TopExp,
   &_swigt__p_TopLoc_Location,
   &_swigt__p_TopTools_IndexedMapOfShape,
+  &_swigt__p_TopTools_ListOfShape,
+  &_swigt__p_TopoDS_CompSolid,
   &_swigt__p_TopoDS_Edge,
   &_swigt__p_TopoDS_Face,
   &_swigt__p_TopoDS_Shape,
@@ -6792,6 +7408,8 @@ static swig_cast_info _swigc__p_TopAbs_ShapeEnum[] = {  {&_swigt__p_TopAbs_Shape
 static swig_cast_info _swigc__p_TopExp[] = {  {&_swigt__p_TopExp, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TopLoc_Location[] = {  {&_swigt__p_TopLoc_Location, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TopTools_IndexedMapOfShape[] = {  {&_swigt__p_TopTools_IndexedMapOfShape, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TopTools_ListOfShape[] = {  {&_swigt__p_TopTools_ListOfShape, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TopoDS_CompSolid[] = {  {&_swigt__p_TopoDS_CompSolid, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TopoDS_Edge[] = {  {&_swigt__p_TopoDS_Edge, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TopoDS_Face[] = {  {&_swigt__p_TopoDS_Face, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TopoDS_Shape[] = {  {&_swigt__p_TopoDS_Shell, _p_TopoDS_ShellTo_p_TopoDS_Shape, 0, 0},  {&_swigt__p_TopoDS_Shape, 0, 0, 0},  {&_swigt__p_TopoDS_Solid, _p_TopoDS_SolidTo_p_TopoDS_Shape, 0, 0},  {&_swigt__p_TopoDS_Vertex, _p_TopoDS_VertexTo_p_TopoDS_Shape, 0, 0},  {&_swigt__p_TopoDS_Edge, _p_TopoDS_EdgeTo_p_TopoDS_Shape, 0, 0},  {&_swigt__p_TopoDS_Face, _p_TopoDS_FaceTo_p_TopoDS_Shape, 0, 0},  {&_swigt__p_TopoDS_Wire, _p_TopoDS_WireTo_p_TopoDS_Shape, 0, 0},{0, 0, 0, 0}};
@@ -6849,6 +7467,8 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_TopExp,
   _swigc__p_TopLoc_Location,
   _swigc__p_TopTools_IndexedMapOfShape,
+  _swigc__p_TopTools_ListOfShape,
+  _swigc__p_TopoDS_CompSolid,
   _swigc__p_TopoDS_Edge,
   _swigc__p_TopoDS_Face,
   _swigc__p_TopoDS_Shape,
@@ -7549,6 +8169,8 @@ SWIGV8_AddStaticFunction(exports_obj, "makeVertex", _wrap_makeVertex);
 SWIGV8_AddStaticFunction(exports_obj, "makeWire", _wrap___wrap_makeWire);
 SWIGV8_AddStaticFunction(exports_obj, "makeFace", _wrap___wrap_makeFace);
 SWIGV8_AddStaticFunction(exports_obj, "makeShell", _wrap___wrap_makeShell);
+SWIGV8_AddStaticFunction(exports_obj, "makeSolid", _wrap___wrap_makeSolid);
+SWIGV8_AddStaticFunction(exports_obj, "transform", _wrap_transform);
 
 
   /* register classes */

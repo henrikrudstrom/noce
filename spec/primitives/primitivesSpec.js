@@ -1,10 +1,10 @@
 const expect = require('chai').expect;
-const helpers = require('./testHelpers.js');
-const create = require('./create.js');
-const gp = require('../lib/gp.node');
-const geom = require('../lib/geom.node');
-const topo = require('../lib/topo.node');
-const primitives = require('../lib/primitives.node');
+const helpers = require('../testHelpers.js');
+const gpCreate = require('../gp/create.js');
+const gp = require('../../lib/gp.js');
+const geom = require('../../lib/geom.js');
+const topo = require('../../lib/topo.js');
+const primitives = require('../../lib/primitives.js');
 
 describe('primitives', function() {
   it('makePrism(topo.Shape, gp.Vec, Boolean, Boolean)', function() {
@@ -22,7 +22,7 @@ describe('primitives', function() {
       new gp.Pnt(0, 0, 0), new gp.Dir(1, 0, 0), new gp.Dir(0, -1, 0)
     ));
     var face = topo.makeFace(plane, 0, 2, 0, 2, 0.01);
-    var res = primitives.makePrism(face, create.gp.Dir(), false, false, false);
+    var res = primitives.makePrism(face, gpCreate.dir(), false, false, false);
 
     helpers.expectType(res, 'Shape');
   });
@@ -33,7 +33,7 @@ describe('primitives', function() {
       new gp.Pnt(0, 0, 0), new gp.Dir(1, 0, 0), new gp.Dir(0, -1, 0)
     ));
     var face = topo.makeFace(plane, 0, 2, 0, 2, 0.01);
-    var res = primitives.makeRevol(face, create.gp.Ax1(), 0.5, false);
+    var res = primitives.makeRevol(face, gpCreate.ax1(), 0.5, false);
     helpers.expectType(res, 'Shape');
   });
 
@@ -43,7 +43,7 @@ describe('primitives', function() {
       new gp.Pnt(0, 0, 0), new gp.Dir(1, 0, 0), new gp.Dir(0, -1, 0)
     ));
     var face = topo.makeFace(plane, 0, 2, 0, 2, 0.01);
-    var res = primitives.makeRevol(face, create.gp.Ax1(), false);
+    var res = primitives.makeRevol(face, gpCreate.ax1(), false);
     helpers.expectType(res, 'Shape');
   });
 });
