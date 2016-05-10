@@ -26,14 +26,12 @@ var notWorking = {
     'transformParameters(Double, Double, gp.Trsf)'
   ],
   'geom.BezierCurve': [
-    'increase(Integer)',
-    //'poles(Array)' // TODO: array outarg typemap for Array1Of has memory trouble
+    'increase(Integer)'
   ],
   'geom2d.BezierCurve': [
     'increase(Integer)',
     'BezierCurve(Array)',
     'BezierCurve(Array, Array)'
-    //'poles(Array)' // TODO: array outarg typemap for Array1Of has memory trouble
   ],
   'primitives.Revolution': [
     'startTopEdge()',
@@ -43,6 +41,9 @@ var notWorking = {
   'topo': [
     'makeWire(topo.Wire)',
     'makeWire(topo.Edge)'
+  ],
+  'boolean': [
+    '*(*)'
   ]
 };
 

@@ -1,5 +1,6 @@
 const topo = require('../../lib/topo.js');
 const geom = require('../../lib/geom.js');
+const geom2d = require('../../lib/geom2d.js');
 const gp = require('../../lib/gp.js');
 const helpers = require('../testHelpers.js');
 const create = require('./create.js');
@@ -17,8 +18,11 @@ describe('topo.Location', function(){
     var res = obj.identity();
   });
 
-  // Arguments or return type not wrapped.
-  xit('firstDatum()', function() { });
+  it('firstDatum()', function() {
+    var obj = create.topo.location();
+    var res = obj.firstDatum();
+    helpers.expectType(res, 'Datum3D');
+  });
 
   it('firstPower()', function() {
     var obj = create.topo.location();
@@ -96,6 +100,8 @@ describe('topo.Location', function(){
     helpers.expectType(res, 'Location');
   });
 
-  // Arguments or return type not wrapped.
-  xit('Location(Handle_TopLoc_Datum3D)', function() { });
+  it('Location(topo.Datum3D)', function() {
+    var res = new topo.Location(create.topo.datum3D());
+    helpers.expectType(res, 'Location');
+  });
 });

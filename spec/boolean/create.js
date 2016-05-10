@@ -11,7 +11,8 @@ var gp = require('./../../lib/gp.js');
 
 // create overlapping boxes for boolean tests
 module.exports.topo.shape = function() {
-  var offset = (counter % 2) * 2
+  console.log("create shape");
+  var offset = (counter % 2) * 2;
   counter += 1;
   return primitives.makeBox(
     new gp.Pnt(offset, offset, offset),

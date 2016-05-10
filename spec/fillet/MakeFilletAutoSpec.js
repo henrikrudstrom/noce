@@ -1,6 +1,7 @@
 const fillet = require('../../lib/fillet.js');
 const gp = require('../../lib/gp.js');
 const geom = require('../../lib/geom.js');
+const geom2d = require('../../lib/geom2d.js');
 const topo = require('../../lib/topo.js');
 const helpers = require('../testHelpers.js');
 const create = require('./create.js');
@@ -134,118 +135,118 @@ describe('fillet.MakeFillet', function(){
     expect(typeof res).to.equal('number');
   });
 
-  // it('nbEdges(Integer)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.nbEdges(1);
-  //   expect(typeof res).to.equal('number');
-  // });
-  //
-  // it('edge(Integer, Integer)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.edge(1, 2);
-  //   helpers.expectType(res, 'Edge');
-  // });
-  //
-  // it('remove(topo.Edge)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.remove(create.topo.edge());
-  // });
-  //
-  // it('length(Integer)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.length(1);
-  //   expect(typeof res).to.equal('number');
-  // });
-  //
-  // it('firstVertex(Integer)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.firstVertex(1);
-  //   helpers.expectType(res, 'Vertex');
-  // });
-  //
-  // it('lastVertex(Integer)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.lastVertex(1);
-  //   helpers.expectType(res, 'Vertex');
-  // });
-  //
-  // it('abscissa(Integer, topo.Vertex)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.abscissa(1, create.topo.vertex());
-  //   expect(typeof res).to.equal('number');
-  // });
-  //
-  // it('relativeAbscissa(Integer, topo.Vertex)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.relativeAbscissa(1, create.topo.vertex());
-  //   expect(typeof res).to.equal('number');
-  // });
-  //
-  // it('closedAndTangent(Integer)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.closedAndTangent(1);
-  //   expect(typeof res).to.equal('boolean');
-  // });
-  //
-  // it('closed(Integer)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.closed(1);
-  //   expect(typeof res).to.equal('boolean');
-  // });
+  it('nbEdges(Integer)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.nbEdges(1);
+    expect(typeof res).to.equal('number');
+  });
 
-  // it('build()', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.build();
-  // });
+  it('edge(Integer, Integer)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.edge(1, 2);
+    helpers.expectType(res, 'Edge');
+  });
 
-  // it('reset()', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.reset();
-  // });
+  it('remove(topo.Edge)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.remove(create.topo.edge());
+  });
+
+  it('length(Integer)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.length(1);
+    expect(typeof res).to.equal('number');
+  });
+
+  it('firstVertex(Integer)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.firstVertex(1);
+    helpers.expectType(res, 'Vertex');
+  });
+
+  it('lastVertex(Integer)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.lastVertex(1);
+    helpers.expectType(res, 'Vertex');
+  });
+
+  it('abscissa(Integer, topo.Vertex)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.abscissa(1, create.topo.vertex());
+    expect(typeof res).to.equal('number');
+  });
+
+  it('relativeAbscissa(Integer, topo.Vertex)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.relativeAbscissa(1, create.topo.vertex());
+    expect(typeof res).to.equal('number');
+  });
+
+  it('closedAndTangent(Integer)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.closedAndTangent(1);
+    expect(typeof res).to.equal('boolean');
+  });
+
+  it('closed(Integer)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.closed(1);
+    expect(typeof res).to.equal('boolean');
+  });
+
+  it('build()', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.build();
+  });
+
+  it('reset()', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.reset();
+  });
 
   // Arguments or return type not wrapped.
   xit('builder()', function() { });
 
-  // it('generated(topo.Shape)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.generated(create.topo.shape());
-  //   helpers.expectType(res, 'Array');
-  // });
-  //
-  // it('modified(topo.Shape)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.modified(create.topo.shape());
-  //   helpers.expectType(res, 'Array');
-  // });
-  //
-  // it('isDeleted(topo.Shape)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.isDeleted(create.topo.shape());
-  //   expect(typeof res).to.equal('boolean');
-  // });
+  it('generated(topo.Shape)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.generated(create.topo.shape());
+    helpers.expectType(res, 'Array');
+  });
 
-  // it('nbSurfaces()', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.nbSurfaces();
-  //   expect(typeof res).to.equal('number');
-  // });
+  it('modified(topo.Shape)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.modified(create.topo.shape());
+    helpers.expectType(res, 'Array');
+  });
 
-  // it('newFaces(Integer)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.newFaces(1);
-  //   helpers.expectType(res, 'Array');
-  // });
-  //
-  // it('simulate(Integer)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.simulate(1);
-  // });
-  //
-  // it('nbSurf(Integer)', function() {
-  //   var obj = create.fillet.makeFillet();
-  //   var res = obj.nbSurf(1);
-  //   expect(typeof res).to.equal('number');
-  // });
+  it('isDeleted(topo.Shape)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.isDeleted(create.topo.shape());
+    expect(typeof res).to.equal('boolean');
+  });
+
+  it('nbSurfaces()', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.nbSurfaces();
+    expect(typeof res).to.equal('number');
+  });
+
+  it('newFaces(Integer)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.newFaces(1);
+    helpers.expectType(res, 'Array');
+  });
+
+  it('simulate(Integer)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.simulate(1);
+  });
+
+  it('nbSurf(Integer)', function() {
+    var obj = create.fillet.makeFillet();
+    var res = obj.nbSurf(1);
+    expect(typeof res).to.equal('number');
+  });
 
   // Arguments or return type not wrapped.
   xit('sect(Integer, Integer)', function() { });

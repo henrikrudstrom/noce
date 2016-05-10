@@ -15,6 +15,7 @@ var create = extend({},
         return topo.makeEdge(create.geom.line());
       },
       shape() {
+        console.log("create shape nope");
         return create.topo.edge();
       },
       orientation() {

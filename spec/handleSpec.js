@@ -1,7 +1,7 @@
 const geom = require('../lib/geom.js');
 const gp = require('../lib/gp.js');
 const helpers = require('./testHelpers.js');
-const geomCreate = require('./geom/create.js');
+const geomCreate = require('./geom/create.js').geom;
 
 
 describe('a handle', function() {
@@ -34,7 +34,7 @@ describe('a handle', function() {
 
   });
 
-  it('TrimmedCurve plays well with garbage collectors', function() {
+  xit('TrimmedCurve plays well with garbage collectors', function() {
     process.stdout.write('GarbageCollector');
     for (var i = 0; i < 100000; i++) { // 52631 pr second
       var circle = geomCreate.curve();
