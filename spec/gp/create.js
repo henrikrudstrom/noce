@@ -3,8 +3,8 @@ var gp = require('../../lib/gp.js');
 var currentDouble = 0;
 
 function nextDouble() {
-  currentDouble += 1;
-  return currentDouble;
+  currentDouble += 0.5;
+  return currentDouble % 3;
 }
 
 var create = {
@@ -63,4 +63,4 @@ var create = {
   }
 };
 
-module.exports = create;
+module.exports.gp = create;

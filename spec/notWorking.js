@@ -29,6 +29,12 @@ var notWorking = {
     'increase(Integer)',
     //'poles(Array)' // TODO: array outarg typemap for Array1Of has memory trouble
   ],
+  'geom2d.BezierCurve': [
+    'increase(Integer)',
+    'BezierCurve(Array)',
+    'BezierCurve(Array, Array)'
+    //'poles(Array)' // TODO: array outarg typemap for Array1Of has memory trouble
+  ],
   'primitives.Revolution': [
     'startTopEdge()',
     // TODO: first arg is outarg or 'const &'

@@ -1,8 +1,7 @@
 const geom = require('../../lib/geom.js');
-var geomCreate = require('../geom/create.js');
 const gp = require('../../lib/gp.js');
-var gpCreate = require('../gp/create.js');
 const helpers = require('../testHelpers.js');
+const create = require('./create.js');
 const expect = require('chai').expect;
 describe('geom.Plane', function(){
 
@@ -13,23 +12,23 @@ describe('geom.Plane', function(){
   xit('pln()', function() { });
 
   it('ureverse()', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.ureverse();
   });
 
   it('ureversedParameter(Double)', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.ureversedParameter(0.5);
     expect(typeof res).to.equal('number');
   });
 
   it('vreverse()', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.vreverse();
   });
 
   it('vreversedParameter(Double)', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.vreversedParameter(0.5);
     expect(typeof res).to.equal('number');
   });
@@ -41,7 +40,7 @@ describe('geom.Plane', function(){
   xit('parametricTransformation(gp.Trsf)', function() { });
 
   it('bounds(Double, Double, Double, Double)', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.bounds();
     helpers.expectType(res, 'Object');
     helpers.expectType(res.u1, 'Double');
@@ -51,7 +50,7 @@ describe('geom.Plane', function(){
   });
 
   it('coefficients(Double, Double, Double, Double)', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.coefficients();
     helpers.expectType(res, 'Object');
     helpers.expectType(res.a, 'Double');
@@ -61,49 +60,49 @@ describe('geom.Plane', function(){
   });
 
   it('isUclosed()', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.isUclosed();
     expect(typeof res).to.equal('boolean');
   });
 
   it('isVclosed()', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.isVclosed();
     expect(typeof res).to.equal('boolean');
   });
 
   it('isUperiodic()', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.isUperiodic();
     expect(typeof res).to.equal('boolean');
   });
 
   it('isVperiodic()', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.isVperiodic();
     expect(typeof res).to.equal('boolean');
   });
 
   it('uiso(Double)', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.uiso(0.5);
     helpers.expectType(res, 'Line');
   });
 
   it('viso(Double)', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.viso(0.5);
     helpers.expectType(res, 'Line');
   });
 
   it('d0(Double, Double, gp.Pnt)', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.d0(0.5, 1);
     helpers.expectType(res, 'Pnt');
   });
 
   it('d1(Double, Double, gp.Pnt, gp.Vec, gp.Vec)', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.d1(0.5, 1);
     helpers.expectType(res, 'Object');
     helpers.expectType(res.p, 'gp.Pnt');
@@ -112,7 +111,7 @@ describe('geom.Plane', function(){
   });
 
   it('d2(Double, Double, gp.Pnt, gp.Vec, gp.Vec, gp.Vec, gp.Vec, gp.Vec)', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.d2(0.5, 1);
     helpers.expectType(res, 'Object');
     helpers.expectType(res.p, 'gp.Pnt');
@@ -124,7 +123,7 @@ describe('geom.Plane', function(){
   });
 
   it('d3(Double, Double, gp.Pnt, gp.Vec, gp.Vec, gp.Vec, gp.Vec, gp.Vec, gp.Vec, gp.Vec, gp.Vec, gp.Vec)', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.d3(0.5, 1);
     helpers.expectType(res, 'Object');
     helpers.expectType(res.p, 'gp.Pnt');
@@ -140,24 +139,24 @@ describe('geom.Plane', function(){
   });
 
   it('dn(Double, Double, Integer, Integer)', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.dn(0.5, 1, 2, 3);
     helpers.expectType(res, 'Vec');
   });
 
   it('transform(gp.Trsf)', function() {
-    var obj = geomCreate.plane();
-    var res = obj.transform(gpCreate.trsf());
+    var obj = create.geom.plane();
+    var res = obj.transform(create.gp.trsf());
   });
 
   it('copy()', function() {
-    var obj = geomCreate.plane();
+    var obj = create.geom.plane();
     var res = obj.copy();
     helpers.expectType(res, 'Plane');
   });
 
   it('Plane(gp.Ax3)', function() {
-    var res = new geom.Plane(gpCreate.ax3());
+    var res = new geom.Plane(create.gp.ax3());
     helpers.expectType(res, 'Plane');
   });
 
@@ -165,7 +164,7 @@ describe('geom.Plane', function(){
   xit('Plane(gp_Pln)', function() { });
 
   it('Plane(gp.Pnt, gp.Dir)', function() {
-    var res = new geom.Plane(gpCreate.pnt(), gpCreate.dir());
+    var res = new geom.Plane(create.gp.pnt(), create.gp.dir());
     helpers.expectType(res, 'Plane');
   });
 

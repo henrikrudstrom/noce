@@ -4,6 +4,6 @@ const gp = require('../../lib/gp.js');
 const helpers = require('../testHelpers.js');
 const create = require('./create.js');
 const expect = require('chai').expect;
-describe('topo.Solid', function(){
+describe('topo.Compound', function(){
 
 });

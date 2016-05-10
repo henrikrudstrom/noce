@@ -1,11 +1,11 @@
 const gp = require('../../lib/gp.js');
-var gpCreate = require('../gp/create.js');
 const helpers = require('../testHelpers.js');
+const create = require('./create.js');
 const expect = require('chai').expect;
 describe('gp.Dir2d', function(){
 
   it('x', function() {
-    var obj = gpCreate.dir2d();
+    var obj = create.gp.dir2d();
     var value = 0.5;
     obj.x = value;
     var res = obj.x;
@@ -14,7 +14,7 @@ describe('gp.Dir2d', function(){
   });
 
   it('y', function() {
-    var obj = gpCreate.dir2d();
+    var obj = create.gp.dir2d();
     var value = 0.5;
     obj.y = value;
     var res = obj.y;
@@ -29,79 +29,79 @@ describe('gp.Dir2d', function(){
   xit('xy()', function() { });
 
   it('isEqual(gp.Dir2d, Double)', function() {
-    var obj = gpCreate.dir2d();
-    var res = obj.isEqual(gpCreate.dir2d(), 0.5);
+    var obj = create.gp.dir2d();
+    var res = obj.isEqual(create.gp.dir2d(), 0.5);
     expect(typeof res).to.equal('boolean');
   });
 
   it('isNormal(gp.Dir2d, Double)', function() {
-    var obj = gpCreate.dir2d();
-    var res = obj.isNormal(gpCreate.dir2d(), 0.5);
+    var obj = create.gp.dir2d();
+    var res = obj.isNormal(create.gp.dir2d(), 0.5);
     expect(typeof res).to.equal('boolean');
   });
 
   it('isOpposite(gp.Dir2d, Double)', function() {
-    var obj = gpCreate.dir2d();
-    var res = obj.isOpposite(gpCreate.dir2d(), 0.5);
+    var obj = create.gp.dir2d();
+    var res = obj.isOpposite(create.gp.dir2d(), 0.5);
     expect(typeof res).to.equal('boolean');
   });
 
   it('isParallel(gp.Dir2d, Double)', function() {
-    var obj = gpCreate.dir2d();
-    var res = obj.isParallel(gpCreate.dir2d(), 0.5);
+    var obj = create.gp.dir2d();
+    var res = obj.isParallel(create.gp.dir2d(), 0.5);
     expect(typeof res).to.equal('boolean');
   });
 
   it('angle(gp.Dir2d)', function() {
-    var obj = gpCreate.dir2d();
-    var res = obj.angle(gpCreate.dir2d());
+    var obj = create.gp.dir2d();
+    var res = obj.angle(create.gp.dir2d());
     expect(typeof res).to.equal('number');
   });
 
   it('cross(gp.Dir2d)', function() {
-    var obj = gpCreate.dir2d();
-    var res = obj.cross(gpCreate.dir2d());
+    var obj = create.gp.dir2d();
+    var res = obj.cross(create.gp.dir2d());
     expect(typeof res).to.equal('number');
   });
 
   it('dot(gp.Dir2d)', function() {
-    var obj = gpCreate.dir2d();
-    var res = obj.dot(gpCreate.dir2d());
+    var obj = create.gp.dir2d();
+    var res = obj.dot(create.gp.dir2d());
     expect(typeof res).to.equal('number');
   });
 
   it('reverse()', function() {
-    var obj = gpCreate.dir2d();
+    var obj = create.gp.dir2d();
     var res = obj.reverse();
   });
 
   it('reversed()', function() {
-    var obj = gpCreate.dir2d();
+    var obj = create.gp.dir2d();
     var res = obj.reversed();
     helpers.expectType(res, 'Dir2d');
   });
 
   it('mirror(gp.Dir2d)', function() {
-    var obj = gpCreate.dir2d();
-    var res = obj.mirror(gpCreate.dir2d());
+    var obj = create.gp.dir2d();
+    var res = obj.mirror(create.gp.dir2d());
     helpers.expectType(res, 'Dir2d');
   });
 
   it('mirror(gp.Ax2d)', function() {
-    var obj = gpCreate.dir2d();
-    var res = obj.mirror(gpCreate.ax2d());
+    var obj = create.gp.dir2d();
+    var res = obj.mirror(create.gp.ax2d());
     helpers.expectType(res, 'Dir2d');
   });
 
   it('rotate(Double)', function() {
-    var obj = gpCreate.dir2d();
+    var obj = create.gp.dir2d();
     var res = obj.rotate(0.5);
     helpers.expectType(res, 'Dir2d');
   });
 
   it('transform(gp.Trsf2d)', function() {
-    var obj = gpCreate.dir2d();
-    var res = obj.transform(gpCreate.trsf2d());
+    var obj = create.gp.dir2d();
+    var res = obj.transform(create.gp.trsf2d());
     helpers.expectType(res, 'Dir2d');
   });
 
@@ -111,7 +111,7 @@ describe('gp.Dir2d', function(){
   });
 
   it('Dir2d(gp.Vec2d)', function() {
-    var res = new gp.Dir2d(gpCreate.vec2d());
+    var res = new gp.Dir2d(create.gp.vec2d());
     helpers.expectType(res, 'Dir2d');
   });
 

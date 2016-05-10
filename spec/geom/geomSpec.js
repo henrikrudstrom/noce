@@ -1,12 +1,12 @@
 var geom = require('../../lib/geom.js');
 var gp = require('../../lib/gp.js');
-var createGeom = require('./create.js');
+var create = require('./create.js');
 var helpers = require('../testHelpers.js');
 const expect = require('chai').expect;
 
 describe('geom.TrimmedCurve', function() {
   it('TrimmedCurve(geom.Curve, Double, Double, Boolean)', function() {
-    const circle = createGeom.curve();
+    const circle = create.geom.curve();
     const res = new geom.TrimmedCurve(circle, 0, 0.5, true);
     helpers.expectType(res, 'TrimmedCurve');
   });

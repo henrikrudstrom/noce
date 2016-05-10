@@ -1,8 +1,7 @@
 const geom = require('../../lib/geom.js');
-var geomCreate = require('../geom/create.js');
 const gp = require('../../lib/gp.js');
-var gpCreate = require('../gp/create.js');
 const helpers = require('../testHelpers.js');
+const create = require('./create.js');
 const expect = require('chai').expect;
 describe('geom.CylindricalSurface', function(){
 
@@ -10,7 +9,7 @@ describe('geom.CylindricalSurface', function(){
   xit('setCylinder(gp_Cylinder)', function() { });
 
   it('setRadius(Double)', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.setRadius(0.5);
   });
 
@@ -18,13 +17,13 @@ describe('geom.CylindricalSurface', function(){
   xit('cylinder()', function() { });
 
   it('ureversedParameter(Double)', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.ureversedParameter(0.5);
     expect(typeof res).to.equal('number');
   });
 
   it('vreversedParameter(Double)', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.vreversedParameter(0.5);
     expect(typeof res).to.equal('number');
   });
@@ -36,7 +35,7 @@ describe('geom.CylindricalSurface', function(){
   xit('parametricTransformation(gp.Trsf)', function() { });
 
   it('bounds(Double, Double, Double, Double)', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.bounds();
     helpers.expectType(res, 'Object');
     helpers.expectType(res.u1, 'Double');
@@ -46,7 +45,7 @@ describe('geom.CylindricalSurface', function(){
   });
 
   it('coefficients(Double, Double, Double, Double, Double, Double, Double, Double, Double, Double)', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.coefficients();
     helpers.expectType(res, 'Object');
     helpers.expectType(res.a1, 'Double');
@@ -62,31 +61,31 @@ describe('geom.CylindricalSurface', function(){
   });
 
   it('radius()', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.radius();
     expect(typeof res).to.equal('number');
   });
 
   it('isUclosed()', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.isUclosed();
     expect(typeof res).to.equal('boolean');
   });
 
   it('isVclosed()', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.isVclosed();
     expect(typeof res).to.equal('boolean');
   });
 
   it('isUperiodic()', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.isUperiodic();
     expect(typeof res).to.equal('boolean');
   });
 
   it('isVperiodic()', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.isVperiodic();
     expect(typeof res).to.equal('boolean');
   });
@@ -95,19 +94,19 @@ describe('geom.CylindricalSurface', function(){
   xit('uiso(Double)', function() { });
 
   it('viso(Double)', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.viso(1);
     helpers.expectType(res, 'Circle');
   });
 
   it('d0(Double, Double, gp.Pnt)', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.d0(0.5, 1);
     helpers.expectType(res, 'Pnt');
   });
 
   it('d1(Double, Double, gp.Pnt, gp.Vec, gp.Vec)', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.d1(0.5, 1);
     helpers.expectType(res, 'Object');
     helpers.expectType(res.p, 'gp.Pnt');
@@ -116,7 +115,7 @@ describe('geom.CylindricalSurface', function(){
   });
 
   it('d2(Double, Double, gp.Pnt, gp.Vec, gp.Vec, gp.Vec, gp.Vec, gp.Vec)', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.d2(0.5, 1);
     helpers.expectType(res, 'Object');
     helpers.expectType(res.p, 'gp.Pnt');
@@ -128,7 +127,7 @@ describe('geom.CylindricalSurface', function(){
   });
 
   it('d3(Double, Double, gp.Pnt, gp.Vec, gp.Vec, gp.Vec, gp.Vec, gp.Vec, gp.Vec, gp.Vec, gp.Vec, gp.Vec)', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.d3(0.5, 1);
     helpers.expectType(res, 'Object');
     helpers.expectType(res.p, 'gp.Pnt');
@@ -144,24 +143,24 @@ describe('geom.CylindricalSurface', function(){
   });
 
   it('dn(Double, Double, Integer, Integer)', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.dn(0.5, 1, 2, 3);
     helpers.expectType(res, 'Vec');
   });
 
   it('transform(gp.Trsf)', function() {
-    var obj = geomCreate.cylindricalSurface();
-    var res = obj.transform(gpCreate.trsf());
+    var obj = create.geom.cylindricalSurface();
+    var res = obj.transform(create.gp.trsf());
   });
 
   it('copy()', function() {
-    var obj = geomCreate.cylindricalSurface();
+    var obj = create.geom.cylindricalSurface();
     var res = obj.copy();
     helpers.expectType(res, 'CylindricalSurface');
   });
 
   it('CylindricalSurface(gp.Ax3, Double)', function() {
-    var res = new geom.CylindricalSurface(gpCreate.ax3(), 0.5);
+    var res = new geom.CylindricalSurface(create.gp.ax3(), 0.5);
     helpers.expectType(res, 'CylindricalSurface');
   });
 
